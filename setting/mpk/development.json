@@ -1,0 +1,39 @@
+{
+    "enumeration": {
+        "temporary workspace": {
+            "element": {
+                "localhost": {
+                    "host": "localhost", 
+                    "path": "~/.tubo/temp"
+                }
+            }
+        }, 
+        "volume": {
+            "element": {
+                "epsilon": {
+                    "host": "localhost", 
+                    "path": "~/.tubo/epsilon"
+                }
+            }
+        }
+    }, 
+    "rule": {
+        "rule/genealogy/profile": null, 
+        "rule/genealogy/volume": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "volume", 
+                            "value": "epsilon"
+                        }
+                    ]
+                }
+            ]
+        }, 
+        "rule/task/preset": null
+    }, 
+    "system": {
+        "interface": "default"
+    }
+}

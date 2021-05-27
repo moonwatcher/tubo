@@ -1,0 +1,1245 @@
+{
+    "namespace": {
+        "ns/instruction/csv/library": {
+            "element": {
+                "barcode": null, 
+                "barcodes": {
+                    "csv": "barcodes"
+                }, 
+                "flowcell id": {
+                    "csv": "flowcell id"
+                }, 
+                "fragment size estimation method": {
+                    "csv": "fragment size estimation method"
+                }, 
+                "illumina flowcell id": {
+                    "csv": "illumina flowcell id"
+                }, 
+                "lane id": {
+                    "csv": "lane id"
+                }, 
+                "lane number": {
+                    "csv": "lane number"
+                }, 
+                "library description": {
+                    "csv": "library description"
+                }, 
+                "library experimental application": {
+                    "csv": "library experimental application"
+                }, 
+                "library id": {
+                    "csv": "library id"
+                }, 
+                "library name": {
+                    "csv": "library name"
+                }, 
+                "mean fragment size": {
+                    "csv": "mean fragment size"
+                }, 
+                "pool id": {
+                    "csv": "pool id"
+                }, 
+                "protocol kit name": {
+                    "csv": "protocol kit name"
+                }, 
+                "sample id": {
+                    "csv": "sample id"
+                }, 
+                "sample percent": {
+                    "csv": "sample percent"
+                }
+            }, 
+            "rule": [
+                "rule/home/qualified/flowcell/uri", 
+                "rule/home/qualified/lane/uri", 
+                "rule/home/qualified/pool/uri", 
+                "rule/home/qualified/sample/uri", 
+                "rule/home/qualified/library/uri", 
+                "rule/home/qualified/barcode/uri", 
+                "rule/home/qualified/person/uri", 
+                "rule/home/qualified/group/uri", 
+                "rule/home/qualified/organism/uri"
+            ], 
+            "synonym": [
+                "keyword", 
+                "csv"
+            ]
+        }, 
+        "ns/knowledge/barcode": {
+            "default": {
+                "web": null
+            }, 
+            "element": {
+                "barcode cycle offset": {
+                    "web": "barcode_position"
+                }, 
+                "barcode home uri": null, 
+                "barcode id": {
+                    "csv": "barcode id"
+                }, 
+                "barcode knowledge uri": null, 
+                "barcode length": null, 
+                "barcode local uri": null, 
+                "barcode mismatch": null, 
+                "barcode name": {
+                    "web": "name"
+                }, 
+                "barcode nibble": {
+                    "web": "barcode_location"
+                }, 
+                "barcode pattern": null, 
+                "barcode sequence": {
+                    "web": "barcode_sequence"
+                }, 
+                "barcode set": {
+                    "web": "barcode_kit"
+                }, 
+                "barcode source": {
+                    "web": "barcode_provider"
+                }, 
+                "barcode uuid": null, 
+                "home uri": null, 
+                "knowledge uri": null, 
+                "local uri": null, 
+                "modified": null, 
+                "web barcode id": {
+                    "web": "id"
+                }
+            }, 
+            "rule": [
+                "rule/home/barcode/uri", 
+                "rule/home/qualified/barcode/uri", 
+                "rule/knowledge/barcode/uri", 
+                "rule/knowledge/qualified/barcode/uri", 
+                "rule/local/barcode/uri", 
+                "rule/local/qualified/barcode/uri", 
+                "rule/knowledge/barcode/length", 
+                "rule/knowledge/barcode/pattern"
+            ], 
+            "similarity": [
+                [
+                    "barcode id"
+                ], 
+                [
+                    "barcode uuid"
+                ], 
+                [
+                    "web barcode id"
+                ]
+            ], 
+            "synonym": [
+                "keyword", 
+                "web"
+            ]
+        }, 
+        "ns/knowledge/flowcell": {
+            "default": {
+                "illumina": null, 
+                "web": null
+            }, 
+            "element": {
+                "asset uri": null, 
+                "control lane number": {
+                    "illumina": "ControlLane"
+                }, 
+                "flowcell asset uri": null, 
+                "flowcell description": {
+                    "web": "description"
+                }, 
+                "flowcell home uri": null, 
+                "flowcell id": null, 
+                "flowcell knowledge uri": null, 
+                "flowcell lanes local uri": null, 
+                "flowcell local uri": null, 
+                "flowcell scheduled": {
+                    "web": "scheduled_date"
+                }, 
+                "flowcell socket": {
+                    "illumina": "FCPosition"
+                }, 
+                "flowcell timestamp": null, 
+                "flowcell uuid": null, 
+                "guaranteed yield": null, 
+                "home uri": null, 
+                "illumina application name": {
+                    "illumina": "ApplicationName"
+                }, 
+                "illumina application version": {
+                    "illumina": "ApplicationVersion"
+                }, 
+                "illumina flowcell id": {
+                    "illumina": "Flowcell", 
+                    "web": "name"
+                }, 
+                "illumina flowcell type": {
+                    "illumina": "FlowcellType"
+                }, 
+                "illumina instrument id": {
+                    "illumina": "Instrument"
+                }, 
+                "illumina lane count": {
+                    "illumina": "@LaneCount"
+                }, 
+                "illumina rta version": {
+                    "illumina": "RTAVersion"
+                }, 
+                "illumina run day": {
+                    "illumina": "Date"
+                }, 
+                "illumina run id": {
+                    "illumina": "@Id"
+                }, 
+                "illumina surface count": {
+                    "illumina": "@SurfaceCount"
+                }, 
+                "illumina swath count": {
+                    "illumina": "@SwathCount"
+                }, 
+                "illumina tile count": {
+                    "illumina": "@TileCount"
+                }, 
+                "instrument id": null, 
+                "kind": null, 
+                "knowledge uri": null, 
+                "lane": null, 
+                "lane count": null, 
+                "lanes": {
+                    "web": "lanes"
+                }, 
+                "local uri": null, 
+                "media kind": null, 
+                "modified": null, 
+                "nibble": null, 
+                "nibbles": {
+                    "illumina": "Reads"
+                }, 
+                "number of nibbles": null, 
+                "profile": null, 
+                "volume": null, 
+                "web flowcell id": {
+                    "web": "id"
+                }, 
+                "web flowcell status": {
+                    "web": "status"
+                }
+            }, 
+            "rule": [
+                "rule/home/flowcell/uri", 
+                "rule/home/qualified/flowcell/uri", 
+                "rule/knowledge/flowcell/uri", 
+                "rule/knowledge/qualified/flowcell/uri", 
+                "rule/local/flowcell/uri", 
+                "rule/local/qualified/flowcell/uri", 
+                "rule/local/qualified/flowcell/lanes/uri", 
+                "rule/medium/resource/illumina/flowcell/type", 
+                "rule/medium/resource/illumina/flowcell/timestamp"
+            ], 
+            "similarity": [
+                [
+                    "flowcell id"
+                ], 
+                [
+                    "flowcell uuid"
+                ], 
+                [
+                    "web flowcell id"
+                ]
+            ], 
+            "synonym": [
+                "keyword", 
+                "illumina", 
+                "web"
+            ]
+        }, 
+        "ns/knowledge/group": {
+            "default": {
+                "web": null
+            }, 
+            "element": {
+                "group handle": {
+                    "web": "name"
+                }, 
+                "people": {
+                    "web": "users"
+                }, 
+                "web group id": {
+                    "web": "id"
+                }
+            }, 
+            "similarity": [
+                [
+                    "web group id"
+                ]
+            ], 
+            "synonym": [
+                "web"
+            ]
+        }, 
+        "ns/knowledge/lane": {
+            "default": {
+                "web": null
+            }, 
+            "element": {
+                "asset uri": null, 
+                "control lane": null, 
+                "fastq quality report": null, 
+                "flowcell id": null, 
+                "home uri": null, 
+                "illumina flowcell id": null, 
+                "knowledge uri": null, 
+                "lane asset uri": null, 
+                "lane description": {
+                    "web": "description"
+                }, 
+                "lane home uri": null, 
+                "lane id": null, 
+                "lane knowledge uri": null, 
+                "lane local uri": null, 
+                "lane number": {
+                    "web": "lane_number"
+                }, 
+                "lane pools local uri": null, 
+                "lane uuid": null, 
+                "local uri": null, 
+                "modified": null, 
+                "pool": null, 
+                "pools": {
+                    "web": "librarypools"
+                }, 
+                "pure phix": {
+                    "web": "is_PhiX"
+                }, 
+                "seeding concentration": {
+                    "web": "seeding_concentration"
+                }, 
+                "web flowcell id": null, 
+                "web lane id": {
+                    "web": "id"
+                }
+            }, 
+            "rule": [
+                "rule/asset/lane/uri", 
+                "rule/asset/qualified/lane/uri", 
+                "rule/home/lane/uri", 
+                "rule/home/qualified/lane/uri", 
+                "rule/knowledge/lane/uri", 
+                "rule/knowledge/qualified/lane/uri", 
+                "rule/local/lane/uri", 
+                "rule/local/qualified/lane/uri", 
+                "rule/local/qualified/lane/pools/uri"
+            ], 
+            "similarity": [
+                [
+                    "lane id"
+                ], 
+                [
+                    "web lane id"
+                ], 
+                [
+                    "lane uuid"
+                ], 
+                [
+                    "flowcell id", 
+                    "lane number"
+                ], 
+                [
+                    "flowcell uuid", 
+                    "lane number"
+                ], 
+                [
+                    "web flowcell id", 
+                    "lane number"
+                ]
+            ], 
+            "synonym": [
+                "keyword", 
+                "web"
+            ]
+        }, 
+        "ns/knowledge/library": {
+            "default": {
+                "web": null
+            }, 
+            "element": {
+                "asset uri": null, 
+                "barcode": null, 
+                "barcodes": {
+                    "web": "barcodes"
+                }, 
+                "fastq quality report": null, 
+                "fragment size estimation method": {
+                    "web": "fragment_size_estimation_method"
+                }, 
+                "home uri": null, 
+                "knowledge uri": null, 
+                "library asset uri": null, 
+                "library barcodes local uri": null, 
+                "library description": {
+                    "web": "description"
+                }, 
+                "library experimental application": {
+                    "web": "library_application"
+                }, 
+                "library home uri": null, 
+                "library id": null, 
+                "library knowledge uri": null, 
+                "library local uri": null, 
+                "library name": {
+                    "web": "name"
+                }, 
+                "library uuid": null, 
+                "local uri": null, 
+                "mean fragment size": {
+                    "web": "mean_fragment_size"
+                }, 
+                "modified": null, 
+                "operator id": null, 
+                "organism id": null, 
+                "organism name": null, 
+                "pool id": null, 
+                "project id": null, 
+                "project name": null, 
+                "protocol kit name": {
+                    "web": "protocol_kit_name"
+                }, 
+                "simple library name": null, 
+                "simple organism name": null, 
+                "simple project name": null, 
+                "web library id": {
+                    "web": "id"
+                }
+            }, 
+            "rule": [
+                "rule/asset/library/uri", 
+                "rule/asset/qualified/library/uri", 
+                "rule/home/library/uri", 
+                "rule/home/qualified/library/uri", 
+                "rule/knowledge/library/uri", 
+                "rule/knowledge/qualified/library/uri", 
+                "rule/local/library/uri", 
+                "rule/local/qualified/library/uri", 
+                "rule/local/qualified/library/barcodes/uri", 
+                "rule/knowledge/simple/name/library"
+            ], 
+            "similarity": [
+                [
+                    "library id"
+                ], 
+                [
+                    "library uuid"
+                ], 
+                [
+                    "web library id"
+                ]
+            ], 
+            "synonym": [
+                "keyword", 
+                "web"
+            ]
+        }, 
+        "ns/knowledge/nibble": {
+            "default": {
+                "illumina": null
+            }, 
+            "element": {
+                "flowcell id": null, 
+                "index nibble": {
+                    "illumina": "@IsIndexedRead"
+                }, 
+                "instrument id": null, 
+                "kind": null, 
+                "lane id": null, 
+                "lane number": null, 
+                "media kind": null, 
+                "nibble cycle count": {
+                    "illumina": "@NumCycles"
+                }, 
+                "nibble number": {
+                    "illumina": "@Number"
+                }, 
+                "profile": null, 
+                "volume": null
+            }, 
+            "rule": [], 
+            "synonym": [
+                "illumina", 
+                "keyword"
+            ]
+        }, 
+        "ns/knowledge/person": {
+            "default": {
+                "web": null
+            }, 
+            "element": {
+                "email": {
+                    "web": "email"
+                }, 
+                "full name": {
+                    "web": "last_name"
+                }, 
+                "groups": {
+                    "web": "groups"
+                }, 
+                "person handle": {
+                    "web": "username"
+                }, 
+                "web person id": {
+                    "web": "id"
+                }
+            }, 
+            "similarity": [
+                [
+                    "web person id"
+                ]
+            ], 
+            "synonym": [
+                "web"
+            ]
+        }, 
+        "ns/knowledge/pool": {
+            "default": {
+                "web": null
+            }, 
+            "element": {
+                "home uri": null, 
+                "knowledge uri": null, 
+                "local uri": null, 
+                "modified": null, 
+                "pool barcode": null, 
+                "pool barcodes": {
+                    "web": "reverse_complement"
+                }, 
+                "pool description": {
+                    "web": "additional_comment"
+                }, 
+                "pool home uri": null, 
+                "pool id": null, 
+                "pool knowledge uri": null, 
+                "pool local uri": null, 
+                "pool samples local uri": null, 
+                "pool uuid": null, 
+                "pooled date": {
+                    "web": "pooled_date"
+                }, 
+                "sample": null, 
+                "samples": {
+                    "web": "librarypoolconcentrations"
+                }, 
+                "seeding concentration": {
+                    "web": "seeding_concentration"
+                }, 
+                "submission concentration": {
+                    "web": "pool_concentration"
+                }, 
+                "submission date": {
+                    "web": "submission_date"
+                }, 
+                "total volume": {
+                    "web": "volume_of_final_pool"
+                }, 
+                "web pool id": {
+                    "web": "id"
+                }
+            }, 
+            "rule": [
+                "rule/home/pool/uri", 
+                "rule/home/qualified/pool/uri", 
+                "rule/knowledge/pool/uri", 
+                "rule/knowledge/qualified/pool/uri", 
+                "rule/local/pool/uri", 
+                "rule/local/qualified/pool/uri", 
+                "rule/local/qualified/pool/samples/uri"
+            ], 
+            "similarity": [
+                [
+                    "pool id"
+                ], 
+                [
+                    "pool uuid"
+                ], 
+                [
+                    "web pool id"
+                ]
+            ], 
+            "synonym": [
+                "keyword", 
+                "web"
+            ]
+        }, 
+        "ns/knowledge/pool/barcode": {
+            "default": {
+                "web": null
+            }, 
+            "element": {
+                "barcode index": {
+                    "web": "index_number"
+                }, 
+                "barcode reverse complement": {
+                    "web": "revcom"
+                }
+            }, 
+            "similarity": [
+                [
+                    "barcode index"
+                ]
+            ], 
+            "synonym": [
+                "keyword", 
+                "web"
+            ]
+        }, 
+        "ns/knowledge/sample": {
+            "default": {
+                "web": null
+            }, 
+            "element": {
+                "asset uri": null, 
+                "fastq quality report": null, 
+                "home uri": null, 
+                "knowledge uri": null, 
+                "library": {
+                    "web": "library"
+                }, 
+                "local uri": null, 
+                "modified": null, 
+                "operator id": null, 
+                "pool": null, 
+                "pool id": null, 
+                "sample asset uri": null, 
+                "sample description": {
+                    "web": "description"
+                }, 
+                "sample home uri": null, 
+                "sample id": null, 
+                "sample knowledge uri": null, 
+                "sample local uri": null, 
+                "sample percent": {
+                    "web": "library_percentage"
+                }, 
+                "sample uuid": null, 
+                "web sample id": {
+                    "web": "id"
+                }
+            }, 
+            "rule": [
+                "rule/asset/sample/uri", 
+                "rule/asset/qualified/sample/uri", 
+                "rule/home/sample/uri", 
+                "rule/home/qualified/sample/uri", 
+                "rule/knowledge/sample/uri", 
+                "rule/knowledge/qualified/sample/uri", 
+                "rule/local/sample/uri", 
+                "rule/local/qualified/sample/uri"
+            ], 
+            "similarity": [
+                [
+                    "sample id"
+                ], 
+                [
+                    "sample uuid"
+                ], 
+                [
+                    "web sample id"
+                ]
+            ], 
+            "synonym": [
+                "keyword", 
+                "web"
+            ]
+        }, 
+        "ns/medium/average/phred/score/report": {
+            "element": {
+                "average phred score distribution": null, 
+                "average phred score max": null, 
+                "average phred score mean": null, 
+                "average phred score min": null, 
+                "average phred score sum": null
+            }, 
+            "synonym": [
+                "keyword"
+            ]
+        }, 
+        "ns/medium/cycle/nucleotide/quality/report": {
+            "element": {
+                "cycle quality distribution": null, 
+                "nucleotide": null
+            }, 
+            "synonym": [
+                "keyword"
+            ]
+        }, 
+        "ns/medium/cycle/quality/distribution": {
+            "element": {
+                "cycle count": null, 
+                "cycle quality first quartile": null, 
+                "cycle quality interquartile range": null, 
+                "cycle quality left whisker": null, 
+                "cycle quality max": null, 
+                "cycle quality mean": null, 
+                "cycle quality median": null, 
+                "cycle quality min": null, 
+                "cycle quality right whisker": null, 
+                "cycle quality sum": null, 
+                "cycle quality third quartile": null
+            }, 
+            "synonym": [
+                "keyword"
+            ]
+        }, 
+        "ns/medium/demultiplex/input/report": {
+            "element": {
+                "filtered yield": null, 
+                "filtered yield fraction": null, 
+                "library quality report": null, 
+                "library quality reports": null, 
+                "perfect yield": null, 
+                "perfect yield fraction": null, 
+                "yield": null
+            }, 
+            "synonym": [
+                "keyword"
+            ]
+        }, 
+        "ns/medium/demultiplex/library/report": {
+            "element": {
+                "barcodes": null, 
+                "effective yield fraction": null, 
+                "fastq quality report": null, 
+                "fastq quality reports": null, 
+                "filtered read count": null, 
+                "filtered yield": null, 
+                "filtered yield fraction": null, 
+                "perfect read count": null, 
+                "perfect yield": null, 
+                "perfect yield fraction": null, 
+                "read count": null, 
+                "yield": null, 
+                "yield fraction": null
+            }, 
+            "synonym": [
+                "keyword"
+            ]
+        }, 
+        "ns/medium/demultiplex/output/report": {
+            "element": {
+                "fastq quality report": null, 
+                "fastq quality reports": null, 
+                "filtered read count": null, 
+                "read count": null
+            }, 
+            "synonym": [
+                "keyword"
+            ]
+        }, 
+        "ns/medium/demultiplex/report": {
+            "element": {
+                "demultiplex input report": null, 
+                "demultiplex output report": null, 
+                "determined filtered read count": null, 
+                "determined read count": null, 
+                "determined read fraction": null, 
+                "filtered read count": null, 
+                "filtered read fraction": null, 
+                "read count": null
+            }, 
+            "synonym": [
+                "keyword"
+            ]
+        }, 
+        "ns/medium/fastq/quality/report": {
+            "element": {
+                "average phred score report": null, 
+                "cycle nucleotide quality report": null, 
+                "cycle nucleotide quality reports": null, 
+                "filtered read count": null, 
+                "filtered read fraction": null, 
+                "max sequence length": null, 
+                "min sequence length": null, 
+                "path": null, 
+                "read count": null
+            }, 
+            "synonym": [
+                "keyword"
+            ]
+        }, 
+        "ns/medium/fastq/resource": {
+            "element": {
+                "fastq quality report": null
+            }
+        }, 
+        "ns/medium/flowcell/resource": {
+            "element": {
+                "flowcell": null
+            }
+        }, 
+        "ns/medium/resource/url/decode": {
+            "element": {
+                "barcode id": null, 
+                "flowcell id": null, 
+                "flowcell socket": null, 
+                "illumina flowcell id": null, 
+                "illumina instrument id": null, 
+                "illumina run day": null, 
+                "illumina run id": null, 
+                "instrument run count": null, 
+                "lane count": null, 
+                "lane id": null, 
+                "lane number": null, 
+                "library id": null, 
+                "nibble number": null, 
+                "organism id": null, 
+                "pool id": null
+            }
+        }, 
+        "ns/program/bcl2fastq": {
+            "element": {
+                "basename": null, 
+                "bcl2fastq adapter sequence": {
+                    "cli": "--adapter-sequence"
+                }, 
+                "bcl2fastq adapter stringency": {
+                    "cli": "--adapter-stringency"
+                }, 
+                "bcl2fastq fastq cluster count": {
+                    "cli": "--fastq-cluster-count"
+                }, 
+                "bcl2fastq filter dir": {
+                    "cli": "--filter-dir"
+                }, 
+                "bcl2fastq flowcell id": {
+                    "cli": "--flowcell-id"
+                }, 
+                "bcl2fastq ignore missing bcl": {
+                    "cli": "--ignore-missing-bcl"
+                }, 
+                "bcl2fastq ignore missing control": {
+                    "cli": "--ignore-missing-control"
+                }, 
+                "bcl2fastq ignore missing stats": {
+                    "cli": "--ignore-missing-stats"
+                }, 
+                "bcl2fastq input dir": {
+                    "cli": "--input-dir"
+                }, 
+                "bcl2fastq intensities dir": {
+                    "cli": "--intensities-dir"
+                }, 
+                "bcl2fastq mismatches": {
+                    "cli": "--mismatches"
+                }, 
+                "bcl2fastq no eamss": {
+                    "cli": "--no-eamss"
+                }, 
+                "bcl2fastq output dir": {
+                    "cli": "--output-dir"
+                }, 
+                "bcl2fastq positions dir": {
+                    "cli": "--positions-dir"
+                }, 
+                "bcl2fastq positions format": {
+                    "cli": "--positions-format"
+                }, 
+                "bcl2fastq sample sheet": {
+                    "cli": "--sample-sheet"
+                }, 
+                "bcl2fastq tiles": {
+                    "cli": "--tiles"
+                }, 
+                "bcl2fastq use bases mask": {
+                    "cli": "--use-bases-mask"
+                }, 
+                "bcl2fastq with failed reads": {
+                    "cli": "--with-failed-reads"
+                }, 
+                "dirname": null, 
+                "flowcell id": null, 
+                "flowcell socket": null, 
+                "home id": null, 
+                "host": null, 
+                "illumina flowcell id": null, 
+                "illumina instrument id": null, 
+                "illumina run day": null, 
+                "illumina run id": null, 
+                "instrument run count": null, 
+                "lane count": null, 
+                "path": null, 
+                "stderr path": null, 
+                "stdout path": null, 
+                "work directory": null
+            }, 
+            "rule": [
+                "rule/system/default/stdout/path", 
+                "rule/system/default/stderr/path", 
+                "rule/program/bcl2fastq/output/dirname", 
+                "rule/program/bcl2fastq/input/dirname", 
+                "rule/program/bcl2fastq/samplesheet/path", 
+                "rule/program/bcl2fastq/clustercount/default", 
+                "rule/program/bcl2fastq/eamss/default", 
+                "rule/program/bcl2fastq/mismatches/default", 
+                "rule/program/bcl2fastq/flowcell/default", 
+                "rule/medium/resource/illumina/flowcell/type"
+            ], 
+            "synonym": [
+                "cli", 
+                "keyword"
+            ]
+        }, 
+        "ns/program/make": {
+            "element": {
+                "stderr path": null, 
+                "stdout path": null, 
+                "threads": {
+                    "cli": "--jobs"
+                }, 
+                "work directory": null
+            }, 
+            "rule": [
+                "rule/system/default/stdout/path", 
+                "rule/system/default/stderr/path"
+            ], 
+            "synonym": [
+                "cli", 
+                "keyword"
+            ]
+        }, 
+        "ns/program/pheniqs/demux": {
+            "element": {
+                "pheniqs barcode": {
+                    "config": "barcode"
+                }, 
+                "pheniqs configuration path": {
+                    "cli": "--conf"
+                }, 
+                "pheniqs error": {
+                    "config": "error"
+                }, 
+                "pheniqs fragment": {
+                    "config": "fragment"
+                }, 
+                "pheniqs id": {
+                    "config": "id"
+                }, 
+                "pheniqs include non pf": {
+                    "config": "include non pf"
+                }, 
+                "pheniqs input": {
+                    "config": "input"
+                }, 
+                "pheniqs library": {
+                    "config": "library"
+                }, 
+                "pheniqs output": {
+                    "config": "output"
+                }, 
+                "pheniqs sequence": {
+                    "config": "sequence"
+                }, 
+                "pheniqs undetermined": {
+                    "config": "undetermined"
+                }, 
+                "positional": null, 
+                "stderr path": null, 
+                "stdout path": null, 
+                "work directory": null
+            }, 
+            "rule": [
+                "rule/system/default/stdout/path", 
+                "rule/system/default/stderr/path", 
+                "rule/program/pheniqs/configuration/path"
+            ], 
+            "synonym": [
+                "cli", 
+                "keyword"
+            ]
+        }, 
+        "ns/program/pheniqs/filter": {
+            "element": {
+                "pheniqs fragment": {
+                    "cli": "--fragment", 
+                    "config": "fragment"
+                }, 
+                "pheniqs include non pf": {
+                    "cli": "--includeFiltered", 
+                    "config": "include non pf"
+                }, 
+                "pheniqs input": {
+                    "cli": "--input", 
+                    "config": "input"
+                }, 
+                "pheniqs library": {
+                    "cli": "--library", 
+                    "config": "library"
+                }, 
+                "pheniqs output": {
+                    "cli": "--output", 
+                    "config": "output"
+                }, 
+                "positional": null, 
+                "stderr path": null, 
+                "stdout path": null, 
+                "work directory": null
+            }, 
+            "rule": [
+                "rule/system/default/stdout/path", 
+                "rule/system/default/stderr/path", 
+                "rule/program/pheniqs/configuration/path"
+            ], 
+            "synonym": [
+                "cli", 
+                "keyword"
+            ]
+        }, 
+        "ns/program/pheniqs/quality": {
+            "element": {
+                "pheniqs include non pf": {
+                    "cli": "--includeFiltered"
+                }, 
+                "pheniqs input": {
+                    "cli": "--input"
+                }, 
+                "positional": null, 
+                "stderr path": null, 
+                "stdout path": null, 
+                "work directory": null
+            }, 
+            "rule": [
+                "rule/system/default/stdout/path", 
+                "rule/system/default/stderr/path"
+            ], 
+            "synonym": [
+                "cli", 
+                "keyword"
+            ]
+        }, 
+        "ns/program/picard/illuminabasecallstofastq": {
+            "element": {
+                "basename": null, 
+                "dirname": null, 
+                "flowcell id": null, 
+                "flowcell socket": null, 
+                "home id": null, 
+                "host": null, 
+                "illumina flowcell id": null, 
+                "illumina instrument id": null, 
+                "illumina run day": null, 
+                "illumina run id": null, 
+                "instrument run count": null, 
+                "lane count": null, 
+                "lane number": null, 
+                "path": null, 
+                "picard apply eamss filter": {
+                    "cli": "APPLY_EAMSS_FILTER"
+                }, 
+                "picard basecall dir": {
+                    "cli": "BASECALLS_DIR"
+                }, 
+                "picard compress outputs": {
+                    "cli": "COMPRESS_OUTPUTS"
+                }, 
+                "picard flowcell barcode": {
+                    "cli": "FLOWCELL_BARCODE"
+                }, 
+                "picard force gc": {
+                    "cli": "FORCE_GC"
+                }, 
+                "picard include non pf reads": {
+                    "cli": "INCLUDE_NON_PF_READS"
+                }, 
+                "picard lane": {
+                    "cli": "LANE"
+                }, 
+                "picard machine name": {
+                    "cli": "MACHINE_NAME"
+                }, 
+                "picard max reads in ram per tile": {
+                    "cli": "MAX_READS_IN_RAM_PER_TILE"
+                }, 
+                "picard minimum quality": {
+                    "cli": "MINIMUM_QUALITY"
+                }, 
+                "picard number of processors": {
+                    "cli": "NUM_PROCESSORS"
+                }, 
+                "picard output prefix": {
+                    "cli": "OUTPUT_PREFIX"
+                }, 
+                "picard read name format": {
+                    "cli": "READ_NAME_FORMAT"
+                }, 
+                "picard read structure": {
+                    "cli": "READ_STRUCTURE"
+                }, 
+                "picard run barcode": {
+                    "cli": "RUN_BARCODE"
+                }, 
+                "picard temp directory": {
+                    "cli": "TMP_DIR"
+                }, 
+                "stderr path": null, 
+                "stdout path": null, 
+                "threads": null, 
+                "work directory": null
+            }, 
+            "rule": [
+                "rule/system/default/stdout/path", 
+                "rule/system/default/stderr/path", 
+                "rule/program/picard/output/prefix", 
+                "rule/program/picard/basecall/dirname", 
+                "rule/program/picard/illumina/flowcell/id", 
+                "rule/program/picard/illumina/run/count", 
+                "rule/program/picard/illumina/instrument/id", 
+                "rule/program/picard/read/id/format/default", 
+                "rule/program/picard/illumina/lane/number", 
+                "rule/program/picard/threads", 
+                "rule/program/picard/temp/dirname"
+            ], 
+            "synonym": [
+                "cli", 
+                "keyword"
+            ]
+        }, 
+        "ns/service/genealogy": {
+            "default": {
+                "web": null
+            }, 
+            "element": {
+                "api key": {
+                    "web": "api_key"
+                }, 
+                "barcode home uri": null, 
+                "barcode id": null, 
+                "barcode knowledge uri": null, 
+                "barcode local uri": null, 
+                "barcode uuid": null, 
+                "flowcell asset uri": null, 
+                "flowcell home uri": null, 
+                "flowcell id": null, 
+                "flowcell knowledge uri": null, 
+                "flowcell lanes local uri": null, 
+                "flowcell local uri": null, 
+                "flowcell scheduled": null, 
+                "flowcell socket": null, 
+                "flowcell timestamp": null, 
+                "flowcell uuid": null, 
+                "illumina flowcell id": null, 
+                "illumina instrument id": null, 
+                "illumina lane count": null, 
+                "illumina run day": null, 
+                "illumina run id": null, 
+                "instrument run count": null, 
+                "lane asset uri": null, 
+                "lane count": null, 
+                "lane home uri": null, 
+                "lane id": null, 
+                "lane knowledge uri": null, 
+                "lane local uri": null, 
+                "lane number": null, 
+                "lane pools local uri": null, 
+                "lane uuid": null, 
+                "library asset uri": null, 
+                "library barcodes local uri": null, 
+                "library home uri": null, 
+                "library id": null, 
+                "library knowledge uri": null, 
+                "library local uri": null, 
+                "library name": null, 
+                "library uuid": null, 
+                "nibble number": null, 
+                "number of nibbles": null, 
+                "organism handle": null, 
+                "organism home uri": null, 
+                "organism id": null, 
+                "organism knowledge uri": null, 
+                "organism local uri": null, 
+                "pool home uri": null, 
+                "pool id": null, 
+                "pool knowledge uri": null, 
+                "pool local uri": null, 
+                "pool samples local uri": null, 
+                "pool uuid": null, 
+                "sample asset uri": null, 
+                "sample home uri": null, 
+                "sample id": null, 
+                "sample knowledge uri": null, 
+                "sample local uri": null, 
+                "sample uuid": null, 
+                "simple library name": null, 
+                "username": {
+                    "web": "username"
+                }, 
+                "web barcode id": null, 
+                "web flowcell id": null, 
+                "web flowcell status": null, 
+                "web group id": null, 
+                "web instrument id": null, 
+                "web lane id": null, 
+                "web library id": null, 
+                "web organism id": null, 
+                "web person id": null, 
+                "web pool id": null, 
+                "web sample id": null
+            }, 
+            "rule": [
+                "rule/medium/resource/illumina/flowcell/type", 
+                "rule/knowledge/simple/name/library", 
+                "rule/home/qualified/flowcell/uri", 
+                "rule/home/qualified/lane/uri", 
+                "rule/home/qualified/pool/uri", 
+                "rule/home/qualified/library/uri", 
+                "rule/home/qualified/sample/uri", 
+                "rule/home/qualified/barcode/uri", 
+                "rule/home/qualified/organism/uri", 
+                "rule/knowledge/qualified/flowcell/uri", 
+                "rule/knowledge/qualified/lane/uri", 
+                "rule/knowledge/qualified/pool/uri", 
+                "rule/knowledge/qualified/library/uri", 
+                "rule/knowledge/qualified/sample/uri", 
+                "rule/knowledge/qualified/barcode/uri", 
+                "rule/knowledge/qualified/organism/uri", 
+                "rule/asset/qualified/flowcell/uri", 
+                "rule/asset/qualified/lane/uri", 
+                "rule/asset/qualified/library/uri", 
+                "rule/asset/qualified/sample/uri", 
+                "rule/local/qualified/flowcell/uri", 
+                "rule/local/qualified/flowcell/lanes/uri", 
+                "rule/local/qualified/lane/uri", 
+                "rule/local/qualified/lane/pools/uri", 
+                "rule/local/qualified/pool/uri", 
+                "rule/local/qualified/pool/samples/uri", 
+                "rule/local/qualified/library/uri", 
+                "rule/local/qualified/sample/uri", 
+                "rule/local/qualified/library/barcodes/uri", 
+                "rule/local/qualified/barcode/uri", 
+                "rule/local/qualified/organism/uri", 
+                "rule/medium/resource/illumina/flowcell/timestamp"
+            ]
+        }, 
+        "ns/system/command/default": {
+            "element": {
+                "basecall implementation": null, 
+                "pheniqs barcode": null, 
+                "pheniqs error": null, 
+                "pheniqs fragment": null, 
+                "pheniqs library": null
+            }
+        }, 
+        "ns/system/job": {
+            "element": {
+                "basecall implementation": null, 
+                "pheniqs barcode": null, 
+                "pheniqs error": null, 
+                "pheniqs fragment": null, 
+                "pheniqs library": null
+            }
+        }, 
+        "ns/system/task": {
+            "element": {
+                "basecall implementation": null, 
+                "pheniqs barcode": null, 
+                "pheniqs error": null, 
+                "pheniqs fragment": null, 
+                "pheniqs library": null
+            }
+        }
+    }
+}

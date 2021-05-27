@@ -1,0 +1,7 @@
+{
+    "constant": {
+        "bcl2fastq samplesheet header": "FCID,Lane,SampleID,SampleRef,Index,Description,Control,Recipe,Operator,SampleProject", 
+        "bcl2fastq threads per lane": 2, 
+        "picard threads per lane": 6
+    }
+}

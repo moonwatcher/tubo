@@ -1,0 +1,39 @@
+{
+    "command": {
+        "ffmpeg": {
+            "binary": "ffmpeg", 
+            "namespace": "ns/program/ffmpeg"
+        }, 
+        "handbrake": {
+            "binary": "HandBrakeCLI", 
+            "namespace": "ns/program/handbrake"
+        }, 
+        "mediainfo": {
+            "binary": "mediainfo", 
+            "namespace": "ns/program/mediainfo", 
+            "style": "mediainfo"
+        }, 
+        "mkvextract": {
+            "binary": "mkvextract", 
+            "namespace": "ns/program/mkvextract"
+        }, 
+        "mkvmerge": {
+            "binary": "mkvmerge", 
+            "namespace": "ns/program/mkvmerge"
+        }, 
+        "mp4art": {
+            "binary": "mp4art", 
+            "enable": false, 
+            "namespace": "ns/program/mp4art"
+        }, 
+        "mp4file": {
+            "binary": "mp4file", 
+            "enable": false, 
+            "namespace": "ns/program/mp4file"
+        }, 
+        "subler": {
+            "binary": "SublerCLI", 
+            "namespace": "ns/program/subler"
+        }
+    }
+}

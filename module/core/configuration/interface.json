@@ -1,0 +1,1044 @@
+{
+    "interface": {
+        "daemon": {
+            "global": {
+                "argument": [
+                    "host", 
+                    "version", 
+                    "verbosity"
+                ]
+            }, 
+            "instruction": {
+                "description": "Lior Galanti lior.galanti@nyu.edu NYU Center for Genomics & Systems Biology"
+            }, 
+            "namespace": "ns/system/command/default", 
+            "prototype": {
+                "host": {
+                    "flag": [
+                        "--host"
+                    ], 
+                    "parameter": {
+                        "dest": "host", 
+                        "help": "repository host name", 
+                        "metavar": "HOST"
+                    }
+                }, 
+                "preset": {
+                    "flag": [
+                        "-s", 
+                        "--preset"
+                    ], 
+                    "parameter": {
+                        "dest": "preset", 
+                        "help": "select preset", 
+                        "metavar": "NAME"
+                    }
+                }, 
+                "verbosity": {
+                    "axis": "code", 
+                    "flag": [
+                        "-v", 
+                        "--verbosity"
+                    ], 
+                    "parameter": {
+                        "dest": "verbosity", 
+                        "help": "logging verbosity level", 
+                        "metavar": "LEVEL"
+                    }
+                }, 
+                "version": {
+                    "flag": [
+                        "--version"
+                    ], 
+                    "parameter": {
+                        "action": "version", 
+                        "version": "%(prog)s"
+                    }
+                }
+            }
+        }, 
+        "default": {
+            "global": {
+                "argument": [
+                    "submit", 
+                    "host", 
+                    "debug", 
+                    "threads",
+                    "version", 
+                    "verbosity"
+                ]
+            }, 
+            "instruction": {
+                "description": "Lior Galanti lior.galanti@nyu.edu NYU Center for Genomics & Systems Biology"
+            }, 
+            "namespace": "ns/system/command/default", 
+            "prototype": {
+                "threads": {
+                    "flag": [
+                        "-T", 
+                        "--threads"
+                    ], 
+                    "parameter": {
+                        "dest": "slots", 
+                        "help": "job thread limit",
+                        "metavar": "INT"
+                    }
+                }, 
+                "all": {
+                    "flag": [
+                        "-a", 
+                        "--all"
+                    ], 
+                    "parameter": {
+                        "action": "store_true", 
+                        "default": false, 
+                        "dest": "all", 
+                        "help": "all"
+                    }
+                }, 
+                "compression": {
+                    "flag": [
+                        "-x", 
+                        "--compression"
+                    ], 
+                    "parameter": {
+                        "dest": "compression", 
+                        "help": "compression method", 
+                        "metavar": "FORMAT"
+                    }
+                }, 
+                "crawl": {
+                    "flag": [
+                        "-C", 
+                        "--crawl"
+                    ], 
+                    "parameter": {
+                        "action": "store_true", 
+                        "default": false, 
+                        "dest": "crawl", 
+                        "help": "force rebuilding meta data index for resources"
+                    }
+                }, 
+                "debug": {
+                    "flag": [
+                        "-d", 
+                        "--debug"
+                    ], 
+                    "parameter": {
+                        "action": "store_true", 
+                        "default": false, 
+                        "dest": "debug", 
+                        "help": "only print commands without executing"
+                    }
+                }, 
+                "drop on restore": {
+                    "flag": [
+                        "-D", 
+                        "--drop"
+                    ], 
+                    "parameter": {
+                        "action": "store_true", 
+                        "default": false, 
+                        "dest": "drop on restore", 
+                        "help": "drop table before restoring"
+                    }
+                }, 
+                "filter": {
+                    "flag": [
+                        "--filter"
+                    ], 
+                    "parameter": {
+                        "action": "append", 
+                        "dest": "filter", 
+                        "help": "filter files matching PATTERN", 
+                        "metavar": "PATTERN"
+                    }
+                }, 
+                "genealogy": {
+                    "flag": [
+                        "-g", 
+                        "--genealogy"
+                    ], 
+                    "parameter": {
+                        "dest": "genealogy", 
+                        "help": "dictionary of genealogy elements", 
+                        "metavar": "DICT"
+                    }
+                }, 
+                "horizon": {
+                    "flag": [
+                        "-H", 
+                        "--horizon"
+                    ], 
+                    "parameter": {
+                        "dest": "horizon", 
+                        "help": "sync refreshing horizon", 
+                        "metavar": "SECOND"
+                    }
+                }, 
+                "host": {
+                    "flag": [
+                        "--host"
+                    ], 
+                    "parameter": {
+                        "dest": "host", 
+                        "help": "local host name", 
+                        "metavar": "HOST"
+                    }
+                }, 
+                "kind": {
+                    "flag": [
+                        "-k", 
+                        "--kind"
+                    ], 
+                    "parameter": {
+                        "dest": "kind", 
+                        "help": "select kind", 
+                        "metavar": "KIND"
+                    }
+                }, 
+                "language": {
+                    "axis": "ISO 639-1", 
+                    "flag": [
+                        "-l", 
+                        "--lang"
+                    ], 
+                    "parameter": {
+                        "dest": "language", 
+                        "help": "select language by ISO 639-1 2 letter code", 
+                        "metavar": "CODE"
+                    }
+                }, 
+                "overwrite": {
+                    "flag": [
+                        "-w", 
+                        "--overwrite"
+                    ], 
+                    "parameter": {
+                        "action": "store_true", 
+                        "default": false, 
+                        "dest": "overwrite", 
+                        "help": "overwrite existing files"
+                    }
+                }, 
+                "preset": {
+                    "flag": [
+                        "-s", 
+                        "--preset"
+                    ], 
+                    "parameter": {
+                        "dest": "preset", 
+                        "help": "select preset", 
+                        "metavar": "NAME"
+                    }
+                }, 
+                "profile": {
+                    "flag": [
+                        "-p", 
+                        "--profile"
+                    ], 
+                    "parameter": {
+                        "dest": "profile", 
+                        "help": "select profile", 
+                        "metavar": "PROFILE"
+                    }
+                }, 
+                "recursive": {
+                    "flag": [
+                        "-r", 
+                        "--recursive"
+                    ], 
+                    "parameter": {
+                        "action": "store_true", 
+                        "default": false, 
+                        "dest": "recursive", 
+                        "help": "recurse into directories"
+                    }
+                }, 
+                "scan path": {
+                    "flag": [
+                        "scan path"
+                    ], 
+                    "parameter": {
+                        "help": "file or directory paths to scan", 
+                        "metavar": "PATH", 
+                        "nargs": "*"
+                    }
+                }, 
+                "submit": {
+                    "flag": [
+                        "-S", 
+                        "--submit"
+                    ], 
+                    "parameter": {
+                        "action": "store_true", 
+                        "default": false, 
+                        "dest": "submit", 
+                        "help": "Submit job to queue"
+                    }
+                }, 
+                "sync": {
+                    "flag": [
+                        "-R", 
+                        "--refresh"
+                    ], 
+                    "parameter": {
+                        "action": "store_true", 
+                        "default": false, 
+                        "dest": "sync", 
+                        "help": "synchronize service"
+                    }
+                }, 
+                "tables": {
+                    "flag": [
+                        "tables"
+                    ], 
+                    "parameter": {
+                        "help": "list of tables", 
+                        "metavar": "TABLE", 
+                        "nargs": "*"
+                    }
+                }, 
+                "uris": {
+                    "flag": [
+                        "uris"
+                    ], 
+                    "parameter": {
+                        "help": "list of URIs", 
+                        "metavar": "URI", 
+                        "nargs": "*"
+                    }
+                }, 
+                "verbosity": {
+                    "axis": "code", 
+                    "flag": [
+                        "-v", 
+                        "--verbosity"
+                    ], 
+                    "parameter": {
+                        "dest": "verbosity", 
+                        "help": "logging verbosity level", 
+                        "metavar": "LEVEL"
+                    }
+                }, 
+                "version": {
+                    "flag": [
+                        "--version"
+                    ], 
+                    "parameter": {
+                        "action": "version", 
+                        "version": "%(prog)s"
+                    }
+                }, 
+                "volume": {
+                    "flag": [
+                        "-o", 
+                        "--volume"
+                    ], 
+                    "parameter": {
+                        "dest": "volume", 
+                        "help": "select volume", 
+                        "metavar": "VOL"
+                    }
+                }
+            }, 
+            "section": {
+                "action": [
+                    {
+                        "argument": [
+                            "scan path", 
+                            "recursive", 
+                            "preset", 
+                            "filter", 
+                            "sync", 
+                            "horizon"
+                        ], 
+                        "instruction": {
+                            "help": "display resource information", 
+                            "name": "info"
+                        }
+                    }, 
+                    {
+                        "argument": [
+                            "scan path", 
+                            "volume", 
+                            "profile", 
+                            "preset", 
+                            "recursive", 
+                            "overwrite", 
+                            "filter", 
+                            "sync"
+                        ], 
+                        "instruction": {
+                            "help": "copy resource", 
+                            "name": "copy"
+                        }
+                    }, 
+                    {
+                        "argument": [
+                            "scan path", 
+                            "volume", 
+                            "profile", 
+                            "recursive", 
+                            "overwrite", 
+                            "filter", 
+                            "sync"
+                        ], 
+                        "instruction": {
+                            "help": "symlink resource", 
+                            "name": "symlink"
+                        }
+                    }, 
+                    {
+                        "argument": [
+                            "scan path", 
+                            "volume", 
+                            "profile", 
+                            "preset", 
+                            "recursive", 
+                            "overwrite", 
+                            "filter", 
+                            "sync"
+                        ], 
+                        "instruction": {
+                            "help": "move resource", 
+                            "name": "move"
+                        }
+                    }, 
+                    {
+                        "argument": [
+                            "scan path", 
+                            "recursive", 
+                            "filter"
+                        ], 
+                        "instruction": {
+                            "help": "delete resource", 
+                            "name": "delete"
+                        }
+                    }, 
+                    {
+                        "argument": [
+                            "uris", 
+                            "sync", 
+                            "horizon", 
+                            "genealogy"
+                        ], 
+                        "instruction": {
+                            "help": "get a document", 
+                            "name": "get"
+                        }
+                    }, 
+                    {
+                        "argument": [
+                            "uris", 
+                            "genealogy"
+                        ], 
+                        "instruction": {
+                            "help": "set values on document ontology", 
+                            "name": "set"
+                        }
+                    }, 
+                    {
+                        "argument": [
+                            "uris"
+                        ], 
+                        "instruction": {
+                            "help": "drop document", 
+                            "name": "drop"
+                        }
+                    }, 
+                    {
+                        "argument": [
+                            "scan path", 
+                            "recursive", 
+                            "preset", 
+                            "filter", 
+                            "sync", 
+                            "horizon"
+                        ], 
+                        "instruction": {
+                            "help": "collect information about resources", 
+                            "name": "crawl"
+                        }
+                    }, 
+                    {
+                        "argument": [
+                            "preset", 
+                            "tables", 
+                            "drop on restore"
+                        ], 
+                        "instruction": {
+                            "help": "rebuild database", 
+                            "name": "rebuild"
+                        }
+                    }
+                ], 
+                "instruction": {
+                    "description": "", 
+                    "dest": "action", 
+                    "help": null, 
+                    "metavar": "ACTION", 
+                    "title": "pipeline operations"
+                }
+            }
+        }, 
+        "development": {
+            "global": {
+                "argument": [
+                    "submit", 
+                    "host", 
+                    "debug", 
+                    "threads",
+                    "version", 
+                    "verbosity"
+                ]
+            }, 
+            "instruction": {
+                "description": "Lior Galanti lior.galanti@nyu.edu NYU Center for Genomics & Systems Biology"
+            }, 
+            "namespace": "ns/system/command/default", 
+            "prototype": {
+                "threads": {
+                    "flag": [
+                        "-T", 
+                        "--threads"
+                    ], 
+                    "parameter": {
+                        "dest": "slots", 
+                        "help": "job thread limit",
+                        "metavar": "INT"
+                    }
+                }, 
+                "all": {
+                    "flag": [
+                        "-a", 
+                        "--all"
+                    ], 
+                    "parameter": {
+                        "action": "store_true", 
+                        "default": false, 
+                        "dest": "all", 
+                        "help": "All"
+                    }
+                }, 
+                "compression": {
+                    "flag": [
+                        "-x", 
+                        "--compression"
+                    ], 
+                    "parameter": {
+                        "dest": "compression", 
+                        "help": "compression method", 
+                        "metavar": "FORMAT"
+                    }
+                }, 
+                "crawl": {
+                    "flag": [
+                        "-C", 
+                        "--crawl"
+                    ], 
+                    "parameter": {
+                        "action": "store_true", 
+                        "default": false, 
+                        "dest": "crawl", 
+                        "help": "force rebuilding meta data index for resources"
+                    }
+                }, 
+                "debug": {
+                    "flag": [
+                        "-d", 
+                        "--debug"
+                    ], 
+                    "parameter": {
+                        "action": "store_true", 
+                        "default": false, 
+                        "dest": "debug", 
+                        "help": "only print commands without executing"
+                    }
+                }, 
+                "drop on restore": {
+                    "flag": [
+                        "-D", 
+                        "--drop"
+                    ], 
+                    "parameter": {
+                        "action": "store_true", 
+                        "default": false, 
+                        "dest": "drop on restore", 
+                        "help": "drop table before restoring"
+                    }
+                }, 
+                "filter": {
+                    "flag": [
+                        "--filter"
+                    ], 
+                    "parameter": {
+                        "action": "append", 
+                        "dest": "filter", 
+                        "help": "filter files matching PATTERN", 
+                        "metavar": "PATTERN"
+                    }
+                }, 
+                "genealogy": {
+                    "flag": [
+                        "-g", 
+                        "--genealogy"
+                    ], 
+                    "parameter": {
+                        "dest": "genealogy", 
+                        "help": "dictionary of genealogy elements", 
+                        "metavar": "DICT"
+                    }
+                }, 
+                "horizon": {
+                    "flag": [
+                        "-H", 
+                        "--horizon"
+                    ], 
+                    "parameter": {
+                        "dest": "horizon", 
+                        "help": "sync refreshing horizon", 
+                        "metavar": "SECOND"
+                    }
+                }, 
+                "host": {
+                    "flag": [
+                        "--host"
+                    ], 
+                    "parameter": {
+                        "dest": "host", 
+                        "help": "local host name", 
+                        "metavar": "HOST"
+                    }
+                }, 
+                "kind": {
+                    "flag": [
+                        "-k", 
+                        "--kind"
+                    ], 
+                    "parameter": {
+                        "dest": "kind", 
+                        "help": "select kind", 
+                        "metavar": "KIND"
+                    }
+                }, 
+                "language": {
+                    "axis": "ISO 639-1", 
+                    "flag": [
+                        "-l", 
+                        "--lang"
+                    ], 
+                    "parameter": {
+                        "dest": "language", 
+                        "help": "select language by ISO 639-1 2 letter code", 
+                        "metavar": "CODE"
+                    }
+                }, 
+                "overwrite": {
+                    "flag": [
+                        "-w", 
+                        "--overwrite"
+                    ], 
+                    "parameter": {
+                        "action": "store_true", 
+                        "default": false, 
+                        "dest": "overwrite", 
+                        "help": "overwrite existing files"
+                    }
+                }, 
+                "preset": {
+                    "flag": [
+                        "-s", 
+                        "--preset"
+                    ], 
+                    "parameter": {
+                        "dest": "preset", 
+                        "help": "select preset", 
+                        "metavar": "NAME"
+                    }
+                }, 
+                "profile": {
+                    "flag": [
+                        "-p", 
+                        "--profile"
+                    ], 
+                    "parameter": {
+                        "dest": "profile", 
+                        "help": "select profile", 
+                        "metavar": "PROFILE"
+                    }
+                }, 
+                "recursive": {
+                    "flag": [
+                        "-r", 
+                        "--recursive"
+                    ], 
+                    "parameter": {
+                        "action": "store_true", 
+                        "default": false, 
+                        "dest": "recursive", 
+                        "help": "recurse into directories"
+                    }
+                }, 
+                "scan path": {
+                    "flag": [
+                        "scan path"
+                    ], 
+                    "parameter": {
+                        "help": "file or directory paths to scan", 
+                        "metavar": "PATH", 
+                        "nargs": "*"
+                    }
+                }, 
+                "submit": {
+                    "flag": [
+                        "-S", 
+                        "--submit"
+                    ], 
+                    "parameter": {
+                        "action": "store_true", 
+                        "default": false, 
+                        "dest": "submit", 
+                        "help": "Submit job to queue"
+                    }
+                }, 
+                "sync": {
+                    "flag": [
+                        "-R", 
+                        "--refresh"
+                    ], 
+                    "parameter": {
+                        "action": "store_true", 
+                        "default": false, 
+                        "dest": "sync", 
+                        "help": "synchronize service"
+                    }
+                }, 
+                "tables": {
+                    "flag": [
+                        "tables"
+                    ], 
+                    "parameter": {
+                        "help": "list of tables", 
+                        "metavar": "TABLE", 
+                        "nargs": "*"
+                    }
+                }, 
+                "uris": {
+                    "flag": [
+                        "uris"
+                    ], 
+                    "parameter": {
+                        "help": "list of URIs", 
+                        "metavar": "URI", 
+                        "nargs": "*"
+                    }
+                }, 
+                "verbosity": {
+                    "axis": "code", 
+                    "flag": [
+                        "-v", 
+                        "--verbosity"
+                    ], 
+                    "parameter": {
+                        "dest": "verbosity", 
+                        "help": "logging verbosity level", 
+                        "metavar": "LEVEL"
+                    }
+                }, 
+                "version": {
+                    "flag": [
+                        "--version"
+                    ], 
+                    "parameter": {
+                        "action": "version", 
+                        "version": "%(prog)s"
+                    }
+                }, 
+                "volume": {
+                    "flag": [
+                        "-o", 
+                        "--volume"
+                    ], 
+                    "parameter": {
+                        "dest": "volume", 
+                        "help": "select volume", 
+                        "metavar": "VOL"
+                    }
+                }
+            }, 
+            "section": {
+                "action": [
+                    {
+                        "argument": [
+                            "scan path", 
+                            "recursive", 
+                            "preset", 
+                            "filter", 
+                            "sync", 
+                            "horizon"
+                        ], 
+                        "instruction": {
+                            "help": "display resource information", 
+                            "name": "info"
+                        }
+                    }, 
+                    {
+                        "argument": [
+                            "scan path", 
+                            "volume", 
+                            "profile", 
+                            "preset", 
+                            "recursive", 
+                            "overwrite", 
+                            "filter", 
+                            "sync"
+                        ], 
+                        "instruction": {
+                            "help": "copy resource", 
+                            "name": "copy"
+                        }
+                    }, 
+                    {
+                        "argument": [
+                            "scan path", 
+                            "volume", 
+                            "profile", 
+                            "recursive", 
+                            "overwrite", 
+                            "filter", 
+                            "sync"
+                        ], 
+                        "instruction": {
+                            "help": "symlink resource", 
+                            "name": "symlink"
+                        }
+                    }, 
+                    {
+                        "argument": [
+                            "scan path", 
+                            "volume", 
+                            "profile", 
+                            "preset", 
+                            "recursive", 
+                            "overwrite", 
+                            "filter", 
+                            "sync"
+                        ], 
+                        "instruction": {
+                            "help": "move resource", 
+                            "name": "move"
+                        }
+                    }, 
+                    {
+                        "argument": [
+                            "scan path", 
+                            "recursive", 
+                            "filter"
+                        ], 
+                        "instruction": {
+                            "help": "delete resource", 
+                            "name": "delete"
+                        }
+                    }, 
+                    {
+                        "argument": [
+                            "scan path", 
+                            "volume", 
+                            "profile", 
+                            "recursive", 
+                            "overwrite", 
+                            "filter", 
+                            "sync", 
+                            "compression"
+                        ], 
+                        "instruction": {
+                            "help": "create a compressed tar archive", 
+                            "name": "implode"
+                        }
+                    }, 
+                    {
+                        "argument": [
+                            "scan path", 
+                            "volume", 
+                            "profile", 
+                            "recursive", 
+                            "overwrite", 
+                            "filter", 
+                            "sync", 
+                            "compression"
+                        ], 
+                        "instruction": {
+                            "help": "expand a compressed tar archive", 
+                            "name": "explode"
+                        }
+                    }, 
+                    {
+                        "argument": [
+                            "uris", 
+                            "sync", 
+                            "horizon", 
+                            "genealogy"
+                        ], 
+                        "instruction": {
+                            "help": "get a document", 
+                            "name": "get"
+                        }
+                    }, 
+                    {
+                        "argument": [
+                            "uris", 
+                            "genealogy"
+                        ], 
+                        "instruction": {
+                            "help": "set values on document ontology", 
+                            "name": "set"
+                        }
+                    }, 
+                    {
+                        "argument": [
+                            "uris"
+                        ], 
+                        "instruction": {
+                            "help": "drop document", 
+                            "name": "drop"
+                        }
+                    }, 
+                    {
+                        "argument": [
+                            "scan path", 
+                            "recursive", 
+                            "preset", 
+                            "filter", 
+                            "sync", 
+                            "horizon"
+                        ], 
+                        "instruction": {
+                            "help": "collect information about resources", 
+                            "name": "crawl"
+                        }
+                    }, 
+                    {
+                        "argument": [
+                            "preset", 
+                            "tables", 
+                            "compression"
+                        ], 
+                        "instruction": {
+                            "help": "create a BSON database snapshot", 
+                            "name": "backup"
+                        }
+                    }, 
+                    {
+                        "argument": [
+                            "preset", 
+                            "scan path", 
+                            "drop on restore"
+                        ], 
+                        "instruction": {
+                            "help": "restore database from BSON snapshot", 
+                            "name": "restore"
+                        }
+                    }, 
+                    {
+                        "argument": [
+                            "preset", 
+                            "tables", 
+                            "compression"
+                        ], 
+                        "instruction": {
+                            "help": "create a JSON database snapshot", 
+                            "name": "export"
+                        }
+                    }, 
+                    {
+                        "argument": [
+                            "preset", 
+                            "scan path", 
+                            "drop on restore"
+                        ], 
+                        "instruction": {
+                            "help": "import records from JSON snapshot", 
+                            "name": "import"
+                        }
+                    }, 
+                    {
+                        "argument": [
+                            "preset", 
+                            "tables", 
+                            "drop on restore"
+                        ], 
+                        "instruction": {
+                            "help": "rebuild database", 
+                            "name": "rebuild"
+                        }
+                    }
+                ], 
+                "instruction": {
+                    "description": "", 
+                    "dest": "action", 
+                    "help": null, 
+                    "metavar": "ACTION", 
+                    "title": "pipeline operations"
+                }
+            }
+        }, 
+        "rest": {
+            "global": {
+                "argument": [
+                    "host", 
+                    "version", 
+                    "verbosity"
+                ]
+            }, 
+            "instruction": {
+                "description": "Lior Galanti lior.galanti@nyu.edu NYU Center for Genomics & Systems Biology"
+            }, 
+            "namespace": "ns/system/command/default", 
+            "prototype": {
+                "host": {
+                    "flag": [
+                        "--host"
+                    ], 
+                    "parameter": {
+                        "dest": "host", 
+                        "help": "repository host name", 
+                        "metavar": "HOST"
+                    }
+                }, 
+                "preset": {
+                    "flag": [
+                        "-s", 
+                        "--preset"
+                    ], 
+                    "parameter": {
+                        "dest": "preset", 
+                        "help": "select preset", 
+                        "metavar": "NAME"
+                    }
+                }, 
+                "verbosity": {
+                    "axis": "code", 
+                    "flag": [
+                        "-v", 
+                        "--verbosity"
+                    ], 
+                    "parameter": {
+                        "dest": "verbosity", 
+                        "help": "logging verbosity level", 
+                        "metavar": "LEVEL"
+                    }
+                }, 
+                "version": {
+                    "flag": [
+                        "--version"
+                    ], 
+                    "parameter": {
+                        "action": "version", 
+                        "version": "%(prog)s"
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "command": {
+        "tar": {
+            "binary": "gtar", 
+            "environment": {
+                "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            }
+        }
+    }, 
+    "rule": {
+        "rule/genealogy/volume": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "volume", 
+                            "value": "gamma"
+                        }
+                    ]
+                }
+            ]
+        }
+    }, 
+    "system": {
+        "cores": 8, 
+        "host": "albireo.bio.nyu.edu", 
+        "repository": "mpk"
+    }
+}

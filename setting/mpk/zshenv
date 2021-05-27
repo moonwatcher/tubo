@@ -1,0 +1,6 @@
+#!/bin/zsh
+typeset -U path
+path=(~/.bin /opt/local/tubo/env/bin /usr/local/bin /usr/local/sbin $path)
+export LC_CTYPE=en_US.UTF-8
+export TUBO_HOME=~/.tubo
+export TUBO_TEMP=/volume/babylon/brooklyn/temp

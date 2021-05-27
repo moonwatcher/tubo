@@ -1,0 +1,1230 @@
+{
+    "enumeration": {
+        "content rating": {
+            "default": {
+                "rtng": null
+            }, 
+            "element": {
+                "clean": {
+                    "itunes": "notExplicit", 
+                    "name": "Clean", 
+                    "rtng": 2
+                }, 
+                "explicit": {
+                    "itunes": "explicit", 
+                    "name": "Explicit", 
+                    "rtng": 4
+                }, 
+                "none": {
+                    "name": "None", 
+                    "rtng": 0
+                }
+            }, 
+            "synonym": [
+                "rtng", 
+                "itunes"
+            ]
+        }, 
+        "frame rate": {
+            "default": {
+                "long": null
+            }, 
+            "element": {
+                "film": {
+                    "float": 24.0, 
+                    "long": "film", 
+                    "name": "FILM 24"
+                }, 
+                "ntsc": {
+                    "float": 23.976023976023978, 
+                    "long": "ntsc", 
+                    "name": "NTSC FILM 23.976"
+                }, 
+                "pal": {
+                    "float": 25.0, 
+                    "long": "pal", 
+                    "name": "PAL 25"
+                }, 
+                "tv": {
+                    "float": 29.97002997002997, 
+                    "long": "tv", 
+                    "name": "NTSC Television 29.97"
+                }
+            }, 
+            "synonym": [
+                "long"
+            ]
+        }, 
+        "genre": {
+            "default": {
+                "ID3": null, 
+                "iTMF": null, 
+                "mediainfo": null
+            }, 
+            "element": [
+                {
+                    "ID3": 0, 
+                    "iTMF": 1, 
+                    "key": 1, 
+                    "mediainfo": "Genre_000", 
+                    "name": "Blues"
+                }, 
+                {
+                    "ID3": 1, 
+                    "iTMF": 2, 
+                    "key": 2, 
+                    "mediainfo": "Genre_001", 
+                    "name": "Classic Rock"
+                }, 
+                {
+                    "ID3": 2, 
+                    "iTMF": 3, 
+                    "key": 3, 
+                    "mediainfo": "Genre_002", 
+                    "name": "Country"
+                }, 
+                {
+                    "ID3": 3, 
+                    "iTMF": 4, 
+                    "key": 4, 
+                    "mediainfo": "Genre_003", 
+                    "name": "Dance"
+                }, 
+                {
+                    "ID3": 4, 
+                    "iTMF": 5, 
+                    "key": 5, 
+                    "mediainfo": "Genre_004", 
+                    "name": "Disco"
+                }, 
+                {
+                    "ID3": 5, 
+                    "iTMF": 6, 
+                    "key": 6, 
+                    "mediainfo": "Genre_005", 
+                    "name": "Funk"
+                }, 
+                {
+                    "ID3": 6, 
+                    "iTMF": 7, 
+                    "key": 7, 
+                    "mediainfo": "Genre_006", 
+                    "name": "Grunge"
+                }, 
+                {
+                    "ID3": 7, 
+                    "iTMF": 8, 
+                    "key": 8, 
+                    "mediainfo": "Genre_007", 
+                    "name": "Hip Hop"
+                }, 
+                {
+                    "ID3": 8, 
+                    "iTMF": 9, 
+                    "key": 9, 
+                    "mediainfo": "Genre_008", 
+                    "name": "Jazz"
+                }, 
+                {
+                    "ID3": 9, 
+                    "iTMF": 10, 
+                    "key": 10, 
+                    "mediainfo": "Genre_009", 
+                    "name": "Metal"
+                }, 
+                {
+                    "ID3": 10, 
+                    "iTMF": 11, 
+                    "key": 11, 
+                    "mediainfo": "Genre_010", 
+                    "name": "New Age"
+                }, 
+                {
+                    "ID3": 11, 
+                    "iTMF": 12, 
+                    "key": 12, 
+                    "mediainfo": "Genre_011", 
+                    "name": "Oldies"
+                }, 
+                {
+                    "ID3": 12, 
+                    "iTMF": 13, 
+                    "key": 13, 
+                    "mediainfo": "Genre_012", 
+                    "name": "Other"
+                }, 
+                {
+                    "ID3": 13, 
+                    "iTMF": 14, 
+                    "key": 14, 
+                    "mediainfo": "Genre_013", 
+                    "name": "Pop"
+                }, 
+                {
+                    "ID3": 14, 
+                    "iTMF": 15, 
+                    "key": 15, 
+                    "mediainfo": "Genre_014", 
+                    "name": "R&B"
+                }, 
+                {
+                    "ID3": 15, 
+                    "iTMF": 16, 
+                    "key": 16, 
+                    "mediainfo": "Genre_015", 
+                    "name": "Rap"
+                }, 
+                {
+                    "ID3": 16, 
+                    "iTMF": 17, 
+                    "key": 17, 
+                    "mediainfo": "Genre_016", 
+                    "name": "Reggae"
+                }, 
+                {
+                    "ID3": 17, 
+                    "iTMF": 18, 
+                    "key": 18, 
+                    "mediainfo": "Genre_017", 
+                    "name": "Rock"
+                }, 
+                {
+                    "ID3": 18, 
+                    "iTMF": 19, 
+                    "key": 19, 
+                    "mediainfo": "Genre_018", 
+                    "name": "Techno"
+                }, 
+                {
+                    "ID3": 19, 
+                    "iTMF": 20, 
+                    "key": 20, 
+                    "mediainfo": "Genre_019", 
+                    "name": "Industrial"
+                }, 
+                {
+                    "ID3": 20, 
+                    "iTMF": 21, 
+                    "key": 21, 
+                    "mediainfo": "Genre_020", 
+                    "name": "Alternative"
+                }, 
+                {
+                    "ID3": 21, 
+                    "iTMF": 22, 
+                    "key": 22, 
+                    "mediainfo": "Genre_021", 
+                    "name": "Ska"
+                }, 
+                {
+                    "ID3": 22, 
+                    "iTMF": 23, 
+                    "key": 23, 
+                    "mediainfo": "Genre_022", 
+                    "name": "Death Metal"
+                }, 
+                {
+                    "ID3": 23, 
+                    "iTMF": 24, 
+                    "key": 24, 
+                    "mediainfo": "Genre_023", 
+                    "name": "Pranks"
+                }, 
+                {
+                    "ID3": 24, 
+                    "iTMF": 25, 
+                    "key": 25, 
+                    "mediainfo": "Genre_024", 
+                    "name": "Soundtrack"
+                }, 
+                {
+                    "ID3": 25, 
+                    "iTMF": 26, 
+                    "key": 26, 
+                    "mediainfo": "Genre_025", 
+                    "name": "Euro Techno"
+                }, 
+                {
+                    "ID3": 26, 
+                    "iTMF": 27, 
+                    "key": 27, 
+                    "mediainfo": "Genre_026", 
+                    "name": "Ambient"
+                }, 
+                {
+                    "ID3": 27, 
+                    "iTMF": 28, 
+                    "key": 28, 
+                    "mediainfo": "Genre_027", 
+                    "name": "Trip Hop"
+                }, 
+                {
+                    "ID3": 28, 
+                    "iTMF": 29, 
+                    "key": 29, 
+                    "mediainfo": "Genre_028", 
+                    "name": "Vocal"
+                }, 
+                {
+                    "ID3": 29, 
+                    "iTMF": 30, 
+                    "key": 30, 
+                    "mediainfo": "Genre_029", 
+                    "name": "Jazz Funk"
+                }, 
+                {
+                    "ID3": 30, 
+                    "iTMF": 31, 
+                    "key": 31, 
+                    "mediainfo": "Genre_030", 
+                    "name": "Fusion"
+                }, 
+                {
+                    "ID3": 31, 
+                    "iTMF": 32, 
+                    "key": 32, 
+                    "mediainfo": "Genre_031", 
+                    "name": "Trance"
+                }, 
+                {
+                    "ID3": 32, 
+                    "iTMF": 33, 
+                    "key": 33, 
+                    "mediainfo": "Genre_032", 
+                    "name": "Classical"
+                }, 
+                {
+                    "ID3": 33, 
+                    "iTMF": 34, 
+                    "key": 34, 
+                    "mediainfo": "Genre_033", 
+                    "name": "Instrumental"
+                }, 
+                {
+                    "ID3": 34, 
+                    "iTMF": 35, 
+                    "key": 35, 
+                    "mediainfo": "Genre_034", 
+                    "name": "Acid"
+                }, 
+                {
+                    "ID3": 35, 
+                    "iTMF": 36, 
+                    "key": 36, 
+                    "mediainfo": "Genre_035", 
+                    "name": "House"
+                }, 
+                {
+                    "ID3": 36, 
+                    "iTMF": 37, 
+                    "key": 37, 
+                    "mediainfo": "Genre_036", 
+                    "name": "Game"
+                }, 
+                {
+                    "ID3": 37, 
+                    "iTMF": 38, 
+                    "key": 38, 
+                    "mediainfo": "Genre_037", 
+                    "name": "Sound Clip"
+                }, 
+                {
+                    "ID3": 38, 
+                    "iTMF": 39, 
+                    "key": 39, 
+                    "mediainfo": "Genre_038", 
+                    "name": "Gospel"
+                }, 
+                {
+                    "ID3": 39, 
+                    "iTMF": 40, 
+                    "key": 40, 
+                    "mediainfo": "Genre_039", 
+                    "name": "Noise"
+                }, 
+                {
+                    "ID3": 40, 
+                    "iTMF": 41, 
+                    "key": 41, 
+                    "mediainfo": "Genre_040", 
+                    "name": "Alternrock"
+                }, 
+                {
+                    "ID3": 41, 
+                    "iTMF": 42, 
+                    "key": 42, 
+                    "mediainfo": "Genre_041", 
+                    "name": "Bass"
+                }, 
+                {
+                    "ID3": 42, 
+                    "iTMF": 43, 
+                    "key": 43, 
+                    "mediainfo": "Genre_042", 
+                    "name": "Soul"
+                }, 
+                {
+                    "ID3": 43, 
+                    "iTMF": 44, 
+                    "key": 44, 
+                    "mediainfo": "Genre_043", 
+                    "name": "Punk"
+                }, 
+                {
+                    "ID3": 44, 
+                    "iTMF": 45, 
+                    "key": 45, 
+                    "mediainfo": "Genre_044", 
+                    "name": "Space"
+                }, 
+                {
+                    "ID3": 45, 
+                    "iTMF": 46, 
+                    "key": 46, 
+                    "mediainfo": "Genre_045", 
+                    "name": "Meditative"
+                }, 
+                {
+                    "ID3": 46, 
+                    "iTMF": 47, 
+                    "key": 47, 
+                    "mediainfo": "Genre_046", 
+                    "name": "Instrumental Pop"
+                }, 
+                {
+                    "ID3": 47, 
+                    "iTMF": 48, 
+                    "key": 48, 
+                    "mediainfo": "Genre_047", 
+                    "name": "Instrumental Rock"
+                }, 
+                {
+                    "ID3": 48, 
+                    "iTMF": 49, 
+                    "key": 49, 
+                    "mediainfo": "Genre_048", 
+                    "name": "Ethnic"
+                }, 
+                {
+                    "ID3": 49, 
+                    "iTMF": 50, 
+                    "key": 50, 
+                    "mediainfo": "Genre_049", 
+                    "name": "Gothic"
+                }, 
+                {
+                    "ID3": 50, 
+                    "iTMF": 51, 
+                    "key": 51, 
+                    "mediainfo": "Genre_050", 
+                    "name": "Darkwave"
+                }, 
+                {
+                    "ID3": 51, 
+                    "iTMF": 52, 
+                    "key": 52, 
+                    "mediainfo": "Genre_051", 
+                    "name": "Techno Industrial"
+                }, 
+                {
+                    "ID3": 52, 
+                    "iTMF": 53, 
+                    "key": 53, 
+                    "mediainfo": "Genre_052", 
+                    "name": "Electronic"
+                }, 
+                {
+                    "ID3": 53, 
+                    "iTMF": 54, 
+                    "key": 54, 
+                    "mediainfo": "Genre_053", 
+                    "name": "Pop Folk"
+                }, 
+                {
+                    "ID3": 54, 
+                    "iTMF": 55, 
+                    "key": 55, 
+                    "mediainfo": "Genre_054", 
+                    "name": "Eurodance"
+                }, 
+                {
+                    "ID3": 55, 
+                    "iTMF": 56, 
+                    "key": 56, 
+                    "mediainfo": "Genre_055", 
+                    "name": "Dream"
+                }, 
+                {
+                    "ID3": 56, 
+                    "iTMF": 57, 
+                    "key": 57, 
+                    "mediainfo": "Genre_056", 
+                    "name": "Southern Rock"
+                }, 
+                {
+                    "ID3": 57, 
+                    "iTMF": 58, 
+                    "key": 58, 
+                    "mediainfo": "Genre_057", 
+                    "name": "Comedy"
+                }, 
+                {
+                    "ID3": 58, 
+                    "iTMF": 59, 
+                    "key": 59, 
+                    "mediainfo": "Genre_058", 
+                    "name": "Cult"
+                }, 
+                {
+                    "ID3": 59, 
+                    "iTMF": 60, 
+                    "key": 60, 
+                    "mediainfo": "Genre_059", 
+                    "name": "Gangsta"
+                }, 
+                {
+                    "ID3": 60, 
+                    "iTMF": 61, 
+                    "key": 61, 
+                    "mediainfo": "Genre_060", 
+                    "name": "Top 40"
+                }, 
+                {
+                    "ID3": 61, 
+                    "iTMF": 62, 
+                    "key": 62, 
+                    "mediainfo": "Genre_061", 
+                    "name": "Christian Rap"
+                }, 
+                {
+                    "ID3": 62, 
+                    "iTMF": 63, 
+                    "key": 63, 
+                    "mediainfo": "Genre_062", 
+                    "name": "Pop Funk"
+                }, 
+                {
+                    "ID3": 63, 
+                    "iTMF": 64, 
+                    "key": 64, 
+                    "mediainfo": "Genre_063", 
+                    "name": "Jungle"
+                }, 
+                {
+                    "ID3": 64, 
+                    "iTMF": 65, 
+                    "key": 65, 
+                    "mediainfo": "Genre_064", 
+                    "name": "Native American"
+                }, 
+                {
+                    "ID3": 65, 
+                    "iTMF": 66, 
+                    "key": 66, 
+                    "mediainfo": "Genre_065", 
+                    "name": "Cabaret"
+                }, 
+                {
+                    "ID3": 66, 
+                    "iTMF": 67, 
+                    "key": 67, 
+                    "mediainfo": "Genre_066", 
+                    "name": "New Wave"
+                }, 
+                {
+                    "ID3": 67, 
+                    "iTMF": 68, 
+                    "key": 68, 
+                    "mediainfo": "Genre_067", 
+                    "name": "Psychedelic"
+                }, 
+                {
+                    "ID3": 68, 
+                    "iTMF": 69, 
+                    "key": 69, 
+                    "mediainfo": "Genre_068", 
+                    "name": "Rave"
+                }, 
+                {
+                    "ID3": 69, 
+                    "iTMF": 70, 
+                    "key": 70, 
+                    "mediainfo": "Genre_069", 
+                    "name": "Showtunes"
+                }, 
+                {
+                    "ID3": 70, 
+                    "iTMF": 71, 
+                    "key": 71, 
+                    "mediainfo": "Genre_070", 
+                    "name": "Trailer"
+                }, 
+                {
+                    "ID3": 71, 
+                    "iTMF": 72, 
+                    "key": 72, 
+                    "mediainfo": "Genre_071", 
+                    "name": "Lo Fi"
+                }, 
+                {
+                    "ID3": 72, 
+                    "iTMF": 73, 
+                    "key": 73, 
+                    "mediainfo": "Genre_072", 
+                    "name": "Tribal"
+                }, 
+                {
+                    "ID3": 73, 
+                    "iTMF": 74, 
+                    "key": 74, 
+                    "mediainfo": "Genre_073", 
+                    "name": "Acid Punk"
+                }, 
+                {
+                    "ID3": 74, 
+                    "iTMF": 75, 
+                    "key": 75, 
+                    "mediainfo": "Genre_074", 
+                    "name": "Acid Jazz"
+                }, 
+                {
+                    "ID3": 75, 
+                    "iTMF": 76, 
+                    "key": 76, 
+                    "mediainfo": "Genre_075", 
+                    "name": "Polka"
+                }, 
+                {
+                    "ID3": 76, 
+                    "iTMF": 77, 
+                    "key": 77, 
+                    "mediainfo": "Genre_076", 
+                    "name": "Retro"
+                }, 
+                {
+                    "ID3": 77, 
+                    "iTMF": 78, 
+                    "key": 78, 
+                    "mediainfo": "Genre_077", 
+                    "name": "Musical"
+                }, 
+                {
+                    "ID3": 78, 
+                    "iTMF": 79, 
+                    "key": 79, 
+                    "mediainfo": "Genre_078", 
+                    "name": "Rock and Roll"
+                }, 
+                {
+                    "ID3": 79, 
+                    "iTMF": 80, 
+                    "key": 80, 
+                    "mediainfo": "Genre_079", 
+                    "name": "Hard Rock"
+                }, 
+                {
+                    "ID3": 80, 
+                    "iTMF": 81, 
+                    "key": 81, 
+                    "mediainfo": "Genre_080", 
+                    "name": "Folk"
+                }, 
+                {
+                    "ID3": 81, 
+                    "iTMF": 82, 
+                    "key": 82, 
+                    "mediainfo": "Genre_081", 
+                    "name": "Folk-Rock"
+                }, 
+                {
+                    "ID3": 82, 
+                    "iTMF": 83, 
+                    "key": 83, 
+                    "mediainfo": "Genre_082", 
+                    "name": "National Folk"
+                }, 
+                {
+                    "ID3": 83, 
+                    "iTMF": 84, 
+                    "key": 84, 
+                    "mediainfo": "Genre_083", 
+                    "name": "Swing"
+                }, 
+                {
+                    "ID3": 84, 
+                    "iTMF": 85, 
+                    "key": 85, 
+                    "mediainfo": "Genre_084", 
+                    "name": "Fast Fusion"
+                }, 
+                {
+                    "ID3": 85, 
+                    "iTMF": 86, 
+                    "key": 86, 
+                    "mediainfo": "Genre_085", 
+                    "name": "Bebob"
+                }, 
+                {
+                    "ID3": 86, 
+                    "iTMF": 87, 
+                    "key": 87, 
+                    "mediainfo": "Genre_086", 
+                    "name": "Latin"
+                }, 
+                {
+                    "ID3": 87, 
+                    "iTMF": 88, 
+                    "key": 88, 
+                    "mediainfo": "Genre_087", 
+                    "name": "Revival"
+                }, 
+                {
+                    "ID3": 88, 
+                    "iTMF": 89, 
+                    "key": 89, 
+                    "mediainfo": "Genre_088", 
+                    "name": "Celtic"
+                }, 
+                {
+                    "ID3": 89, 
+                    "iTMF": 90, 
+                    "key": 90, 
+                    "mediainfo": "Genre_089", 
+                    "name": "Bluegrass"
+                }, 
+                {
+                    "ID3": 90, 
+                    "iTMF": 91, 
+                    "key": 91, 
+                    "mediainfo": "Genre_090", 
+                    "name": "Avantgarde"
+                }, 
+                {
+                    "ID3": 91, 
+                    "iTMF": 92, 
+                    "key": 92, 
+                    "mediainfo": "Genre_091", 
+                    "name": "Gothic Rock"
+                }, 
+                {
+                    "ID3": 92, 
+                    "iTMF": 93, 
+                    "key": 93, 
+                    "mediainfo": "Genre_092", 
+                    "name": "Progressive Rock"
+                }, 
+                {
+                    "ID3": 93, 
+                    "iTMF": 94, 
+                    "key": 94, 
+                    "mediainfo": "Genre_093", 
+                    "name": "Psychedelic Rock"
+                }, 
+                {
+                    "ID3": 94, 
+                    "iTMF": 95, 
+                    "key": 95, 
+                    "mediainfo": "Genre_094", 
+                    "name": "Symphonic Rock"
+                }, 
+                {
+                    "ID3": 95, 
+                    "iTMF": 96, 
+                    "key": 96, 
+                    "mediainfo": "Genre_095", 
+                    "name": "Slow Rock"
+                }, 
+                {
+                    "ID3": 96, 
+                    "iTMF": 97, 
+                    "key": 97, 
+                    "mediainfo": "Genre_096", 
+                    "name": "Big Band"
+                }, 
+                {
+                    "ID3": 97, 
+                    "iTMF": 98, 
+                    "key": 98, 
+                    "mediainfo": "Genre_097", 
+                    "name": "Chorus"
+                }, 
+                {
+                    "ID3": 98, 
+                    "iTMF": 99, 
+                    "key": 99, 
+                    "mediainfo": "Genre_098", 
+                    "name": "Easy Listening"
+                }, 
+                {
+                    "ID3": 99, 
+                    "iTMF": 100, 
+                    "key": 100, 
+                    "mediainfo": "Genre_099", 
+                    "name": "Acoustic"
+                }, 
+                {
+                    "ID3": 100, 
+                    "iTMF": 101, 
+                    "key": 101, 
+                    "mediainfo": "Genre_100", 
+                    "name": "Humor"
+                }, 
+                {
+                    "ID3": 101, 
+                    "iTMF": 102, 
+                    "key": 102, 
+                    "mediainfo": "Genre_101", 
+                    "name": "Speech"
+                }, 
+                {
+                    "ID3": 102, 
+                    "iTMF": 103, 
+                    "key": 103, 
+                    "mediainfo": "Genre_102", 
+                    "name": "Chason"
+                }, 
+                {
+                    "ID3": 103, 
+                    "iTMF": 104, 
+                    "key": 104, 
+                    "mediainfo": "Genre_103", 
+                    "name": "Opera"
+                }, 
+                {
+                    "ID3": 104, 
+                    "iTMF": 105, 
+                    "key": 105, 
+                    "mediainfo": "Genre_104", 
+                    "name": "Chamber Music"
+                }, 
+                {
+                    "ID3": 105, 
+                    "iTMF": 106, 
+                    "key": 106, 
+                    "mediainfo": "Genre_105", 
+                    "name": "Sonata"
+                }, 
+                {
+                    "ID3": 106, 
+                    "iTMF": 107, 
+                    "key": 107, 
+                    "mediainfo": "Genre_106", 
+                    "name": "Symphony"
+                }, 
+                {
+                    "ID3": 107, 
+                    "iTMF": 108, 
+                    "key": 108, 
+                    "mediainfo": "Genre_107", 
+                    "name": "Booty Bass"
+                }, 
+                {
+                    "ID3": 108, 
+                    "iTMF": 109, 
+                    "key": 109, 
+                    "mediainfo": "Genre_108", 
+                    "name": "Primus"
+                }, 
+                {
+                    "ID3": 109, 
+                    "iTMF": 110, 
+                    "key": 110, 
+                    "mediainfo": "Genre_109", 
+                    "name": "Porn Groove"
+                }, 
+                {
+                    "ID3": 110, 
+                    "iTMF": 111, 
+                    "key": 111, 
+                    "mediainfo": "Genre_110", 
+                    "name": "Satire"
+                }, 
+                {
+                    "ID3": 111, 
+                    "iTMF": 112, 
+                    "key": 112, 
+                    "mediainfo": "Genre_111", 
+                    "name": "Slow Jam"
+                }, 
+                {
+                    "ID3": 112, 
+                    "iTMF": 113, 
+                    "key": 113, 
+                    "mediainfo": "Genre_112", 
+                    "name": "Club"
+                }, 
+                {
+                    "ID3": 113, 
+                    "iTMF": 114, 
+                    "key": 114, 
+                    "mediainfo": "Genre_113", 
+                    "name": "Tango"
+                }, 
+                {
+                    "ID3": 114, 
+                    "iTMF": 115, 
+                    "key": 115, 
+                    "mediainfo": "Genre_114", 
+                    "name": "Samba"
+                }, 
+                {
+                    "ID3": 115, 
+                    "iTMF": 116, 
+                    "key": 116, 
+                    "mediainfo": "Genre_115", 
+                    "name": "Folklore"
+                }, 
+                {
+                    "ID3": 116, 
+                    "iTMF": 117, 
+                    "key": 117, 
+                    "mediainfo": "Genre_116", 
+                    "name": "Ballad"
+                }, 
+                {
+                    "ID3": 117, 
+                    "iTMF": 118, 
+                    "key": 118, 
+                    "mediainfo": "Genre_117", 
+                    "name": "Power Ballad"
+                }, 
+                {
+                    "ID3": 118, 
+                    "iTMF": 119, 
+                    "key": 119, 
+                    "mediainfo": "Genre_118", 
+                    "name": "Rhythmic Soul"
+                }, 
+                {
+                    "ID3": 119, 
+                    "iTMF": 120, 
+                    "key": 120, 
+                    "mediainfo": "Genre_119", 
+                    "name": "Freestyle"
+                }, 
+                {
+                    "ID3": 120, 
+                    "iTMF": 121, 
+                    "key": 121, 
+                    "mediainfo": "Genre_120", 
+                    "name": "Duet"
+                }, 
+                {
+                    "ID3": 121, 
+                    "iTMF": 122, 
+                    "key": 122, 
+                    "mediainfo": "Genre_121", 
+                    "name": "Punk Rock"
+                }, 
+                {
+                    "ID3": 122, 
+                    "iTMF": 123, 
+                    "key": 123, 
+                    "mediainfo": "Genre_122", 
+                    "name": "Drum Solo"
+                }, 
+                {
+                    "ID3": 123, 
+                    "iTMF": 124, 
+                    "key": 124, 
+                    "mediainfo": "Genre_123", 
+                    "name": "A capella"
+                }, 
+                {
+                    "ID3": 124, 
+                    "iTMF": 125, 
+                    "key": 125, 
+                    "mediainfo": "Genre_124", 
+                    "name": "Euro-House"
+                }, 
+                {
+                    "ID3": 125, 
+                    "iTMF": 126, 
+                    "key": 126, 
+                    "mediainfo": "Genre_125", 
+                    "name": "Dance Hall"
+                }
+            ], 
+            "synonym": [
+                "mediainfo"
+            ]
+        }, 
+        "itunes account type": {
+            "default": {
+                "akID": null
+            }, 
+            "element": {
+                "aol": {
+                    "akID": 1, 
+                    "name": "AOL"
+                }, 
+                "itunes": {
+                    "akID": 0, 
+                    "name": "iTunes"
+                }
+            }, 
+            "synonym": [
+                "akID"
+            ]
+        }, 
+        "itunmovi": {
+            "default": {
+                "plist": null
+            }, 
+            "element": {
+                "cast": {
+                    "name": "Cast", 
+                    "plist": "cast"
+                }, 
+                "codirectors": {
+                    "name": "Codirectors", 
+                    "plist": "codirectors"
+                }, 
+                "directors": {
+                    "name": "Directors", 
+                    "plist": "directors"
+                }, 
+                "producers": {
+                    "name": "Producers", 
+                    "plist": "producers"
+                }, 
+                "screenwriters": {
+                    "name": "Screenwriters", 
+                    "plist": "screenwriters"
+                }, 
+                "studio": {
+                    "name": "Studio", 
+                    "plist": "studio"
+                }
+            }, 
+            "synonym": [
+                "plist"
+            ]
+        }, 
+        "kind": {
+            "element": {
+                "aac": {
+                    "container": "RawAudio", 
+                    "localized": true, 
+                    "name": "AAC raw audio file"
+                }, 
+                "ac3": {
+                    "container": "RawAudio", 
+                    "localized": true, 
+                    "name": "AC-3 raw audio"
+                }, 
+                "ass": {
+                    "container": "Subtitles", 
+                    "localized": true, 
+                    "name": "ASS subtitle file"
+                }, 
+                "avi": {
+                    "container": "avi", 
+                    "localized": false, 
+                    "name": "AVI video file"
+                }, 
+                "chp": {
+                    "container": "TableOfContent", 
+                    "localized": true, 
+                    "name": "OGG chapter file"
+                }, 
+                "dts": {
+                    "container": "RawAudio", 
+                    "localized": true, 
+                    "name": "DTS raw audio"
+                }, 
+                "flac": {
+                    "container": "RawAudio", 
+                    "localized": true, 
+                    "name": "FLAC audio file"
+                }, 
+                "jpg": {
+                    "container": "Image", 
+                    "localized": true, 
+                    "name": "JPEG image file"
+                }, 
+                "json": {
+                    "container": "json", 
+                    "localized": true, 
+                    "name": "JSON document"
+                }, 
+                "m4a": {
+                    "container": "MP4", 
+                    "localized": false, 
+                    "name": "MPEG-4 audio file"
+                }, 
+                "m4v": {
+                    "container": "MP4", 
+                    "localized": false, 
+                    "name": "MPEG-4 video file"
+                }, 
+                "mkv": {
+                    "container": "Matroska", 
+                    "localized": false, 
+                    "name": "Matroska video file"
+                }, 
+                "mp3": {
+                    "container": "RawAudio", 
+                    "localized": true, 
+                    "name": "MP3 audio file"
+                }, 
+                "ogg": {
+                    "container": "RawAudio", 
+                    "localized": true, 
+                    "name": "Vorbis audio file"
+                }, 
+                "png": {
+                    "container": "Image", 
+                    "localized": true, 
+                    "name": "PNG image file"
+                }, 
+                "srt": {
+                    "container": "Subtitles", 
+                    "localized": true, 
+                    "name": "SRT subtitles file"
+                }
+            }
+        }, 
+        "media kind": {
+            "default": {
+                "stik": null
+            }, 
+            "element": [
+                {
+                    "key": 0, 
+                    "name": "Home Video", 
+                    "stik": 0
+                }, 
+                {
+                    "key": 1, 
+                    "name": "Music", 
+                    "stik": 1
+                }, 
+                {
+                    "key": 10, 
+                    "name": "TV Show", 
+                    "stik": 10
+                }, 
+                {
+                    "key": 101, 
+                    "name": "Genre"
+                }, 
+                {
+                    "key": 102, 
+                    "name": "Network"
+                }, 
+                {
+                    "key": 103, 
+                    "name": "Production Company"
+                }, 
+                {
+                    "key": 104, 
+                    "name": "Collection"
+                }, 
+                {
+                    "key": 11, 
+                    "name": "Booklet", 
+                    "stik": 11
+                }, 
+                {
+                    "key": 14, 
+                    "name": "Ringtone", 
+                    "stik": 14
+                }, 
+                {
+                    "key": 2, 
+                    "name": "Audio Book", 
+                    "stik": 2
+                }, 
+                {
+                    "key": 21, 
+                    "name": "Podcast", 
+                    "stik": 21
+                }, 
+                {
+                    "key": 23, 
+                    "name": "iTunes U", 
+                    "stik": 23
+                }, 
+                {
+                    "key": 6, 
+                    "name": "Music Video", 
+                    "stik": 6
+                }, 
+                {
+                    "key": 9, 
+                    "name": "Movie", 
+                    "stik": 9
+                }
+            ]
+        }, 
+        "mediainfo stream type": {
+            "default": {
+                "mediainfo": null
+            }, 
+            "element": {
+                "audio": {
+                    "mediainfo": "Audio", 
+                    "name": "Audio", 
+                    "namespace": "ns/medium/resource/stream/audio"
+                }, 
+                "general": {
+                    "mediainfo": "General", 
+                    "name": "General", 
+                    "namespace": "ns/medium/resource/meta"
+                }, 
+                "image": {
+                    "mediainfo": "Image", 
+                    "name": "Image", 
+                    "namespace": "ns/medium/resource/stream/image"
+                }, 
+                "menu": {
+                    "mediainfo": "Menu", 
+                    "name": "Menu", 
+                    "namespace": null
+                }, 
+                "text": {
+                    "mediainfo": "Text", 
+                    "name": "Text", 
+                    "namespace": "ns/medium/resource/stream/text"
+                }, 
+                "video": {
+                    "mediainfo": "Video", 
+                    "name": "Video", 
+                    "namespace": "ns/medium/resource/stream/video"
+                }
+            }, 
+            "synonym": [
+                "mediainfo"
+            ]
+        }, 
+        "stream kind": {
+            "element": {
+                "audio": {
+                    "name": "Audio", 
+                    "namespace": "ns/medium/resource/stream/audio"
+                }, 
+                "caption": {
+                    "name": "Caption", 
+                    "namespace": "ns/medium/resource/stream/text"
+                }, 
+                "image": {
+                    "name": "Image", 
+                    "namespace": "ns/medium/resource/stream/image"
+                }, 
+                "menu": {
+                    "name": "Menu", 
+                    "namespace": "ns/medium/resource/stream/text"
+                }, 
+                "preview": {
+                    "name": "Preview", 
+                    "namespace": "ns/medium/resource/stream/video"
+                }, 
+                "video": {
+                    "name": "Video", 
+                    "namespace": "ns/medium/resource/stream/video"
+                }
+            }
+        }
+    }
+}

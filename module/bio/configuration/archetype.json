@@ -1,0 +1,770 @@
+{
+    "archetype": {
+        "average phred score distribution": {
+            "plural": true, 
+            "type": "integer"
+        }, 
+        "average phred score max": {
+            "type": "float"
+        }, 
+        "average phred score mean": {
+            "type": "float"
+        }, 
+        "average phred score min": {
+            "type": "float"
+        }, 
+        "average phred score report": {
+            "namespace": "ns/medium/average/phred/score/report", 
+            "type": "object"
+        }, 
+        "average phred score sum": {
+            "type": "float"
+        }, 
+        "barcode": {
+            "description": "A barcode is a unique 6 or 8 basepair sequence that allows for the multiplexing of sequencing libraries into a single pool. The barcode allows for the parsing of the sequencing libraries in the data analysis stage of the sequencing pipeline.", 
+            "namespace": "ns/knowledge/barcode", 
+            "type": "object"
+        }, 
+        "barcode cycle offset": {
+            "description": "The cycle within the nibble that the barcode begins on. The standard position is the first nucleotide within the position but this can vary with custom made barcodes.", 
+            "type": "integer"
+        }, 
+        "barcode home uri": {
+            "type": "string"
+        }, 
+        "barcode id": {
+            "description": "The interally generated unique identifier for a barcode.", 
+            "type": "integer"
+        }, 
+        "barcode index": {
+            "type": "integer"
+        }, 
+        "barcode knowledge uri": {
+            "type": "string"
+        }, 
+        "barcode length": {
+            "type": "integer"
+        }, 
+        "barcode mismatch": {
+            "description": "This number identifies how many mismatches to the barcode sequence are allowed during data analysis. 1 is the default.", 
+            "type": "integer"
+        }, 
+        "barcode name": {
+            "description": "The identifier of a specific barcode. It can be provided by the manufacuter or custom made by the researcher (ie N501, 1, etc.).", 
+            "type": "string"
+        }, 
+        "barcode nibble": {
+            "description": "The nibble number where the barcode can be found.", 
+            "type": "integer"
+        }, 
+        "barcode pattern": {
+            "type": "string"
+        }, 
+        "barcode reverse complement": {
+            "type": "boolean"
+        }, 
+        "barcode sequence": {
+            "description": "The unique 6 to 8 basepair nucleotide (ATCG) sequence of the barcode.", 
+            "type": "string"
+        }, 
+        "barcode set": {
+            "description": "The name of the a specific set or collection of barcodes commercially bought or prepared by a researcher.", 
+            "type": "string"
+        }, 
+        "barcode source": {
+            "description": "The company or preparator of the barcodes.", 
+            "type": "string"
+        }, 
+        "barcode uuid": {
+            "type": "string"
+        }, 
+        "barcodes": {
+            "namespace": "ns/knowledge/barcode", 
+            "plural": true, 
+            "single": "barcode", 
+            "type": "object"
+        }, 
+        "basecall implementation": {
+            "type": "string"
+        }, 
+        "bcl2fastq adapter sequence": {
+            "type": "string"
+        }, 
+        "bcl2fastq adapter stringency": {
+            "type": "float"
+        }, 
+        "bcl2fastq fastq cluster count": {
+            "type": "integer"
+        }, 
+        "bcl2fastq filter dir": {
+            "type": "string"
+        }, 
+        "bcl2fastq flowcell id": {
+            "type": "string"
+        }, 
+        "bcl2fastq ignore missing bcl": {
+            "type": "boolean"
+        }, 
+        "bcl2fastq ignore missing control": {
+            "type": "boolean"
+        }, 
+        "bcl2fastq ignore missing stats": {
+            "type": "boolean"
+        }, 
+        "bcl2fastq input dir": {
+            "type": "string"
+        }, 
+        "bcl2fastq intensities dir": {
+            "type": "string"
+        }, 
+        "bcl2fastq mismatches": {
+            "type": "integer"
+        }, 
+        "bcl2fastq no eamss": {
+            "type": "boolean"
+        }, 
+        "bcl2fastq output dir": {
+            "type": "string"
+        }, 
+        "bcl2fastq positions dir": {
+            "type": "string"
+        }, 
+        "bcl2fastq positions format": {
+            "type": "string"
+        }, 
+        "bcl2fastq sample sheet": {
+            "type": "string"
+        }, 
+        "bcl2fastq tiles": {
+            "type": "string"
+        }, 
+        "bcl2fastq use bases mask": {
+            "type": "string"
+        }, 
+        "bcl2fastq with failed reads": {
+            "type": "boolean"
+        }, 
+        "control lane": {
+            "description": "This identifies whether the lane was selected as a control lane or not.", 
+            "type": "boolean"
+        }, 
+        "control lane number": {
+            "description": "The number of the lane on the flowcell that was choosen by the instrument's operator as the control lane. A control lane is choosen based on the base diversity of the pool in that lane or if a PhiX control library was loaded. There is no control lane on the MiSeq.", 
+            "type": "integer"
+        }, 
+        "cycle count": {
+            "plural": true, 
+            "type": "integer"
+        }, 
+        "cycle nucleotide quality report": {
+            "namespace": "ns/medium/cycle/nucleotide/quality/report", 
+            "type": "object"
+        }, 
+        "cycle nucleotide quality reports": {
+            "namespace": "ns/medium/cycle/nucleotide/quality/report", 
+            "plural": true, 
+            "single": "cycle nucleotide quality report", 
+            "type": "object"
+        }, 
+        "cycle quality distribution": {
+            "namespace": "ns/medium/cycle/quality/distribution", 
+            "type": "object"
+        }, 
+        "cycle quality first quartile": {
+            "plural": true, 
+            "type": "integer"
+        }, 
+        "cycle quality interquartile range": {
+            "plural": true, 
+            "type": "integer"
+        }, 
+        "cycle quality left whisker": {
+            "plural": true, 
+            "type": "integer"
+        }, 
+        "cycle quality max": {
+            "plural": true, 
+            "type": "integer"
+        }, 
+        "cycle quality mean": {
+            "plural": true, 
+            "type": "float"
+        }, 
+        "cycle quality median": {
+            "plural": true, 
+            "type": "integer"
+        }, 
+        "cycle quality min": {
+            "plural": true, 
+            "type": "integer"
+        }, 
+        "cycle quality right whisker": {
+            "plural": true, 
+            "type": "integer"
+        }, 
+        "cycle quality sum": {
+            "plural": true, 
+            "type": "integer"
+        }, 
+        "cycle quality third quartile": {
+            "plural": true, 
+            "type": "integer"
+        }, 
+        "determined filtered read count": {
+            "type": "integer"
+        }, 
+        "determined read count": {
+            "type": "integer"
+        }, 
+        "fastq quality report": {
+            "namespace": "ns/medium/fastq/quality/report", 
+            "type": "object"
+        }, 
+        "fastq quality reports": {
+            "namespace": "ns/medium/fastq/quality/report", 
+            "plural": true, 
+            "single": "fastq quality report", 
+            "type": "object"
+        }, 
+        "filtered read count": {
+            "type": "integer"
+        }, 
+        "filtered read fraction": {
+            "type": "float"
+        }, 
+        "flowcell": {
+            "namespace": "ns/knowledge/flowcell", 
+            "type": "object"
+        }, 
+        "flowcell asset uri": {
+            "type": "string"
+        }, 
+        "flowcell description": {
+            "type": "string"
+        }, 
+        "flowcell home uri": {
+            "type": "string"
+        }, 
+        "flowcell id": {
+            "description": "The internally generated unique identifier of a flowcell that was sequenced on a sequencing instrument.", 
+            "type": "integer"
+        }, 
+        "flowcell knowledge uri": {
+            "type": "string"
+        }, 
+        "flowcell lanes local uri": {
+            "type": "string"
+        }, 
+        "flowcell scheduled": {
+            "type": "date"
+        }, 
+        "flowcell socket": {
+            "description": "The socket on the physical HiSeq 2500 instrument where the flowcell was sequenced. There are two sockets called A and B.", 
+            "type": "string"
+        }, 
+        "flowcell timestamp": {
+            "type": "string"
+        }, 
+        "flowcell uuid": {
+            "type": "string"
+        }, 
+        "fragment size estimation method": {
+            "description": "The method by which the size of the library fragment is determined.", 
+            "type": "string"
+        }, 
+        "guaranteed yield": {
+            "type": "integer"
+        }, 
+        "illumina application name": {
+            "description": "The application run on the Illumina sequencer for a sequencing flowcell.", 
+            "type": "string"
+        }, 
+        "illumina application version": {
+            "description": "The version of the Illumina application used for a specific flowcell.", 
+            "type": "string"
+        }, 
+        "illumina flowcell id": {
+            "description": "The Illumina generated unique identifier that is present on the physical Illumina flowcell.", 
+            "type": "string"
+        }, 
+        "illumina flowcell type": {
+            "description": "The specific type of the flowcell that was used. This can either be a paired or single end flowcell and for the HiSeq is can be a High-Output or Rapid Run flowcell as well.", 
+            "type": "string"
+        }, 
+        "illumina instrument id": {
+            "description": "The Illumina generated identifier for the specific sequencer the flowcell was sequenced on. This can refer to either the HiSeq 2500 or the MiSeq.", 
+            "type": "string"
+        }, 
+        "illumina lane count": {
+            "type": "integer"
+        }, 
+        "illumina rta version": {
+            "description": "The version of Illumina real time analysis viewer that was used for a sequencing flowcell.", 
+            "type": "string"
+        }, 
+        "illumina run day": {
+            "format": "short", 
+            "type": "date"
+        }, 
+        "illumina run id": {
+            "description": "The Illumina generated unique flowcell identifier.", 
+            "type": "string"
+        }, 
+        "illumina surface count": {
+            "type": "integer"
+        }, 
+        "illumina swath count": {
+            "type": "integer"
+        }, 
+        "illumina tile count": {
+            "type": "integer"
+        }, 
+        "index nibble": {
+            "description": "This identifies whether or not the nibble is an index in the sequencing run.", 
+            "type": "boolean"
+        }, 
+        "instrument id": {
+            "description": "The internally generated unique identifier for the sequencer that a flowcell was sequenced on. ", 
+            "type": "integer"
+        }, 
+        "instrument run count": {
+            "description": "The total number of flowcells sequenced on a sequencing instrument.", 
+            "type": "integer"
+        }, 
+        "invoice account code": {
+            "description": "A five number account code in a lab's NYU chartfield. This is by default 60455.", 
+            "type": "string"
+        }, 
+        "invoice fund": {
+            "description": "Fund is two numbers specified in a lab's chartfield. This specificies what kind of grant it is. ", 
+            "type": "string"
+        }, 
+        "invoice organization": {
+            "description": "The organization is five numbers found in a lab's chartfield. They specify what department the lab is associated with.", 
+            "type": "string"
+        }, 
+        "invoice program": {
+            "description": "The program is a mix of five letters or numbers that are found in a lab's chartfield. This is blank for the majority of labs and a placeholder of WSQPG is in place.", 
+            "type": "string"
+        }, 
+        "invoice project": {
+            "description": "The project is a mix of five letters are numbers found in a lab's chartfield. They specify what project the grant funds. If this happens to be blank a placeholder of WSQPJ is used. Most labs have this field in their chartfields.", 
+            "type": "string"
+        }, 
+        "lane": {
+            "description": "A lane is a physical space on a Illumina flowcell. An Illumina High-Ouput Run flowcell has 8 lanes, a Rapid Run flowcell has 2 lanes, and a MiSeq flowcell has only one lane.", 
+            "namespace": "ns/knowledge/lane", 
+            "type": "object"
+        }, 
+        "lane asset uri": {
+            "type": "string"
+        }, 
+        "lane count": {
+            "description": "The total number of the physical lanes on the sequenced Illumina flowcell.", 
+            "type": "integer"
+        }, 
+        "lane description": {
+            "type": "string"
+        }, 
+        "lane home uri": {
+            "type": "string"
+        }, 
+        "lane id": {
+            "description": "The internally generated unique identifier referencing a specific lane on a sequenced Illumina flowcell.", 
+            "type": "integer"
+        }, 
+        "lane knowledge uri": {
+            "type": "string"
+        }, 
+        "lane number": {
+            "description": "The number of the physical lane in which a submitted pool was run on a sequenced Illumina flowcell.", 
+            "type": "integer"
+        }, 
+        "lane pools local uri": {
+            "type": "string"
+        }, 
+        "lane uuid": {
+            "type": "string"
+        }, 
+        "lanes": {
+            "namespace": "ns/knowledge/lane", 
+            "plural": true, 
+            "single": "lane", 
+            "type": "object"
+        }, 
+        "left trim offset": {
+            "description": "Number of cycles to trim from the left of the nibble", 
+            "type": "integer"
+        }, 
+        "libraries": {
+            "namespace": "ns/knowledge/library", 
+            "plural": true, 
+            "single": "library", 
+            "type": "object"
+        }, 
+        "library": {
+            "description": "A library is a researcher prepared sample from a particular organism containing DNA fragments that is compatible with next generation sequencing instruments.", 
+            "namespace": "ns/knowledge/library", 
+            "type": "object"
+        }, 
+        "library asset uri": {
+            "type": "string"
+        }, 
+        "library barcodes local uri": {
+            "type": "string"
+        }, 
+        "library description": {
+            "type": "string"
+        }, 
+        "library experimental application": {
+            "description": "The scientific application the library is accomplishing. For example, DNA-seq, RNA-seq, ChIP-seq, and etc.", 
+            "type": "string"
+        }, 
+        "library home uri": {
+            "type": "string"
+        }, 
+        "library id": {
+            "description": "The interally generated unique identifier for a sequencing library.", 
+            "type": "integer"
+        }, 
+        "library knowledge uri": {
+            "type": "string"
+        }, 
+        "library name": {
+            "description": "The name of a sequencing library that is researcher generated.", 
+            "type": "string"
+        }, 
+        "library quality report": {
+            "namespace": "ns/medium/demultiplex/library/report", 
+            "type": "object"
+        }, 
+        "library quality reports": {
+            "namespace": "ns/medium/demultiplex/library/report", 
+            "plural": true, 
+            "single": "library quality report", 
+            "type": "object"
+        }, 
+        "library uuid": {
+            "type": "string"
+        }, 
+        "max sequence length": {
+            "type": "integer"
+        }, 
+        "mean fragment size": {
+            "description": "The estimated average size of the library fragment in basepairs.", 
+            "type": "integer"
+        }, 
+        "min sequence length": {
+            "type": "integer"
+        }, 
+        "nibble": {
+            "description": "A nibble is a fragment of a read layout, can be either an index or a read nibble.", 
+            "namespace": "ns/knowledge/nibble", 
+            "type": "object"
+        }, 
+        "nibble cycle count": {
+            "description": "The number of cycles that has been completed during a sequencing run for this nibble. Cycle can also be interchangable with base (i.e. 100 cycles is the same as 100 bases).", 
+            "type": "integer"
+        }, 
+        "nibble number": {
+            "description": "The enumerated index of this nibble. This number can be anywhere from 1 to 4.", 
+            "type": "integer"
+        }, 
+        "nibbles": {
+            "namespace": "ns/knowledge/nibble", 
+            "plural": true, 
+            "single": "nibble", 
+            "type": "object"
+        }, 
+        "nucleotide": {
+            "enumeration": "IUPAC Nucleic acid notation", 
+            "type": "enum"
+        }, 
+        "number of nibbles": {
+            "type": "integer"
+        }, 
+        "operator id": {
+            "description": "The NetID of the researcher who prepared the library.", 
+            "type": "integer"
+        }, 
+        "organism handle": {
+            "type": "string"
+        }, 
+        "organism home uri": {
+            "type": "string"
+        }, 
+        "organism id": {
+            "description": "The internally generated unique identifier for the specified organism of a sequencing library.", 
+            "type": "integer"
+        }, 
+        "organism knowledge uri": {
+            "type": "string"
+        }, 
+        "organism name": {
+            "description": "The scientific name of the organism of a sequencing library.", 
+            "type": "string"
+        }, 
+        "organism uuid": {
+            "type": "string"
+        }, 
+        "pheniqs barcode": {
+            "plural": true, 
+            "type": "string"
+        }, 
+        "pheniqs configuration path": {
+            "type": "string"
+        }, 
+        "pheniqs error": {
+            "plural": true, 
+            "type": "integer"
+        }, 
+        "pheniqs fragment": {
+            "plural": true, 
+            "type": "string"
+        }, 
+        "pheniqs id": {
+            "type": "integer"
+        }, 
+        "pheniqs include non pf": {
+            "type": "integer"
+        }, 
+        "pheniqs input": {
+            "plural": true, 
+            "type": "string"
+        }, 
+        "pheniqs library": {
+            "plural": true, 
+            "type": "string"
+        }, 
+        "pheniqs output": {
+            "plural": true, 
+            "type": "string"
+        }, 
+        "pheniqs sequence": {
+            "plural": true, 
+            "type": "string"
+        }, 
+        "pheniqs undetermined": {
+            "type": "integer"
+        }, 
+        "phix percent": {
+            "description": "The percentage of the Illumina control library, PhiX, that is spiked-in to a pool to act as a quality control and/or to provide base diversity.", 
+            "type": "float"
+        }, 
+        "picard apply eamss filter": {
+            "type": "boolean"
+        }, 
+        "picard basecall dir": {
+            "type": "string"
+        }, 
+        "picard compress outputs": {
+            "type": "boolean"
+        }, 
+        "picard flowcell barcode": {
+            "type": "string"
+        }, 
+        "picard force gc": {
+            "type": "boolean"
+        }, 
+        "picard include non pf reads": {
+            "type": "boolean"
+        }, 
+        "picard lane": {
+            "type": "integer"
+        }, 
+        "picard machine name": {
+            "type": "string"
+        }, 
+        "picard max reads in ram per tile": {
+            "type": "integer"
+        }, 
+        "picard minimum quality": {
+            "type": "integer"
+        }, 
+        "picard number of processors": {
+            "type": "integer"
+        }, 
+        "picard output prefix": {
+            "type": "string"
+        }, 
+        "picard read name format": {
+            "type": "string"
+        }, 
+        "picard read structure": {
+            "type": "string"
+        }, 
+        "picard run barcode": {
+            "type": "integer"
+        }, 
+        "picard temp directory": {
+            "type": "string"
+        }, 
+        "pool": {
+            "description": "A pool is a mixture of sequencing libraries or a single library.", 
+            "namespace": "ns/knowledge/pool", 
+            "type": "object"
+        }, 
+        "pool barcode": {
+            "namespace": "ns/knowledge/pool/barcode", 
+            "type": "object"
+        }, 
+        "pool barcodes": {
+            "namespace": "ns/knowledge/pool/barcode", 
+            "plural": true, 
+            "single": "pool barcode", 
+            "type": "object"
+        }, 
+        "pool description": {
+            "type": "string"
+        }, 
+        "pool home uri": {
+            "type": "string"
+        }, 
+        "pool id": {
+            "description": "The interally generated unique identifier for a specific pool that was sequenced.", 
+            "type": "integer"
+        }, 
+        "pool knowledge uri": {
+            "type": "string"
+        }, 
+        "pool samples local uri": {
+            "type": "string"
+        }, 
+        "pool uuid": {
+            "type": "string"
+        }, 
+        "pooled date": {
+            "description": "The date that the researcher(s) pooled individual libaries together or diluted a single library to the submission concnetration.", 
+            "type": "date"
+        }, 
+        "pools": {
+            "namespace": "ns/knowledge/pool", 
+            "plural": true, 
+            "single": "pool", 
+            "type": "object"
+        }, 
+        "project id": {
+            "description": "The internally generated unique identifier for a specific project. This is not to be confused with the Illumina terminology for project, which GenCore does not use.", 
+            "type": "integer"
+        }, 
+        "project name": {
+            "description": "The researcher generated name for the scientific project that he/she associates with a sequencing library. This is not to be confused with the Illumina terminology for project, which GenCore does not use.", 
+            "type": "string"
+        }, 
+        "protocol kit name": {
+            "description": "The protocol or kit used to prepare the sequencing libraries.", 
+            "type": "string"
+        }, 
+        "pure phix": {
+            "type": "boolean"
+        }, 
+        "read count": {
+            "type": "integer"
+        }, 
+        "right trim offset": {
+            "description": "Number of cycles to trim from the right of the nibble", 
+            "type": "integer"
+        }, 
+        "sample": {
+            "description": "a sample is a collection of reads, of a particular sample, that was sequenced in a pool in lane in a flowcell", 
+            "namespace": "ns/knowledge/sample", 
+            "type": "object"
+        }, 
+        "sample asset uri": {
+            "type": "string"
+        }, 
+        "sample description": {
+            "type": "string"
+        }, 
+        "sample home uri": {
+            "type": "string"
+        }, 
+        "sample id": {
+            "description": "The interally generated unique identifier for a sequencing sample.", 
+            "type": "integer"
+        }, 
+        "sample knowledge uri": {
+            "type": "string"
+        }, 
+        "sample local uri": {
+            "type": "string"
+        }, 
+        "sample percent": {
+            "description": "the relative fraction of the sample in the pool.", 
+            "type": "float"
+        }, 
+        "sample uuid": {
+            "type": "string"
+        }, 
+        "samples": {
+            "namespace": "ns/knowledge/sample", 
+            "plural": true, 
+            "single": "sample", 
+            "type": "object"
+        }, 
+        "seeding concentration": {
+            "description": "The concentration in pM that the pool(s) are loaded onto the flowcell in.", 
+            "type": "float"
+        }, 
+        "simple library name": {
+            "description": "The internally generated simplified name of the library. All special characters not supported in different file systems are removed, the name is converted to all lowercase, and spaces are replaced with underscores", 
+            "simplify": true, 
+            "type": "string"
+        }, 
+        "simple organism name": {
+            "description": "The internally generated simplified name of the organism. All special characters not supported in different file systems are removed, the name is converted to all lowercase, and spaces are replaced with underscores.", 
+            "simplify": true, 
+            "type": "string"
+        }, 
+        "simple project name": {
+            "description": "The internally generated simplified name of the project. All special characters not supported in different file systems are removed, the name is converted to all lowercase, and spaces are replaced with underscores.", 
+            "simplify": true, 
+            "type": "string"
+        }, 
+        "submission concentration": {
+            "description": "The concentration in nM that the final pool(s) of libraries are submitted in to GenCore.", 
+            "type": "float"
+        }, 
+        "submission date": {
+            "description": "The date the pool(s) are submitted to the queue and are ready for sequencing.", 
+            "type": "date"
+        }, 
+        "total volume": {
+            "description": "The volume in ul that the pool(s) are submitted in to GenCore. The standard for submission is 25 ul.", 
+            "type": "float"
+        }, 
+        "web barcode id": {
+            "type": "integer"
+        }, 
+        "web flowcell id": {
+            "type": "integer"
+        }, 
+        "web flowcell status": {
+            "type": "integer"
+        }, 
+        "web group id": {
+            "type": "integer"
+        }, 
+        "web instrument id": {
+            "type": "integer"
+        }, 
+        "web lane id": {
+            "type": "integer"
+        }, 
+        "web library id": {
+            "type": "integer"
+        }, 
+        "web organism id": {
+            "type": "integer"
+        }, 
+        "web person id": {
+            "type": "integer"
+        }, 
+        "web pool id": {
+            "type": "integer"
+        }, 
+        "web sample id": {
+            "type": "integer"
+        }
+    }
+}

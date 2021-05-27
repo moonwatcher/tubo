@@ -1,0 +1,18 @@
+{
+    "system": {
+        "api port": 5000, 
+        "cores": 4, 
+        "host": null, 
+        "interface": "default", 
+        "job polling interval": 5, 
+        "language": "en", 
+        "max of free portion": 0.7, 
+        "queue polling interval": 10, 
+        "repository": null, 
+        "thread per core ratio": 1.5, 
+        "tubo major version": 1, 
+        "tubo minor version": 6, 
+        "tubo version comment": "to shreds you say", 
+        "verbosity": 20
+    }
+}

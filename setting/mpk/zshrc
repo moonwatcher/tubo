@@ -1,0 +1,30 @@
+#!/bin/zsh
+setopt nobeep extendedglob nomultios
+PS1="%B%m%b:%1~ %n%# "
+RPS1=" %~"
+EDITOR=vi
+TERM=xterm
+
+# History
+setopt sharehistory histignorealldups histreduceblanks histignorespace
+HISTSIZE=10000
+SAVEHIST=10000
+HISTFILE=~/.history
+
+# Navigation
+setopt autocd autopushd
+DIRSTACKSIZE=10000
+typeset -U cdpath; cdpath=(. $cdpath)
+autoload -U compinit; compinit
+
+# Logread
+alias logread="cat /var/log/syslog"
+alias tubo.log="tail -n 100 -f /var/log/tubo/tubod.log"
+
+# JSON lint
+alias jsl="python -mjson.tool"
+
+alias action.deleteIllumInaFromTemp="find $TUBO_TEMP -regextype posix-egrep -regex \".*/[0-9]{6}_(M[0-9]{5}_[0-9]{4}_[0]{9}-[A-Z0-9]{5}|SN[0-9]+_[0-9]{4}_[AB][A-Z0-9]{9})/.*\" -delete"
+alias action.findIlluminaInTemp="find $TUBO_TEMP -regextype posix-egrep -regex \".*/[0-9]{6}_(M[0-9]{5}_[0-9]{4}_[0]{9}-[A-Z0-9]{5}|SN[0-9]+_[0-9]{4}_[AB][A-Z0-9]{9})/.*\""
+alias action.findIOIntemp="find $TUBO_TEMP -regextype posix-egrep -regex \".*/(output|error)\.log\""
+alias mongo.tubo="mongo -u tubo -p 9c8e07483851fc8ab3d963fdaeccc62e babylon.bio.nyu.edu/tubo"

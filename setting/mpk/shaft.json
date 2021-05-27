@@ -1,0 +1,41 @@
+{
+    "enumeration": {
+        "temporary workspace": {
+            "element": {
+                "shaft": {
+                    "host": "shaft", 
+                    "path": "~/.tubo/temp"
+                }
+            }
+        }, 
+        "volume": {
+            "element": {
+                "epsilon": {
+                    "host": "shaft", 
+                    "path": "~/.tubo/epsilon"
+                }
+            }
+        }
+    }, 
+    "rule": {
+        "rule/genealogy/profile": null, 
+        "rule/genealogy/volume": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "volume", 
+                            "value": "epsilon"
+                        }
+                    ]
+                }
+            ]
+        }, 
+        "rule/task/preset": null
+    }, 
+    "system": {
+        "cores": 4, 
+        "host": "shaft", 
+        "repository": "mpk"
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "preset": {
+        "default": {
+            "action": {
+                "backup": null, 
+                "copy": null, 
+                "crawl": null, 
+                "delete": null, 
+                "drop": null, 
+                "export": null, 
+                "get": null, 
+                "import": null, 
+                "info": null, 
+                "move": null, 
+                "rebuild": null, 
+                "restore": null, 
+                "set": null, 
+                "symlink": null
+            }, 
+            "description": "Default preset"
+        }
+    }
+}

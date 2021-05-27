@@ -1,0 +1,407 @@
+{
+    "interface": {
+        "default": {
+            "prototype": {
+                "barcode": {
+                    "flag": [
+                        "--barcode"
+                    ], 
+                    "parameter": {
+                        "dest": "pheniqs barcode", 
+                        "help": "pheniqs barcode composition definition", 
+                        "metavar": "FREFS", 
+                        "nargs": "*"
+                    }
+                }, 
+                "basecall implementation": {
+                    "flag": [
+                        "--implementation"
+                    ], 
+                    "parameter": {
+                        "choices": [
+                            "picard", 
+                            "bcl2fastq"
+                        ], 
+                        "default": "picard", 
+                        "dest": "basecall implementation", 
+                        "help": "use picard or illumina bcl2fastq for basecalling", 
+                        "metavar": "NANE"
+                    }
+                }, 
+                "error": {
+                    "flag": [
+                        "--pheniqs-error"
+                    ], 
+                    "parameter": {
+                        "dest": "pheniqs error", 
+                        "help": "maximum number of mismatches allowed in pheniqs", 
+                        "metavar": "INT", 
+                        "nargs": "*"
+                    }
+                }, 
+                "fragment": {
+                    "flag": [
+                        "--fragment"
+                    ], 
+                    "parameter": {
+                        "dest": "pheniqs fragment", 
+                        "help": "pheniqs nibble fragment definition", 
+                        "metavar": "FRAG", 
+                        "nargs": "*"
+                    }
+                }, 
+                "library": {
+                    "flag": [
+                        "--library"
+                    ], 
+                    "parameter": {
+                        "dest": "pheniqs library", 
+                        "help": "pheniqs library composition definition", 
+                        "metavar": "FREFS", 
+                        "nargs": "*"
+                    }
+                }
+            }, 
+            "section": {
+                "action": [
+                    {
+                        "argument": [
+                            "scan path", 
+                            "recursive", 
+                            "sync", 
+                            "volume", 
+                            "profile", 
+                            "preset", 
+                            "overwrite", 
+                            "basecall implementation"
+                        ], 
+                        "instruction": {
+                            "help": "convert BCL files to FASTQ", 
+                            "name": "basecall"
+                        }
+                    }, 
+                    {
+                        "argument": [
+                            "scan path", 
+                            "volume", 
+                            "profile", 
+                            "recursive", 
+                            "overwrite", 
+                            "sync", 
+                            "preset", 
+                            "error", 
+                            "barcode", 
+                            "library", 
+                            "fragment"
+                        ], 
+                        "instruction": {
+                            "description": "if library definitions for pheniqs are not specified, every nibble not marked as an index nibble on the flowcell will become a library nibble.", 
+                            "help": "demultiplex reads", 
+                            "name": "demux"
+                        }
+                    }, 
+                    {
+                        "argument": [
+                            "scan path", 
+                            "volume", 
+                            "profile", 
+                            "recursive", 
+                            "overwrite", 
+                            "sync", 
+                            "preset"
+                        ], 
+                        "instruction": {
+                            "description": "library template assumed to be 0 with fragment 0 being 0:0:", 
+                            "help": "filter reads", 
+                            "name": "filter"
+                        }
+                    }, 
+                    {
+                        "argument": [
+                            "scan path", 
+                            "volume", 
+                            "profile", 
+                            "recursive", 
+                            "overwrite", 
+                            "sync", 
+                            "preset"
+                        ], 
+                        "instruction": {
+                            "description": "for each nibble in each flowcell, merge all fastq files from different lanes", 
+                            "help": "merge lanes", 
+                            "name": "merge"
+                        }
+                    }, 
+                    {
+                        "argument": [
+                            "scan path", 
+                            "recursive", 
+                            "sync", 
+                            "volume", 
+                            "profile", 
+                            "preset", 
+                            "overwrite"
+                        ], 
+                        "instruction": {
+                            "help": "extract interOp data from flowcell", 
+                            "name": "sav"
+                        }
+                    }, 
+                    {
+                        "argument": [
+                            "scan path", 
+                            "volume", 
+                            "profile", 
+                            "recursive", 
+                            "overwrite", 
+                            "filter", 
+                            "sync", 
+                            "compression"
+                        ], 
+                        "instruction": {
+                            "help": "create a compressed tar archive", 
+                            "name": "implode"
+                        }
+                    }, 
+                    {
+                        "argument": [
+                            "scan path", 
+                            "volume", 
+                            "profile", 
+                            "recursive", 
+                            "overwrite", 
+                            "filter", 
+                            "sync", 
+                            "compression"
+                        ], 
+                        "instruction": {
+                            "help": "expand a compressed tar archive", 
+                            "name": "explode"
+                        }
+                    }
+                ], 
+                "instruction": {
+                    "description": "", 
+                    "dest": "action", 
+                    "help": null, 
+                    "metavar": "ACTION", 
+                    "title": "pipeline operations"
+                }
+            }
+        }, 
+        "development": {
+            "prototype": {
+                "barcode": {
+                    "flag": [
+                        "--barcode"
+                    ], 
+                    "parameter": {
+                        "dest": "pheniqs barcode", 
+                        "help": "pheniqs barcode composition definition", 
+                        "metavar": "FREFS", 
+                        "nargs": "*"
+                    }
+                }, 
+                "basecall implementation": {
+                    "flag": [
+                        "--implementation"
+                    ], 
+                    "parameter": {
+                        "choices": [
+                            "picard", 
+                            "bcl2fastq"
+                        ], 
+                        "default": "picard", 
+                        "dest": "basecall implementation", 
+                        "help": "use picard or illumina bcl2fastq for basecalling", 
+                        "metavar": "NANE"
+                    }
+                }, 
+                "error": {
+                    "flag": [
+                        "--pheniqs-error"
+                    ], 
+                    "parameter": {
+                        "dest": "pheniqs error", 
+                        "help": "maximum number of mismatches allowed in pheniqs", 
+                        "metavar": "INT", 
+                        "nargs": "*"
+                    }
+                }, 
+                "fragment": {
+                    "flag": [
+                        "--fragment"
+                    ], 
+                    "parameter": {
+                        "dest": "pheniqs fragment", 
+                        "help": "pheniqs nibble fragment definition", 
+                        "metavar": "FRAG", 
+                        "nargs": "*"
+                    }
+                }, 
+                "library": {
+                    "flag": [
+                        "--library"
+                    ], 
+                    "parameter": {
+                        "dest": "pheniqs library", 
+                        "help": "pheniqs library composition definition", 
+                        "metavar": "FREFS", 
+                        "nargs": "*"
+                    }
+                }
+            }, 
+            "section": {
+                "action": [
+                    {
+                        "argument": [
+                            "scan path", 
+                            "recursive", 
+                            "sync", 
+                            "volume", 
+                            "profile", 
+                            "preset", 
+                            "overwrite", 
+                            "basecall implementation"
+                        ], 
+                        "instruction": {
+                            "help": "convert BCL files to FASTQ", 
+                            "name": "basecall"
+                        }
+                    }, 
+                    {
+                        "argument": [
+                            "scan path", 
+                            "volume", 
+                            "profile", 
+                            "recursive", 
+                            "overwrite", 
+                            "sync", 
+                            "preset"
+                        ], 
+                        "instruction": {
+                            "description": "for each nibble in each flowcell, merge all fastq files from different lanes", 
+                            "help": "merge lanes", 
+                            "name": "merge"
+                        }
+                    }, 
+                    {
+                        "argument": [
+                            "scan path", 
+                            "volume", 
+                            "profile", 
+                            "recursive", 
+                            "overwrite", 
+                            "sync", 
+                            "preset", 
+                            "error", 
+                            "barcode", 
+                            "library", 
+                            "fragment"
+                        ], 
+                        "instruction": {
+                            "description": "if library definitions for pheniqs are not specified, every nibble not marked as an index nibble on the flowcell will become a library nibble.", 
+                            "help": "demultiplex reads", 
+                            "name": "demux"
+                        }
+                    }, 
+                    {
+                        "argument": [
+                            "scan path", 
+                            "volume", 
+                            "profile", 
+                            "recursive", 
+                            "overwrite", 
+                            "sync", 
+                            "preset"
+                        ], 
+                        "instruction": {
+                            "description": "library template assumed to be 0 with fragment 0 being 0:0:", 
+                            "help": "filter reads", 
+                            "name": "filter"
+                        }
+                    }, 
+                    {
+                        "argument": [
+                            "scan path", 
+                            "recursive", 
+                            "sync", 
+                            "volume", 
+                            "profile", 
+                            "preset", 
+                            "overwrite"
+                        ], 
+                        "instruction": {
+                            "help": "extract interOp data from flowcell", 
+                            "name": "sav"
+                        }
+                    }, 
+                    {
+                        "argument": [
+                            "scan path", 
+                            "volume", 
+                            "profile", 
+                            "recursive", 
+                            "overwrite", 
+                            "filter", 
+                            "sync", 
+                            "compression"
+                        ], 
+                        "instruction": {
+                            "help": "create a compressed tar archive", 
+                            "name": "implode"
+                        }
+                    }, 
+                    {
+                        "argument": [
+                            "scan path", 
+                            "volume", 
+                            "profile", 
+                            "recursive", 
+                            "overwrite", 
+                            "filter", 
+                            "sync", 
+                            "compression"
+                        ], 
+                        "instruction": {
+                            "help": "expand a compressed tar archive", 
+                            "name": "explode"
+                        }
+                    }, 
+                    {
+                        "argument": [
+                            "uris", 
+                            "sync", 
+                            "horizon", 
+                            "genealogy"
+                        ], 
+                        "instruction": {
+                            "description": "convert a flowcell knowledge document to a csv sample sheet", 
+                            "help": "export sample sheet", 
+                            "name": "export-samplesheet"
+                        }
+                    }, 
+                    {
+                        "argument": [
+                            "preset", 
+                            "sync", 
+                            "scan path"
+                        ], 
+                        "instruction": {
+                            "description": "import local records from a csv samplesheet", 
+                            "help": "import sample sheet", 
+                            "name": "import-samplesheet"
+                        }
+                    }
+                ], 
+                "instruction": {
+                    "description": "", 
+                    "dest": "action", 
+                    "help": null, 
+                    "metavar": "ACTION", 
+                    "title": "pipeline operations"
+                }
+            }
+        }
+    }
+}

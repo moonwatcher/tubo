@@ -1,0 +1,2596 @@
+{
+    "table": {
+        "facebook/movie": {
+            "collection": "facebook_movie", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/movie"
+        }, 
+        "home": {
+            "collection": "home", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/home"
+        }, 
+        "itunes/genre": {
+            "collection": "itunes_genre", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/genre"
+        }, 
+        "itunes/movie": {
+            "collection": "itunes_movie", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/movie"
+        }, 
+        "itunes/music/album": {
+            "collection": "itunes_music_album", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/music/album"
+        }, 
+        "itunes/music/album/tracks": {
+            "collection": "itunes_music_album_tracks", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/music/album"
+        }, 
+        "itunes/music/track": {
+            "collection": "itunes_music_track", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/music/track"
+        }, 
+        "itunes/person": {
+            "collection": "itunes_person", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/person"
+        }, 
+        "itunes/tv/episode": {
+            "collection": "itunes_tv_episode", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/tv/episode"
+        }, 
+        "itunes/tv/season": {
+            "collection": "itunes_tv_season", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/tv/season"
+        }, 
+        "itunes/tv/season/episodes": {
+            "collection": "itunes_tv_season_episodes", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/tv/season"
+        }, 
+        "itunes/tv/show": {
+            "collection": "itunes_tv_show", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/tv/show"
+        }, 
+        "itunes/tv/show/seasons": {
+            "collection": "itunes_tv_show_seasons", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/tv/show"
+        }, 
+        "knowledge/collection": {
+            "collection": "knowledge_collection", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/collection"
+        }, 
+        "knowledge/company": {
+            "collection": "knowledge_company", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/company"
+        }, 
+        "knowledge/company/credit": {
+            "collection": "knowledge_company_credit", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/company"
+        }, 
+        "knowledge/company/image": {
+            "collection": "knowledge_company_image", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/company"
+        }, 
+        "knowledge/configuration": {
+            "collection": "knowledge_configuration", 
+            "comment": "has no namespace", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ]
+        }, 
+        "knowledge/department": {
+            "collection": "knowledge_department", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/department"
+        }, 
+        "knowledge/genre": {
+            "collection": "knowledge_genre", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/genre"
+        }, 
+        "knowledge/movie": {
+            "collection": "knowledge_movie", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/movie"
+        }, 
+        "knowledge/movie/alternative": {
+            "collection": "knowledge_movie_alternative", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/movie"
+        }, 
+        "knowledge/movie/clip": {
+            "collection": "knowledge_movie_clip", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/movie"
+        }, 
+        "knowledge/movie/image": {
+            "collection": "knowledge_movie_image", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/movie"
+        }, 
+        "knowledge/movie/keyword": {
+            "collection": "knowledge_movie_keyword", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/movie"
+        }, 
+        "knowledge/movie/people": {
+            "collection": "knowledge_movie_people", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/movie"
+        }, 
+        "knowledge/movie/rating": {
+            "collection": "knowledge_movie_rating", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/movie"
+        }, 
+        "knowledge/movie/translation": {
+            "collection": "knowledge_movie_translation", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/movie"
+        }, 
+        "knowledge/music/album": {
+            "collection": "knowledge_music_album", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/music/album"
+        }, 
+        "knowledge/music/album/image": {
+            "collection": "knowledge_music_album_image", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/music/album"
+        }, 
+        "knowledge/music/track": {
+            "collection": "knowledge_music_track", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/music/track"
+        }, 
+        "knowledge/network": {
+            "collection": "knowledge_network", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/network"
+        }, 
+        "knowledge/occupation": {
+            "collection": "knowledge_occupation", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/occupation"
+        }, 
+        "knowledge/person": {
+            "collection": "knowledge_person", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/person"
+        }, 
+        "knowledge/person/credit": {
+            "collection": "knowledge_person_credit", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/person"
+        }, 
+        "knowledge/person/image": {
+            "collection": "knowledge_person_image", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/person"
+        }, 
+        "knowledge/playlist": {
+            "collection": "knowledge_playlist", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/playlist"
+        }, 
+        "knowledge/tv/episode": {
+            "collection": "knowledge_tv_episode", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/tv/episode"
+        }, 
+        "knowledge/tv/episode/image": {
+            "collection": "knowledge_tv_episode_image", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/tv/episode"
+        }, 
+        "knowledge/tv/episode/people": {
+            "collection": "knowledge_tv_episode_people", 
+            "comment": "This is weird", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/tv/episode"
+        }, 
+        "knowledge/tv/season": {
+            "collection": "knowledge_tv_season", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/tv/season"
+        }, 
+        "knowledge/tv/season/image": {
+            "collection": "knowledge_tv_season_image", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/tv/season"
+        }, 
+        "knowledge/tv/season/people": {
+            "collection": "knowledge_tv_season_people", 
+            "comment": "This is weird", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/tv/season"
+        }, 
+        "knowledge/tv/show": {
+            "collection": "knowledge_tv_show", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/tv/show"
+        }, 
+        "knowledge/tv/show/image": {
+            "collection": "knowledge_tv_show_image", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/tv/show"
+        }, 
+        "knowledge/tv/show/people": {
+            "collection": "knowledge_tv_show_people", 
+            "comment": "This is weird", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/tv/show"
+        }, 
+        "local/collection": {
+            "collection": "local_collection", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/collection"
+        }, 
+        "local/company": {
+            "collection": "local_company", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/company"
+        }, 
+        "local/department": {
+            "collection": "local_department", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/department"
+        }, 
+        "local/genre": {
+            "collection": "local_genre", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/genre"
+        }, 
+        "local/keyword": {
+            "collection": "local_keyword", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/keyword"
+        }, 
+        "local/movie": {
+            "collection": "local_movie", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/movie"
+        }, 
+        "local/music/album": {
+            "collection": "local_music_album", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/music/album"
+        }, 
+        "local/music/track": {
+            "collection": "local_music_track", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/music/track"
+        }, 
+        "local/network": {
+            "collection": "local_network", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/network"
+        }, 
+        "local/occupation": {
+            "collection": "local_occupation", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/occupation"
+        }, 
+        "local/tv/episode": {
+            "collection": "local_tv_episode", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/tv/episode"
+        }, 
+        "local/tv/season": {
+            "collection": "local_tv_season", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/tv/season"
+        }, 
+        "local/tv/show": {
+            "collection": "local_tv_show", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/tv/show"
+        }, 
+        "medium/asset": {
+            "collection": "medium_asset", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ]
+        }, 
+        "medium/resource": {
+            "collection": "medium_resource", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.genealogy.home id", 
+                            1
+                        ]
+                    ], 
+                    "name": "genealogy home id"
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.genealogy.resource path digest", 
+                            1
+                        ]
+                    ], 
+                    "name": "genealogy resource path digest"
+                }
+            ]
+        }, 
+        "medium/resource/fragment": {
+            "collection": "medium_resource_fragment", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ]
+        }, 
+        "rottentomatoes/movie": {
+            "collection": "rottentomatoes_movie", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/movie"
+        }, 
+        "rottentomatoes/movie/clip": {
+            "collection": "rottentomatoes_movie_clip", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/movie"
+        }, 
+        "rottentomatoes/movie/people": {
+            "collection": "rottentomatoes_movie_people", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/movie"
+        }, 
+        "rottentomatoes/movie/review": {
+            "collection": "rottentomatoes_movie_review", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/movie"
+        }, 
+        "rottentomatoes/movie/similar": {
+            "collection": "rottentomatoes_movie_similar", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/movie"
+        }, 
+        "tmdb/collection": {
+            "collection": "tmdb_collection", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/collection"
+        }, 
+        "tmdb/company": {
+            "collection": "tmdb_company", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/company"
+        }, 
+        "tmdb/company/credit": {
+            "collection": "tmdb_company_credit", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/company"
+        }, 
+        "tmdb/configuration": {
+            "collection": "tmdb_configuration", 
+            "comment": "has no namespace", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ]
+        }, 
+        "tmdb/genre": {
+            "collection": "tmdb_genre", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/genre"
+        }, 
+        "tmdb/keyword": {
+            "collection": "tmdb_keyword", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/keyword"
+        }, 
+        "tmdb/movie": {
+            "collection": "tmdb_movie", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/movie"
+        }, 
+        "tmdb/movie/alternative": {
+            "collection": "tmdb_movie_alternative", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/movie"
+        }, 
+        "tmdb/movie/clip": {
+            "collection": "tmdb_movie_clip", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/movie"
+        }, 
+        "tmdb/movie/image": {
+            "collection": "tmdb_movie_image", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/movie"
+        }, 
+        "tmdb/movie/keyword": {
+            "collection": "tmdb_movie_keyword", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/movie"
+        }, 
+        "tmdb/movie/people": {
+            "collection": "tmdb_movie_people", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/movie"
+        }, 
+        "tmdb/movie/rating": {
+            "collection": "tmdb_movie_rating", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/movie"
+        }, 
+        "tmdb/movie/translation": {
+            "collection": "tmdb_movie_translation", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/movie"
+        }, 
+        "tmdb/network": {
+            "collection": "tmdb_network", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/network"
+        }, 
+        "tmdb/person": {
+            "collection": "tmdb_person", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/person"
+        }, 
+        "tmdb/person/credit": {
+            "collection": "tmdb_person_credit", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/person"
+        }, 
+        "tmdb/person/external": {
+            "collection": "tmdb_person_external", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/person"
+        }, 
+        "tmdb/person/image": {
+            "collection": "tmdb_person_image", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/person"
+        }, 
+        "tmdb/tv/episode": {
+            "collection": "tmdb_tv_episode", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/tv/episode"
+        }, 
+        "tmdb/tv/episode/external": {
+            "collection": "tmdb_tv_episode_external", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/tv/episode"
+        }, 
+        "tmdb/tv/episode/image": {
+            "collection": "tmdb_tv_episode_image", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/tv/episode"
+        }, 
+        "tmdb/tv/episode/people": {
+            "collection": "tmdb_tv_episode_people", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/tv/episode"
+        }, 
+        "tmdb/tv/season": {
+            "collection": "tmdb_tv_season", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/tv/season"
+        }, 
+        "tmdb/tv/season/external": {
+            "collection": "tmdb_tv_season_external", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/tv/season"
+        }, 
+        "tmdb/tv/season/image": {
+            "collection": "tmdb_tv_season_image", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/tv/season"
+        }, 
+        "tmdb/tv/season/people": {
+            "collection": "tmdb_tv_season_people", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/tv/season"
+        }, 
+        "tmdb/tv/show": {
+            "collection": "tmdb_tv_show", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/tv/show"
+        }, 
+        "tmdb/tv/show/external": {
+            "collection": "tmdb_tv_show_external", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/tv/show"
+        }, 
+        "tmdb/tv/show/image": {
+            "collection": "tmdb_tv_show_image", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/tv/show"
+        }, 
+        "tmdb/tv/show/people": {
+            "collection": "tmdb_tv_show_people", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/tv/show"
+        }, 
+        "wikipedia/movie": {
+            "collection": "wikipedia_movie", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/movie"
+        }
+    }
+}

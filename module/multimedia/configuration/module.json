@@ -1,0 +1,38 @@
+{
+    "module": {
+        "multimedia": {
+            "include": [
+                {
+                    "path": "archetype.json"
+                }, 
+                {
+                    "path": "namespace.json"
+                }, 
+                {
+                    "path": "enumeration.json"
+                }, 
+                {
+                    "path": "command.json"
+                }, 
+                {
+                    "path": "expression.json"
+                }, 
+                {
+                    "path": "rule.json"
+                }, 
+                {
+                    "path": "table.json"
+                }, 
+                {
+                    "path": "constant.json"
+                }, 
+                {
+                    "path": "interface.json"
+                }, 
+                {
+                    "path": "service.json"
+                }
+            ]
+        }
+    }
+}

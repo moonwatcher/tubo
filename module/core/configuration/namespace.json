@@ -1,0 +1,922 @@
+{
+    "namespace": {
+        "ns/home": {
+            "element": {}, 
+            "rule": [], 
+            "similarity": [], 
+            "synonym": [
+                "keyword"
+            ]
+        }, 
+        "ns/instruction/basename/decode": {
+            "element": {
+                "basename": null, 
+                "compression": null, 
+                "created": {
+                    "format": "long"
+                }, 
+                "dirname": null, 
+                "extension": null, 
+                "inode type": null, 
+                "kind": null, 
+                "path": null, 
+                "timestamp": null, 
+                "volume path": null, 
+                "work directory": null
+            }, 
+            "rule": [
+                "rule/instruction/basename/decode"
+            ], 
+            "synonym": [
+                "keyword"
+            ]
+        }, 
+        "ns/knowledge/group": {
+            "element": {
+                "group handle": null, 
+                "group home uri": null, 
+                "group id": null, 
+                "group knowledge uri": null, 
+                "group local uri": null, 
+                "group uuid": null, 
+                "home uri": null, 
+                "knowledge uri": null, 
+                "local uri": null, 
+                "modified": null, 
+                "people": null, 
+                "person": null
+            }, 
+            "rule": [
+                "rule/home/group/uri", 
+                "rule/home/qualified/group/uri", 
+                "rule/knowledge/group/uri", 
+                "rule/knowledge/qualified/group/uri", 
+                "rule/local/group/uri", 
+                "rule/local/qualified/group/uri"
+            ], 
+            "similarity": [
+                [
+                    "group id"
+                ], 
+                [
+                    "group uuid"
+                ]
+            ], 
+            "synonym": [
+                "keyword"
+            ]
+        }, 
+        "ns/knowledge/language": {
+            "element": {
+                "iso 639 1": null, 
+                "iso 639 2b": null, 
+                "iso 639 2t": null, 
+                "language": null
+            }, 
+            "synonym": [
+                "keyword"
+            ]
+        }, 
+        "ns/knowledge/person": {
+            "element": {
+                "email": null, 
+                "full name": null, 
+                "group": null, 
+                "groups": null, 
+                "home uri": null, 
+                "knowledge uri": null, 
+                "local uri": null, 
+                "modified": null, 
+                "person handle": null, 
+                "person home uri": null, 
+                "person id": null, 
+                "person knowledge uri": null, 
+                "person local uri": null, 
+                "person uuid": null
+            }, 
+            "rule": [
+                "rule/home/person/uri", 
+                "rule/home/qualified/person/uri", 
+                "rule/knowledge/person/uri", 
+                "rule/knowledge/qualified/person/uri", 
+                "rule/local/person/uri", 
+                "rule/local/qualified/person/uri"
+            ], 
+            "similarity": [
+                [
+                    "person id"
+                ], 
+                [
+                    "person uuid"
+                ]
+            ], 
+            "synonym": [
+                "keyword"
+            ]
+        }, 
+        "ns/medium/asset": {
+            "element": {
+                "reference": null, 
+                "references": null
+            }, 
+            "rule": [], 
+            "synonym": [
+                "keyword"
+            ]
+        }, 
+        "ns/medium/resource": {
+            "element": {}, 
+            "synonym": [
+                "keyword"
+            ]
+        }, 
+        "ns/medium/resource/url/decode": {
+            "element": {
+                "basename": null, 
+                "compression": null, 
+                "dirname": null, 
+                "extension": null, 
+                "home id": null, 
+                "inode type": null, 
+                "kind": null, 
+                "language": null, 
+                "media kind": null, 
+                "path": null, 
+                "profile": null, 
+                "resource path digest": null, 
+                "stop": null, 
+                "umid": null, 
+                "volume path": null
+            }, 
+            "rule": [
+                "rule/medium/resource/basename/parse", 
+                "rule/medium/kind"
+            ], 
+            "synonym": [
+                "keyword"
+            ]
+        }, 
+        "ns/program/default": {
+            "element": {
+                "positional": null, 
+                "stderr path": null, 
+                "stdout path": null, 
+                "work directory": null
+            }, 
+            "rule": [
+                "rule/system/default/stdout/path", 
+                "rule/system/default/stderr/path"
+            ], 
+            "synonym": [
+                "cli", 
+                "keyword"
+            ]
+        }, 
+        "ns/program/ln": {
+            "element": {
+                "positional": null, 
+                "stderr path": null, 
+                "stdout path": null, 
+                "symbolic ln": {
+                    "cli": "--symbolic"
+                }, 
+                "work directory": null
+            }, 
+            "rule": [
+                "rule/system/default/stdout/path", 
+                "rule/system/default/stderr/path"
+            ], 
+            "synonym": [
+                "cli", 
+                "keyword"
+            ]
+        }, 
+        "ns/program/mongodump": {
+            "element": {
+                "database": {
+                    "cli": "--db"
+                }, 
+                "hidden password": null, 
+                "host": {
+                    "cli": "--host"
+                }, 
+                "mongodb collection": {
+                    "cli": "--collection"
+                }, 
+                "mongodump output directory": {
+                    "cli": "--out"
+                }, 
+                "password": {
+                    "cli": "--password"
+                }, 
+                "password digest": null, 
+                "port": {
+                    "cli": "--port"
+                }, 
+                "positional": null, 
+                "stderr path": null, 
+                "stdout path": null, 
+                "username": {
+                    "cli": "--username"
+                }, 
+                "work directory": null
+            }, 
+            "rule": [
+                "rule/system/mongodb/password/digest", 
+                "rule/system/mongodb/password/hidden", 
+                "rule/system/default/stdout/path", 
+                "rule/system/default/stderr/path", 
+                "rule/program/mongodump/output/directory"
+            ], 
+            "synonym": [
+                "cli", 
+                "keyword"
+            ]
+        }, 
+        "ns/program/mongoexport": {
+            "element": {
+                "database": {
+                    "cli": "--db"
+                }, 
+                "hidden password": null, 
+                "host": {
+                    "cli": "--host"
+                }, 
+                "mongodb collection": {
+                    "cli": "--collection"
+                }, 
+                "mongoexport output directory": null, 
+                "mongoexport output path": {
+                    "cli": "--out"
+                }, 
+                "password": {
+                    "cli": "--password"
+                }, 
+                "password digest": null, 
+                "port": {
+                    "cli": "--port"
+                }, 
+                "positional": null, 
+                "stderr path": null, 
+                "stdout path": null, 
+                "username": {
+                    "cli": "--username"
+                }, 
+                "work directory": null
+            }, 
+            "rule": [
+                "rule/system/mongodb/password/digest", 
+                "rule/system/mongodb/password/hidden", 
+                "rule/system/default/stdout/path", 
+                "rule/system/default/stderr/path", 
+                "rule/program/mongoexport/output/directory", 
+                "rule/program/mongoexport/output/path"
+            ], 
+            "synonym": [
+                "cli", 
+                "keyword"
+            ]
+        }, 
+        "ns/program/mongoimport": {
+            "element": {
+                "database": {
+                    "cli": "--db"
+                }, 
+                "drop on restore": {
+                    "cli": "--drop"
+                }, 
+                "hidden password": null, 
+                "host": {
+                    "cli": "--host"
+                }, 
+                "mongodb collection": {
+                    "cli": "--collection"
+                }, 
+                "mongoimport input directory": null, 
+                "mongoimport input path": {
+                    "cli": "--file"
+                }, 
+                "password": {
+                    "cli": "--password"
+                }, 
+                "password digest": null, 
+                "port": {
+                    "cli": "--port"
+                }, 
+                "positional": null, 
+                "stderr path": null, 
+                "stdout path": null, 
+                "username": {
+                    "cli": "--username"
+                }, 
+                "work directory": null
+            }, 
+            "rule": [
+                "rule/system/mongodb/password/digest", 
+                "rule/system/mongodb/password/hidden", 
+                "rule/system/default/stdout/path", 
+                "rule/system/default/stderr/path", 
+                "rule/program/mongoimport/input/directory", 
+                "rule/program/mongoimport/input/path"
+            ], 
+            "synonym": [
+                "cli", 
+                "keyword"
+            ]
+        }, 
+        "ns/program/mongorestore": {
+            "element": {
+                "database": {
+                    "cli": "--db"
+                }, 
+                "drop on restore": {
+                    "cli": "--drop"
+                }, 
+                "hidden password": null, 
+                "host": {
+                    "cli": "--host"
+                }, 
+                "mongodb collection": {
+                    "cli": "--collection"
+                }, 
+                "mongorestore input directory": null, 
+                "password": {
+                    "cli": "--password"
+                }, 
+                "password digest": null, 
+                "port": {
+                    "cli": "--port"
+                }, 
+                "positional": null, 
+                "stderr path": null, 
+                "stdout path": null, 
+                "username": {
+                    "cli": "--username"
+                }, 
+                "work directory": null
+            }, 
+            "rule": [
+                "rule/system/mongodb/password/digest", 
+                "rule/system/mongodb/password/hidden", 
+                "rule/system/default/stdout/path", 
+                "rule/system/default/stderr/path", 
+                "rule/program/mongorestore/input/directory"
+            ], 
+            "synonym": [
+                "cli", 
+                "keyword"
+            ]
+        }, 
+        "ns/program/mv": {
+            "element": {
+                "positional": null, 
+                "stderr path": null, 
+                "stdout path": null, 
+                "work directory": null
+            }, 
+            "rule": [
+                "rule/system/default/stdout/path", 
+                "rule/system/default/stderr/path"
+            ], 
+            "synonym": [
+                "cli", 
+                "keyword"
+            ]
+        }, 
+        "ns/program/rm": {
+            "element": {
+                "force": {
+                    "cli": "-f"
+                }, 
+                "positional": null, 
+                "recursive rm": {
+                    "cli": "-r"
+                }, 
+                "stderr path": null, 
+                "stdout path": null, 
+                "work directory": null
+            }, 
+            "rule": [
+                "rule/system/default/stdout/path", 
+                "rule/system/default/stderr/path"
+            ], 
+            "synonym": [
+                "cli", 
+                "keyword"
+            ]
+        }, 
+        "ns/program/rsync": {
+            "element": {
+                "bandwidth limit": {
+                    "cli": "--bwlimit"
+                }, 
+                "positional": null, 
+                "recursive rsync": {
+                    "cli": "--recursive"
+                }, 
+                "stderr path": null, 
+                "stdout path": null, 
+                "work directory": null
+            }, 
+            "rule": [
+                "rule/system/default/stdout/path", 
+                "rule/system/default/stderr/path"
+            ], 
+            "synonym": [
+                "cli", 
+                "keyword"
+            ]
+        }, 
+        "ns/program/tar": {
+            "element": {
+                "archive name": null, 
+                "basename": null, 
+                "compression": null, 
+                "dirname": null, 
+                "positional": null, 
+                "stderr path": null, 
+                "stdout path": null, 
+                "tar create": {
+                    "cli": "--create"
+                }, 
+                "tar exclude": {
+                    "cli": "--exclude"
+                }, 
+                "tar extract": {
+                    "cli": "--extract"
+                }, 
+                "tar file": {
+                    "cli": "--file"
+                }, 
+                "tar use compress prog": {
+                    "cli": "--use-compress-program"
+                }, 
+                "threads": null, 
+                "work directory": null
+            }, 
+            "rule": [
+                "rule/system/default/stdout/path", 
+                "rule/system/default/stderr/path", 
+                "rule/program/tar/compression", 
+                "rule/system/default/compression", 
+                "rule/program/tar/file/extension/implicit", 
+                "rule/program/tar/file/basename/implicit", 
+                "rule/program/tar/file/path/implicit"
+            ], 
+            "synonym": [
+                "cli", 
+                "keyword"
+            ]
+        }, 
+        "ns/service/document": {
+            "element": {
+                "body": null, 
+                "head": null
+            }, 
+            "synonym": [
+                "keyword"
+            ]
+        }, 
+        "ns/service/document/body": {
+            "element": {}, 
+            "synonym": [
+                "keyword"
+            ]
+        }, 
+        "ns/service/document/head": {
+            "element": {
+                "alternate": null, 
+                "canonical": null, 
+                "created": null, 
+                "genealogy": null, 
+                "modified": null, 
+                "namespace": null
+            }, 
+            "synonym": [
+                "keyword"
+            ]
+        }, 
+        "ns/service/genealogy": {
+            "element": {
+                "api key": null, 
+                "asset uri": null, 
+                "basename": null, 
+                "canonic basename": null, 
+                "canonic dirname": null, 
+                "compression": null, 
+                "configuration handle": null, 
+                "dirname": null, 
+                "extension": null, 
+                "fully qualified path": null, 
+                "group handle": null, 
+                "group home uri": null, 
+                "group id": null, 
+                "group knowledge uri": null, 
+                "group local uri": null, 
+                "group uuid": null, 
+                "home id": null, 
+                "home uri": null, 
+                "host": null, 
+                "implementation": null, 
+                "inode type": null, 
+                "job status": null, 
+                "job uuid": null, 
+                "kind": null, 
+                "knowledge uri": null, 
+                "language": null, 
+                "local uri": null, 
+                "localized": null, 
+                "media kind": null, 
+                "namespace": null, 
+                "path": null, 
+                "path digest": null, 
+                "person handle": null, 
+                "person home uri": null, 
+                "person id": null, 
+                "person knowledge uri": null, 
+                "person local uri": null, 
+                "person uuid": null, 
+                "profile": null, 
+                "resource path digest": null, 
+                "resource uri": null, 
+                "table handle": null, 
+                "umid": null, 
+                "url": null, 
+                "username": null, 
+                "uuid": null, 
+                "volume": null, 
+                "volume path": null
+            }, 
+            "rule": [
+                "rule/system/temp/location", 
+                "rule/system/volume/location", 
+                "rule/genealogy/volume/host", 
+                "rule/medium/resource/basename/canonic", 
+                "rule/medium/resource/dirname/canonic", 
+                "rule/medium/resource/path/canonic", 
+                "rule/medium/resource/basename/implicit", 
+                "rule/medium/resource/dirname/implicit", 
+                "rule/medium/resource/path/implicit", 
+                "rule/medium/resource/path/digest", 
+                "rule/medium/resource/qualified/path", 
+                "rule/medium/resource/kind/language", 
+                "rule/genealogy/volume", 
+                "rule/genealogy/profile", 
+                "rule/system/default/language", 
+                "rule/genealogy/umid", 
+                "rule/container/implementation", 
+                "rule/medium/resource/uri", 
+                "rule/genealogy/home/uri", 
+                "rule/genealogy/knowledge/uri", 
+                "rule/genealogy/asset/uri", 
+                "rule/home/qualified/person/uri", 
+                "rule/home/qualified/group/uri", 
+                "rule/knowledge/qualified/person/uri", 
+                "rule/knowledge/qualified/group/uri", 
+                "rule/local/qualified/person/uri", 
+                "rule/local/qualified/group/uri"
+            ], 
+            "synonym": [
+                "keyword"
+            ]
+        }, 
+        "ns/service/query": {
+            "element": {
+                "reference": null, 
+                "references": null
+            }, 
+            "rule": [], 
+            "synonym": [
+                "keyword"
+            ]
+        }, 
+        "ns/system/command/default": {
+            "element": {
+                "action": null, 
+                "all": null, 
+                "blocking": null, 
+                "compression": null, 
+                "crawl": null, 
+                "debug": null, 
+                "demonized": null, 
+                "download": null, 
+                "drop on restore": null, 
+                "filter": null, 
+                "genealogy": null, 
+                "horizon": null, 
+                "host": null, 
+                "kind": null, 
+                "language": null, 
+                "overwrite": null, 
+                "preset": null, 
+                "profile": null, 
+                "recursive": null, 
+                "scan path": {
+                    "decode": false
+                }, 
+                "submit": null, 
+                "sync": null, 
+                "tables": null, 
+                "uris": {
+                    "decode": false
+                }, 
+                "verbosity": null, 
+                "volume": null,
+                "slots": null
+            }, 
+            "synonym": [
+                "key"
+            ]
+        }, 
+        "ns/system/condition": {
+            "element": {
+                "condition cardinality": null, 
+                "condition scope": null, 
+                "task reference": null, 
+                "task reference status": null, 
+                "task status": null, 
+                "task status to apply": null
+            }, 
+            "synonym": [
+                "keyword"
+            ]
+        }, 
+        "ns/system/context": {
+            "element": {
+                "job execution": null, 
+                "task execution": null
+            }, 
+            "synonym": [
+                "keyword"
+            ]
+        }, 
+        "ns/system/environment": {
+            "element": {
+                "blocking": null, 
+                "cores": null, 
+                "demonized": null, 
+                "host": null, 
+                "host setting path": null, 
+                "interactive": null, 
+                "interface": null, 
+                "job polling interval": null, 
+                "language": null, 
+                "max of free portion": null, 
+                "parse command line": null, 
+                "queue polling interval": null, 
+                "repository": null, 
+                "repository setting path": null, 
+                "setting cache path": null, 
+                "start rest api": null, 
+                "thread per core ratio": null, 
+                "tubo git revision": null, 
+                "tubo home": null, 
+                "tubo major version": null, 
+                "tubo minor version": null, 
+                "tubo version": null, 
+                "tubo version comment": null, 
+                "user setting path": null, 
+                "verbosity": null
+            }, 
+            "rule": [
+                "rule/system/version"
+            ], 
+            "synonym": [
+                "keyword"
+            ]
+        }, 
+        "ns/system/job": {
+            "element": {
+                "action": null, 
+                "all": {
+                    "decode": false
+                }, 
+                "compression": null, 
+                "crawl": {
+                    "decode": false
+                }, 
+                "debug": {
+                    "decode": false
+                }, 
+                "download": {
+                    "decode": false
+                }, 
+                "drop on restore": null, 
+                "filter": null, 
+                "genealogy": null, 
+                "horizon": null, 
+                "host": null, 
+                "implementation": null, 
+                "job uri": null, 
+                "job uuid": null, 
+                "kind": null, 
+                "language": null, 
+                "overwrite": {
+                    "decode": false
+                }, 
+                "preset": null, 
+                "profile": null, 
+                "recursive": {
+                    "decode": false
+                }, 
+                "save job execution": null, 
+                "scan path": {
+                    "decode": false
+                }, 
+                "sync": {
+                    "decode": false
+                }, 
+                "tables": null, 
+                "uris": {
+                    "decode": false
+                }, 
+                "verbosity": null, 
+                "volume": null,
+                "slots": null, 
+                "threads": null
+            }, 
+            "rule": [
+                "rule/job/implementation", 
+                "rule/queue/job/uri", 
+                "rule/job/log/default"
+            ], 
+            "synonym": [
+                "keyword"
+            ]
+        }, 
+        "ns/system/job/execution": {
+            "element": {
+                "created": null, 
+                "duration": null, 
+                "ended": null, 
+                "host": null, 
+                "job": null, 
+                "job execution uri": null, 
+                "job status": null, 
+                "job uuid": null, 
+                "number of aborted tasks": null, 
+                "number of completed tasks": null, 
+                "number of pending tasks": null, 
+                "number of ready tasks": null, 
+                "number of running tasks": null, 
+                "started": null, 
+                "stderr path": null, 
+                "stdout path": null, 
+                "task execution": null, 
+                "task executions": null, 
+                "temp path": null, 
+                "work directory": null
+            }, 
+            "rule": [
+                "rule/system/temp/location", 
+                "rule/queue/job/execution/uri", 
+                "rule/job/default/work/directory", 
+                "rule/system/default/stdout/path", 
+                "rule/system/default/stderr/path"
+            ], 
+            "synonym": [
+                "keyword"
+            ]
+        }, 
+        "ns/system/mongodb": {
+            "element": {
+                "database": null, 
+                "hidden password": null, 
+                "host": null, 
+                "mongodb safe url": null, 
+                "mongodb url": null, 
+                "password": null, 
+                "password digest": null, 
+                "port": null, 
+                "username": null
+            }, 
+            "rule": [
+                "rule/system/mongodb/password/digest", 
+                "rule/system/mongodb/password/hidden", 
+                "rule/system/mongodb/url/safe", 
+                "rule/system/mongodb/url"
+            ], 
+            "synonym": [
+                "keyword"
+            ]
+        }, 
+        "ns/system/queue": {
+            "element": {
+                "blocking": null, 
+                "cores": null, 
+                "demonized": null, 
+                "host": null, 
+                "interactive": null, 
+                "job polling interval": null, 
+                "max of free portion": null, 
+                "queue polling interval": null, 
+                "slots": null, 
+                "thread per core ratio": null, 
+                "threads": null, 
+                "verbosity": null
+            }, 
+            "rule": [], 
+            "synonym": [
+                "keyword"
+            ]
+        }, 
+        "ns/system/scanner": {
+            "element": {
+                "filter": null, 
+                "kind": null, 
+                "language": null, 
+                "preset": null, 
+                "profile": null, 
+                "recursive": null, 
+                "scan path": null
+            }, 
+            "rule": [], 
+            "synonym": [
+                "keyword"
+            ]
+        }, 
+        "ns/system/task": {
+            "element": {
+                "action": null, 
+                "all": {
+                    "decode": false
+                }, 
+                "compression": null, 
+                "cores": null, 
+                "crawl": {
+                    "decode": false
+                }, 
+                "debug": {
+                    "decode": false
+                }, 
+                "download": {
+                    "decode": false
+                }, 
+                "drop on restore": null, 
+                "genealogy": null, 
+                "horizon": null, 
+                "host": null, 
+                "kind": null, 
+                "language": null, 
+                "method": null, 
+                "overwrite": {
+                    "decode": false
+                }, 
+                "preset": null, 
+                "profile": null, 
+                "sync": {
+                    "decode": false
+                }, 
+                "tables": null, 
+                "task cores": null, 
+                "threads": null, 
+                "verbosity": null, 
+                "volume": null
+            }, 
+            "rule": [
+                "rule/task/default/cores", 
+                "rule/task/preset", 
+                "rule/genealogy/profile", 
+                "rule/task/action/implementation"
+            ], 
+            "synonym": [
+                "keyword"
+            ]
+        }, 
+        "ns/system/task/execution": {
+            "element": {
+                "condition": null, 
+                "conditions": null, 
+                "created": null, 
+                "duration": null, 
+                "ended": null, 
+                "errors": null, 
+                "host": null, 
+                "job uuid": null, 
+                "location": null, 
+                "origins": null, 
+                "products": null, 
+                "started": null, 
+                "stderr path": null, 
+                "stdout path": null, 
+                "task": null, 
+                "task group uuid": null, 
+                "task status": null, 
+                "task uuid": null, 
+                "temp path": null, 
+                "timestamp": null, 
+                "work directory": null
+            }, 
+            "rule": [
+                "rule/system/temp/location", 
+                "rule/task/default/work/directory", 
+                "rule/system/default/stdout/path", 
+                "rule/system/default/stderr/path", 
+                "rule/task/timestamp"
+            ], 
+            "synonym": [
+                "keyword"
+            ]
+        }
+    }
+}

@@ -1,0 +1,364 @@
+{
+    "service": {
+        "configuration": {
+            "branch": {
+                "service/document/configuration/live": {
+                    "index": [
+                        "configuration handle"
+                    ], 
+                    "match": [
+                        {
+                            "filter": "^/s/configuration/live/(?P<configuration_handle>[a-z]+)$"
+                        }
+                    ], 
+                    "namespace": "ns/service/document/head", 
+                    "resolvable": [
+                        {
+                            "canonical": true, 
+                            "format": "/s/configuration/live/{configuration handle}"
+                        }
+                    ]
+                }
+            }, 
+            "implementation": {
+                "class": "module.core.service.configuration.ConfigurationHandler"
+            }, 
+            "match": "^/s/configuration/.*$"
+        }, 
+        "home": {
+            "branch": {
+                "service/home": {
+                    "match": [
+                        {
+                            "filter": "^/h/(?P<home_id>[0-9]+)$"
+                        }
+                    ], 
+                    "table": "home"
+                }, 
+                "service/home/group": {
+                    "collect": [
+                        "/c/local/group/{group uuid}"
+                    ], 
+                    "index": [
+                        "group id", 
+                        "group uuid", 
+                        "group handle"
+                    ], 
+                    "match": [
+                        {
+                            "filter": "^/h/group/(?P<group_id>[0-9]+)$"
+                        }, 
+                        {
+                            "depend": "/c/local/group/{group uuid}", 
+                            "filter": "^/h/group/uuid/(?P<group_uuid>(?P<uuid>[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}))$"
+                        }
+                    ], 
+                    "qualified key": {
+                        "home id": "group id", 
+                        "uuid": "group uuid"
+                    }, 
+                    "resolvable": [
+                        {
+                            "format": "/h/{home id}"
+                        }, 
+                        {
+                            "canonical": true, 
+                            "format": "/h/group/{group id}"
+                        }, 
+                        {
+                            "format": "/h/group/handle/{group handle}"
+                        }, 
+                        {
+                            "format": "/h/group/uuid/{group uuid}"
+                        }
+                    ], 
+                    "table": "home"
+                }, 
+                "service/home/person": {
+                    "collect": [
+                        "/c/local/person/{person uuid}"
+                    ], 
+                    "index": [
+                        "person id", 
+                        "person handle", 
+                        "person uuid", 
+                        "person name", 
+                        "simple person name"
+                    ], 
+                    "match": [
+                        {
+                            "filter": "^/h/person/(?P<person_id>[0-9]+)$"
+                        }, 
+                        {
+                            "depend": "/c/local/person/{person uuid}", 
+                            "filter": "^/h/person/uuid/(?P<person_uuid>(?P<uuid>[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}))$"
+                        }
+                    ], 
+                    "qualified key": {
+                        "home id": "person id", 
+                        "uuid": "person uuid"
+                    }, 
+                    "resolvable": [
+                        {
+                            "format": "/h/{home id}"
+                        }, 
+                        {
+                            "canonical": true, 
+                            "format": "/h/person/{person id}"
+                        }, 
+                        {
+                            "format": "/h/person/handle/{person handle}"
+                        }, 
+                        {
+                            "format": "/h/person/uuid/{person uuid}"
+                        }
+                    ], 
+                    "table": "home"
+                }
+            }, 
+            "generated": [
+                {
+                    "element": "home id", 
+                    "space": "knowledge"
+                }, 
+                {
+                    "element": "uuid", 
+                    "space": "local"
+                }
+            ], 
+            "implementation": {
+                "class": "module.core.service.home.HomeHandler"
+            }, 
+            "match": "^/h/.*$"
+        }, 
+        "knowledge": {
+            "branch": {
+                "service/knowledge/group": {
+                    "aggregate": [
+                        {
+                            "order": 100, 
+                            "uri": "/c/local/group/{group uuid}"
+                        }
+                    ], 
+                    "collect": [
+                        "/h/group/{group id}"
+                    ], 
+                    "index": [
+                        "group id", 
+                        "group uuid"
+                    ], 
+                    "match": [
+                        {
+                            "depend": "/h/group/{group id}", 
+                            "filter": "^/k/group/(?P<group_id>[0-9]+)$"
+                        }
+                    ], 
+                    "resolvable": [
+                        {
+                            "canonical": true, 
+                            "format": "/k/group/{group id}"
+                        }
+                    ], 
+                    "table": "knowledge/group"
+                }, 
+                "service/knowledge/person": {
+                    "aggregate": [
+                        {
+                            "order": 100, 
+                            "uri": "/c/local/person/{person uuid}"
+                        }, 
+                        {
+                            "order": 110, 
+                            "uri": "/k/person/{person id}/groups"
+                        }
+                    ], 
+                    "collect": [
+                        "/h/person/{person id}"
+                    ], 
+                    "index": [
+                        "person id", 
+                        "person uuid"
+                    ], 
+                    "match": [
+                        {
+                            "depend": "/h/person/{person id}", 
+                            "filter": "^/k/person/(?P<person_id>[0-9]+)$"
+                        }
+                    ], 
+                    "resolvable": [
+                        {
+                            "canonical": true, 
+                            "format": "/k/person/{person id}"
+                        }
+                    ], 
+                    "table": "knowledge/person"
+                }
+            }, 
+            "implementation": {
+                "class": "module.core.service.knowledge.KnowledgeBaseHandler"
+            }, 
+            "match": "^/k/.*$"
+        }, 
+        "local": {
+            "branch": {
+                "service/document/local/group": {
+                    "index": [
+                        "group uuid", 
+                        "group handle"
+                    ], 
+                    "match": [
+                        {
+                            "filter": "^/c/local/group/(?P<group_uuid>[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})$"
+                        }, 
+                        {
+                            "filter": "^/c/local/group/handle/(?P<group_handle>[a-z0-9]+)$"
+                        }
+                    ], 
+                    "resolvable": [
+                        {
+                            "canonical": true, 
+                            "format": "/c/local/group/{group uuid}"
+                        }, 
+                        {
+                            "format": "/c/local/group/handle/{group handle}"
+                        }
+                    ], 
+                    "table": "local/group"
+                }, 
+                "service/document/local/group/people": {
+                    "index": [
+                        "group uuid"
+                    ], 
+                    "match": [
+                        {
+                            "filter": "^/c/local/group/(?P<group_uuid>[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})/people$"
+                        }
+                    ], 
+                    "resolvable": [
+                        {
+                            "canonical": true, 
+                            "format": "/c/local/group/{group uuid}/people"
+                        }
+                    ], 
+                    "table": "local/group/people"
+                }, 
+                "service/document/local/person": {
+                    "index": [
+                        "person uuid", 
+                        "person handle"
+                    ], 
+                    "match": [
+                        {
+                            "filter": "^/c/local/person/(?P<person_uuid>[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})$"
+                        }, 
+                        {
+                            "filter": "^/c/local/person/handle/(?P<person_handle>[a-z0-9]+)$"
+                        }
+                    ], 
+                    "resolvable": [
+                        {
+                            "canonical": true, 
+                            "format": "/c/local/person/{person uuid}"
+                        }, 
+                        {
+                            "format": "/c/local/person/handle/{person handle}"
+                        }
+                    ], 
+                    "table": "local/person"
+                }, 
+                "service/document/local/person/groups": {
+                    "index": [
+                        "person uuid"
+                    ], 
+                    "match": [
+                        {
+                            "filter": "^/c/local/person/(?P<person_uuid>[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})/groups$"
+                        }
+                    ], 
+                    "resolvable": [
+                        {
+                            "canonical": true, 
+                            "format": "/c/local/person/{person uuid}/groups"
+                        }
+                    ], 
+                    "table": "local/person/groups"
+                }
+            }, 
+            "implementation": {
+                "class": "module.core.service.local.LocalHandler"
+            }, 
+            "match": "^/c/local/.*$"
+        }, 
+        "medium": {
+            "branch": {
+                "service/medium/asset": {
+                    "index": [
+                        "home id"
+                    ], 
+                    "match": [
+                        {
+                            "depend": "/h/{home id}", 
+                            "filter": "^/m/asset/(?P<home_id>[0-9]+)$"
+                        }
+                    ], 
+                    "resolvable": [
+                        {
+                            "canonical": true, 
+                            "format": "/m/asset/{home id}"
+                        }
+                    ], 
+                    "table": "medium/asset", 
+                    "type": "reference"
+                }
+            }, 
+            "implementation": {
+                "class": "module.core.service.medium.MediumHandler"
+            }, 
+            "match": "^/m/asset/.*$"
+        }, 
+        "queue": {
+            "branch": {
+                "service/document/queue/job": {
+                    "index": [
+                        "job uuid", 
+                        "host"
+                    ], 
+                    "match": [
+                        {
+                            "filter": "^/q/job/(?P<job_uuid>[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})$"
+                        }
+                    ], 
+                    "resolvable": [
+                        {
+                            "canonical": true, 
+                            "format": "/q/job/{job uuid}"
+                        }
+                    ], 
+                    "table": "system/job/queue"
+                }, 
+                "service/document/queue/job/history": {
+                    "index": [
+                        "job uuid", 
+                        "host"
+                    ], 
+                    "match": [
+                        {
+                            "filter": "^/q/job/(?P<job_uuid>[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})/execution$"
+                        }
+                    ], 
+                    "resolvable": [
+                        {
+                            "canonical": true, 
+                            "format": "/q/job/{job uuid}/execution"
+                        }
+                    ], 
+                    "table": "system/job/history"
+                }
+            }, 
+            "implementation": {
+                "class": "module.core.service.queue.QueueHandler"
+            }, 
+            "match": "^/q/.*$"
+        }
+    }
+}

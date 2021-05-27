@@ -1,0 +1,44 @@
+{
+    "module": {
+        "core": {
+            "include": [
+                {
+                    "path": "constant.json"
+                }, 
+                {
+                    "path": "expression.json"
+                }, 
+                {
+                    "path": "system.json"
+                }, 
+                {
+                    "path": "archetype.json"
+                }, 
+                {
+                    "path": "enumeration.json"
+                }, 
+                {
+                    "path": "rule.json"
+                }, 
+                {
+                    "path": "namespace.json"
+                }, 
+                {
+                    "path": "table.json"
+                }, 
+                {
+                    "path": "service.json"
+                }, 
+                {
+                    "path": "command.json"
+                }, 
+                {
+                    "path": "preset.json"
+                }, 
+                {
+                    "path": "interface.json"
+                }
+            ]
+        }
+    }
+}

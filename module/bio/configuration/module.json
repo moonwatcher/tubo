@@ -1,0 +1,38 @@
+{
+    "module": {
+        "bio": {
+            "include": [
+                {
+                    "path": "constant.json"
+                }, 
+                {
+                    "path": "archetype.json"
+                }, 
+                {
+                    "path": "enumeration.json"
+                }, 
+                {
+                    "path": "rule.json"
+                }, 
+                {
+                    "path": "namespace.json"
+                }, 
+                {
+                    "path": "table.json"
+                }, 
+                {
+                    "path": "service.json"
+                }, 
+                {
+                    "path": "command.json"
+                }, 
+                {
+                    "path": "preset.json"
+                }, 
+                {
+                    "path": "interface.json"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "rule": {
+        "rule/genealogy/volume": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "volume", 
+                            "value": "jupiter"
+                        }
+                    ]
+                }
+            ]
+        }
+    }, 
+    "system": {
+        "cores": 4, 
+        "host": "vito", 
+        "repository": "mpk"
+    }
+}

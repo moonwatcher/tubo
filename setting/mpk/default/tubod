@@ -1,0 +1,26 @@
+#!/bin/sh
+# Author: Lior Galanti lior.galanti@nyu.edu NYU Center for Genomics & Systems Biology
+# Defaults for tubod server
+# Sourced by /etc/init.d/tubod
+
+# enable or disable the daemon
+ENABLE_DAEMON=1
+
+# path to python3 interpreter
+PYTHON3=/opt/local/tubo/bin/python3
+
+# path to daemon
+DAEMON=/opt/local/tubo/bin/tubod
+
+# user running the daemon
+USER="tubo"
+
+# options for daemon
+# OPTIONS=""
+
+# log file location 
+STDOUT_LOG_FILE="/var/log/tubo/tubod.out"
+STDERR_LOG_FILE="/var/log/tubo/tubod.err"
+
+# log verbosity: critical, error, warning, info, debug
+# VERBOSITY="debug"

@@ -1,0 +1,239 @@
+{
+    "interface": {
+        "default": {
+            "namespace": "ns/system/command/default", 
+            "prototype": {
+                "crop": {
+                    "flag": [
+                        "--crop"
+                    ], 
+                    "parameter": {
+                        "dest": "crop", 
+                        "help": "override HandBrake automatic crop", 
+                        "metavar": "T:B:L:R"
+                    }
+                }, 
+                "download": {
+                    "flag": [
+                        "--download"
+                    ], 
+                    "parameter": {
+                        "action": "store_true", 
+                        "default": false, 
+                        "dest": "download", 
+                        "help": "download remote resources if local is unavailable"
+                    }
+                }, 
+                "quantizer": {
+                    "flag": [
+                        "-q", 
+                        "--quantizer"
+                    ], 
+                    "parameter": {
+                        "dest": "quantizer", 
+                        "help": "override the x264 quantizer value", 
+                        "metavar": "QUANTIZER"
+                    }
+                }, 
+                "query": {
+                    "flag": [
+                        "-q", 
+                        "--query"
+                    ], 
+                    "parameter": {
+                        "dest": "query", 
+                        "help": "query parameters for lookup", 
+                        "metavar": "DICT"
+                    }
+                }, 
+                "source frame rate": {
+                    "axis": "long", 
+                    "flag": [
+                        "--from"
+                    ], 
+                    "parameter": {
+                        "dest": "source frame rate", 
+                        "help": "source frame rate"
+                    }
+                }, 
+                "target frame rate": {
+                    "axis": "long", 
+                    "flag": [
+                        "--to"
+                    ], 
+                    "parameter": {
+                        "dest": "target frame rate", 
+                        "help": "target frame rate"
+                    }
+                }, 
+                "time shift": {
+                    "flag": [
+                        "--shift"
+                    ], 
+                    "parameter": {
+                        "dest": "time shift", 
+                        "help": "offset in milliseconds", 
+                        "metavar": "MILLISECOND"
+                    }
+                }, 
+                "width": {
+                    "flag": [
+                        "-W", 
+                        "--width"
+                    ], 
+                    "parameter": {
+                        "dest": "width", 
+                        "help": "override profile set maximum pixel width", 
+                        "metavar": "PIXEL"
+                    }
+                }
+            }, 
+            "section": {
+                "action": [
+                    {
+                        "argument": [
+                            "scan path", 
+                            "kind", 
+                            "volume", 
+                            "profile", 
+                            "preset", 
+                            "recursive", 
+                            "overwrite", 
+                            "sync", 
+                            "crawl", 
+                            "language"
+                        ], 
+                        "instruction": {
+                            "help": "explode streams and repack", 
+                            "name": "prepare"
+                        }
+                    }, 
+                    {
+                        "argument": [
+                            "scan path", 
+                            "kind", 
+                            "volume", 
+                            "profile", 
+                            "preset", 
+                            "recursive", 
+                            "overwrite", 
+                            "sync", 
+                            "crawl", 
+                            "download"
+                        ], 
+                        "group": [
+                            {
+                                "argument": [
+                                    "quantizer", 
+                                    "width", 
+                                    "crop"
+                                ], 
+                                "instruction": {
+                                    "title": "video parameters"
+                                }
+                            }, 
+                            {
+                                "argument": [
+                                    "time shift", 
+                                    "source frame rate", 
+                                    "target frame rate"
+                                ], 
+                                "instruction": {
+                                    "title": "subtitle parameters"
+                                }
+                            }
+                        ], 
+                        "instruction": {
+                            "help": "transcode files to preset", 
+                            "name": "transcode"
+                        }
+                    }, 
+                    {
+                        "argument": [
+                            "scan path", 
+                            "kind", 
+                            "volume", 
+                            "preset", 
+                            "profile", 
+                            "recursive", 
+                            "sync", 
+                            "crawl", 
+                            "download", 
+                            "language"
+                        ], 
+                        "instruction": {
+                            "help": "update container streams", 
+                            "name": "update"
+                        }, 
+                        "name": "update"
+                    }, 
+                    {
+                        "argument": [
+                            "scan path", 
+                            "preset", 
+                            "recursive", 
+                            "sync", 
+                            "crawl", 
+                            "language"
+                        ], 
+                        "instruction": {
+                            "help": "update container metadata", 
+                            "name": "tag"
+                        }
+                    }, 
+                    {
+                        "argument": [
+                            "scan path", 
+                            "preset", 
+                            "recursive", 
+                            "overwrite", 
+                            "sync", 
+                            "crawl"
+                        ], 
+                        "instruction": {
+                            "help": "explode streams from container", 
+                            "name": "explode"
+                        }
+                    }, 
+                    {
+                        "argument": [
+                            "scan path", 
+                            "kind", 
+                            "volume", 
+                            "profile", 
+                            "preset", 
+                            "recursive", 
+                            "overwrite", 
+                            "sync", 
+                            "crawl", 
+                            "language"
+                        ], 
+                        "instruction": {
+                            "help": "pack streams into a container", 
+                            "name": "pack"
+                        }
+                    }, 
+                    {
+                        "argument": [
+                            "scan path", 
+                            "sync", 
+                            "crawl", 
+                            "recursive"
+                        ], 
+                        "instruction": {
+                            "help": "optimize file structure", 
+                            "name": "optimize"
+                        }
+                    }
+                ], 
+                "instruction": {
+                    "description": "", 
+                    "dest": "action", 
+                    "help": null, 
+                    "metavar": "ACTION", 
+                    "title": "pipeline operations"
+                }
+            }
+        }
+    }
+}

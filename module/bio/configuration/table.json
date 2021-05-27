@@ -1,0 +1,1018 @@
+{
+    "table": {
+        "knowledge/barcode": {
+            "collection": "knowledge_barcode", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/barcode"
+        }, 
+        "knowledge/flowcell": {
+            "collection": "knowledge_flowcell", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/flowcell"
+        }, 
+        "knowledge/flowcell/lanes": {
+            "collection": "knowledge_flowcell_lanes", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/flowcell"
+        }, 
+        "knowledge/instrument": {
+            "collection": "knowledge_instrument", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/instrument"
+        }, 
+        "knowledge/lane": {
+            "collection": "knowledge_lane", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/lane"
+        }, 
+        "knowledge/lane/pools": {
+            "collection": "knowledge_lane_pools", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/lane"
+        }, 
+        "knowledge/library": {
+            "collection": "knowledge_library", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/library"
+        }, 
+        "knowledge/library/barcodes": {
+            "collection": "knowledge_library_barcodes", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/library"
+        }, 
+        "knowledge/organism": {
+            "collection": "knowledge_organism", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/organism/canonical"
+        }, 
+        "knowledge/pool": {
+            "collection": "knowledge_pool", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/pool"
+        }, 
+        "knowledge/pool/samples": {
+            "collection": "knowledge_pool_samples", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/pool"
+        }, 
+        "knowledge/sample": {
+            "collection": "knowledge_sample", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/sample"
+        }, 
+        "local/barcode": {
+            "collection": "local_barcode", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/barcode"
+        }, 
+        "local/flowcell": {
+            "collection": "local_flowcell", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/flowcell"
+        }, 
+        "local/flowcell/lanes": {
+            "collection": "local_flowcell_lanes", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/flowcell"
+        }, 
+        "local/lane": {
+            "collection": "local_lane", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/lane"
+        }, 
+        "local/lane/pools": {
+            "collection": "local_lane_pools", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/lane"
+        }, 
+        "local/library": {
+            "collection": "local_library", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/library"
+        }, 
+        "local/library/barcodes": {
+            "collection": "local_library_barcodes", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/library"
+        }, 
+        "local/organism": {
+            "collection": "local_organism", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/organism"
+        }, 
+        "local/pool": {
+            "collection": "local_pool", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/pool"
+        }, 
+        "local/pool/samples": {
+            "collection": "local_pool_samples", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/pool"
+        }, 
+        "local/sample": {
+            "collection": "local_sample", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/sample"
+        }, 
+        "web/barcode": {
+            "collection": "web_barcode", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/barcode"
+        }, 
+        "web/flowcell": {
+            "collection": "web_flowcell", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/flowcell"
+        }, 
+        "web/flowcell/lanes": {
+            "collection": "web_flowcell_lanes", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/flowcell"
+        }, 
+        "web/flowcell/status": {
+            "collection": "web_flowcell_status", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/flowcell"
+        }, 
+        "web/group": {
+            "collection": "web_group", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/group"
+        }, 
+        "web/group/people": {
+            "collection": "web_group_people", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/group"
+        }, 
+        "web/lane": {
+            "collection": "web_lane", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/lane"
+        }, 
+        "web/lane/pools": {
+            "collection": "web_lane_pools", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/lane"
+        }, 
+        "web/library": {
+            "collection": "web_library", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/library"
+        }, 
+        "web/library/barcodes": {
+            "collection": "web_library_barcodes", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/library"
+        }, 
+        "web/organism": {
+            "collection": "web_organism", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/organism"
+        }, 
+        "web/person": {
+            "collection": "web_person", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/person"
+        }, 
+        "web/person/groups": {
+            "collection": "web_person_groups", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/person"
+        }, 
+        "web/pool": {
+            "collection": "web_pool", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/pool"
+        }, 
+        "web/pool/samples": {
+            "collection": "web_pool_samples", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/pool"
+        }, 
+        "web/sample": {
+            "collection": "web_sample", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/sample"
+        }
+    }
+}

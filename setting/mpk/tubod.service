@@ -1,0 +1,18 @@
+[Unit]
+Description=tubod background daemon
+After=syslog.target network.target remote-fs.target
+
+[Service]
+Type=simple
+PIDFile=/var/run/tubod.pid
+Environment=TUBO_HOME=/home/tubo/.tubo
+ExecStart=/opt/local/tubo/env/bin/python3 /opt/local/tubo/env/bin/tubod
+Restart=always
+User=tubo
+Group=tubo
+StandardOutput=journal
+StandardError=journal
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target

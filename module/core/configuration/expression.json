@@ -1,0 +1,44 @@
+{
+    "expression": {
+        "characters to exclude from filename": {
+            "definition": "[\\/?<>:*|'\"^\\.]", 
+            "flags": 32
+        }, 
+        "clean xml": {
+            "definition": "\\s+/\\s+(?:\t)*", 
+            "flags": 32
+        }, 
+        "filter rule": {
+            "definition": "^(?P<mode>\\+|-)\\s+(?P<filter>.*)$", 
+            "flags": 32
+        }, 
+        "full utc datetime": {
+            "definition": "(?:(?P<tzinfo>[A-Za-z/]+) )?(?P<year>[0-9]{4})(?:-(?P<month>[0-9]{2})(?:-(?P<day>[0-9]{2})(?:(?: |T)(?P<hour>[0-9]{2}):(?P<minute>[0-9]{2}):(?P<second>[0-9]{2}))?)?)?", 
+            "flags": 32
+        }, 
+        "job execution uri": {
+            "definition": "^/q/job/(?P<uuid>[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})/execution$", 
+            "flags": 32
+        }, 
+        "long datetime": {
+            "definition": "(?P<year>[0-9]{4})(?:-(?P<month>[0-9]{2})(?:-(?P<day>[0-9]{2})(?:-(?P<hour>[0-9]{2})(?:-(?P<minute>[0-9]{2})(?:-(?P<second>[0-9]{2})(?:-(?P<microsecond>[0-9]{6}))?)?)?)?)?)?", 
+            "flags": 32
+        }, 
+        "short datetime": {
+            "definition": "(?P<year>[0-9]{2})(?P<month>[0-9]{2})(?P<day>[0-9]{2})", 
+            "flags": 32
+        }, 
+        "system runtime document": {
+            "definition": "^/s/.*$", 
+            "flags": 32
+        }, 
+        "true value": {
+            "definition": "yes|true|1|Y", 
+            "flags": 34
+        }, 
+        "whitespace": {
+            "definition": "\\s+", 
+            "flags": 32
+        }
+    }
+}

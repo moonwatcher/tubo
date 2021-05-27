@@ -1,0 +1,606 @@
+{
+    "archetype": {
+        "action": {
+            "type": "string"
+        }, 
+        "all": {
+            "type": "boolean"
+        }, 
+        "alternate": {
+            "plural": true, 
+            "type": "string"
+        }, 
+        "api key": {
+            "type": "string"
+        }, 
+        "archive name": {
+            "type": "string"
+        }, 
+        "asset uri": {
+            "type": "string"
+        }, 
+        "bandwidth limit": {
+            "type": "integer"
+        }, 
+        "basename": {
+            "type": "string"
+        }, 
+        "blocking": {
+            "type": "boolean"
+        }, 
+        "canonic basename": {
+            "type": "string"
+        }, 
+        "canonic dirname": {
+            "type": "string"
+        }, 
+        "canonical": {
+            "type": "string"
+        }, 
+        "compression": {
+            "type": "string"
+        }, 
+        "condition": {
+            "namespace": "ns/system/condition", 
+            "type": "object"
+        }, 
+        "condition cardinality": {
+            "type": "string"
+        }, 
+        "condition scope": {
+            "type": "string"
+        }, 
+        "conditions": {
+            "namespace": "ns/system/condition", 
+            "plural": true, 
+            "single": "condition", 
+            "type": "object"
+        }, 
+        "configuration handle": {
+            "type": "string"
+        }, 
+        "cores": {
+            "type": "integer"
+        }, 
+        "country code": {
+            "enumeration": "country", 
+            "type": "enum"
+        }, 
+        "country name": {
+            "type": "string"
+        }, 
+        "crawl": {
+            "type": "boolean"
+        }, 
+        "created": {
+            "type": "date"
+        }, 
+        "database": {
+            "type": "string"
+        }, 
+        "debug": {
+            "type": "boolean"
+        }, 
+        "default": {
+            "type": "boolean"
+        }, 
+        "demonized": {
+            "type": "boolean"
+        }, 
+        "dialect": {
+            "type": "string"
+        }, 
+        "dirname": {
+            "type": "string"
+        }, 
+        "download": {
+            "type": "boolean"
+        }, 
+        "drop on restore": {
+            "type": "boolean"
+        }, 
+        "duration": {
+            "type": "float"
+        }, 
+        "email": {
+            "type": "string"
+        }, 
+        "ended": {
+            "type": "date"
+        }, 
+        "errors": {
+            "plural": true, 
+            "type": "string"
+        }, 
+        "extension": {
+            "type": "string"
+        }, 
+        "file size": {
+            "format": "byte", 
+            "type": "integer"
+        }, 
+        "filter": {
+            "plural": true, 
+            "type": "string"
+        }, 
+        "force": {
+            "type": "boolean"
+        }, 
+        "format": {
+            "type": "string"
+        }, 
+        "full name": {
+            "type": "string"
+        }, 
+        "fully qualified path": {
+            "type": "string"
+        }, 
+        "genealogy": {
+            "namespace": "ns/service/genealogy", 
+            "parse": "json", 
+            "type": "object"
+        }, 
+        "group": {
+            "namespace": "ns/knowledge/group", 
+            "type": "object"
+        }, 
+        "group handle": {
+            "type": "string"
+        }, 
+        "group home uri": {
+            "type": "string"
+        }, 
+        "group id": {
+            "type": "integer"
+        }, 
+        "group knowledge uri": {
+            "type": "string"
+        }, 
+        "group uuid": {
+            "type": "string"
+        }, 
+        "groups": {
+            "namespace": "ns/knowledge/group", 
+            "plural": true, 
+            "single": "group", 
+            "type": "object"
+        }, 
+        "head": {
+            "namespace": "ns/service/document/head", 
+            "type": "object"
+        }, 
+        "hidden password": {
+            "type": "string"
+        }, 
+        "home id": {
+            "type": "integer"
+        }, 
+        "home uri": {
+            "type": "string"
+        }, 
+        "horizon": {
+            "type": "integer"
+        }, 
+        "host": {
+            "type": "string"
+        }, 
+        "host setting path": {
+            "type": "string"
+        }, 
+        "implementation": {
+            "type": "string"
+        }, 
+        "inode type": {
+            "type": "string"
+        }, 
+        "interactive": {
+            "type": "boolean"
+        }, 
+        "interface": {
+            "type": "string"
+        }, 
+        "iso 3166 1 alpha 2": {
+            "type": "string"
+        }, 
+        "iso 3166 1 alpha 3": {
+            "type": "string"
+        }, 
+        "iso 3166 1 numeric": {
+            "type": "string"
+        }, 
+        "iso 639 1": {
+            "type": "string"
+        }, 
+        "iso 639 2b": {
+            "type": "string"
+        }, 
+        "iso 639 2t": {
+            "type": "string"
+        }, 
+        "job": {
+            "namespace": "ns/system/job", 
+            "type": "object"
+        }, 
+        "job execution": {
+            "namespace": "ns/system/job/execution", 
+            "type": "object"
+        }, 
+        "job execution uri": {
+            "type": "string"
+        }, 
+        "job executions": {
+            "namespace": "ns/system/job/execution", 
+            "plural": true, 
+            "single": "job execution", 
+            "type": "object"
+        }, 
+        "job polling interval": {
+            "type": "integer"
+        }, 
+        "job status": {
+            "type": "string"
+        }, 
+        "job uri": {
+            "type": "string"
+        }, 
+        "job uuid": {
+            "type": "string"
+        }, 
+        "kind": {
+            "type": "string"
+        }, 
+        "knowledge uri": {
+            "type": "string"
+        }, 
+        "language": {
+            "enumeration": "language", 
+            "type": "enum"
+        }, 
+        "language code": {
+            "enumeration": "language", 
+            "type": "enum"
+        }, 
+        "language name": {
+            "type": "string"
+        }, 
+        "local uri": {
+            "type": "string"
+        }, 
+        "localized": {
+            "type": "boolean"
+        }, 
+        "location": {
+            "namespace": "ns/service/genealogy", 
+            "type": "object"
+        }, 
+        "max of free portion": {
+            "type": "float"
+        }, 
+        "media kind": {
+            "atom": "stik", 
+            "enumeration": "media kind", 
+            "type": "enum"
+        }, 
+        "method": {
+            "type": "string"
+        }, 
+        "modified": {
+            "type": "date"
+        }, 
+        "mongodb collection": {
+            "type": "string"
+        }, 
+        "mongodb safe url": {
+            "type": "string"
+        }, 
+        "mongodb url": {
+            "type": "string"
+        }, 
+        "mongodump output directory": {
+            "type": "string"
+        }, 
+        "mongoexport output directory": {
+            "type": "string"
+        }, 
+        "mongoexport output path": {
+            "type": "string"
+        }, 
+        "mongoimport input directory": {
+            "type": "string"
+        }, 
+        "mongorestore input directory": {
+            "type": "string"
+        }, 
+        "namespace": {
+            "type": "string"
+        }, 
+        "native country name": {
+            "type": "string"
+        }, 
+        "native language name": {
+            "type": "string"
+        }, 
+        "number of aborted tasks": {
+            "type": "integer"
+        }, 
+        "number of completed tasks": {
+            "type": "integer"
+        }, 
+        "number of pending tasks": {
+            "type": "integer"
+        }, 
+        "number of ready tasks": {
+            "type": "integer"
+        }, 
+        "number of running tasks": {
+            "type": "integer"
+        }, 
+        "origins": {
+            "namespace": "ns/service/genealogy", 
+            "plural": true, 
+            "single": "location", 
+            "type": "object"
+        }, 
+        "overwrite": {
+            "type": "boolean"
+        }, 
+        "parse command line": {
+            "type": "boolean"
+        }, 
+        "password": {
+            "type": "string"
+        }, 
+        "password digest": {
+            "type": "string"
+        }, 
+        "path": {
+            "type": "string"
+        }, 
+        "path digest": {
+            "type": "string"
+        }, 
+        "people": {
+            "namespace": "ns/knowledge/person", 
+            "plural": true, 
+            "single": "person", 
+            "type": "object"
+        }, 
+        "person": {
+            "namespace": "ns/knowledge/person", 
+            "type": "object"
+        }, 
+        "person handle": {
+            "type": "string"
+        }, 
+        "person home uri": {
+            "type": "string"
+        }, 
+        "person id": {
+            "type": "integer"
+        }, 
+        "person knowledge uri": {
+            "type": "string"
+        }, 
+        "person name": {
+            "type": "string"
+        }, 
+        "person uuid": {
+            "type": "string"
+        }, 
+        "port": {
+            "type": "integer"
+        }, 
+        "positional": {
+            "plural": true, 
+            "type": "string"
+        }, 
+        "preset": {
+            "type": "string"
+        }, 
+        "primary": {
+            "type": "boolean"
+        }, 
+        "products": {
+            "namespace": "ns/service/genealogy", 
+            "plural": true, 
+            "single": "location", 
+            "type": "object"
+        }, 
+        "profile": {
+            "type": "string"
+        }, 
+        "queue polling interval": {
+            "type": "integer"
+        }, 
+        "recursive": {
+            "type": "boolean"
+        }, 
+        "recursive rm": {
+            "type": "boolean"
+        }, 
+        "recursive rsync": {
+            "type": "boolean"
+        }, 
+        "reference": {
+            "namespace": "ns/service/document/head", 
+            "type": "object"
+        }, 
+        "references": {
+            "namespace": "ns/service/document/head", 
+            "plural": true, 
+            "single": "reference", 
+            "type": "object"
+        }, 
+        "repository": {
+            "type": "string"
+        }, 
+        "repository setting path": {
+            "type": "string"
+        }, 
+        "resource path digest": {
+            "type": "string"
+        }, 
+        "resource uri": {
+            "type": "string"
+        }, 
+        "runtime": {
+            "type": "integer"
+        }, 
+        "save job execution": {
+            "type": "boolean"
+        }, 
+        "scan path": {
+            "plural": true, 
+            "type": "string"
+        }, 
+        "setting cache path": {
+            "type": "string"
+        }, 
+        "slots": {
+            "type": "integer"
+        }, 
+        "start rest api": {
+            "type": "boolean"
+        }, 
+        "started": {
+            "type": "date"
+        }, 
+        "stderr path": {
+            "type": "string"
+        }, 
+        "stdin path": {
+            "type": "string"
+        }, 
+        "stdout path": {
+            "type": "string"
+        }, 
+        "stop": {
+            "type": "boolean"
+        }, 
+        "submit": {
+            "type": "boolean"
+        }, 
+        "symbolic ln": {
+            "type": "boolean"
+        }, 
+        "sync": {
+            "type": "boolean"
+        }, 
+        "table handle": {
+            "type": "string"
+        }, 
+        "tables": {
+            "plural": true, 
+            "type": "string"
+        }, 
+        "tar create": {
+            "type": "boolean"
+        }, 
+        "tar exclude": {
+            "type": "string"
+        }, 
+        "tar extract": {
+            "type": "boolean"
+        }, 
+        "tar file": {
+            "type": "string"
+        }, 
+        "tar use compress prog": {
+            "type": "string"
+        }, 
+        "task": {
+            "namespace": "ns/system/task", 
+            "type": "object"
+        }, 
+        "task cores": {
+            "type": "integer"
+        }, 
+        "task execution": {
+            "namespace": "ns/system/task/execution", 
+            "type": "object"
+        }, 
+        "task executions": {
+            "namespace": "ns/system/task/execution", 
+            "plural": true, 
+            "single": "task execution", 
+            "type": "object"
+        }, 
+        "task group uuid": {
+            "type": "string"
+        }, 
+        "task reference": {
+            "type": "string"
+        }, 
+        "task reference status": {
+            "type": "string"
+        }, 
+        "task status": {
+            "type": "string"
+        }, 
+        "task status to apply": {
+            "type": "string"
+        }, 
+        "task uuid": {
+            "type": "string"
+        }, 
+        "thread per core ratio": {
+            "type": "float"
+        }, 
+        "threads": {
+            "type": "integer"
+        }, 
+        "timestamp": {
+            "type": "string"
+        }, 
+        "tubo git revision": {
+            "type": "string"
+        }, 
+        "tubo home": {
+            "type": "string"
+        }, 
+        "tubo major version": {
+            "type": "integer"
+        }, 
+        "tubo minor version": {
+            "type": "integer"
+        }, 
+        "tubo version": {
+            "type": "string"
+        }, 
+        "tubo version comment": {
+            "type": "string"
+        }, 
+        "umid": {
+            "type": "string"
+        }, 
+        "uris": {
+            "plural": true, 
+            "type": "string"
+        }, 
+        "url": {
+            "type": "string"
+        }, 
+        "user setting path": {
+            "type": "string"
+        }, 
+        "username": {
+            "type": "string"
+        }, 
+        "uuid": {
+            "type": "string"
+        }, 
+        "verbosity": {
+            "enumeration": "verbosity", 
+            "type": "enum"
+        }, 
+        "volume": {
+            "type": "string"
+        }, 
+        "volume path": {
+            "type": "string"
+        }, 
+        "work directory": {
+            "type": "string"
+        }
+    }
+}

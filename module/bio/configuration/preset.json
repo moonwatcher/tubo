@@ -1,0 +1,180 @@
+{
+    "preset": {
+        "default": {
+            "action": {
+                "basecall": {
+                    "bcl2fastq": {
+                        "bcl2fastq fastq cluster count": 0, 
+                        "bcl2fastq ignore missing bcl": true, 
+                        "bcl2fastq ignore missing control": true, 
+                        "bcl2fastq ignore missing stats": true, 
+                        "bcl2fastq no eamss": true, 
+                        "bcl2fastq with failed reads": true
+                    }, 
+                    "picard illuminabasecallstofastq": {
+                        "picard apply eamss filter": false, 
+                        "picard compress outputs": true, 
+                        "picard force gc": true, 
+                        "picard include non pf reads": true, 
+                        "picard max reads in ram per tile": 200000, 
+                        "picard minimum quality": 2
+                    }
+                }, 
+                "crawl": null, 
+                "demux": {
+                    "pheniqs demux": {
+                        "pheniqs barcode": [], 
+                        "pheniqs fragment": [], 
+                        "pheniqs include non pf": 0, 
+                        "pheniqs input": [], 
+                        "pheniqs library": [], 
+                        "pheniqs output": [], 
+                        "pheniqs sequence": []
+                    }
+                }, 
+                "explode": null, 
+                "export-samplesheet": null, 
+                "filter": {
+                    "pheniqs filter": {
+                        "pheniqs fragment": [
+                            "0:0:"
+                        ], 
+                        "pheniqs include non pf": 0, 
+                        "pheniqs input": [], 
+                        "pheniqs library": [
+                            "0"
+                        ], 
+                        "pheniqs output": []
+                    }
+                }, 
+                "implode": {
+                    "tar": {
+                        "tar exclude": "Data/Intensities/L00*/C*.1"
+                    }
+                }, 
+                "import-samplesheet": null, 
+                "info": null, 
+                "merge": null, 
+                "sav": null
+            }, 
+            "description": "Default preset"
+        }, 
+        "filtered": {
+            "action": {
+                "basecall": {
+                    "bcl2fastq": {
+                        "bcl2fastq fastq cluster count": 0, 
+                        "bcl2fastq ignore missing bcl": true, 
+                        "bcl2fastq ignore missing control": true, 
+                        "bcl2fastq ignore missing stats": true, 
+                        "bcl2fastq no eamss": true, 
+                        "bcl2fastq with failed reads": false
+                    }, 
+                    "picard illuminabasecallstofastq": {
+                        "picard apply eamss filter": false, 
+                        "picard compress outputs": true, 
+                        "picard force gc": true, 
+                        "picard include non pf reads": false, 
+                        "picard max reads in ram per tile": 200000, 
+                        "picard minimum quality": 2
+                    }
+                }, 
+                "copy": null, 
+                "crawl": null, 
+                "delete": null, 
+                "demux": {
+                    "pheniqs demux": {
+                        "pheniqs barcode": [], 
+                        "pheniqs fragment": [], 
+                        "pheniqs include non pf": 0, 
+                        "pheniqs input": [], 
+                        "pheniqs library": [], 
+                        "pheniqs output": [], 
+                        "pheniqs sequence": []
+                    }
+                }, 
+                "filter": {
+                    "pheniqs filter": {
+                        "pheniqs fragment": [
+                            "0:0:"
+                        ], 
+                        "pheniqs include non pf": 0, 
+                        "pheniqs input": [], 
+                        "pheniqs library": [
+                            "0"
+                        ], 
+                        "pheniqs output": []
+                    }
+                }, 
+                "move": null
+            }, 
+            "description": "Preset for filtered processing"
+        }, 
+        "slow": {
+            "action": {
+                "copy": {
+                    "rsync": {
+                        "bandwidth limit": 4096
+                    }
+                }, 
+                "move": {
+                    "rsync": {
+                        "bandwidth limit": 4096
+                    }
+                }
+            }, 
+            "description": "Limited speed transfer preset"
+        }, 
+        "unfiltered": {
+            "action": {
+                "basecall": {
+                    "bcl2fastq": {
+                        "bcl2fastq fastq cluster count": 0, 
+                        "bcl2fastq ignore missing bcl": true, 
+                        "bcl2fastq ignore missing control": true, 
+                        "bcl2fastq ignore missing stats": true, 
+                        "bcl2fastq no eamss": true, 
+                        "bcl2fastq with failed reads": true
+                    }, 
+                    "picard illuminabasecallstofastq": {
+                        "picard apply eamss filter": false, 
+                        "picard compress outputs": true, 
+                        "picard force gc": true, 
+                        "picard include non pf reads": true, 
+                        "picard max reads in ram per tile": 200000, 
+                        "picard minimum quality": 2
+                    }
+                }, 
+                "copy": null, 
+                "crawl": null, 
+                "delete": null, 
+                "demux": {
+                    "pheniqs demux": {
+                        "pheniqs barcode": [], 
+                        "pheniqs fragment": [], 
+                        "pheniqs include non pf": 1, 
+                        "pheniqs input": [], 
+                        "pheniqs library": [], 
+                        "pheniqs output": [], 
+                        "pheniqs sequence": []
+                    }
+                }, 
+                "filter": {
+                    "pheniqs filter": {
+                        "pheniqs fragment": [
+                            "0:0:"
+                        ], 
+                        "pheniqs include non pf": 1, 
+                        "pheniqs input": [], 
+                        "pheniqs library": [
+                            "0"
+                        ], 
+                        "pheniqs output": []
+                    }
+                }, 
+                "move": null
+            }, 
+            "description": "Preset for unfiltered processing"
+        }
+    }
+}

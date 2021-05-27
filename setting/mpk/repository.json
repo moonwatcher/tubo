@@ -1,0 +1,133 @@
+{
+    "enumeration": {
+        "path homology": {
+            "element": {
+                "brooklyn on babylon": {
+                    "alternate": "/export/data1",
+                    "host": "babylon.bio.nyu.edu",
+                    "path": "/volume/babylon/brooklyn"
+                },
+                "toronto on babylon": {
+                    "alternate": "/mnt/gencore",
+                    "host": "babylon.bio.nyu.edu",
+                    "path": "/volume/euphrates/toronto"
+                },
+                "volume on albireo": {
+                    "alternate": "/Volumes",
+                    "host": "albireo.bio.nyu.edu",
+                    "path": "/volume/albireo"
+                },
+                "volume on multivac": {
+                    "alternate": "/Volumes",
+                    "host": "multivac",
+                    "path": "/volume/multivac"
+                }
+            }
+        },
+        "temporary workspace": {
+            "element": {
+                "aduae190": {
+                    "host": "aduae190-lap.abudhabi.nyu.edu",
+                    "path": "/home/tubo/temp"
+                },
+                "albireo": {
+                    "host": "albireo.bio.nyu.edu",
+                    "path": "/volume/albireo/waverly/temp"
+                },
+                "babylon": {
+                    "host": "babylon.bio.nyu.edu",
+                    "path": "/volume/babylon/brooklyn/temp"
+                },
+                "multivac": {
+                    "host": "multivac",
+                    "path": "/volume/multivac/boston/temp"
+                },
+                "shaft": {
+                    "host": "shaft",
+                    "path": "/Users/lg/Documents/temp"
+                },
+                "vito": {
+                    "host": "vito",
+                    "path": "/volume/vito/barcelona/temp"
+                }
+            }
+        },
+        "volume": {
+            "element": {
+                "alpha": {
+                    "host": "babylon.bio.nyu.edu",
+                    "path": "/volume/babylon/brooklyn/alpha"
+                },
+                "atlas": {
+                    "host": "shaft",
+                    "path": "/volume/grandcentral/huston/atlas"
+                },
+                "beta": {
+                    "host": "babylon.bio.nyu.edu",
+                    "path": "/volume/euphrates/toronto/beta"
+                },
+                "django": {
+                    "host": "albireo.bio.nyu.edu",
+                    "path": "/volume/albireo/canal/django"
+                },
+                "eros": {
+                    "host": "multivac",
+                    "path": "/volume/multivac/nagasaki/eros"
+                },
+                "gamma": {
+                    "host": "albireo.bio.nyu.edu",
+                    "path": "/volume/albireo/waverly/gamma"
+                },
+                "janus": {
+                    "host": "shaft",
+                    "path": "/volume/grandcentral/columbia/janus"
+                },
+                "jupiter": {
+                    "host": "multivac",
+                    "path": "/volume/vito/toronto/jupiter"
+                },
+                "lambda": {
+                    "host": "aduae190-lap.abudhabi.nyu.edu",
+                    "path": "/home/tubo/lambda"
+                },
+                "neptune": {
+                    "host": "vito",
+                    "path": "/volume/vito/london/neptune"
+                },
+                "oberon": {
+                    "host": "multivac",
+                    "path": "/volume/multivac/valencia/oberon"
+                },
+                "pan": {
+                    "host": "shaft",
+                    "path": "/volume/grandcentral/chicago/pan"
+                },
+                "pluto": {
+                    "host": "vito",
+                    "path": "/volume/vito/kyoto"
+                },
+                "saturn": {
+                    "host": "vito",
+                    "path": "/volume/vito/paris/saturn"
+                },
+                "titan": {
+                    "host": "multivac",
+                    "path": "/volume/multivac/hiroshima/titan"
+                }
+            }
+        }
+    },
+    "repository": {
+        "mpk": {
+            "mongodb": {
+                "database": "tubo",
+                "host": "albireo.bio.nyu.edu",
+                "password": "password",
+                "username": "tubo"
+            }
+        }
+    },
+    "system": {
+        "repository": "mpk"
+    }
+}

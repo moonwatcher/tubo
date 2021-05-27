@@ -1,0 +1,2071 @@
+{
+    "preset": {
+        "ac3audio": {
+            "action": {
+                "explode": {
+                    "pivot": [
+                        {
+                            "operator": "this"
+                        }
+                    ], 
+                    "transform": [
+                        {
+                            "branch": [
+                                {
+                                    "kind": "mkv"
+                                }
+                            ], 
+                            "mode": "select", 
+                            "track": [
+                                {
+                                    "branch": [
+                                        {
+                                            "language": "he", 
+                                            "stream kind": "caption"
+                                        }
+                                    ], 
+                                    "mode": "choose", 
+                                    "override": {
+                                        "routing type": "fragment", 
+                                        "tasks": [
+                                            {
+                                                "action": "transcode", 
+                                                "kind": "srt", 
+                                                "preset": "default", 
+                                                "profile": "original"
+                                            }, 
+                                            {
+                                                "action": "transcode", 
+                                                "kind": "srt", 
+                                                "preset": "clean", 
+                                                "profile": "clean"
+                                            }
+                                        ]
+                                    }
+                                }, 
+                                {
+                                    "branch": [
+                                        {
+                                            "language": "en", 
+                                            "stream kind": "caption"
+                                        }
+                                    ], 
+                                    "mode": "choose", 
+                                    "override": {
+                                        "routing type": "fragment", 
+                                        "tasks": [
+                                            {
+                                                "action": "transcode", 
+                                                "kind": "srt", 
+                                                "preset": "default", 
+                                                "profile": "original"
+                                            }, 
+                                            {
+                                                "action": "transcode", 
+                                                "kind": "srt", 
+                                                "preset": "clean", 
+                                                "profile": "clean"
+                                            }
+                                        ]
+                                    }
+                                }, 
+                                {
+                                    "branch": [
+                                        {
+                                            "kind": "dts", 
+                                            "stream kind": "audio"
+                                        }
+                                    ], 
+                                    "mode": "select", 
+                                    "override": {
+                                        "routing type": "fragment", 
+                                        "tasks": [
+                                            {
+                                                "action": "transcode", 
+                                                "kind": "ac3", 
+                                                "preset": "default", 
+                                                "routing type": "fragment"
+                                            }
+                                        ]
+                                    }
+                                }, 
+                                {
+                                    "branch": [
+                                        {
+                                            "kind": "flac", 
+                                            "stream kind": "audio"
+                                        }
+                                    ], 
+                                    "mode": "select", 
+                                    "override": {
+                                        "routing type": "fragment", 
+                                        "tasks": [
+                                            {
+                                                "action": "transcode", 
+                                                "kind": "ac3", 
+                                                "preset": "default", 
+                                                "routing type": "fragment"
+                                            }
+                                        ]
+                                    }
+                                }, 
+                                {
+                                    "branch": [
+                                        {
+                                            "stream kind": "menu"
+                                        }
+                                    ], 
+                                    "mode": "choose", 
+                                    "override": {
+                                        "routing type": "fragment", 
+                                        "tasks": [
+                                            {
+                                                "action": "transcode", 
+                                                "kind": "chp"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }, 
+                "pack": {
+                    "pivot": [
+                        {
+                            "operator": "this"
+                        }, 
+                        {
+                            "operator": "fragments"
+                        }
+                    ], 
+                    "transform": [
+                        {
+                            "branch": [
+                                {
+                                    "kind": "srt"
+                                }
+                            ], 
+                            "description": "Subtitles", 
+                            "mode": "select", 
+                            "track": [
+                                {
+                                    "branch": [
+                                        {
+                                            "stream kind": "caption"
+                                        }
+                                    ], 
+                                    "mode": "choose", 
+                                    "override": {
+                                        "stream name": "Normal"
+                                    }
+                                }
+                            ]
+                        }, 
+                        {
+                            "branch": [
+                                {
+                                    "kind": "chp"
+                                }
+                            ], 
+                            "description": "Chapters", 
+                            "mode": "choose", 
+                            "track": [
+                                {
+                                    "branch": [
+                                        {
+                                            "stream kind": "menu"
+                                        }
+                                    ], 
+                                    "mode": "choose"
+                                }
+                            ]
+                        }, 
+                        {
+                            "branch": [
+                                {
+                                    "kind": "ac3"
+                                }
+                            ], 
+                            "description": "Raw ac3", 
+                            "mode": "select", 
+                            "track": [
+                                {
+                                    "branch": [
+                                        {
+                                            "kind": "ac3", 
+                                            "stream kind": "audio"
+                                        }
+                                    ], 
+                                    "mode": "choose", 
+                                    "override": {
+                                        "stream name": "Normal"
+                                    }
+                                }
+                            ]
+                        }, 
+                        {
+                            "branch": [
+                                {
+                                    "kind": "mkv"
+                                }, 
+                                {
+                                    "kind": "m4v"
+                                }, 
+                                {
+                                    "kind": "avi"
+                                }
+                            ], 
+                            "description": "Audio and video streams from the main file", 
+                            "mode": "choose", 
+                            "override": {
+                                "mkvmerge flags": [
+                                    "--no-global-tags", 
+                                    "--no-track-tags", 
+                                    "--no-chapters", 
+                                    "--no-attachments", 
+                                    "--no-subtitles"
+                                ]
+                            }, 
+                            "track": [
+                                {
+                                    "branch": [
+                                        {
+                                            "stream kind": "video"
+                                        }, 
+                                        {
+                                            "kind": "ac3", 
+                                            "stream kind": "audio"
+                                        }, 
+                                        {
+                                            "kind": "aac", 
+                                            "stream kind": "audio"
+                                        }, 
+                                        {
+                                            "kind": "flac", 
+                                            "stream kind": "audio"
+                                        }, 
+                                        {
+                                            "kind": "mp3", 
+                                            "stream kind": "audio"
+                                        }
+                                    ], 
+                                    "mode": "select"
+                                }
+                            ]
+                        }
+                    ]
+                }, 
+                "prepare": {}
+            }, 
+            "description": "A preset for prepare to explode, transcode DTS and FLAC tracks to AC3 and repack the fragments"
+        }, 
+        "atv2": {
+            "action": {
+                "transcode": {
+                    "pivot": [
+                        {
+                            "operator": "this"
+                        }
+                    ], 
+                    "transform": [
+                        {
+                            "branch": [
+                                {
+                                    "kind": "mkv"
+                                }, 
+                                {
+                                    "kind": "m4v"
+                                }
+                            ], 
+                            "description": "Audio and video streams from a matroska or m4v file", 
+                            "mode": "choose", 
+                            "override": {
+                                "profile": "High@L3.1"
+                            }, 
+                            "track": [
+                                {
+                                    "branch": [
+                                        {
+                                            "stream kind": "video"
+                                        }
+                                    ], 
+                                    "description": "Transcode the main video track to H.264", 
+                                    "mode": "choose", 
+                                    "override": {
+                                        "handbrake parameters": {
+                                            "--encoder": "x264", 
+                                            "--h264-level": "3.1", 
+                                            "--large-file": null, 
+                                            "--loose-anamorphic": null, 
+                                            "--maxHeight": 720, 
+                                            "--maxWidth": 1280, 
+                                            "--modulus": 2, 
+                                            "--pfr": null, 
+                                            "--quality": 18, 
+                                            "--rate": 30, 
+                                            "--x264-preset": "slow", 
+                                            "--x264-profile": "high"
+                                        }, 
+                                        "handbrake x264 settings": {
+                                            "subme": 9, 
+                                            "trellis": 2, 
+                                            "vbv-bufsize": 17500, 
+                                            "vbv-maxrate": 17500
+                                        }
+                                    }
+                                }, 
+                                {
+                                    "branch": [
+                                        {
+                                            "kind": "ac3", 
+                                            "stream kind": "audio"
+                                        }, 
+                                        {
+                                            "kind": "aac", 
+                                            "stream kind": "audio"
+                                        }
+                                    ], 
+                                    "description": "Copy aac and ac3 audio tracks", 
+                                    "mode": "select", 
+                                    "override": {
+                                        "handbrake audio encoder settings": {
+                                            "--ab": "auto", 
+                                            "--aencoder": "copy", 
+                                            "--mixdown": "auto"
+                                        }
+                                    }
+                                }, 
+                                {
+                                    "branch": [
+                                        {
+                                            "channels": 6, 
+                                            "kind": "flac", 
+                                            "stream kind": "audio"
+                                        }, 
+                                        {
+                                            "channels": 5, 
+                                            "kind": "flac", 
+                                            "stream kind": "audio"
+                                        }, 
+                                        {
+                                            "channels": 4, 
+                                            "kind": "flac", 
+                                            "stream kind": "audio"
+                                        }, 
+                                        {
+                                            "channels": 6, 
+                                            "kind": "dts", 
+                                            "stream kind": "audio"
+                                        }, 
+                                        {
+                                            "channels": 5, 
+                                            "kind": "dts", 
+                                            "stream kind": "audio"
+                                        }, 
+                                        {
+                                            "channels": 4, 
+                                            "kind": "dts", 
+                                            "stream kind": "audio"
+                                        }
+                                    ], 
+                                    "description": "Transcode 6,5 and 4 channels flac or dts to 448kbps ac3", 
+                                    "mode": "select", 
+                                    "override": {
+                                        "handbrake audio encoder settings": {
+                                            "--ab": 448, 
+                                            "--aencoder": "ac3"
+                                        }
+                                    }
+                                }, 
+                                {
+                                    "branch": [
+                                        {
+                                            "channels": 3, 
+                                            "kind": "flac", 
+                                            "stream kind": "audio"
+                                        }, 
+                                        {
+                                            "channels": 2, 
+                                            "kind": "flac", 
+                                            "stream kind": "audio"
+                                        }, 
+                                        {
+                                            "channels": 3, 
+                                            "kind": "dts", 
+                                            "stream kind": "audio"
+                                        }, 
+                                        {
+                                            "channels": 2, 
+                                            "kind": "dts", 
+                                            "stream kind": "audio"
+                                        }
+                                    ], 
+                                    "description": "Transcode 3 and 2 channels flac or dts to 256kbps ac3", 
+                                    "mode": "select", 
+                                    "override": {
+                                        "handbrake audio encoder settings": {
+                                            "--ab": 256, 
+                                            "--aencoder": "ac3"
+                                        }
+                                    }
+                                }, 
+                                {
+                                    "branch": [
+                                        {
+                                            "channels": 1, 
+                                            "kind": "flac", 
+                                            "stream kind": "audio"
+                                        }, 
+                                        {
+                                            "channels": 1, 
+                                            "kind": "dts", 
+                                            "stream kind": "audio"
+                                        }
+                                    ], 
+                                    "description": "Transcode 1 channel flac or dts to 192kbps ac3", 
+                                    "mode": "select", 
+                                    "override": {
+                                        "handbrake audio encoder settings": {
+                                            "--ab": 192, 
+                                            "--aencoder": "ac3"
+                                        }
+                                    }
+                                }, 
+                                {
+                                    "branch": [
+                                        {
+                                            "kind": "flac", 
+                                            "stream kind": "audio"
+                                        }, 
+                                        {
+                                            "kind": "dts", 
+                                            "stream kind": "audio"
+                                        }
+                                    ], 
+                                    "description": "Transcode flac or dts to 256kbps Dolby Pro Logic II aac", 
+                                    "mode": "select", 
+                                    "override": {
+                                        "handbrake audio encoder settings": {
+                                            "--ab": 256, 
+                                            "--aencoder": "ca_aac", 
+                                            "--mixdown": "dpl2"
+                                        }
+                                    }
+                                }, 
+                                {
+                                    "branch": [
+                                        {
+                                            "kind": "ac3", 
+                                            "stream kind": "audio"
+                                        }
+                                    ], 
+                                    "description": "Transcode ac3 to 160kbps Dolby Pro Logic II aac", 
+                                    "mode": "select", 
+                                    "override": {
+                                        "handbrake audio encoder settings": {
+                                            "--ab": 160, 
+                                            "--aencoder": "ca_aac", 
+                                            "--mixdown": "dpl2"
+                                        }
+                                    }
+                                }, 
+                                {
+                                    "branch": [
+                                        {
+                                            "channels": 2, 
+                                            "kind": "mp3", 
+                                            "stream kind": "audio"
+                                        }, 
+                                        {
+                                            "channels": 2, 
+                                            "kind": "ogg", 
+                                            "stream kind": "audio"
+                                        }
+                                    ], 
+                                    "description": "Transcode mp3 or vorbis stereo tracks to 128kbps stereo aac", 
+                                    "mode": "select", 
+                                    "override": {
+                                        "handbrake audio encoder settings": {
+                                            "--ab": 128, 
+                                            "--aencoder": "ca_aac", 
+                                            "--mixdown": "stereo"
+                                        }
+                                    }
+                                }, 
+                                {
+                                    "branch": [
+                                        {
+                                            "channels": 1, 
+                                            "kind": "mp3", 
+                                            "stream kind": "audio"
+                                        }, 
+                                        {
+                                            "channels": 1, 
+                                            "kind": "ogg", 
+                                            "stream kind": "audio"
+                                        }
+                                    ], 
+                                    "description": "Transcode mono mp3 or vorbis tracks to 64kbps mono aac", 
+                                    "mode": "select", 
+                                    "override": {
+                                        "handbrake audio encoder settings": {
+                                            "--ab": 64, 
+                                            "--aencoder": "ca_aac", 
+                                            "--mixdown": "mono"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }, 
+            "description": "Apple TV 2 transcoding presets"
+        }, 
+        "atv3": {
+            "action": {
+                "transcode": {
+                    "pivot": [
+                        {
+                            "operator": "this"
+                        }
+                    ], 
+                    "transform": [
+                        {
+                            "branch": [
+                                {
+                                    "kind": "mkv"
+                                }, 
+                                {
+                                    "kind": "m4v"
+                                }
+                            ], 
+                            "description": "Audio and video streams from a matroska or m4v file", 
+                            "mode": "choose", 
+                            "override": {
+                                "profile": "High@L4.0"
+                            }, 
+                            "track": [
+                                {
+                                    "branch": [
+                                        {
+                                            "stream kind": "video"
+                                        }
+                                    ], 
+                                    "description": "Transcode the main video track to H.264", 
+                                    "mode": "choose", 
+                                    "override": {
+                                        "handbrake parameters": {
+                                            "--encoder": "x264", 
+                                            "--h264-level": "4.0", 
+                                            "--large-file": null, 
+                                            "--loose-anamorphic": null, 
+                                            "--maxHeight": 1080, 
+                                            "--maxWidth": 1920, 
+                                            "--modulus": 2, 
+                                            "--pfr": null, 
+                                            "--quality": 18, 
+                                            "--rate": 30, 
+                                            "--x264-preset": "slow", 
+                                            "--x264-profile": "high"
+                                        }, 
+                                        "handbrake x264 settings": {
+                                            "subme": 9, 
+                                            "trellis": 2, 
+                                            "vbv-bufsize": 31250, 
+                                            "vbv-maxrate": 25000
+                                        }
+                                    }
+                                }, 
+                                {
+                                    "branch": [
+                                        {
+                                            "kind": "ac3", 
+                                            "stream kind": "audio"
+                                        }, 
+                                        {
+                                            "kind": "aac", 
+                                            "stream kind": "audio"
+                                        }
+                                    ], 
+                                    "description": "Copy aac and ac3 audio tracks", 
+                                    "mode": "select", 
+                                    "override": {
+                                        "handbrake audio encoder settings": {
+                                            "--ab": "auto", 
+                                            "--aencoder": "copy", 
+                                            "--mixdown": "auto"
+                                        }
+                                    }
+                                }, 
+                                {
+                                    "branch": [
+                                        {
+                                            "channels": 6, 
+                                            "kind": "flac", 
+                                            "stream kind": "audio"
+                                        }, 
+                                        {
+                                            "channels": 5, 
+                                            "kind": "flac", 
+                                            "stream kind": "audio"
+                                        }, 
+                                        {
+                                            "channels": 4, 
+                                            "kind": "flac", 
+                                            "stream kind": "audio"
+                                        }, 
+                                        {
+                                            "channels": 6, 
+                                            "kind": "dts", 
+                                            "stream kind": "audio"
+                                        }, 
+                                        {
+                                            "channels": 5, 
+                                            "kind": "dts", 
+                                            "stream kind": "audio"
+                                        }, 
+                                        {
+                                            "channels": 4, 
+                                            "kind": "dts", 
+                                            "stream kind": "audio"
+                                        }
+                                    ], 
+                                    "description": "Transcode 6,5 and 4 channels flac or dts to 448kbps ac3", 
+                                    "mode": "select", 
+                                    "override": {
+                                        "handbrake audio encoder settings": {
+                                            "--ab": 448, 
+                                            "--aencoder": "ac3"
+                                        }
+                                    }
+                                }, 
+                                {
+                                    "branch": [
+                                        {
+                                            "channels": 3, 
+                                            "kind": "flac", 
+                                            "stream kind": "audio"
+                                        }, 
+                                        {
+                                            "channels": 2, 
+                                            "kind": "flac", 
+                                            "stream kind": "audio"
+                                        }, 
+                                        {
+                                            "channels": 3, 
+                                            "kind": "dts", 
+                                            "stream kind": "audio"
+                                        }, 
+                                        {
+                                            "channels": 2, 
+                                            "kind": "dts", 
+                                            "stream kind": "audio"
+                                        }
+                                    ], 
+                                    "description": "Transcode 3 and 2 channels flac or dts to 256kbps ac3", 
+                                    "mode": "select", 
+                                    "override": {
+                                        "handbrake audio encoder settings": {
+                                            "--ab": 256, 
+                                            "--aencoder": "ac3"
+                                        }
+                                    }
+                                }, 
+                                {
+                                    "branch": [
+                                        {
+                                            "channels": 1, 
+                                            "kind": "flac", 
+                                            "stream kind": "audio"
+                                        }, 
+                                        {
+                                            "channels": 1, 
+                                            "kind": "dts", 
+                                            "stream kind": "audio"
+                                        }
+                                    ], 
+                                    "description": "Transcode 1 channel flac or dts to 192kbps ac3", 
+                                    "mode": "select", 
+                                    "override": {
+                                        "handbrake audio encoder settings": {
+                                            "--ab": 192, 
+                                            "--aencoder": "ac3"
+                                        }
+                                    }
+                                }, 
+                                {
+                                    "branch": [
+                                        {
+                                            "kind": "flac", 
+                                            "stream kind": "audio"
+                                        }, 
+                                        {
+                                            "kind": "dts", 
+                                            "stream kind": "audio"
+                                        }
+                                    ], 
+                                    "description": "Transcode flac or dts to 256kbps Dolby Pro Logic II aac", 
+                                    "mode": "select", 
+                                    "override": {
+                                        "handbrake audio encoder settings": {
+                                            "--ab": 256, 
+                                            "--aencoder": "ca_aac", 
+                                            "--mixdown": "dpl2"
+                                        }
+                                    }
+                                }, 
+                                {
+                                    "branch": [
+                                        {
+                                            "kind": "ac3", 
+                                            "stream kind": "audio"
+                                        }
+                                    ], 
+                                    "description": "Transcode ac3 to 160kbps Dolby Pro Logic II aac", 
+                                    "mode": "select", 
+                                    "override": {
+                                        "handbrake audio encoder settings": {
+                                            "--ab": 160, 
+                                            "--aencoder": "ca_aac", 
+                                            "--mixdown": "dpl2"
+                                        }
+                                    }
+                                }, 
+                                {
+                                    "branch": [
+                                        {
+                                            "channels": 2, 
+                                            "kind": "mp3", 
+                                            "stream kind": "audio"
+                                        }, 
+                                        {
+                                            "channels": 2, 
+                                            "kind": "ogg", 
+                                            "stream kind": "audio"
+                                        }
+                                    ], 
+                                    "description": "Transcode mp3 or vorbis stereo tracks to 128kbps stereo aac", 
+                                    "mode": "select", 
+                                    "override": {
+                                        "handbrake audio encoder settings": {
+                                            "--ab": 128, 
+                                            "--aencoder": "ca_aac", 
+                                            "--mixdown": "stereo"
+                                        }
+                                    }
+                                }, 
+                                {
+                                    "branch": [
+                                        {
+                                            "channels": 1, 
+                                            "kind": "mp3", 
+                                            "stream kind": "audio"
+                                        }, 
+                                        {
+                                            "channels": 1, 
+                                            "kind": "ogg", 
+                                            "stream kind": "audio"
+                                        }
+                                    ], 
+                                    "description": "Transcode mono mp3 or vorbis tracks to 64kbps mono aac", 
+                                    "mode": "select", 
+                                    "override": {
+                                        "handbrake audio encoder settings": {
+                                            "--ab": 64, 
+                                            "--aencoder": "ca_aac", 
+                                            "--mixdown": "mono"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }, 
+            "description": "Apple TV 3 transcoding presets"
+        }, 
+        "clean": {
+            "action": {
+                "transcode": {
+                    "pivot": [
+                        {
+                            "operator": "this"
+                        }
+                    ], 
+                    "transform": [
+                        {
+                            "branch": [
+                                {
+                                    "kind": "srt"
+                                }, 
+                                {
+                                    "kind": "ass"
+                                }
+                            ], 
+                            "description": "subtitles", 
+                            "mode": "select", 
+                            "track": [
+                                {
+                                    "branch": [
+                                        {
+                                            "language": "he", 
+                                            "stream kind": "caption"
+                                        }
+                                    ], 
+                                    "description": "Hebrew subtitles", 
+                                    "mode": "choose", 
+                                    "override": {
+                                        "subtitle filters": [
+                                            "noise", 
+                                            "hebrew noise", 
+                                            "typo", 
+                                            "punctuation", 
+                                            "leftover"
+                                        ]
+                                    }
+                                }, 
+                                {
+                                    "branch": [
+                                        {
+                                            "language": "en", 
+                                            "stream kind": "caption"
+                                        }
+                                    ], 
+                                    "description": "English subtitles", 
+                                    "mode": "choose", 
+                                    "override": {
+                                        "subtitle filters": [
+                                            "noise", 
+                                            "typo", 
+                                            "english typo", 
+                                            "leftover"
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }, 
+            "description": "Clean preset for cleaning subtitles"
+        }, 
+        "default": {
+            "action": {
+                "copy": {}, 
+                "delete": {}, 
+                "explode": {
+                    "pivot": [
+                        {
+                            "operator": "this"
+                        }
+                    ], 
+                    "transform": [
+                        {
+                            "branch": [
+                                {
+                                    "kind": "mkv"
+                                }
+                            ], 
+                            "mode": "select", 
+                            "track": [
+                                {
+                                    "branch": [
+                                        {
+                                            "kind": "srt", 
+                                            "language": "he", 
+                                            "stream kind": "caption"
+                                        }, 
+                                        {
+                                            "kind": "ass", 
+                                            "language": "he", 
+                                            "stream kind": "caption"
+                                        }
+                                    ], 
+                                    "mode": "select", 
+                                    "override": {
+                                        "routing type": "fragment", 
+                                        "tasks": [
+                                            {
+                                                "action": "transcode", 
+                                                "kind": "srt", 
+                                                "preset": "default", 
+                                                "profile": "original"
+                                            }, 
+                                            {
+                                                "action": "transcode", 
+                                                "kind": "srt", 
+                                                "preset": "clean", 
+                                                "profile": "clean"
+                                            }
+                                        ]
+                                    }
+                                }, 
+                                {
+                                    "branch": [
+                                        {
+                                            "kind": "srt", 
+                                            "language": "en", 
+                                            "stream kind": "caption"
+                                        }, 
+                                        {
+                                            "kind": "ass", 
+                                            "language": "en", 
+                                            "stream kind": "caption"
+                                        }
+                                    ], 
+                                    "mode": "select", 
+                                    "override": {
+                                        "routing type": "fragment", 
+                                        "tasks": [
+                                            {
+                                                "action": "transcode", 
+                                                "kind": "srt", 
+                                                "preset": "default", 
+                                                "profile": "original"
+                                            }, 
+                                            {
+                                                "action": "transcode", 
+                                                "kind": "srt", 
+                                                "preset": "clean", 
+                                                "profile": "clean"
+                                            }
+                                        ]
+                                    }
+                                }, 
+                                {
+                                    "branch": [
+                                        {
+                                            "stream kind": "menu"
+                                        }
+                                    ], 
+                                    "mode": "choose", 
+                                    "override": {
+                                        "routing type": "fragment", 
+                                        "tasks": [
+                                            {
+                                                "action": "transcode", 
+                                                "kind": "chp", 
+                                                "profile": "original"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }, 
+                        {
+                            "branch": [
+                                {
+                                    "kind": "m4v"
+                                }
+                            ], 
+                            "mode": "select", 
+                            "track": [
+                                {
+                                    "branch": [
+                                        {
+                                            "stream kind": "menu"
+                                        }
+                                    ], 
+                                    "mode": "choose", 
+                                    "override": {
+                                        "routing type": "fragment", 
+                                        "tasks": [
+                                            {
+                                                "action": "transcode", 
+                                                "kind": "chp", 
+                                                "profile": "original"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }, 
+                "info": {}, 
+                "move": {}, 
+                "optimize": {}, 
+                "pack": {
+                    "pivot": [
+                        {
+                            "operator": "this"
+                        }, 
+                        {
+                            "constraint": {
+                                "kind": "srt"
+                            }, 
+                            "operator": "select"
+                        }, 
+                        {
+                            "constraint": {
+                                "kind": "chp"
+                            }, 
+                            "operator": "select"
+                        }, 
+                        {
+                            "constraint": {
+                                "kind": "ac3"
+                            }, 
+                            "operator": "select"
+                        }
+                    ], 
+                    "transform": [
+                        {
+                            "branch": [
+                                {
+                                    "kind": "srt", 
+                                    "profile": "clean"
+                                }
+                            ], 
+                            "description": "Hebrew and english subtitles from the clean profile", 
+                            "mode": "select", 
+                            "track": [
+                                {
+                                    "branch": [
+                                        {
+                                            "language": "he", 
+                                            "stream kind": "caption"
+                                        }
+                                    ], 
+                                    "mode": "choose", 
+                                    "override": {
+                                        "stream name": "Normal"
+                                    }
+                                }, 
+                                {
+                                    "branch": [
+                                        {
+                                            "language": "en", 
+                                            "stream kind": "caption"
+                                        }
+                                    ], 
+                                    "mode": "choose", 
+                                    "override": {
+                                        "stream name": "Normal"
+                                    }
+                                }
+                            ]
+                        }, 
+                        {
+                            "branch": [
+                                {
+                                    "kind": "srt", 
+                                    "language": "he", 
+                                    "profile": "clean"
+                                }, 
+                                {
+                                    "kind": "srt", 
+                                    "language": "en", 
+                                    "profile": "clean"
+                                }
+                            ], 
+                            "description": "First of hebrew or english subtitles as swedish", 
+                            "mode": "choose", 
+                            "track": [
+                                {
+                                    "branch": [
+                                        {
+                                            "stream kind": "caption"
+                                        }
+                                    ], 
+                                    "mode": "choose", 
+                                    "override": {
+                                        "language": "sv", 
+                                        "stream name": "Smart"
+                                    }
+                                }
+                            ]
+                        }, 
+                        {
+                            "branch": [
+                                {
+                                    "kind": "chp", 
+                                    "language": "he"
+                                }, 
+                                {
+                                    "kind": "chp", 
+                                    "language": "en"
+                                }, 
+                                {
+                                    "kind": "chp"
+                                }
+                            ], 
+                            "description": "First of hebrew or english or other chapter track", 
+                            "mode": "choose", 
+                            "track": [
+                                {
+                                    "branch": [
+                                        {
+                                            "stream kind": "menu"
+                                        }
+                                    ], 
+                                    "mode": "choose"
+                                }
+                            ]
+                        }, 
+                        {
+                            "branch": [
+                                {
+                                    "kind": "mkv"
+                                }, 
+                                {
+                                    "kind": "m4v"
+                                }, 
+                                {
+                                    "kind": "avi"
+                                }
+                            ], 
+                            "description": "Audio and video streams from a matroska file", 
+                            "mode": "choose", 
+                            "override": {
+                                "mkvmerge flags": [
+                                    "--no-global-tags", 
+                                    "--no-track-tags", 
+                                    "--no-chapters", 
+                                    "--no-attachments", 
+                                    "--no-subtitles"
+                                ]
+                            }, 
+                            "track": [
+                                {
+                                    "branch": [
+                                        {
+                                            "stream kind": "video"
+                                        }, 
+                                        {
+                                            "kind": "ac3", 
+                                            "stream kind": "audio"
+                                        }, 
+                                        {
+                                            "kind": "aac", 
+                                            "stream kind": "audio"
+                                        }, 
+                                        {
+                                            "kind": "dts", 
+                                            "stream kind": "audio"
+                                        }, 
+                                        {
+                                            "kind": "flac", 
+                                            "stream kind": "audio"
+                                        }, 
+                                        {
+                                            "kind": "mp3", 
+                                            "stream kind": "audio"
+                                        }
+                                    ], 
+                                    "mode": "select"
+                                }
+                            ]
+                        }
+                    ]
+                }, 
+                "prepare": {}, 
+                "tag": {}, 
+                "transcode": {
+                    "pivot": [
+                        {
+                            "operator": "this"
+                        }
+                    ], 
+                    "transform": [
+                        {
+                            "branch": [
+                                {
+                                    "kind": "png"
+                                }, 
+                                {
+                                    "kind": "jpg"
+                                }
+                            ], 
+                            "description": "png or jpg artwork", 
+                            "mode": "choose", 
+                            "track": [
+                                {
+                                    "branch": [
+                                        {
+                                            "stream kind": "image"
+                                        }
+                                    ], 
+                                    "description": "Transcode image to png", 
+                                    "mode": "choose", 
+                                    "override": {
+                                        "max length": 1024
+                                    }
+                                }
+                            ]
+                        }, 
+                        {
+                            "branch": [
+                                {
+                                    "kind": "dts"
+                                }
+                            ], 
+                            "description": "raw dts audio stream to ac3", 
+                            "mode": "choose", 
+                            "track": [
+                                {
+                                    "branch": [
+                                        {
+                                            "channels": 6, 
+                                            "kind": "dts", 
+                                            "stream kind": "audio"
+                                        }
+                                    ], 
+                                    "description": "Transcode 6 channels dts to ac3", 
+                                    "mode": "choose", 
+                                    "override": {
+                                        "ffmpeg parameters": {
+                                            "-ab": "448k", 
+                                            "-ac": 6, 
+                                            "-acodec": "ac3"
+                                        }
+                                    }
+                                }, 
+                                {
+                                    "branch": [
+                                        {
+                                            "channels": 5, 
+                                            "kind": "dts", 
+                                            "stream kind": "audio"
+                                        }
+                                    ], 
+                                    "description": "Transcode 5 channels dts to ac3", 
+                                    "mode": "choose", 
+                                    "override": {
+                                        "ffmpeg parameters": {
+                                            "-ab": "448k", 
+                                            "-ac": 5, 
+                                            "-acodec": "ac3"
+                                        }
+                                    }
+                                }, 
+                                {
+                                    "branch": [
+                                        {
+                                            "channels": 4, 
+                                            "kind": "dts", 
+                                            "stream kind": "audio"
+                                        }
+                                    ], 
+                                    "description": "Transcode 4 channels dts to ac3", 
+                                    "mode": "choose", 
+                                    "override": {
+                                        "ffmpeg parameters": {
+                                            "-ab": "448k", 
+                                            "-ac": 4, 
+                                            "-acodec": "ac3"
+                                        }
+                                    }
+                                }, 
+                                {
+                                    "branch": [
+                                        {
+                                            "channels": 3, 
+                                            "kind": "dts", 
+                                            "stream kind": "audio"
+                                        }
+                                    ], 
+                                    "description": "Transcode 3 channels dts to ac3", 
+                                    "mode": "choose", 
+                                    "override": {
+                                        "ffmpeg parameters": {
+                                            "-ab": "448k", 
+                                            "-ac": 3, 
+                                            "-acodec": "ac3"
+                                        }
+                                    }
+                                }, 
+                                {
+                                    "branch": [
+                                        {
+                                            "channels": 2, 
+                                            "kind": "dts", 
+                                            "stream kind": "audio"
+                                        }
+                                    ], 
+                                    "description": "Transcode stereo dts to ac3", 
+                                    "mode": "choose", 
+                                    "override": {
+                                        "ffmpeg parameters": {
+                                            "-ab": "256k", 
+                                            "-ac": 2, 
+                                            "-acodec": "ac3"
+                                        }
+                                    }
+                                }, 
+                                {
+                                    "branch": [
+                                        {
+                                            "channels": 1, 
+                                            "kind": "dts", 
+                                            "stream kind": "audio"
+                                        }
+                                    ], 
+                                    "description": "Transcode mono dts to ac3", 
+                                    "mode": "choose", 
+                                    "override": {
+                                        "ffmpeg parameters": {
+                                            "-ab": "192k", 
+                                            "-ac": 1, 
+                                            "-acodec": "ac3"
+                                        }
+                                    }
+                                }
+                            ]
+                        }, 
+                        {
+                            "branch": [
+                                {
+                                    "kind": "srt"
+                                }, 
+                                {
+                                    "kind": "ass"
+                                }
+                            ], 
+                            "description": "subtitles", 
+                            "mode": "select", 
+                            "track": [
+                                {
+                                    "branch": [
+                                        {
+                                            "stream kind": "caption"
+                                        }
+                                    ], 
+                                    "description": "Hebrew subtitles", 
+                                    "mode": "choose"
+                                }
+                            ]
+                        }, 
+                        {
+                            "branch": [
+                                {
+                                    "kind": "chp"
+                                }
+                            ], 
+                            "description": "menu", 
+                            "mode": "select", 
+                            "track": [
+                                {
+                                    "branch": [
+                                        {
+                                            "stream kind": "menu"
+                                        }
+                                    ], 
+                                    "description": "menu", 
+                                    "mode": "choose"
+                                }
+                            ]
+                        }
+                    ]
+                }, 
+                "update": {
+                    "pivot": [
+                        {
+                            "constraint": {
+                                "kind": "srt"
+                            }, 
+                            "operator": "select"
+                        }, 
+                        {
+                            "constraint": {
+                                "kind": "chp"
+                            }, 
+                            "operator": "select"
+                        }, 
+                        {
+                            "constraint": {
+                                "kind": "png"
+                            }, 
+                            "operator": "select"
+                        }
+                    ], 
+                    "transform": [
+                        {
+                            "branch": [
+                                {
+                                    "kind": "srt", 
+                                    "profile": "clean"
+                                }
+                            ], 
+                            "description": "All hebrew and english subtitles of the clean profile", 
+                            "mode": "select", 
+                            "track": [
+                                {
+                                    "branch": [
+                                        {
+                                            "language": "he", 
+                                            "stream kind": "caption"
+                                        }
+                                    ], 
+                                    "mode": "choose", 
+                                    "override": {
+                                        "height": 0.132, 
+                                        "stream name": "Normal"
+                                    }
+                                }, 
+                                {
+                                    "branch": [
+                                        {
+                                            "language": "en", 
+                                            "stream kind": "caption"
+                                        }
+                                    ], 
+                                    "mode": "choose", 
+                                    "override": {
+                                        "height": 0.132, 
+                                        "stream name": "Normal"
+                                    }
+                                }
+                            ]
+                        }, 
+                        {
+                            "branch": [
+                                {
+                                    "kind": "srt", 
+                                    "language": "he", 
+                                    "profile": "clean"
+                                }, 
+                                {
+                                    "kind": "srt", 
+                                    "language": "en", 
+                                    "profile": "clean"
+                                }
+                            ], 
+                            "description": "First of hebrew or english subtitles as swedish", 
+                            "mode": "choose", 
+                            "track": [
+                                {
+                                    "branch": [
+                                        {
+                                            "stream kind": "caption"
+                                        }
+                                    ], 
+                                    "mode": "choose", 
+                                    "override": {
+                                        "height": 0.148, 
+                                        "language": "sv", 
+                                        "stream name": "Smart"
+                                    }
+                                }
+                            ]
+                        }, 
+                        {
+                            "branch": [
+                                {
+                                    "kind": "png", 
+                                    "language": "he", 
+                                    "profile": "normal"
+                                }, 
+                                {
+                                    "kind": "png", 
+                                    "language": "en", 
+                                    "profile": "normal"
+                                }
+                            ], 
+                            "description": "First of hebrew or english artwork", 
+                            "mode": "choose", 
+                            "track": [
+                                {
+                                    "branch": [
+                                        {
+                                            "stream kind": "image"
+                                        }
+                                    ], 
+                                    "mode": "choose"
+                                }
+                            ]
+                        }, 
+                        {
+                            "branch": [
+                                {
+                                    "kind": "chp", 
+                                    "language": "he"
+                                }, 
+                                {
+                                    "kind": "chp", 
+                                    "language": "en"
+                                }
+                            ], 
+                            "description": "First of hebrew or english chapter track", 
+                            "mode": "choose", 
+                            "track": [
+                                {
+                                    "branch": [
+                                        {
+                                            "stream kind": "menu"
+                                        }
+                                    ], 
+                                    "mode": "choose"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }, 
+            "description": "Default preset"
+        }, 
+        "fragment": {
+            "action": {
+                "pack": {
+                    "pivot": [
+                        {
+                            "operator": "this"
+                        }, 
+                        {
+                            "operator": "fragments"
+                        }
+                    ], 
+                    "transform": [
+                        {
+                            "branch": [
+                                {
+                                    "kind": "srt"
+                                }
+                            ], 
+                            "description": "Subtitles", 
+                            "mode": "select", 
+                            "track": [
+                                {
+                                    "branch": [
+                                        {
+                                            "stream kind": "caption"
+                                        }
+                                    ], 
+                                    "mode": "choose", 
+                                    "override": {
+                                        "stream name": "Normal"
+                                    }
+                                }
+                            ]
+                        }, 
+                        {
+                            "branch": [
+                                {
+                                    "kind": "chp"
+                                }
+                            ], 
+                            "description": "Chapters", 
+                            "mode": "choose", 
+                            "track": [
+                                {
+                                    "branch": [
+                                        {
+                                            "stream kind": "menu"
+                                        }
+                                    ], 
+                                    "mode": "choose"
+                                }
+                            ]
+                        }, 
+                        {
+                            "branch": [
+                                {
+                                    "kind": "ac3"
+                                }
+                            ], 
+                            "description": "Raw ac3", 
+                            "mode": "select", 
+                            "track": [
+                                {
+                                    "branch": [
+                                        {
+                                            "kind": "ac3", 
+                                            "stream kind": "audio"
+                                        }
+                                    ], 
+                                    "mode": "choose", 
+                                    "override": {
+                                        "stream name": "Normal"
+                                    }
+                                }
+                            ]
+                        }, 
+                        {
+                            "branch": [
+                                {
+                                    "kind": "mkv"
+                                }, 
+                                {
+                                    "kind": "m4v"
+                                }, 
+                                {
+                                    "kind": "avi"
+                                }
+                            ], 
+                            "description": "Audio and video streams from the main file", 
+                            "mode": "choose", 
+                            "override": {
+                                "mkvmerge flags": [
+                                    "--no-global-tags", 
+                                    "--no-track-tags", 
+                                    "--no-chapters", 
+                                    "--no-attachments", 
+                                    "--no-subtitles"
+                                ]
+                            }, 
+                            "track": [
+                                {
+                                    "branch": [
+                                        {
+                                            "stream kind": "video"
+                                        }, 
+                                        {
+                                            "kind": "ac3", 
+                                            "stream kind": "audio"
+                                        }, 
+                                        {
+                                            "kind": "aac", 
+                                            "stream kind": "audio"
+                                        }, 
+                                        {
+                                            "kind": "dts", 
+                                            "stream kind": "audio"
+                                        }, 
+                                        {
+                                            "kind": "flac", 
+                                            "stream kind": "audio"
+                                        }, 
+                                        {
+                                            "kind": "mp3", 
+                                            "stream kind": "audio"
+                                        }
+                                    ], 
+                                    "mode": "select"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }, 
+            "description": "Pack only the fragments of a file"
+        }, 
+        "iphone": {
+            "action": {
+                "transcode": {
+                    "pivot": [
+                        {
+                            "operator": "this"
+                        }
+                    ], 
+                    "transform": [
+                        {
+                            "branch": [
+                                {
+                                    "kind": "mkv"
+                                }, 
+                                {
+                                    "kind": "m4v"
+                                }
+                            ], 
+                            "description": "Audio and video streams from a matroska or m4v file", 
+                            "mode": "choose", 
+                            "override": {
+                                "profile": "High@L3.1"
+                            }, 
+                            "track": [
+                                {
+                                    "branch": [
+                                        {
+                                            "stream kind": "video"
+                                        }
+                                    ], 
+                                    "description": "Transcode the main video track to H.264", 
+                                    "mode": "choose", 
+                                    "override": {
+                                        "handbrake parameters": {
+                                            "--encoder": "x264", 
+                                            "--h264-level": "3.1", 
+                                            "--large-file": null, 
+                                            "--loose-anamorphic": null, 
+                                            "--maxHeight": 640, 
+                                            "--maxWidth": 960, 
+                                            "--modulus": 2, 
+                                            "--pfr": null, 
+                                            "--quality": 20, 
+                                            "--rate": 30, 
+                                            "--x264-preset": "slow", 
+                                            "--x264-profile": "high"
+                                        }, 
+                                        "handbrake x264 settings": {
+                                            "subme": 9, 
+                                            "trellis": 2, 
+                                            "vbv-bufsize": 17500, 
+                                            "vbv-maxrate": 17500
+                                        }
+                                    }
+                                }, 
+                                {
+                                    "branch": [
+                                        {
+                                            "kind": "aac", 
+                                            "stream kind": "audio"
+                                        }
+                                    ], 
+                                    "description": "Copy aac audio tracks", 
+                                    "mode": "select", 
+                                    "override": {
+                                        "handbrake audio encoder settings": {
+                                            "--ab": "auto", 
+                                            "--aencoder": "copy", 
+                                            "--mixdown": "auto"
+                                        }
+                                    }
+                                }, 
+                                {
+                                    "branch": [
+                                        {
+                                            "kind": "flac", 
+                                            "stream kind": "audio"
+                                        }, 
+                                        {
+                                            "kind": "dts", 
+                                            "stream kind": "audio"
+                                        }
+                                    ], 
+                                    "description": "Transcode flac or dts to 256kbps Dolby Pro Logic II aac", 
+                                    "mode": "select", 
+                                    "override": {
+                                        "handbrake audio encoder settings": {
+                                            "--ab": 256, 
+                                            "--aencoder": "ca_aac", 
+                                            "--mixdown": "dpl2"
+                                        }
+                                    }
+                                }, 
+                                {
+                                    "branch": [
+                                        {
+                                            "kind": "ac3", 
+                                            "stream kind": "audio"
+                                        }
+                                    ], 
+                                    "description": "Transcode ac3 to 160kbps Dolby Pro Logic II aac", 
+                                    "mode": "select", 
+                                    "override": {
+                                        "handbrake audio encoder settings": {
+                                            "--ab": 160, 
+                                            "--aencoder": "ca_aac", 
+                                            "--mixdown": "dpl2"
+                                        }
+                                    }
+                                }, 
+                                {
+                                    "branch": [
+                                        {
+                                            "channels": 2, 
+                                            "kind": "mp3", 
+                                            "stream kind": "audio"
+                                        }, 
+                                        {
+                                            "channels": 2, 
+                                            "kind": "ogg", 
+                                            "stream kind": "audio"
+                                        }
+                                    ], 
+                                    "description": "Transcode mp3 or vorbis stereo tracks to 128kbps stereo aac", 
+                                    "mode": "select", 
+                                    "override": {
+                                        "handbrake audio encoder settings": {
+                                            "--ab": 128, 
+                                            "--aencoder": "ca_aac", 
+                                            "--mixdown": "stereo"
+                                        }
+                                    }
+                                }, 
+                                {
+                                    "branch": [
+                                        {
+                                            "channels": 1, 
+                                            "kind": "mp3", 
+                                            "stream kind": "audio"
+                                        }, 
+                                        {
+                                            "channels": 1, 
+                                            "kind": "ogg", 
+                                            "stream kind": "audio"
+                                        }
+                                    ], 
+                                    "description": "Transcode mono mp3 or vorbis tracks to 64kbps mono aac", 
+                                    "mode": "select", 
+                                    "override": {
+                                        "handbrake audio encoder settings": {
+                                            "--ab": 64, 
+                                            "--aencoder": "ca_aac", 
+                                            "--mixdown": "mono"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }, 
+            "description": "iPhone transcoding presets"
+        }, 
+        "jennifer": {
+            "action": {
+                "transcode": {
+                    "pivot": [
+                        {
+                            "operator": "this"
+                        }
+                    ], 
+                    "transform": [
+                        {
+                            "branch": [
+                                {
+                                    "kind": "mkv"
+                                }, 
+                                {
+                                    "kind": "m4v"
+                                }
+                            ], 
+                            "description": "Audio and video streams from a matroska or m4v file", 
+                            "mode": "choose", 
+                            "override": {
+                                "profile": "High@L3.1"
+                            }, 
+                            "track": [
+                                {
+                                    "branch": [
+                                        {
+                                            "stream kind": "video"
+                                        }
+                                    ], 
+                                    "description": "Transcode the main video track to H.264", 
+                                    "mode": "choose", 
+                                    "override": {
+                                        "handbrake parameters": {
+                                            "--encoder": "x264", 
+                                            "--h264-level": "3.1", 
+                                            "--large-file": null, 
+                                            "--loose-anamorphic": null, 
+                                            "--maxHeight": 720, 
+                                            "--maxWidth": 1280, 
+                                            "--modulus": 2, 
+                                            "--pfr": null, 
+                                            "--quality": 22, 
+                                            "--rate": 30, 
+                                            "--x264-preset": "slow", 
+                                            "--x264-profile": "high"
+                                        }, 
+                                        "handbrake x264 settings": {
+                                            "subme": 9, 
+                                            "trellis": 2, 
+                                            "vbv-bufsize": 17500, 
+                                            "vbv-maxrate": 17500
+                                        }
+                                    }
+                                }, 
+                                {
+                                    "branch": [
+                                        {
+                                            "kind": "ac3", 
+                                            "stream kind": "audio"
+                                        }, 
+                                        {
+                                            "kind": "aac", 
+                                            "stream kind": "audio"
+                                        }
+                                    ], 
+                                    "description": "Copy aac and ac3 audio tracks", 
+                                    "mode": "select", 
+                                    "override": {
+                                        "handbrake audio encoder settings": {
+                                            "--ab": "auto", 
+                                            "--aencoder": "copy", 
+                                            "--mixdown": "auto"
+                                        }
+                                    }
+                                }, 
+                                {
+                                    "branch": [
+                                        {
+                                            "channels": 6, 
+                                            "kind": "flac", 
+                                            "stream kind": "audio"
+                                        }, 
+                                        {
+                                            "channels": 5, 
+                                            "kind": "flac", 
+                                            "stream kind": "audio"
+                                        }, 
+                                        {
+                                            "channels": 4, 
+                                            "kind": "flac", 
+                                            "stream kind": "audio"
+                                        }, 
+                                        {
+                                            "channels": 6, 
+                                            "kind": "dts", 
+                                            "stream kind": "audio"
+                                        }, 
+                                        {
+                                            "channels": 5, 
+                                            "kind": "dts", 
+                                            "stream kind": "audio"
+                                        }, 
+                                        {
+                                            "channels": 4, 
+                                            "kind": "dts", 
+                                            "stream kind": "audio"
+                                        }
+                                    ], 
+                                    "description": "Transcode 6,5 and 4 channels flac or dts to 448kbps ac3", 
+                                    "mode": "select", 
+                                    "override": {
+                                        "handbrake audio encoder settings": {
+                                            "--ab": 448, 
+                                            "--aencoder": "ac3"
+                                        }
+                                    }
+                                }, 
+                                {
+                                    "branch": [
+                                        {
+                                            "channels": 3, 
+                                            "kind": "flac", 
+                                            "stream kind": "audio"
+                                        }, 
+                                        {
+                                            "channels": 2, 
+                                            "kind": "flac", 
+                                            "stream kind": "audio"
+                                        }, 
+                                        {
+                                            "channels": 3, 
+                                            "kind": "dts", 
+                                            "stream kind": "audio"
+                                        }, 
+                                        {
+                                            "channels": 2, 
+                                            "kind": "dts", 
+                                            "stream kind": "audio"
+                                        }
+                                    ], 
+                                    "description": "Transcode 3 and 2 channels flac or dts to 256kbps ac3", 
+                                    "mode": "select", 
+                                    "override": {
+                                        "handbrake audio encoder settings": {
+                                            "--ab": 256, 
+                                            "--aencoder": "ac3"
+                                        }
+                                    }
+                                }, 
+                                {
+                                    "branch": [
+                                        {
+                                            "channels": 1, 
+                                            "kind": "flac", 
+                                            "stream kind": "audio"
+                                        }, 
+                                        {
+                                            "channels": 1, 
+                                            "kind": "dts", 
+                                            "stream kind": "audio"
+                                        }
+                                    ], 
+                                    "description": "Transcode 1 channel flac or dts to 192kbps ac3", 
+                                    "mode": "select", 
+                                    "override": {
+                                        "handbrake audio encoder settings": {
+                                            "--ab": 192, 
+                                            "--aencoder": "ac3"
+                                        }
+                                    }
+                                }, 
+                                {
+                                    "branch": [
+                                        {
+                                            "kind": "flac", 
+                                            "stream kind": "audio"
+                                        }, 
+                                        {
+                                            "kind": "dts", 
+                                            "stream kind": "audio"
+                                        }
+                                    ], 
+                                    "description": "Transcode flac or dts to 256kbps Dolby Pro Logic II aac", 
+                                    "mode": "select", 
+                                    "override": {
+                                        "handbrake audio encoder settings": {
+                                            "--ab": 256, 
+                                            "--aencoder": "ca_aac", 
+                                            "--mixdown": "dpl2"
+                                        }
+                                    }
+                                }, 
+                                {
+                                    "branch": [
+                                        {
+                                            "kind": "ac3", 
+                                            "stream kind": "audio"
+                                        }
+                                    ], 
+                                    "description": "Transcode ac3 to 160kbps Dolby Pro Logic II aac", 
+                                    "mode": "select", 
+                                    "override": {
+                                        "handbrake audio encoder settings": {
+                                            "--ab": 160, 
+                                            "--aencoder": "ca_aac", 
+                                            "--mixdown": "dpl2"
+                                        }
+                                    }
+                                }, 
+                                {
+                                    "branch": [
+                                        {
+                                            "channels": 2, 
+                                            "kind": "mp3", 
+                                            "stream kind": "audio"
+                                        }, 
+                                        {
+                                            "channels": 2, 
+                                            "kind": "ogg", 
+                                            "stream kind": "audio"
+                                        }
+                                    ], 
+                                    "description": "Transcode mp3 or vorbis stereo tracks to 128kbps stereo aac", 
+                                    "mode": "select", 
+                                    "override": {
+                                        "handbrake audio encoder settings": {
+                                            "--ab": 128, 
+                                            "--aencoder": "ca_aac", 
+                                            "--mixdown": "stereo"
+                                        }
+                                    }
+                                }, 
+                                {
+                                    "branch": [
+                                        {
+                                            "channels": 1, 
+                                            "kind": "mp3", 
+                                            "stream kind": "audio"
+                                        }, 
+                                        {
+                                            "channels": 1, 
+                                            "kind": "ogg", 
+                                            "stream kind": "audio"
+                                        }
+                                    ], 
+                                    "description": "Transcode mono mp3 or vorbis tracks to 64kbps mono aac", 
+                                    "mode": "select", 
+                                    "override": {
+                                        "handbrake audio encoder settings": {
+                                            "--ab": 64, 
+                                            "--aencoder": "ca_aac", 
+                                            "--mixdown": "mono"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }, 
+            "description": "transcoding presets for Jennifer"
+        }
+    }
+}

@@ -1,0 +1,236 @@
+{
+    "command": {
+        "bcl2fastq": {
+            "binary": "/opt/perlbrew/perls/perl-5.14.4/bin/perl", 
+            "environment": {
+                "LANG": "en_US.UTF-8", 
+                "LC_CTYPE": "en_US.UTF-8", 
+                "PATH": "/opt/perlbrew/bin:/opt/perlbrew/perls/perl-5.14.4/bin:/opt/local/tubo/env/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin", 
+                "SHELL": "/bin/bash"
+            }, 
+            "implementation": "interpreted", 
+            "namespace": "ns/program/bcl2fastq", 
+            "script": "/usr/local/bin/configureBclToFastq.pl", 
+            "stderr": "file", 
+            "stdout": "file"
+        }, 
+        "bcl2fastq make": {
+            "binary": "make", 
+            "environment": {
+                "LANG": "en_US.UTF-8", 
+                "LC_CTYPE": "en_US.UTF-8", 
+                "PATH": "/opt/perlbrew/bin:/opt/perlbrew/perls/perl-5.14.4/bin:/opt/local/tubo/env/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin", 
+                "SHELL": "/bin/bash"
+            }, 
+            "namespace": "ns/program/make", 
+            "stderr": "file", 
+            "stdout": "file"
+        }, 
+        "pheniqs demux": {
+            "binary": "pheniqs", 
+            "environment": {
+                "LANG": "en_US.UTF-8", 
+                "LC_CTYPE": "en_US.UTF-8", 
+                "PATH": "/opt/local/tubo/env/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin", 
+                "SHELL": "/bin/bash"
+            }, 
+            "error code": [
+                {
+                    "code": 0, 
+                    "message": "Success"
+                }, 
+                {
+                    "code": 1, 
+                    "message": "Help"
+                }, 
+                {
+                    "code": 2, 
+                    "message": "Invalid"
+                }, 
+                {
+                    "code": 3, 
+                    "message": "Unknonw command"
+                }, 
+                {
+                    "code": 4, 
+                    "message": "Bad pattern"
+                }, 
+                {
+                    "code": 5, 
+                    "message": "Bad configuration file"
+                }, 
+                {
+                    "code": 6, 
+                    "message": "Invalid command line syntax"
+                }, 
+                {
+                    "code": 7, 
+                    "message": "Invalid barcode character"
+                }, 
+                {
+                    "code": 8, 
+                    "message": "Invalid layout"
+                }, 
+                {
+                    "code": 9, 
+                    "message": "Invalid reference"
+                }, 
+                {
+                    "code": 10, 
+                    "message": "Sequence too long"
+                }, 
+                {
+                    "code": 11, 
+                    "message": "IO error"
+                }
+            ], 
+            "namespace": "ns/program/pheniqs/demux", 
+            "stderr": "file", 
+            "stdout": "file", 
+            "sub command": "demux"
+        }, 
+        "pheniqs filter": {
+            "binary": "pheniqs", 
+            "environment": {
+                "LANG": "en_US.UTF-8", 
+                "LC_CTYPE": "en_US.UTF-8", 
+                "PATH": "/opt/local/tubo/env/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin", 
+                "SHELL": "/bin/bash"
+            }, 
+            "error code": [
+                {
+                    "code": 0, 
+                    "message": "Success"
+                }, 
+                {
+                    "code": 1, 
+                    "message": "Help"
+                }, 
+                {
+                    "code": 2, 
+                    "message": "Invalid"
+                }, 
+                {
+                    "code": 3, 
+                    "message": "Unknonw command"
+                }, 
+                {
+                    "code": 4, 
+                    "message": "Bad pattern"
+                }, 
+                {
+                    "code": 5, 
+                    "message": "Bad configuration file"
+                }, 
+                {
+                    "code": 6, 
+                    "message": "Invalid command line syntax"
+                }, 
+                {
+                    "code": 7, 
+                    "message": "Invalid barcode character"
+                }, 
+                {
+                    "code": 8, 
+                    "message": "Invalid layout"
+                }, 
+                {
+                    "code": 9, 
+                    "message": "Invalid reference"
+                }, 
+                {
+                    "code": 10, 
+                    "message": "Sequence too long"
+                }, 
+                {
+                    "code": 11, 
+                    "message": "IO error"
+                }
+            ], 
+            "namespace": "ns/program/pheniqs/filter", 
+            "stderr": "file", 
+            "stdout": "file", 
+            "sub command": "demux"
+        }, 
+        "pheniqs quality": {
+            "binary": "pheniqs", 
+            "environment": {
+                "LANG": "en_US.UTF-8", 
+                "LC_CTYPE": "en_US.UTF-8", 
+                "PATH": "/opt/local/tubo/env/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin", 
+                "SHELL": "/bin/bash"
+            }, 
+            "error code": [
+                {
+                    "code": 0, 
+                    "message": "Success"
+                }, 
+                {
+                    "code": 1, 
+                    "message": "Help"
+                }, 
+                {
+                    "code": 2, 
+                    "message": "Invalid"
+                }, 
+                {
+                    "code": 3, 
+                    "message": "Unknonw command"
+                }, 
+                {
+                    "code": 4, 
+                    "message": "Bad pattern"
+                }, 
+                {
+                    "code": 5, 
+                    "message": "Bad configuration file"
+                }, 
+                {
+                    "code": 6, 
+                    "message": "Invalid command line syntax"
+                }, 
+                {
+                    "code": 7, 
+                    "message": "Invalid barcode character"
+                }, 
+                {
+                    "code": 8, 
+                    "message": "Invalid layout"
+                }, 
+                {
+                    "code": 9, 
+                    "message": "Invalid reference"
+                }, 
+                {
+                    "code": 10, 
+                    "message": "Sequence too long"
+                }, 
+                {
+                    "code": 11, 
+                    "message": "IO error"
+                }
+            ], 
+            "namespace": "ns/program/pheniqs/quality", 
+            "sub command": "quality"
+        }, 
+        "picard illuminabasecallstofastq": {
+            "binary": "/usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java", 
+            "environment": {
+                "LANG": "en_US.UTF-8", 
+                "LC_CTYPE": "en_US.UTF-8", 
+                "PATH": "/opt/local/tubo/env/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin", 
+                "SHELL": "/bin/bash"
+            }, 
+            "implementation": "java", 
+            "jar": "/opt/local/tubo/picard/picard-tools/picard.jar", 
+            "jvm arguments": [
+                "-Xmx32g"
+            ], 
+            "namespace": "ns/program/picard/illuminabasecallstofastq", 
+            "stderr": "file", 
+            "stdout": "file", 
+            "style": "picard", 
+            "sub command": "IlluminaBasecallsToFastq"
+        }
+    }
+}

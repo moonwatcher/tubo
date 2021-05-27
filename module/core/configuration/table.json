@@ -1,0 +1,317 @@
+{
+    "table": {
+        "home": {
+            "collection": "home", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/home"
+        }, 
+        "knowledge/group": {
+            "collection": "knowledge_group", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/group"
+        }, 
+        "knowledge/person": {
+            "collection": "knowledge_person", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/person"
+        }, 
+        "local/group": {
+            "collection": "local_group", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/group"
+        }, 
+        "local/group/people": {
+            "collection": "local_group_people", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/group"
+        }, 
+        "local/person": {
+            "collection": "local_person", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/person"
+        }, 
+        "local/person/groups": {
+            "collection": "local_person_groups", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/knowledge/person"
+        }, 
+        "medium/asset": {
+            "collection": "medium_asset", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/medium/asset"
+        }, 
+        "medium/resource": {
+            "collection": "medium_resource", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.genealogy.home id", 
+                            1
+                        ]
+                    ], 
+                    "name": "genealogy home id"
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.genealogy.resource path digest", 
+                            1
+                        ]
+                    ], 
+                    "name": "genealogy resource path digest"
+                }
+            ], 
+            "namespace": "ns/medium/resource"
+        }, 
+        "system/job/history": {
+            "collection": "system_job_history", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }
+            ], 
+            "namespace": "ns/system/job/execution"
+        }, 
+        "system/job/queue": {
+            "collection": "system_job_queue", 
+            "index": [
+                {
+                    "key": [
+                        [
+                            "head.canonical", 
+                            1
+                        ]
+                    ], 
+                    "name": "canonical", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.alternate", 
+                            1
+                        ]
+                    ], 
+                    "name": "alternate", 
+                    "unique": true
+                }, 
+                {
+                    "key": [
+                        [
+                            "head.genealogy.job status", 
+                            1
+                        ]
+                    ], 
+                    "name": "job status"
+                }
+            ], 
+            "namespace": "ns/system/job"
+        }
+    }
+}

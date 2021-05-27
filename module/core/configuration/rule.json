@@ -1,0 +1,1410 @@
+{
+    "rule": {
+        "rule/container/implementation": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "implementation", 
+                            "value": "Resource"
+                        }
+                    ]
+                }
+            ], 
+            "provide": [
+                "implementation"
+            ]
+        }, 
+        "rule/genealogy/asset/uri": {
+            "provide": [
+                "asset uri"
+            ]
+        }, 
+        "rule/genealogy/home/uri": {
+            "provide": [
+                "home uri"
+            ]
+        }, 
+        "rule/genealogy/knowledge/uri": {
+            "provide": [
+                "knowledge uri"
+            ]
+        }, 
+        "rule/genealogy/profile": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "profile", 
+                            "value": "default"
+                        }
+                    ], 
+                    "order": 1000
+                }
+            ], 
+            "provide": [
+                "profile"
+            ]
+        }, 
+        "rule/genealogy/umid": {
+            "provide": [
+                "umid"
+            ]
+        }, 
+        "rule/genealogy/volume": {
+            "provide": [
+                "volume"
+            ]
+        }, 
+        "rule/home/group/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "home uri", 
+                            "reference": "group home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "group home uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "home uri"
+            ]
+        }, 
+        "rule/home/person/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "home uri", 
+                            "reference": "person home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "person home uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "home uri"
+            ]
+        }, 
+        "rule/home/qualified/group/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/h/group/{group id}", 
+                            "property": "group home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "group id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/group/uuid/{group uuid}", 
+                            "property": "group home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "group uuid"
+                    ]
+                }
+            ], 
+            "provide": [
+                "group home uri"
+            ]
+        }, 
+        "rule/home/qualified/person/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/h/person/{person id}", 
+                            "property": "person home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "person id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/person/uuid/{person uuid}", 
+                            "property": "person home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "person uuid"
+                    ]
+                }
+            ], 
+            "provide": [
+                "person home uri"
+            ]
+        }, 
+        "rule/instruction/basename/decode": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "kind", 
+                            "value": "snapshot"
+                        }
+                    ], 
+                    "decode": [
+                        {
+                            "expression": "^(?P<timestamp>(?P<created>[0-9]{4}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{6}))\\.(?P<extension>[^\\.]+)\\.(?P<compression>[^\\.]+)$", 
+                            "flags": 34, 
+                            "property": "basename"
+                        }
+                    ], 
+                    "equal": {
+                        "inode type": "file"
+                    }, 
+                    "match": {
+                        "expression": "^[0-9]{4}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{2}-[0-9]{6}\\.[^\\.]+\\.[^\\.]+$", 
+                        "flags": 34, 
+                        "property": "basename"
+                    }, 
+                    "requires": [
+                        "basename", 
+                        "inode type"
+                    ]
+                }
+            ], 
+            "provide": [
+                "extension", 
+                "compression", 
+                "created", 
+                "timestamp", 
+                "kind"
+            ]
+        }, 
+        "rule/job/default/work/directory": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "{temp path}/{job uuid}", 
+                            "property": "work directory"
+                        }
+                    ], 
+                    "requires": [
+                        "job uuid", 
+                        "temp path"
+                    ]
+                }
+            ], 
+            "provide": [
+                "work directory"
+            ]
+        }, 
+        "rule/job/implementation": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "implementation", 
+                            "value": "queue.ResourceJob"
+                        }
+                    ], 
+                    "equal": {
+                        "action": "info"
+                    }, 
+                    "requires": [
+                        "action"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "implementation", 
+                            "value": "queue.ResourceJob"
+                        }
+                    ], 
+                    "equal": {
+                        "action": "crawl"
+                    }, 
+                    "requires": [
+                        "action"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "implementation", 
+                            "value": "queue.ResourceJob"
+                        }
+                    ], 
+                    "equal": {
+                        "action": "copy"
+                    }, 
+                    "requires": [
+                        "action"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "implementation", 
+                            "value": "queue.ResourceJob"
+                        }
+                    ], 
+                    "equal": {
+                        "action": "symlink"
+                    }, 
+                    "requires": [
+                        "action"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "implementation", 
+                            "value": "queue.ResourceJob"
+                        }
+                    ], 
+                    "equal": {
+                        "action": "move"
+                    }, 
+                    "requires": [
+                        "action"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "implementation", 
+                            "value": "queue.ResourceJob"
+                        }
+                    ], 
+                    "equal": {
+                        "action": "delete"
+                    }, 
+                    "requires": [
+                        "action"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "implementation", 
+                            "value": "module.core.queue.document.DocumentJob"
+                        }
+                    ], 
+                    "equal": {
+                        "action": "get"
+                    }, 
+                    "requires": [
+                        "action"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "implementation", 
+                            "value": "module.core.queue.document.DocumentJob"
+                        }
+                    ], 
+                    "equal": {
+                        "action": "set"
+                    }, 
+                    "requires": [
+                        "action"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "implementation", 
+                            "value": "module.core.queue.document.DocumentJob"
+                        }
+                    ], 
+                    "equal": {
+                        "action": "drop"
+                    }, 
+                    "requires": [
+                        "action"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "implementation", 
+                            "value": "module.core.queue.table.TableJob"
+                        }
+                    ], 
+                    "equal": {
+                        "action": "backup"
+                    }, 
+                    "requires": [
+                        "action"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "implementation", 
+                            "value": "module.core.queue.instruction.InstructionJob"
+                        }
+                    ], 
+                    "equal": {
+                        "action": "restore"
+                    }, 
+                    "requires": [
+                        "action"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "implementation", 
+                            "value": "module.core.queue.table.TableJob"
+                        }
+                    ], 
+                    "equal": {
+                        "action": "export"
+                    }, 
+                    "requires": [
+                        "action"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "implementation", 
+                            "value": "module.core.queue.instruction.InstructionJob"
+                        }
+                    ], 
+                    "equal": {
+                        "action": "import"
+                    }, 
+                    "requires": [
+                        "action"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "implementation", 
+                            "value": "module.core.queue.table.TableJob"
+                        }
+                    ], 
+                    "equal": {
+                        "action": "rebuild"
+                    }, 
+                    "requires": [
+                        "action"
+                    ]
+                }
+            ], 
+            "provide": [
+                "implementation"
+            ]
+        }, 
+        "rule/job/log/default": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "save job execution", 
+                            "value": false
+                        }
+                    ], 
+                    "equal": {
+                        "action": "get"
+                    }, 
+                    "requires": [
+                        "action"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "save job execution", 
+                            "value": false
+                        }
+                    ], 
+                    "equal": {
+                        "action": "info"
+                    }, 
+                    "requires": [
+                        "action"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "save job execution", 
+                            "value": true
+                        }
+                    ], 
+                    "order": 1000
+                }
+            ], 
+            "provide": [
+                "save job execution"
+            ]
+        }, 
+        "rule/knowledge/group/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "knowledge uri", 
+                            "reference": "group knowledge uri"
+                        }
+                    ], 
+                    "requires": [
+                        "group knowledge uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "knowledge uri"
+            ]
+        }, 
+        "rule/knowledge/person/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "knowledge uri", 
+                            "reference": "person knowledge uri"
+                        }
+                    ], 
+                    "requires": [
+                        "person knowledge uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "knowledge uri"
+            ]
+        }, 
+        "rule/knowledge/qualified/group/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/k/group/{group id}", 
+                            "property": "group knowledge uri"
+                        }
+                    ], 
+                    "requires": [
+                        "group id"
+                    ]
+                }
+            ], 
+            "provide": [
+                "group knowledge uri"
+            ]
+        }, 
+        "rule/knowledge/qualified/person/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/k/person/{person id}", 
+                            "property": "person knowledge uri"
+                        }
+                    ], 
+                    "requires": [
+                        "person id"
+                    ]
+                }
+            ], 
+            "provide": [
+                "person knowledge uri"
+            ]
+        }, 
+        "rule/local/group/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "local uri", 
+                            "reference": "group local uri"
+                        }
+                    ], 
+                    "requires": [
+                        "group local uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "local uri"
+            ]
+        }, 
+        "rule/local/person/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "local uri", 
+                            "reference": "person local uri"
+                        }
+                    ], 
+                    "requires": [
+                        "person local uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "local uri"
+            ]
+        }, 
+        "rule/local/qualified/group/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/c/local/group/{group uuid}", 
+                            "property": "group local uri"
+                        }
+                    ], 
+                    "requires": [
+                        "group uuid"
+                    ]
+                }
+            ], 
+            "provide": [
+                "group local uri"
+            ]
+        }, 
+        "rule/local/qualified/person/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/c/local/person/{person uuid}", 
+                            "property": "person local uri"
+                        }
+                    ], 
+                    "requires": [
+                        "person uuid"
+                    ]
+                }
+            ], 
+            "provide": [
+                "person local uri"
+            ]
+        }, 
+        "rule/medium/kind": {
+            "provide": [
+                "kind"
+            ]
+        }, 
+        "rule/medium/resource/basename/canonic": {
+            "provide": [
+                "canonic basename"
+            ]
+        }, 
+        "rule/medium/resource/basename/implicit": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "basename", 
+                            "reference": "canonic basename"
+                        }
+                    ], 
+                    "requires": [
+                        "canonic basename"
+                    ]
+                }
+            ], 
+            "provide": [
+                "basename"
+            ]
+        }, 
+        "rule/medium/resource/basename/parse": {
+            "branch": [
+                {
+                    "decode": [
+                        {
+                            "expression": "^[^\\.]*(?:\\.(?P<language>[a-z]{2}))?\\.(?P<umid>[0-9a-f]{14})\\.(?P<extension>[^\\.]+)(?:\\.(?P<compression>[^\\.]+))?$", 
+                            "flags": 34, 
+                            "property": "basename"
+                        }
+                    ], 
+                    "equal": {
+                        "inode type": "file"
+                    }, 
+                    "match": {
+                        "expression": "^[^\\.]*(?:\\.[a-z]{2})?\\.[0-9a-f]{14}\\.[^\\.]+(?:\\.[^\\.]+)?$", 
+                        "flags": 34, 
+                        "property": "basename"
+                    }, 
+                    "order": 1000, 
+                    "requires": [
+                        "basename", 
+                        "inode type"
+                    ]
+                }
+            ], 
+            "provide": [
+                "extension", 
+                "compression", 
+                "kind", 
+                "media kind", 
+                "resource path digest", 
+                "language", 
+                "umid", 
+                "stop"
+            ]
+        }, 
+        "rule/medium/resource/dirname/canonic": {
+            "provide": [
+                "canonic dirname"
+            ]
+        }, 
+        "rule/medium/resource/dirname/implicit": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "dirname", 
+                            "reference": "canonic dirname"
+                        }
+                    ], 
+                    "requires": [
+                        "canonic dirname"
+                    ]
+                }
+            ], 
+            "provide": [
+                "dirname"
+            ]
+        }, 
+        "rule/medium/resource/kind/language": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "localized", 
+                            "value": false
+                        }
+                    ]
+                }
+            ], 
+            "provide": [
+                "localized"
+            ]
+        }, 
+        "rule/medium/resource/path/canonic": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "{canonic dirname}/{canonic basename}", 
+                            "property": "canonic path"
+                        }
+                    ], 
+                    "requires": [
+                        "canonic dirname", 
+                        "canonic basename"
+                    ]
+                }
+            ], 
+            "provide": [
+                "canonic path"
+            ]
+        }, 
+        "rule/medium/resource/path/digest": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "algorithm": "sha1", 
+                            "digest": "path", 
+                            "property": "path digest"
+                        }
+                    ], 
+                    "requires": [
+                        "path"
+                    ]
+                }
+            ], 
+            "provide": [
+                "path digest"
+            ]
+        }, 
+        "rule/medium/resource/path/implicit": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "{dirname}/{basename}", 
+                            "property": "path"
+                        }
+                    ], 
+                    "requires": [
+                        "dirname", 
+                        "basename"
+                    ]
+                }
+            ], 
+            "provide": [
+                "path"
+            ]
+        }, 
+        "rule/medium/resource/qualified/path": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "{host}:{path}", 
+                            "property": "fully qualified path"
+                        }
+                    ], 
+                    "requires": [
+                        "path", 
+                        "host"
+                    ]
+                }
+            ], 
+            "provide": [
+                "fully qualified path"
+            ]
+        }, 
+        "rule/medium/resource/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/m/resource/{kind}/sha1/{path digest}", 
+                            "property": "resource uri"
+                        }
+                    ], 
+                    "requires": [
+                        "path digest", 
+                        "kind"
+                    ]
+                }
+            ], 
+            "provide": [
+                "resource uri"
+            ]
+        }, 
+        "rule/program/mongodump/output/directory": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "{work directory}", 
+                            "property": "mongodump output directory"
+                        }
+                    ], 
+                    "requires": [
+                        "work directory"
+                    ]
+                }
+            ], 
+            "provide": [
+                "mongodump output directory"
+            ]
+        }, 
+        "rule/program/mongoexport/output/directory": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "{work directory}/{database}", 
+                            "property": "mongoexport output directory"
+                        }
+                    ], 
+                    "requires": [
+                        "work directory", 
+                        "database"
+                    ]
+                }
+            ], 
+            "provide": [
+                "mongoexport output directory"
+            ]
+        }, 
+        "rule/program/mongoexport/output/path": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "{mongoexport output directory}/{mongodb collection}.json", 
+                            "property": "mongoexport output path"
+                        }
+                    ], 
+                    "requires": [
+                        "mongoexport output directory", 
+                        "mongodb collection"
+                    ]
+                }
+            ], 
+            "provide": [
+                "mongoexport output path"
+            ]
+        }, 
+        "rule/program/mongoimport/input/directory": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "{work directory}/{database}", 
+                            "property": "mongoimport input directory"
+                        }
+                    ], 
+                    "requires": [
+                        "work directory", 
+                        "database"
+                    ]
+                }
+            ], 
+            "provide": [
+                "mongoimport input directory"
+            ]
+        }, 
+        "rule/program/mongoimport/input/path": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "{mongoimport input directory}/{mongodb collection}.json", 
+                            "property": "mongoimport input path"
+                        }
+                    ], 
+                    "requires": [
+                        "mongoimport input directory", 
+                        "mongodb collection"
+                    ]
+                }
+            ], 
+            "provide": [
+                "mongoimport input path"
+            ]
+        }, 
+        "rule/program/mongorestore/input/directory": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "{work directory}/{database}", 
+                            "property": "mongorestore input directory"
+                        }
+                    ], 
+                    "requires": [
+                        "work directory", 
+                        "database"
+                    ]
+                }
+            ], 
+            "provide": [
+                "mongorestore input directory"
+            ]
+        }, 
+        "rule/program/tar/compression": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "pbzip2 --loadavg={threads}", 
+                            "property": "tar use compress prog"
+                        }
+                    ], 
+                    "equal": {
+                        "compression": "bz2"
+                    }, 
+                    "requires": [
+                        "compression", 
+                        "threads"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "pixz -p {threads}", 
+                            "property": "tar use compress prog"
+                        }
+                    ], 
+                    "equal": {
+                        "compression": "xz"
+                    }, 
+                    "requires": [
+                        "compression", 
+                        "threads"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "pigz --processes {threads}", 
+                            "property": "tar use compress prog"
+                        }
+                    ], 
+                    "equal": {
+                        "compression": "gz"
+                    }, 
+                    "requires": [
+                        "compression", 
+                        "threads"
+                    ]
+                }
+            ], 
+            "provide": [
+                "tar use compress prog"
+            ]
+        }, 
+        "rule/program/tar/file/basename/implicit": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "{archive name}.{extension}.{compression}", 
+                            "property": "basename"
+                        }
+                    ], 
+                    "requires": [
+                        "archive name", 
+                        "extension", 
+                        "compression"
+                    ]
+                }
+            ], 
+            "provide": [
+                "basename"
+            ]
+        }, 
+        "rule/program/tar/file/extension/implicit": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "extension", 
+                            "value": "tar"
+                        }
+                    ]
+                }
+            ], 
+            "provide": [
+                "extension"
+            ]
+        }, 
+        "rule/program/tar/file/path/implicit": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "{dirname}/{basename}", 
+                            "property": "tar file"
+                        }
+                    ], 
+                    "requires": [
+                        "basename", 
+                        "dirname"
+                    ]
+                }
+            ], 
+            "provide": [
+                "tar file"
+            ]
+        }, 
+        "rule/queue/job/execution/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/q/job/{job uuid}/execution", 
+                            "property": "job execution uri"
+                        }
+                    ], 
+                    "requires": [
+                        "job uuid"
+                    ]
+                }
+            ], 
+            "provide": [
+                "job execution uri"
+            ]
+        }, 
+        "rule/queue/job/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/q/job/{job uuid}", 
+                            "property": "job uri"
+                        }
+                    ], 
+                    "requires": [
+                        "job uuid"
+                    ]
+                }
+            ], 
+            "provide": [
+                "job uri"
+            ]
+        }, 
+        "rule/system/default/compression": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "compression", 
+                            "value": "bz2"
+                        }
+                    ]
+                }
+            ], 
+            "provide": [
+                "compression"
+            ]
+        }, 
+        "rule/system/default/stderr/path": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "{work directory}/error.log", 
+                            "property": "stderr path"
+                        }
+                    ], 
+                    "requires": [
+                        "work directory"
+                    ]
+                }
+            ], 
+            "provide": [
+                "stderr path"
+            ]
+        }, 
+        "rule/system/default/stdout/path": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "{work directory}/output.log", 
+                            "property": "stdout path"
+                        }
+                    ], 
+                    "requires": [
+                        "work directory"
+                    ]
+                }
+            ], 
+            "provide": [
+                "stdout path"
+            ]
+        }, 
+        "rule/system/default/verbosity": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "verbosity", 
+                            "value": 20
+                        }
+                    ]
+                }
+            ], 
+            "provide": [
+                "volume"
+            ]
+        }, 
+        "rule/system/mongodb/password/digest": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "algorithm": "sha1", 
+                            "digest": "password", 
+                            "property": "password digest"
+                        }
+                    ], 
+                    "requires": [
+                        "password"
+                    ]
+                }
+            ], 
+            "provide": [
+                "password digest"
+            ]
+        }, 
+        "rule/system/mongodb/password/hidden": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "algorithm": "hide", 
+                            "digest": "password", 
+                            "property": "hidden password"
+                        }
+                    ], 
+                    "requires": [
+                        "password"
+                    ]
+                }
+            ], 
+            "provide": [
+                "hidden password"
+            ]
+        }, 
+        "rule/system/mongodb/url": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "mongodb://{username}:{password}@{host}:{port}/{database}", 
+                            "property": "mongodb url"
+                        }
+                    ], 
+                    "requires": [
+                        "host", 
+                        "database", 
+                        "port", 
+                        "username", 
+                        "password"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "mongodb://{username}:{password}@{host}/{database}", 
+                            "property": "mongodb url"
+                        }
+                    ], 
+                    "requires": [
+                        "host", 
+                        "database", 
+                        "username", 
+                        "password"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "mongodb://{host}:{port}", 
+                            "property": "mongodb url"
+                        }
+                    ], 
+                    "requires": [
+                        "host", 
+                        "port"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "mongodb://{host}", 
+                            "property": "mongodb url"
+                        }
+                    ], 
+                    "requires": [
+                        "host"
+                    ]
+                }
+            ], 
+            "provide": [
+                "mongodb url"
+            ]
+        }, 
+        "rule/system/mongodb/url/safe": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "mongodb://{host}:{port}/{database}", 
+                            "property": "mongodb safe url"
+                        }
+                    ], 
+                    "requires": [
+                        "host", 
+                        "port", 
+                        "database"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "mongodb://{host}/{database}", 
+                            "property": "mongodb safe url"
+                        }
+                    ], 
+                    "requires": [
+                        "host", 
+                        "database"
+                    ]
+                }
+            ], 
+            "provide": [
+                "mongodb safe url"
+            ]
+        }, 
+        "rule/system/version": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "{tubo major version}.{tubo minfor version}.{tubo git revision} {tubo version comment}", 
+                            "property": "tubo version"
+                        }
+                    ], 
+                    "requires": [
+                        "tubo major version", 
+                        "tubo minor version", 
+                        "tubo git revision", 
+                        "tubo version comment"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "{tubo major version}.{tubo minfor version}.{tubo git revision}", 
+                            "property": "tubo version"
+                        }
+                    ], 
+                    "requires": [
+                        "tubo major version", 
+                        "tubo minor version", 
+                        "tubo git revision"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "{tubo major version}.{tubo minfor version} {tubo version comment}", 
+                            "property": "tubo version"
+                        }
+                    ], 
+                    "requires": [
+                        "tubo major version", 
+                        "tubo minor version", 
+                        "tubo version comment"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "{tubo major version}.{tubo minfor version}", 
+                            "property": "tubo version"
+                        }
+                    ], 
+                    "requires": [
+                        "tubo major version", 
+                        "tubo minor version"
+                    ]
+                }
+            ], 
+            "provide": [
+                "tubo version"
+            ]
+        }, 
+        "rule/task/action/implementation": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "method", 
+                            "value": "import_action"
+                        }
+                    ], 
+                    "equal": {
+                        "action": "import"
+                    }, 
+                    "requires": [
+                        "action"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "method", 
+                            "reference": "action"
+                        }
+                    ], 
+                    "order": 1000, 
+                    "requires": [
+                        "action"
+                    ]
+                }
+            ], 
+            "provide": [
+                "method"
+            ]
+        }, 
+        "rule/task/default/cores": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "task cores", 
+                            "value": 1
+                        }
+                    ], 
+                    "order": 1000
+                }
+            ], 
+            "provide": [
+                "task cores"
+            ]
+        }, 
+        "rule/task/default/work/directory": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "{temp path}/{job uuid}/{task uuid}", 
+                            "property": "work directory"
+                        }
+                    ], 
+                    "requires": [
+                        "task uuid", 
+                        "temp path"
+                    ]
+                }
+            ], 
+            "provide": [
+                "work directory"
+            ]
+        }, 
+        "rule/task/preset": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "preset", 
+                            "value": "default"
+                        }
+                    ]
+                }
+            ], 
+            "provide": [
+                "preset"
+            ]
+        }, 
+        "rule/task/timestamp": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "datetime format": "%Y-%m-%d-%H-%M-%S-%f", 
+                            "property": "timestamp", 
+                            "reference": "created"
+                        }
+                    ], 
+                    "requires": [
+                        "created"
+                    ]
+                }
+            ], 
+            "provide": [
+                "timestamp"
+            ]
+        }
+    }
+}

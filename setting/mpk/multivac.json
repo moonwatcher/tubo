@@ -1,0 +1,21 @@
+{
+    "rule": {
+        "rule/genealogy/volume": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "volume", 
+                            "value": "titan"
+                        }
+                    ]
+                }
+            ]
+        }
+    }, 
+    "system": {
+        "cores": 8, 
+        "host": "multivac", 
+        "repository": "mpk"
+    }
+}

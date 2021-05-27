@@ -1,0 +1,114 @@
+{
+    "enumeration default": {
+        "default": {}, 
+        "element": null, 
+        "synonym": [
+            "key"
+        ]
+    }, 
+    "namespace default": {
+        "default": {
+            "cli": null, 
+            "decode": true, 
+            "keyword": null, 
+            "plural": false, 
+            "simplify": false, 
+            "type": "string"
+        }, 
+        "element": null, 
+        "normalize": [], 
+        "rule": [], 
+        "similarity": [], 
+        "synonym": [
+            "key"
+        ]
+    }, 
+    "section": {
+        "archetype": {
+            "method": "sanitize_archetype_node", 
+            "order": 40, 
+            "pad key": true
+        }, 
+        "command": {
+            "method": "sanitize_command_node", 
+            "order": 100, 
+            "pad key": true
+        }, 
+        "constant": {
+            "order": 10
+        }, 
+        "enumeration": {
+            "method": "sanitize_enumeration_node", 
+            "order": 50, 
+            "pad key": true
+        }, 
+        "expression": {
+            "method": "sanitize_expression_node", 
+            "order": 20
+        }, 
+        "interface": {
+            "method": "sanitize_interface_node", 
+            "order": 130, 
+            "pad key": true
+        }, 
+        "module": {
+            "order": 0
+        }, 
+        "namespace": {
+            "method": "sanitize_namespace_node", 
+            "order": 70, 
+            "pad key": true
+        }, 
+        "preset": {
+            "method": "sanitize_preset_node", 
+            "order": 110, 
+            "pad key": true
+        }, 
+        "repository": {
+            "method": "sanitize_repository_node", 
+            "order": 120, 
+            "pad key": true
+        }, 
+        "rule": {
+            "method": "sanitize_rule_node", 
+            "order": 60, 
+            "pad key": true
+        }, 
+        "service": {
+            "method": "sanitize_service_node", 
+            "order": 90, 
+            "pad key": true
+        }, 
+        "system": {
+            "order": 30
+        }, 
+        "table": {
+            "method": "sanitize_table_node", 
+            "order": 80, 
+            "pad key": true
+        }
+    }, 
+    "host setting path": "host.json", 
+    "module": [
+        {
+            "name": "core", 
+            "path": "module/core/configuration"
+        }, 
+        {
+            "enabled": true, 
+            "name": "bio", 
+            "path": "module/bio/configuration"
+        }, 
+        {
+            "enabled": false, 
+            "name": "multimedia", 
+            "path": "module/multimedia/configuration"
+        }
+    ], 
+    "repository setting path": "repository.json", 
+    "salt": "f5ee31bfcc68e80eaccf8ccf2516f6f43d3bd102", 
+    "setting cache path": "cache.db", 
+    "tubo home": "~/.tubo", 
+    "tubo system home": "/usr/local/etc/tubo", 
+    "user setting path": "setting.json"
+}

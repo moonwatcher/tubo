@@ -1,0 +1,84 @@
+#!/bin/sh -e
+### BEGIN INIT INFO
+# Author: Lior Galanti lior.galanti@nyu.edu NYU Center for Genomics & Systems Biology
+# Provides:          tubod
+# Required-Start:    $local_fs $remote_fs $network
+# Required-Stop:     $local_fs $remote_fs $network
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Start or stop the tubod server
+### END INIT INFO
+
+# Service name
+NAME=tubod
+
+# Defaults file
+DEFAULT_FILE="/etc/default/$NAME"
+
+# Defaults can be overridden in the default file
+USER=tubo
+DAEMON=/usr/bin/tubod
+PYTHON3=/usr/bin/python3
+STDOUT_LOG_FILE="/var/log/tubo/tubod.out"
+STDERR_LOG_FILE="/var/log/tubo/tubod.err"
+
+# load the defaults file
+[ -e "$DEFAULT_FILE" ] && . $DEFAULT_FILE
+
+# if we can't find the daemon just quit
+[ -x "$DAEMON" ] || exit 0
+
+PIDFILE=/var/run/$NAME.pid
+
+. /lib/lsb/init-functions
+
+if [ -n "$TUBO_HOME" ] && [ -d "$TUBO_HOME" ]; then
+    # export the TUBO_HOME variable so tubod can use it
+    export TUBO_HOME=$TUBO_HOME
+fi
+
+[ -n "$VERBOSITY" ] && OPTIONS="--verbosity $VERBOSITY $OPTIONS"
+
+do_start () {
+
+    # Required for basecalling with Picard 
+    # set the open file limit for this shell
+    ulimit -n 65536
+
+    if [ $ENABLE_DAEMON = 1 ]; then
+        log_daemon_msg "Starting $NAME daemon"
+        start-stop-daemon --start --background --pidfile $PIDFILE --make-pidfile \
+        --user $USER --chuid $USER --startas /bin/bash -- -c \
+        "exec $PYTHON3 $DAEMON $OPTIONS >> $STDOUT_LOG_FILE 2>> $STDERR_LOG_FILE"
+        log_end_msg $?
+    else
+        log_daemon_msg "tubod disabled, see ${DEFAULT_FILE}"
+    fi
+}
+do_stop () {
+    log_daemon_msg "Stopping $NAME daemon"
+    start-stop-daemon --stop --pidfile $PIDFILE --retry 10
+    log_end_msg $?
+}
+
+case "$1" in
+
+    start|stop)
+        do_${1}
+        ;;
+
+    restart|reload|force-reload)
+        do_stop
+        do_start
+        ;;
+
+    status)
+        status_of_proc "$NAME" "$DAEMON" && exit 0 || exit $?
+        ;;
+    *)
+        echo "Usage: /etc/init.d/$NAME {start|stop|restart|status}"
+        exit 1
+        ;;
+
+esac
+exit 0

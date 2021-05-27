@@ -1,0 +1,146 @@
+{
+    "command": {
+        "ln": {
+            "binary": "ln", 
+            "namespace": "ns/program/ln"
+        }, 
+        "mongodump": {
+            "binary": "mongodump", 
+            "namespace": "ns/program/mongodump", 
+            "stderr": "file", 
+            "stdout": "file"
+        }, 
+        "mongoexport": {
+            "binary": "mongoexport", 
+            "namespace": "ns/program/mongoexport", 
+            "stderr": "file", 
+            "stdout": "file"
+        }, 
+        "mongoimport": {
+            "binary": "mongoimport", 
+            "namespace": "ns/program/mongoimport", 
+            "stderr": "file", 
+            "stdout": "file"
+        }, 
+        "mongorestore": {
+            "binary": "mongorestore", 
+            "namespace": "ns/program/mongorestore", 
+            "stderr": "file", 
+            "stdout": "file"
+        }, 
+        "rm": {
+            "binary": "rm", 
+            "namespace": "ns/program/rm"
+        }, 
+        "rsync": {
+            "binary": "rsync", 
+            "error code": [
+                {
+                    "code": 0, 
+                    "message": "Success"
+                }, 
+                {
+                    "code": 1, 
+                    "message": "Syntax or usage error"
+                }, 
+                {
+                    "code": 2, 
+                    "message": "Protocol incompatibility"
+                }, 
+                {
+                    "code": 3, 
+                    "message": "Errors selecting input/output files, dirs"
+                }, 
+                {
+                    "code": 4, 
+                    "message": "Requested action not supported: an attempt was made to manipulate 64-bit files on a platform that cannot support them; or an option was specified that is supported by the client and not by the server."
+                }, 
+                {
+                    "code": 5, 
+                    "message": "Error starting client-server protocol"
+                }, 
+                {
+                    "code": 6, 
+                    "message": "Daemon unable to append to log-file"
+                }, 
+                {
+                    "code": 10, 
+                    "message": "Error in socket I/O"
+                }, 
+                {
+                    "code": 11, 
+                    "message": "Error in file I/O"
+                }, 
+                {
+                    "code": 12, 
+                    "message": "Error in rsync protocol data stream"
+                }, 
+                {
+                    "code": 13, 
+                    "message": "Errors with program diagnostics"
+                }, 
+                {
+                    "code": 14, 
+                    "message": "Error in IPC code"
+                }, 
+                {
+                    "code": 20, 
+                    "message": "Received SIGUSR1 or SIGINT"
+                }, 
+                {
+                    "code": 21, 
+                    "message": "Some error returned by waitpid()"
+                }, 
+                {
+                    "code": 22, 
+                    "message": "Error allocating core memory buffers"
+                }, 
+                {
+                    "code": 23, 
+                    "message": "Partial transfer due to error"
+                }, 
+                {
+                    "code": 24, 
+                    "message": "Partial transfer due to vanished source files"
+                }, 
+                {
+                    "code": 25, 
+                    "message": "The --max-delete limit stopped deletions"
+                }, 
+                {
+                    "code": 30, 
+                    "message": "Timeout in data send/receive"
+                }, 
+                {
+                    "code": 35, 
+                    "message": "Timeout waiting for daemon connection"
+                }
+            ], 
+            "namespace": "ns/program/rsync"
+        }, 
+        "tar": {
+            "binary": "tar", 
+            "environment": {
+                "LANG": "en_US.UTF-8", 
+                "LC_CTYPE": "en_US.UTF-8", 
+                "PATH": "/opt/local/tubo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin", 
+                "SHELL": "/bin/bash"
+            }, 
+            "error code": [
+                {
+                    "code": 0, 
+                    "message": "Success"
+                }, 
+                {
+                    "code": 1, 
+                    "message": "Some files differ"
+                }, 
+                {
+                    "code": 2, 
+                    "message": "Fatal error"
+                }
+            ], 
+            "namespace": "ns/program/tar"
+        }
+    }
+}

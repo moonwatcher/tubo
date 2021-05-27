@@ -1,0 +1,3709 @@
+{
+    "enumeration": {
+        "binary iec 60027 2": {
+            "element": [
+                {
+                    "base": 2, 
+                    "exponent": 30, 
+                    "key": 3, 
+                    "name": "GiB"
+                }, 
+                {
+                    "base": 2, 
+                    "exponent": 20, 
+                    "key": 2, 
+                    "name": "MiB"
+                }, 
+                {
+                    "base": 2, 
+                    "exponent": 40, 
+                    "key": 4, 
+                    "name": "TiB"
+                }, 
+                {
+                    "base": 2, 
+                    "exponent": 10, 
+                    "key": 1, 
+                    "name": "KiB"
+                }, 
+                {
+                    "base": 2, 
+                    "exponent": 0, 
+                    "key": 0, 
+                    "name": "Byte"
+                }
+            ]
+        }, 
+        "compression": {
+            "element": {
+                "bz2": {
+                    "name": "bz2 compression"
+                }, 
+                "gz": {
+                    "name": "gnu zip compression"
+                }, 
+                "xz": {
+                    "name": "lzma2 compression"
+                }
+            }
+        }, 
+        "country": {
+            "element": {
+                "AD": {
+                    "ISO 3166-1 alpha-2": "AD", 
+                    "ISO 3166-1 alpha-3": "AND", 
+                    "ISO 3166-1 numeric": "020", 
+                    "name": "Andorra"
+                }, 
+                "AE": {
+                    "ISO 3166-1 alpha-2": "AE", 
+                    "ISO 3166-1 alpha-3": "ARE", 
+                    "ISO 3166-1 numeric": "784", 
+                    "name": "United Arab Emirates", 
+                    "sfID": 143481
+                }, 
+                "AF": {
+                    "ISO 3166-1 alpha-2": "AF", 
+                    "ISO 3166-1 alpha-3": "AFG", 
+                    "ISO 3166-1 numeric": "004", 
+                    "name": "Afghanistan"
+                }, 
+                "AG": {
+                    "ISO 3166-1 alpha-2": "AG", 
+                    "ISO 3166-1 alpha-3": "ATG", 
+                    "ISO 3166-1 numeric": "028", 
+                    "name": "Antigua and Barbuda", 
+                    "sfID": 143540
+                }, 
+                "AI": {
+                    "ISO 3166-1 alpha-2": "AI", 
+                    "ISO 3166-1 alpha-3": "AIA", 
+                    "ISO 3166-1 numeric": "660", 
+                    "name": "Anguilla", 
+                    "sfID": 143538
+                }, 
+                "AL": {
+                    "ISO 3166-1 alpha-2": "AL", 
+                    "ISO 3166-1 alpha-3": "ALB", 
+                    "ISO 3166-1 numeric": "008", 
+                    "name": "Albania"
+                }, 
+                "AM": {
+                    "ISO 3166-1 alpha-2": "AM", 
+                    "ISO 3166-1 alpha-3": "ARM", 
+                    "ISO 3166-1 numeric": "051", 
+                    "name": "Armenia", 
+                    "sfID": 143524
+                }, 
+                "AO": {
+                    "ISO 3166-1 alpha-2": "AO", 
+                    "ISO 3166-1 alpha-3": "AGO", 
+                    "ISO 3166-1 numeric": "024", 
+                    "name": "Angola", 
+                    "sfID": 143564
+                }, 
+                "AQ": {
+                    "ISO 3166-1 alpha-2": "AQ", 
+                    "ISO 3166-1 alpha-3": "ATA", 
+                    "ISO 3166-1 numeric": "010", 
+                    "name": "Antarctica"
+                }, 
+                "AR": {
+                    "ISO 3166-1 alpha-2": "AR", 
+                    "ISO 3166-1 alpha-3": "ARG", 
+                    "ISO 3166-1 numeric": "032", 
+                    "name": "Argentina", 
+                    "sfID": 143505
+                }, 
+                "AS": {
+                    "ISO 3166-1 alpha-2": "AS", 
+                    "ISO 3166-1 alpha-3": "ASM", 
+                    "ISO 3166-1 numeric": "016", 
+                    "name": "American Samoa"
+                }, 
+                "AT": {
+                    "ISO 3166-1 alpha-2": "AT", 
+                    "ISO 3166-1 alpha-3": "AUT", 
+                    "ISO 3166-1 numeric": "040", 
+                    "name": "Austria", 
+                    "sfID": 143445
+                }, 
+                "AU": {
+                    "ISO 3166-1 alpha-2": "AU", 
+                    "ISO 3166-1 alpha-3": "AUS", 
+                    "ISO 3166-1 numeric": "036", 
+                    "name": "Australia", 
+                    "sfID": 143460
+                }, 
+                "AW": {
+                    "ISO 3166-1 alpha-2": "AW", 
+                    "ISO 3166-1 alpha-3": "ABW", 
+                    "ISO 3166-1 numeric": "533", 
+                    "name": "Aruba"
+                }, 
+                "AX": {
+                    "ISO 3166-1 alpha-2": "AX", 
+                    "ISO 3166-1 alpha-3": "ALA", 
+                    "ISO 3166-1 numeric": "248", 
+                    "name": "Aland Islands"
+                }, 
+                "AZ": {
+                    "ISO 3166-1 alpha-2": "AZ", 
+                    "ISO 3166-1 alpha-3": "AZE", 
+                    "ISO 3166-1 numeric": "031", 
+                    "name": "Azerbaijan", 
+                    "sfID": 143568
+                }, 
+                "BA": {
+                    "ISO 3166-1 alpha-2": "BA", 
+                    "ISO 3166-1 alpha-3": "BIH", 
+                    "ISO 3166-1 numeric": "070", 
+                    "name": "Bosnia and Herzegovina"
+                }, 
+                "BB": {
+                    "ISO 3166-1 alpha-2": "BB", 
+                    "ISO 3166-1 alpha-3": "BRB", 
+                    "ISO 3166-1 numeric": "052", 
+                    "name": "Barbados", 
+                    "sfID": 143541
+                }, 
+                "BD": {
+                    "ISO 3166-1 alpha-2": "BD", 
+                    "ISO 3166-1 alpha-3": "BGD", 
+                    "ISO 3166-1 numeric": "050", 
+                    "name": "Bangladesh"
+                }, 
+                "BE": {
+                    "ISO 3166-1 alpha-2": "BE", 
+                    "ISO 3166-1 alpha-3": "BEL", 
+                    "ISO 3166-1 numeric": "056", 
+                    "name": "Belgium", 
+                    "sfID": 143446
+                }, 
+                "BF": {
+                    "ISO 3166-1 alpha-2": "BF", 
+                    "ISO 3166-1 alpha-3": "BFA", 
+                    "ISO 3166-1 numeric": "854", 
+                    "name": "Burkina Faso"
+                }, 
+                "BG": {
+                    "ISO 3166-1 alpha-2": "BG", 
+                    "ISO 3166-1 alpha-3": "BGR", 
+                    "ISO 3166-1 numeric": "100", 
+                    "name": "Bulgaria", 
+                    "sfID": 143526
+                }, 
+                "BH": {
+                    "ISO 3166-1 alpha-2": "BH", 
+                    "ISO 3166-1 alpha-3": "BHR", 
+                    "ISO 3166-1 numeric": "048", 
+                    "name": "Bahrain", 
+                    "sfID": 143559
+                }, 
+                "BI": {
+                    "ISO 3166-1 alpha-2": "BI", 
+                    "ISO 3166-1 alpha-3": "BDI", 
+                    "ISO 3166-1 numeric": "108", 
+                    "name": "Burundi"
+                }, 
+                "BJ": {
+                    "ISO 3166-1 alpha-2": "BJ", 
+                    "ISO 3166-1 alpha-3": "BEN", 
+                    "ISO 3166-1 numeric": "204", 
+                    "name": "Benin"
+                }, 
+                "BL": {
+                    "ISO 3166-1 alpha-2": "BL", 
+                    "ISO 3166-1 alpha-3": "BLM", 
+                    "ISO 3166-1 numeric": "652", 
+                    "name": "Saint Barthelemy"
+                }, 
+                "BM": {
+                    "ISO 3166-1 alpha-2": "BM", 
+                    "ISO 3166-1 alpha-3": "BMU", 
+                    "ISO 3166-1 numeric": "060", 
+                    "name": "Bermuda", 
+                    "sfID": 143542
+                }, 
+                "BN": {
+                    "ISO 3166-1 alpha-2": "BN", 
+                    "ISO 3166-1 alpha-3": "BRN", 
+                    "ISO 3166-1 numeric": "096", 
+                    "name": "Brunei Darussalam", 
+                    "sfID": 143560
+                }, 
+                "BO": {
+                    "ISO 3166-1 alpha-2": "BO", 
+                    "ISO 3166-1 alpha-3": "BOL", 
+                    "ISO 3166-1 numeric": "068", 
+                    "name": "Bolivia", 
+                    "sfID": 143556
+                }, 
+                "BQ": {
+                    "ISO 3166-1 alpha-2": "BQ", 
+                    "ISO 3166-1 alpha-3": "BES", 
+                    "ISO 3166-1 numeric": "535", 
+                    "name": "Bonaire, Saint Eustatius and Saba"
+                }, 
+                "BR": {
+                    "ISO 3166-1 alpha-2": "BR", 
+                    "ISO 3166-1 alpha-3": "BRA", 
+                    "ISO 3166-1 numeric": "076", 
+                    "name": "Brazil", 
+                    "sfID": 143503
+                }, 
+                "BS": {
+                    "ISO 3166-1 alpha-2": "BS", 
+                    "ISO 3166-1 alpha-3": "BHS", 
+                    "ISO 3166-1 numeric": "044", 
+                    "name": "Bahamas", 
+                    "sfID": 143539
+                }, 
+                "BT": {
+                    "ISO 3166-1 alpha-2": "BT", 
+                    "ISO 3166-1 alpha-3": "BTN", 
+                    "ISO 3166-1 numeric": "064", 
+                    "name": "Bhutan"
+                }, 
+                "BV": {
+                    "ISO 3166-1 alpha-2": "BV", 
+                    "ISO 3166-1 alpha-3": "BVT", 
+                    "ISO 3166-1 numeric": "074", 
+                    "name": "Bouvet Island"
+                }, 
+                "BW": {
+                    "ISO 3166-1 alpha-2": "BW", 
+                    "ISO 3166-1 alpha-3": "BWA", 
+                    "ISO 3166-1 numeric": "072", 
+                    "name": "Botswana", 
+                    "sfID": 143525
+                }, 
+                "BY": {
+                    "ISO 3166-1 alpha-2": "BY", 
+                    "ISO 3166-1 alpha-3": "BLR", 
+                    "ISO 3166-1 numeric": "112", 
+                    "name": "Belarus", 
+                    "sfID": 143565
+                }, 
+                "BZ": {
+                    "ISO 3166-1 alpha-2": "BZ", 
+                    "ISO 3166-1 alpha-3": "BLZ", 
+                    "ISO 3166-1 numeric": "084", 
+                    "name": "Belize", 
+                    "sfID": 143555
+                }, 
+                "CA": {
+                    "ISO 3166-1 alpha-2": "CA", 
+                    "ISO 3166-1 alpha-3": "CAN", 
+                    "ISO 3166-1 numeric": "124", 
+                    "name": "Canada", 
+                    "sfID": 143455
+                }, 
+                "CC": {
+                    "ISO 3166-1 alpha-2": "CC", 
+                    "ISO 3166-1 alpha-3": "CCK", 
+                    "ISO 3166-1 numeric": "166", 
+                    "name": "Cocos Islands"
+                }, 
+                "CD": {
+                    "ISO 3166-1 alpha-2": "CD", 
+                    "ISO 3166-1 alpha-3": "COD", 
+                    "ISO 3166-1 numeric": "180", 
+                    "name": "Congo"
+                }, 
+                "CF": {
+                    "ISO 3166-1 alpha-2": "CF", 
+                    "ISO 3166-1 alpha-3": "CAF", 
+                    "ISO 3166-1 numeric": "140", 
+                    "name": "Central African Republic"
+                }, 
+                "CG": {
+                    "ISO 3166-1 alpha-2": "CG", 
+                    "ISO 3166-1 alpha-3": "COG", 
+                    "ISO 3166-1 numeric": "178", 
+                    "name": "Congo"
+                }, 
+                "CH": {
+                    "ISO 3166-1 alpha-2": "CH", 
+                    "ISO 3166-1 alpha-3": "CHE", 
+                    "ISO 3166-1 numeric": "756", 
+                    "name": "Switzerland", 
+                    "sfID": 143459
+                }, 
+                "CI": {
+                    "ISO 3166-1 alpha-2": "CI", 
+                    "ISO 3166-1 alpha-3": "CIV", 
+                    "ISO 3166-1 numeric": "384", 
+                    "name": "Côte d\"Ivoire"
+                }, 
+                "CK": {
+                    "ISO 3166-1 alpha-2": "CK", 
+                    "ISO 3166-1 alpha-3": "COK", 
+                    "ISO 3166-1 numeric": "184", 
+                    "name": "Cook Islands"
+                }, 
+                "CL": {
+                    "ISO 3166-1 alpha-2": "CL", 
+                    "ISO 3166-1 alpha-3": "CHL", 
+                    "ISO 3166-1 numeric": "152", 
+                    "name": "Chile", 
+                    "sfID": 143483
+                }, 
+                "CM": {
+                    "ISO 3166-1 alpha-2": "CM", 
+                    "ISO 3166-1 alpha-3": "CMR", 
+                    "ISO 3166-1 numeric": "120", 
+                    "name": "Cameroon"
+                }, 
+                "CN": {
+                    "ISO 3166-1 alpha-2": "CN", 
+                    "ISO 3166-1 alpha-3": "CHN", 
+                    "ISO 3166-1 numeric": "156", 
+                    "name": "China", 
+                    "sfID": 143465
+                }, 
+                "CO": {
+                    "ISO 3166-1 alpha-2": "CO", 
+                    "ISO 3166-1 alpha-3": "COL", 
+                    "ISO 3166-1 numeric": "170", 
+                    "name": "Colombia", 
+                    "sfID": 143501
+                }, 
+                "CR": {
+                    "ISO 3166-1 alpha-2": "CR", 
+                    "ISO 3166-1 alpha-3": "CRI", 
+                    "ISO 3166-1 numeric": "188", 
+                    "name": "Costa Rica", 
+                    "sfID": 143495
+                }, 
+                "CU": {
+                    "ISO 3166-1 alpha-2": "CU", 
+                    "ISO 3166-1 alpha-3": "CUB", 
+                    "ISO 3166-1 numeric": "192", 
+                    "name": "Cuba"
+                }, 
+                "CV": {
+                    "ISO 3166-1 alpha-2": "CV", 
+                    "ISO 3166-1 alpha-3": "CPV", 
+                    "ISO 3166-1 numeric": "132", 
+                    "name": "Cape Verde"
+                }, 
+                "CW": {
+                    "ISO 3166-1 alpha-2": "CW", 
+                    "ISO 3166-1 alpha-3": "CUW", 
+                    "ISO 3166-1 numeric": "531", 
+                    "name": "Curaçao"
+                }, 
+                "CX": {
+                    "ISO 3166-1 alpha-2": "CX", 
+                    "ISO 3166-1 alpha-3": "CXR", 
+                    "ISO 3166-1 numeric": "162", 
+                    "name": "Christmas Island"
+                }, 
+                "CY": {
+                    "ISO 3166-1 alpha-2": "CY", 
+                    "ISO 3166-1 alpha-3": "CYP", 
+                    "ISO 3166-1 numeric": "196", 
+                    "name": "Cyprus", 
+                    "sfID": 143557
+                }, 
+                "CZ": {
+                    "ISO 3166-1 alpha-2": "CZ", 
+                    "ISO 3166-1 alpha-3": "CZE", 
+                    "ISO 3166-1 numeric": "203", 
+                    "name": "Czech Republic", 
+                    "sfID": 143489
+                }, 
+                "DE": {
+                    "ISO 3166-1 alpha-2": "DE", 
+                    "ISO 3166-1 alpha-3": "DEU", 
+                    "ISO 3166-1 numeric": "276", 
+                    "name": "Germany", 
+                    "sfID": 143443
+                }, 
+                "DJ": {
+                    "ISO 3166-1 alpha-2": "DJ", 
+                    "ISO 3166-1 alpha-3": "DJI", 
+                    "ISO 3166-1 numeric": "262", 
+                    "name": "Djibouti"
+                }, 
+                "DK": {
+                    "ISO 3166-1 alpha-2": "DK", 
+                    "ISO 3166-1 alpha-3": "DNK", 
+                    "ISO 3166-1 numeric": "208", 
+                    "name": "Denmark", 
+                    "sfID": 143458
+                }, 
+                "DM": {
+                    "ISO 3166-1 alpha-2": "DM", 
+                    "ISO 3166-1 alpha-3": "DMA", 
+                    "ISO 3166-1 numeric": "212", 
+                    "name": "Dominica", 
+                    "sfID": 143545
+                }, 
+                "DO": {
+                    "ISO 3166-1 alpha-2": "DO", 
+                    "ISO 3166-1 alpha-3": "DOM", 
+                    "ISO 3166-1 numeric": "214", 
+                    "name": "Dominican Republic", 
+                    "sfID": 143508
+                }, 
+                "DZ": {
+                    "ISO 3166-1 alpha-2": "DZ", 
+                    "ISO 3166-1 alpha-3": "DZA", 
+                    "ISO 3166-1 numeric": "012", 
+                    "name": "Algeria", 
+                    "sfID": 143563
+                }, 
+                "EC": {
+                    "ISO 3166-1 alpha-2": "EC", 
+                    "ISO 3166-1 alpha-3": "ECU", 
+                    "ISO 3166-1 numeric": "218", 
+                    "name": "Ecuador", 
+                    "sfID": 143509
+                }, 
+                "EE": {
+                    "ISO 3166-1 alpha-2": "EE", 
+                    "ISO 3166-1 alpha-3": "EST", 
+                    "ISO 3166-1 numeric": "233", 
+                    "name": "Estonia", 
+                    "sfID": 143518
+                }, 
+                "EG": {
+                    "ISO 3166-1 alpha-2": "EG", 
+                    "ISO 3166-1 alpha-3": "EGY", 
+                    "ISO 3166-1 numeric": "818", 
+                    "name": "Egypt", 
+                    "sfID": 143516
+                }, 
+                "EH": {
+                    "ISO 3166-1 alpha-2": "EH", 
+                    "ISO 3166-1 alpha-3": "ESH", 
+                    "ISO 3166-1 numeric": "732", 
+                    "name": "Western Sahara"
+                }, 
+                "ER": {
+                    "ISO 3166-1 alpha-2": "ER", 
+                    "ISO 3166-1 alpha-3": "ERI", 
+                    "ISO 3166-1 numeric": "232", 
+                    "name": "Eritrea"
+                }, 
+                "ES": {
+                    "ISO 3166-1 alpha-2": "ES", 
+                    "ISO 3166-1 alpha-3": "ESP", 
+                    "ISO 3166-1 numeric": "724", 
+                    "name": "Spain", 
+                    "sfID": 143454
+                }, 
+                "ET": {
+                    "ISO 3166-1 alpha-2": "ET", 
+                    "ISO 3166-1 alpha-3": "ETH", 
+                    "ISO 3166-1 numeric": "231", 
+                    "name": "Ethiopia"
+                }, 
+                "FI": {
+                    "ISO 3166-1 alpha-2": "FI", 
+                    "ISO 3166-1 alpha-3": "FIN", 
+                    "ISO 3166-1 numeric": "246", 
+                    "name": "Finland", 
+                    "sfID": 143447
+                }, 
+                "FJ": {
+                    "ISO 3166-1 alpha-2": "FJ", 
+                    "ISO 3166-1 alpha-3": "FJI", 
+                    "ISO 3166-1 numeric": "242", 
+                    "name": "Fiji"
+                }, 
+                "FK": {
+                    "ISO 3166-1 alpha-2": "FK", 
+                    "ISO 3166-1 alpha-3": "FLK", 
+                    "ISO 3166-1 numeric": "238", 
+                    "name": "Falkland Islands (Malvinas)"
+                }, 
+                "FM": {
+                    "ISO 3166-1 alpha-2": "FM", 
+                    "ISO 3166-1 alpha-3": "FSM", 
+                    "ISO 3166-1 numeric": "583", 
+                    "name": "Micronesia"
+                }, 
+                "FO": {
+                    "ISO 3166-1 alpha-2": "FO", 
+                    "ISO 3166-1 alpha-3": "FRO", 
+                    "ISO 3166-1 numeric": "234", 
+                    "name": "Faroe Islands"
+                }, 
+                "FR": {
+                    "ISO 3166-1 alpha-2": "FR", 
+                    "ISO 3166-1 alpha-3": "FRA", 
+                    "ISO 3166-1 numeric": "250", 
+                    "name": "France", 
+                    "sfID": 143442
+                }, 
+                "GA": {
+                    "ISO 3166-1 alpha-2": "GA", 
+                    "ISO 3166-1 alpha-3": "GAB", 
+                    "ISO 3166-1 numeric": "266", 
+                    "name": "Gabon"
+                }, 
+                "GB": {
+                    "ISO 3166-1 alpha-2": "GB", 
+                    "ISO 3166-1 alpha-3": "GBR", 
+                    "ISO 3166-1 numeric": "826", 
+                    "name": "United Kingdom", 
+                    "sfID": 143444
+                }, 
+                "GD": {
+                    "ISO 3166-1 alpha-2": "GD", 
+                    "ISO 3166-1 alpha-3": "GRD", 
+                    "ISO 3166-1 numeric": "308", 
+                    "name": "Grenada", 
+                    "sfID": 143546
+                }, 
+                "GE": {
+                    "ISO 3166-1 alpha-2": "GE", 
+                    "ISO 3166-1 alpha-3": "GEO", 
+                    "ISO 3166-1 numeric": "268", 
+                    "name": "Georgia"
+                }, 
+                "GF": {
+                    "ISO 3166-1 alpha-2": "GF", 
+                    "ISO 3166-1 alpha-3": "GUF", 
+                    "ISO 3166-1 numeric": "254", 
+                    "name": "French Guiana"
+                }, 
+                "GG": {
+                    "ISO 3166-1 alpha-2": "GG", 
+                    "ISO 3166-1 alpha-3": "GGY", 
+                    "ISO 3166-1 numeric": "831", 
+                    "name": "Guernsey"
+                }, 
+                "GH": {
+                    "ISO 3166-1 alpha-2": "GH", 
+                    "ISO 3166-1 alpha-3": "GHA", 
+                    "ISO 3166-1 numeric": "288", 
+                    "name": "Ghana", 
+                    "sfID": 143573
+                }, 
+                "GI": {
+                    "ISO 3166-1 alpha-2": "GI", 
+                    "ISO 3166-1 alpha-3": "GIB", 
+                    "ISO 3166-1 numeric": "292", 
+                    "name": "Gibraltar"
+                }, 
+                "GL": {
+                    "ISO 3166-1 alpha-2": "GL", 
+                    "ISO 3166-1 alpha-3": "GRL", 
+                    "ISO 3166-1 numeric": "304", 
+                    "name": "Greenland"
+                }, 
+                "GM": {
+                    "ISO 3166-1 alpha-2": "GM", 
+                    "ISO 3166-1 alpha-3": "GMB", 
+                    "ISO 3166-1 numeric": "270", 
+                    "name": "Gambia"
+                }, 
+                "GN": {
+                    "ISO 3166-1 alpha-2": "GN", 
+                    "ISO 3166-1 alpha-3": "GIN", 
+                    "ISO 3166-1 numeric": "324", 
+                    "name": "Guinea"
+                }, 
+                "GP": {
+                    "ISO 3166-1 alpha-2": "GP", 
+                    "ISO 3166-1 alpha-3": "GLP", 
+                    "ISO 3166-1 numeric": "312", 
+                    "name": "Guadeloupe"
+                }, 
+                "GQ": {
+                    "ISO 3166-1 alpha-2": "GQ", 
+                    "ISO 3166-1 alpha-3": "GNQ", 
+                    "ISO 3166-1 numeric": "226", 
+                    "name": "Equatorial Guinea"
+                }, 
+                "GR": {
+                    "ISO 3166-1 alpha-2": "GR", 
+                    "ISO 3166-1 alpha-3": "GRC", 
+                    "ISO 3166-1 numeric": "300", 
+                    "name": "Greece", 
+                    "sfID": 143448
+                }, 
+                "GS": {
+                    "ISO 3166-1 alpha-2": "GS", 
+                    "ISO 3166-1 alpha-3": "SGS", 
+                    "ISO 3166-1 numeric": "239", 
+                    "name": "South Georgia and the South Sandwich Islands"
+                }, 
+                "GT": {
+                    "ISO 3166-1 alpha-2": "GT", 
+                    "ISO 3166-1 alpha-3": "GTM", 
+                    "ISO 3166-1 numeric": "320", 
+                    "name": "Guatemala", 
+                    "sfID": 143504
+                }, 
+                "GU": {
+                    "ISO 3166-1 alpha-2": "GU", 
+                    "ISO 3166-1 alpha-3": "GUM", 
+                    "ISO 3166-1 numeric": "316", 
+                    "name": "Guam"
+                }, 
+                "GW": {
+                    "ISO 3166-1 alpha-2": "GW", 
+                    "ISO 3166-1 alpha-3": "GNB", 
+                    "ISO 3166-1 numeric": "624", 
+                    "name": "Guinea-Bissau"
+                }, 
+                "GY": {
+                    "ISO 3166-1 alpha-2": "GY", 
+                    "ISO 3166-1 alpha-3": "GUY", 
+                    "ISO 3166-1 numeric": "328", 
+                    "name": "Guyana", 
+                    "sfID": 143553
+                }, 
+                "HK": {
+                    "ISO 3166-1 alpha-2": "HK", 
+                    "ISO 3166-1 alpha-3": "HKG", 
+                    "ISO 3166-1 numeric": "344", 
+                    "name": "Hong Kong", 
+                    "sfID": 143463
+                }, 
+                "HM": {
+                    "ISO 3166-1 alpha-2": "HM", 
+                    "ISO 3166-1 alpha-3": "HMD", 
+                    "ISO 3166-1 numeric": "334", 
+                    "name": "Heard Island and McDonald Islands"
+                }, 
+                "HN": {
+                    "ISO 3166-1 alpha-2": "HN", 
+                    "ISO 3166-1 alpha-3": "HND", 
+                    "ISO 3166-1 numeric": "340", 
+                    "name": "Honduras", 
+                    "sfID": 143510
+                }, 
+                "HR": {
+                    "ISO 3166-1 alpha-2": "HR", 
+                    "ISO 3166-1 alpha-3": "HRV", 
+                    "ISO 3166-1 numeric": "191", 
+                    "name": "Croatia", 
+                    "sfID": 143494
+                }, 
+                "HT": {
+                    "ISO 3166-1 alpha-2": "HT", 
+                    "ISO 3166-1 alpha-3": "HTI", 
+                    "ISO 3166-1 numeric": "332", 
+                    "name": "Haiti"
+                }, 
+                "HU": {
+                    "ISO 3166-1 alpha-2": "HU", 
+                    "ISO 3166-1 alpha-3": "HUN", 
+                    "ISO 3166-1 numeric": "348", 
+                    "name": "Hungary", 
+                    "sfID": 143482
+                }, 
+                "ID": {
+                    "ISO 3166-1 alpha-2": "ID", 
+                    "ISO 3166-1 alpha-3": "IDN", 
+                    "ISO 3166-1 numeric": "360", 
+                    "name": "Indonesia", 
+                    "sfID": 143476
+                }, 
+                "IE": {
+                    "ISO 3166-1 alpha-2": "IE", 
+                    "ISO 3166-1 alpha-3": "IRL", 
+                    "ISO 3166-1 numeric": "372", 
+                    "name": "Ireland", 
+                    "sfID": 143449
+                }, 
+                "IL": {
+                    "ISO 3166-1 alpha-2": "IL", 
+                    "ISO 3166-1 alpha-3": "ISR", 
+                    "ISO 3166-1 numeric": "376", 
+                    "name": "Israel", 
+                    "sfID": 143491
+                }, 
+                "IM": {
+                    "ISO 3166-1 alpha-2": "IM", 
+                    "ISO 3166-1 alpha-3": "IMN", 
+                    "ISO 3166-1 numeric": "833", 
+                    "name": "Isle of Man"
+                }, 
+                "IN": {
+                    "ISO 3166-1 alpha-2": "IN", 
+                    "ISO 3166-1 alpha-3": "IND", 
+                    "ISO 3166-1 numeric": "356", 
+                    "name": "India", 
+                    "sfID": 143467
+                }, 
+                "IO": {
+                    "ISO 3166-1 alpha-2": "IO", 
+                    "ISO 3166-1 alpha-3": "IOT", 
+                    "ISO 3166-1 numeric": "086", 
+                    "name": "British Indian Ocean Territory"
+                }, 
+                "IQ": {
+                    "ISO 3166-1 alpha-2": "IQ", 
+                    "ISO 3166-1 alpha-3": "IRQ", 
+                    "ISO 3166-1 numeric": "368", 
+                    "name": "Iraq"
+                }, 
+                "IR": {
+                    "ISO 3166-1 alpha-2": "IR", 
+                    "ISO 3166-1 alpha-3": "IRN", 
+                    "ISO 3166-1 numeric": "364", 
+                    "name": "Iran"
+                }, 
+                "IS": {
+                    "ISO 3166-1 alpha-2": "IS", 
+                    "ISO 3166-1 alpha-3": "ISL", 
+                    "ISO 3166-1 numeric": "352", 
+                    "name": "Iceland", 
+                    "sfID": 143558
+                }, 
+                "IT": {
+                    "ISO 3166-1 alpha-2": "IT", 
+                    "ISO 3166-1 alpha-3": "ITA", 
+                    "ISO 3166-1 numeric": "380", 
+                    "name": "Italy", 
+                    "sfID": 143450
+                }, 
+                "JE": {
+                    "ISO 3166-1 alpha-2": "JE", 
+                    "ISO 3166-1 alpha-3": "JEY", 
+                    "ISO 3166-1 numeric": "832", 
+                    "name": "Jersey"
+                }, 
+                "JM": {
+                    "ISO 3166-1 alpha-2": "JM", 
+                    "ISO 3166-1 alpha-3": "JAM", 
+                    "ISO 3166-1 numeric": "388", 
+                    "name": "Jamaica", 
+                    "sfID": 143511
+                }, 
+                "JO": {
+                    "ISO 3166-1 alpha-2": "JO", 
+                    "ISO 3166-1 alpha-3": "JOR", 
+                    "ISO 3166-1 numeric": "400", 
+                    "name": "Jordan", 
+                    "sfID": 143528
+                }, 
+                "JP": {
+                    "ISO 3166-1 alpha-2": "JP", 
+                    "ISO 3166-1 alpha-3": "JPN", 
+                    "ISO 3166-1 numeric": "392", 
+                    "name": "Japan", 
+                    "sfID": 143462
+                }, 
+                "KE": {
+                    "ISO 3166-1 alpha-2": "KE", 
+                    "ISO 3166-1 alpha-3": "KEN", 
+                    "ISO 3166-1 numeric": "404", 
+                    "name": "Kenya", 
+                    "sfID": 143529
+                }, 
+                "KG": {
+                    "ISO 3166-1 alpha-2": "KG", 
+                    "ISO 3166-1 alpha-3": "KGZ", 
+                    "ISO 3166-1 numeric": "417", 
+                    "name": "Kyrgyzstan"
+                }, 
+                "KH": {
+                    "ISO 3166-1 alpha-2": "KH", 
+                    "ISO 3166-1 alpha-3": "KHM", 
+                    "ISO 3166-1 numeric": "116", 
+                    "name": "Cambodia"
+                }, 
+                "KI": {
+                    "ISO 3166-1 alpha-2": "KI", 
+                    "ISO 3166-1 alpha-3": "KIR", 
+                    "ISO 3166-1 numeric": "296", 
+                    "name": "Kiribati"
+                }, 
+                "KM": {
+                    "ISO 3166-1 alpha-2": "KM", 
+                    "ISO 3166-1 alpha-3": "COM", 
+                    "ISO 3166-1 numeric": "174", 
+                    "name": "Comoros"
+                }, 
+                "KN": {
+                    "ISO 3166-1 alpha-2": "KN", 
+                    "ISO 3166-1 alpha-3": "KNA", 
+                    "ISO 3166-1 numeric": "659", 
+                    "name": "Saint Kitts and Nevis", 
+                    "sfID": 143548
+                }, 
+                "KP": {
+                    "ISO 3166-1 alpha-2": "KP", 
+                    "ISO 3166-1 alpha-3": "PRK", 
+                    "ISO 3166-1 numeric": "408", 
+                    "name": "North Korea"
+                }, 
+                "KR": {
+                    "ISO 3166-1 alpha-2": "KR", 
+                    "ISO 3166-1 alpha-3": "KOR", 
+                    "ISO 3166-1 numeric": "410", 
+                    "name": "South Korea", 
+                    "sfID": 143466
+                }, 
+                "KW": {
+                    "ISO 3166-1 alpha-2": "KW", 
+                    "ISO 3166-1 alpha-3": "KWT", 
+                    "ISO 3166-1 numeric": "414", 
+                    "name": "Kuwait", 
+                    "sfID": 143493
+                }, 
+                "KY": {
+                    "ISO 3166-1 alpha-2": "KY", 
+                    "ISO 3166-1 alpha-3": "CYM", 
+                    "ISO 3166-1 numeric": "136", 
+                    "name": "Cayman Islands", 
+                    "sfID": 143544
+                }, 
+                "KZ": {
+                    "ISO 3166-1 alpha-2": "KZ", 
+                    "ISO 3166-1 alpha-3": "KAZ", 
+                    "ISO 3166-1 numeric": "398", 
+                    "name": "Kazakhstan", 
+                    "sfID": 143517
+                }, 
+                "LA": {
+                    "ISO 3166-1 alpha-2": "LA", 
+                    "ISO 3166-1 alpha-3": "LAO", 
+                    "ISO 3166-1 numeric": "418", 
+                    "name": "Lao"
+                }, 
+                "LB": {
+                    "ISO 3166-1 alpha-2": "LB", 
+                    "ISO 3166-1 alpha-3": "LBN", 
+                    "ISO 3166-1 numeric": "422", 
+                    "name": "Lebanon", 
+                    "sfID": 143497
+                }, 
+                "LC": {
+                    "ISO 3166-1 alpha-2": "LC", 
+                    "ISO 3166-1 alpha-3": "LCA", 
+                    "ISO 3166-1 numeric": "662", 
+                    "name": "Saint Lucia", 
+                    "sfID": 143549
+                }, 
+                "LI": {
+                    "ISO 3166-1 alpha-2": "LI", 
+                    "ISO 3166-1 alpha-3": "LIE", 
+                    "ISO 3166-1 numeric": "438", 
+                    "name": "Liechtenstein"
+                }, 
+                "LK": {
+                    "ISO 3166-1 alpha-2": "LK", 
+                    "ISO 3166-1 alpha-3": "LKA", 
+                    "ISO 3166-1 numeric": "144", 
+                    "name": "Sri Lanka", 
+                    "sfID": 143486
+                }, 
+                "LR": {
+                    "ISO 3166-1 alpha-2": "LR", 
+                    "ISO 3166-1 alpha-3": "LBR", 
+                    "ISO 3166-1 numeric": "430", 
+                    "name": "Liberia"
+                }, 
+                "LS": {
+                    "ISO 3166-1 alpha-2": "LS", 
+                    "ISO 3166-1 alpha-3": "LSO", 
+                    "ISO 3166-1 numeric": "426", 
+                    "name": "Lesotho"
+                }, 
+                "LT": {
+                    "ISO 3166-1 alpha-2": "LT", 
+                    "ISO 3166-1 alpha-3": "LTU", 
+                    "ISO 3166-1 numeric": "440", 
+                    "name": "Lithuania", 
+                    "sfID": 143520
+                }, 
+                "LU": {
+                    "ISO 3166-1 alpha-2": "LU", 
+                    "ISO 3166-1 alpha-3": "LUX", 
+                    "ISO 3166-1 numeric": "442", 
+                    "name": "Luxembourg", 
+                    "sfID": 143451
+                }, 
+                "LV": {
+                    "ISO 3166-1 alpha-2": "LV", 
+                    "ISO 3166-1 alpha-3": "LVA", 
+                    "ISO 3166-1 numeric": "428", 
+                    "name": "Latvia", 
+                    "sfID": 143519
+                }, 
+                "LY": {
+                    "ISO 3166-1 alpha-2": "LY", 
+                    "ISO 3166-1 alpha-3": "LBY", 
+                    "ISO 3166-1 numeric": "434", 
+                    "name": "Libyan Arab Jamahiriya"
+                }, 
+                "MA": {
+                    "ISO 3166-1 alpha-2": "MA", 
+                    "ISO 3166-1 alpha-3": "MAR", 
+                    "ISO 3166-1 numeric": "504", 
+                    "name": "Morocco"
+                }, 
+                "MC": {
+                    "ISO 3166-1 alpha-2": "MC", 
+                    "ISO 3166-1 alpha-3": "MCO", 
+                    "ISO 3166-1 numeric": "492", 
+                    "name": "Monaco"
+                }, 
+                "MD": {
+                    "ISO 3166-1 alpha-2": "MD", 
+                    "ISO 3166-1 alpha-3": "MDA", 
+                    "ISO 3166-1 numeric": "498", 
+                    "name": "Moldova", 
+                    "sfID": 143523
+                }, 
+                "ME": {
+                    "ISO 3166-1 alpha-2": "ME", 
+                    "ISO 3166-1 alpha-3": "MNE", 
+                    "ISO 3166-1 numeric": "499", 
+                    "name": "Montenegro"
+                }, 
+                "MF": {
+                    "ISO 3166-1 alpha-2": "MF", 
+                    "ISO 3166-1 alpha-3": "MAF", 
+                    "ISO 3166-1 numeric": "663", 
+                    "name": "Saint Martin"
+                }, 
+                "MG": {
+                    "ISO 3166-1 alpha-2": "MG", 
+                    "ISO 3166-1 alpha-3": "MDG", 
+                    "ISO 3166-1 numeric": "450", 
+                    "name": "Madagascar", 
+                    "sfID": 143531
+                }, 
+                "MH": {
+                    "ISO 3166-1 alpha-2": "MH", 
+                    "ISO 3166-1 alpha-3": "MHL", 
+                    "ISO 3166-1 numeric": "584", 
+                    "name": "Marshall Islands"
+                }, 
+                "MK": {
+                    "ISO 3166-1 alpha-2": "MK", 
+                    "ISO 3166-1 alpha-3": "MKD", 
+                    "ISO 3166-1 numeric": "807", 
+                    "name": "Macedonia", 
+                    "sfID": 143530
+                }, 
+                "ML": {
+                    "ISO 3166-1 alpha-2": "ML", 
+                    "ISO 3166-1 alpha-3": "MLI", 
+                    "ISO 3166-1 numeric": "466", 
+                    "name": "Mali", 
+                    "sfID": 143532
+                }, 
+                "MM": {
+                    "ISO 3166-1 alpha-2": "MM", 
+                    "ISO 3166-1 alpha-3": "MMR", 
+                    "ISO 3166-1 numeric": "104", 
+                    "name": "Myanmar"
+                }, 
+                "MN": {
+                    "ISO 3166-1 alpha-2": "MN", 
+                    "ISO 3166-1 alpha-3": "MNG", 
+                    "ISO 3166-1 numeric": "496", 
+                    "name": "Mongolia"
+                }, 
+                "MO": {
+                    "ISO 3166-1 alpha-2": "MO", 
+                    "ISO 3166-1 alpha-3": "MAC", 
+                    "ISO 3166-1 numeric": "446", 
+                    "name": "Macao", 
+                    "sfID": 143515
+                }, 
+                "MP": {
+                    "ISO 3166-1 alpha-2": "MP", 
+                    "ISO 3166-1 alpha-3": "MNP", 
+                    "ISO 3166-1 numeric": "580", 
+                    "name": "Northern Mariana Islands"
+                }, 
+                "MQ": {
+                    "ISO 3166-1 alpha-2": "MQ", 
+                    "ISO 3166-1 alpha-3": "MTQ", 
+                    "ISO 3166-1 numeric": "474", 
+                    "name": "Martinique"
+                }, 
+                "MR": {
+                    "ISO 3166-1 alpha-2": "MR", 
+                    "ISO 3166-1 alpha-3": "MRT", 
+                    "ISO 3166-1 numeric": "478", 
+                    "name": "Mauritania"
+                }, 
+                "MS": {
+                    "ISO 3166-1 alpha-2": "MS", 
+                    "ISO 3166-1 alpha-3": "MSR", 
+                    "ISO 3166-1 numeric": "500", 
+                    "name": "Montserrat", 
+                    "sfID": 143547
+                }, 
+                "MT": {
+                    "ISO 3166-1 alpha-2": "MT", 
+                    "ISO 3166-1 alpha-3": "MLT", 
+                    "ISO 3166-1 numeric": "470", 
+                    "name": "Malta", 
+                    "sfID": 143521
+                }, 
+                "MU": {
+                    "ISO 3166-1 alpha-2": "MU", 
+                    "ISO 3166-1 alpha-3": "MUS", 
+                    "ISO 3166-1 numeric": "480", 
+                    "name": "Mauritius", 
+                    "sfID": 143533
+                }, 
+                "MV": {
+                    "ISO 3166-1 alpha-2": "MV", 
+                    "ISO 3166-1 alpha-3": "MDV", 
+                    "ISO 3166-1 numeric": "462", 
+                    "name": "Maldives"
+                }, 
+                "MW": {
+                    "ISO 3166-1 alpha-2": "MW", 
+                    "ISO 3166-1 alpha-3": "MWI", 
+                    "ISO 3166-1 numeric": "454", 
+                    "name": "Malawi"
+                }, 
+                "MX": {
+                    "ISO 3166-1 alpha-2": "MX", 
+                    "ISO 3166-1 alpha-3": "MEX", 
+                    "ISO 3166-1 numeric": "484", 
+                    "name": "Mexico", 
+                    "sfID": 143468
+                }, 
+                "MY": {
+                    "ISO 3166-1 alpha-2": "MY", 
+                    "ISO 3166-1 alpha-3": "MYS", 
+                    "ISO 3166-1 numeric": "458", 
+                    "name": "Malaysia", 
+                    "sfID": 143473
+                }, 
+                "MZ": {
+                    "ISO 3166-1 alpha-2": "MZ", 
+                    "ISO 3166-1 alpha-3": "MOZ", 
+                    "ISO 3166-1 numeric": "508", 
+                    "name": "Mozambique"
+                }, 
+                "NA": {
+                    "ISO 3166-1 alpha-2": "NA", 
+                    "ISO 3166-1 alpha-3": "NAM", 
+                    "ISO 3166-1 numeric": "516", 
+                    "name": "Namibia"
+                }, 
+                "NC": {
+                    "ISO 3166-1 alpha-2": "NC", 
+                    "ISO 3166-1 alpha-3": "NCL", 
+                    "ISO 3166-1 numeric": "540", 
+                    "name": "New Caledonia"
+                }, 
+                "NE": {
+                    "ISO 3166-1 alpha-2": "NE", 
+                    "ISO 3166-1 alpha-3": "NER", 
+                    "ISO 3166-1 numeric": "562", 
+                    "name": "Niger", 
+                    "sfID": 143534
+                }, 
+                "NF": {
+                    "ISO 3166-1 alpha-2": "NF", 
+                    "ISO 3166-1 alpha-3": "NFK", 
+                    "ISO 3166-1 numeric": "574", 
+                    "name": "Norfolk Island"
+                }, 
+                "NG": {
+                    "ISO 3166-1 alpha-2": "NG", 
+                    "ISO 3166-1 alpha-3": "NGA", 
+                    "ISO 3166-1 numeric": "566", 
+                    "name": "Nigeria", 
+                    "sfID": 143561
+                }, 
+                "NI": {
+                    "ISO 3166-1 alpha-2": "NI", 
+                    "ISO 3166-1 alpha-3": "NIC", 
+                    "ISO 3166-1 numeric": "558", 
+                    "name": "Nicaragua", 
+                    "sfID": 143512
+                }, 
+                "NL": {
+                    "ISO 3166-1 alpha-2": "NL", 
+                    "ISO 3166-1 alpha-3": "NLD", 
+                    "ISO 3166-1 numeric": "528", 
+                    "name": "Netherlands", 
+                    "sfID": 143452
+                }, 
+                "NO": {
+                    "ISO 3166-1 alpha-2": "NO", 
+                    "ISO 3166-1 alpha-3": "NOR", 
+                    "ISO 3166-1 numeric": "578", 
+                    "name": "Norway", 
+                    "sfID": 143457
+                }, 
+                "NP": {
+                    "ISO 3166-1 alpha-2": "NP", 
+                    "ISO 3166-1 alpha-3": "NPL", 
+                    "ISO 3166-1 numeric": "524", 
+                    "name": "Nepal"
+                }, 
+                "NR": {
+                    "ISO 3166-1 alpha-2": "NR", 
+                    "ISO 3166-1 alpha-3": "NRU", 
+                    "ISO 3166-1 numeric": "520", 
+                    "name": "Nauru"
+                }, 
+                "NU": {
+                    "ISO 3166-1 alpha-2": "NU", 
+                    "ISO 3166-1 alpha-3": "NIU", 
+                    "ISO 3166-1 numeric": "570", 
+                    "name": "Niue"
+                }, 
+                "NZ": {
+                    "ISO 3166-1 alpha-2": "NZ", 
+                    "ISO 3166-1 alpha-3": "NZL", 
+                    "ISO 3166-1 numeric": "554", 
+                    "name": "New Zealand", 
+                    "sfID": 143461
+                }, 
+                "OM": {
+                    "ISO 3166-1 alpha-2": "OM", 
+                    "ISO 3166-1 alpha-3": "OMN", 
+                    "ISO 3166-1 numeric": "512", 
+                    "name": "Oman", 
+                    "sfID": 143562
+                }, 
+                "PA": {
+                    "ISO 3166-1 alpha-2": "PA", 
+                    "ISO 3166-1 alpha-3": "PAN", 
+                    "ISO 3166-1 numeric": "591", 
+                    "name": "Panama", 
+                    "sfID": 143485
+                }, 
+                "PE": {
+                    "ISO 3166-1 alpha-2": "PE", 
+                    "ISO 3166-1 alpha-3": "PER", 
+                    "ISO 3166-1 numeric": "604", 
+                    "name": "Peru", 
+                    "sfID": 143507
+                }, 
+                "PF": {
+                    "ISO 3166-1 alpha-2": "PF", 
+                    "ISO 3166-1 alpha-3": "PYF", 
+                    "ISO 3166-1 numeric": "258", 
+                    "name": "French Polynesia"
+                }, 
+                "PG": {
+                    "ISO 3166-1 alpha-2": "PG", 
+                    "ISO 3166-1 alpha-3": "PNG", 
+                    "ISO 3166-1 numeric": "598", 
+                    "name": "Papua New Guinea"
+                }, 
+                "PH": {
+                    "ISO 3166-1 alpha-2": "PH", 
+                    "ISO 3166-1 alpha-3": "PHL", 
+                    "ISO 3166-1 numeric": "608", 
+                    "name": "Philippines", 
+                    "sfID": 143474
+                }, 
+                "PK": {
+                    "ISO 3166-1 alpha-2": "PK", 
+                    "ISO 3166-1 alpha-3": "PAK", 
+                    "ISO 3166-1 numeric": "586", 
+                    "name": "Pakistan", 
+                    "sfID": 143477
+                }, 
+                "PL": {
+                    "ISO 3166-1 alpha-2": "PL", 
+                    "ISO 3166-1 alpha-3": "POL", 
+                    "ISO 3166-1 numeric": "616", 
+                    "name": "Poland", 
+                    "sfID": 143478
+                }, 
+                "PM": {
+                    "ISO 3166-1 alpha-2": "PM", 
+                    "ISO 3166-1 alpha-3": "SPM", 
+                    "ISO 3166-1 numeric": "666", 
+                    "name": "Saint Pierre and Miquelon"
+                }, 
+                "PN": {
+                    "ISO 3166-1 alpha-2": "PN", 
+                    "ISO 3166-1 alpha-3": "PCN", 
+                    "ISO 3166-1 numeric": "612", 
+                    "name": "Pitcairn"
+                }, 
+                "PR": {
+                    "ISO 3166-1 alpha-2": "PR", 
+                    "ISO 3166-1 alpha-3": "PRI", 
+                    "ISO 3166-1 numeric": "630", 
+                    "name": "Puerto Rico"
+                }, 
+                "PS": {
+                    "ISO 3166-1 alpha-2": "PS", 
+                    "ISO 3166-1 alpha-3": "PSE", 
+                    "ISO 3166-1 numeric": "275", 
+                    "name": "Palestinian Territory, Occupied"
+                }, 
+                "PT": {
+                    "ISO 3166-1 alpha-2": "PT", 
+                    "ISO 3166-1 alpha-3": "PRT", 
+                    "ISO 3166-1 numeric": "620", 
+                    "name": "Portugal", 
+                    "sfID": 143453
+                }, 
+                "PW": {
+                    "ISO 3166-1 alpha-2": "PW", 
+                    "ISO 3166-1 alpha-3": "PLW", 
+                    "ISO 3166-1 numeric": "585", 
+                    "name": "Palau"
+                }, 
+                "PY": {
+                    "ISO 3166-1 alpha-2": "PY", 
+                    "ISO 3166-1 alpha-3": "PRY", 
+                    "ISO 3166-1 numeric": "600", 
+                    "name": "Paraguay", 
+                    "sfID": 143513
+                }, 
+                "QA": {
+                    "ISO 3166-1 alpha-2": "QA", 
+                    "ISO 3166-1 alpha-3": "QAT", 
+                    "ISO 3166-1 numeric": "634", 
+                    "name": "Qatar", 
+                    "sfID": 143498
+                }, 
+                "RE": {
+                    "ISO 3166-1 alpha-2": "RE", 
+                    "ISO 3166-1 alpha-3": "REU", 
+                    "ISO 3166-1 numeric": "638", 
+                    "name": "Réunion"
+                }, 
+                "RO": {
+                    "ISO 3166-1 alpha-2": "RO", 
+                    "ISO 3166-1 alpha-3": "ROU", 
+                    "ISO 3166-1 numeric": "642", 
+                    "name": "Romania", 
+                    "sfID": 143487
+                }, 
+                "RS": {
+                    "ISO 3166-1 alpha-2": "RS", 
+                    "ISO 3166-1 alpha-3": "SRB", 
+                    "ISO 3166-1 numeric": "688", 
+                    "name": "Serbia"
+                }, 
+                "RU": {
+                    "ISO 3166-1 alpha-2": "RU", 
+                    "ISO 3166-1 alpha-3": "RUS", 
+                    "ISO 3166-1 numeric": "643", 
+                    "name": "Russian Federation", 
+                    "sfID": 143469
+                }, 
+                "RW": {
+                    "ISO 3166-1 alpha-2": "RW", 
+                    "ISO 3166-1 alpha-3": "RWA", 
+                    "ISO 3166-1 numeric": "646", 
+                    "name": "Rwanda"
+                }, 
+                "SA": {
+                    "ISO 3166-1 alpha-2": "SA", 
+                    "ISO 3166-1 alpha-3": "SAU", 
+                    "ISO 3166-1 numeric": "682", 
+                    "name": "Saudi Arabia", 
+                    "sfID": 143479
+                }, 
+                "SB": {
+                    "ISO 3166-1 alpha-2": "SB", 
+                    "ISO 3166-1 alpha-3": "SLB", 
+                    "ISO 3166-1 numeric": "090", 
+                    "name": "Solomon Islands"
+                }, 
+                "SC": {
+                    "ISO 3166-1 alpha-2": "SC", 
+                    "ISO 3166-1 alpha-3": "SYC", 
+                    "ISO 3166-1 numeric": "690", 
+                    "name": "Seychelles"
+                }, 
+                "SD": {
+                    "ISO 3166-1 alpha-2": "SD", 
+                    "ISO 3166-1 alpha-3": "SDN", 
+                    "ISO 3166-1 numeric": "736", 
+                    "name": "Sudan"
+                }, 
+                "SE": {
+                    "ISO 3166-1 alpha-2": "SE", 
+                    "ISO 3166-1 alpha-3": "SWE", 
+                    "ISO 3166-1 numeric": "752", 
+                    "name": "Sweden", 
+                    "sfID": 143456
+                }, 
+                "SG": {
+                    "ISO 3166-1 alpha-2": "SG", 
+                    "ISO 3166-1 alpha-3": "SGP", 
+                    "ISO 3166-1 numeric": "702", 
+                    "name": "Singapore", 
+                    "sfID": 143464
+                }, 
+                "SH": {
+                    "ISO 3166-1 alpha-2": "SH", 
+                    "ISO 3166-1 alpha-3": "SHN", 
+                    "ISO 3166-1 numeric": "654", 
+                    "name": "Saint Helena, Ascension and Tristan da Cunha"
+                }, 
+                "SI": {
+                    "ISO 3166-1 alpha-2": "SI", 
+                    "ISO 3166-1 alpha-3": "SVN", 
+                    "ISO 3166-1 numeric": "705", 
+                    "name": "Slovenia", 
+                    "sfID": 143499
+                }, 
+                "SJ": {
+                    "ISO 3166-1 alpha-2": "SJ", 
+                    "ISO 3166-1 alpha-3": "SJM", 
+                    "ISO 3166-1 numeric": "744", 
+                    "name": "Svalbard and Jan Mayen"
+                }, 
+                "SK": {
+                    "ISO 3166-1 alpha-2": "SK", 
+                    "ISO 3166-1 alpha-3": "SVK", 
+                    "ISO 3166-1 numeric": "703", 
+                    "name": "Slovakia", 
+                    "sfID": 143496
+                }, 
+                "SL": {
+                    "ISO 3166-1 alpha-2": "SL", 
+                    "ISO 3166-1 alpha-3": "SLE", 
+                    "ISO 3166-1 numeric": "694", 
+                    "name": "Sierra Leone"
+                }, 
+                "SM": {
+                    "ISO 3166-1 alpha-2": "SM", 
+                    "ISO 3166-1 alpha-3": "SMR", 
+                    "ISO 3166-1 numeric": "674", 
+                    "name": "San Marino"
+                }, 
+                "SN": {
+                    "ISO 3166-1 alpha-2": "SN", 
+                    "ISO 3166-1 alpha-3": "SEN", 
+                    "ISO 3166-1 numeric": "686", 
+                    "name": "Senegal", 
+                    "sfID": 143535
+                }, 
+                "SO": {
+                    "ISO 3166-1 alpha-2": "SO", 
+                    "ISO 3166-1 alpha-3": "SOM", 
+                    "ISO 3166-1 numeric": "706", 
+                    "name": "Somalia"
+                }, 
+                "SR": {
+                    "ISO 3166-1 alpha-2": "SR", 
+                    "ISO 3166-1 alpha-3": "SUR", 
+                    "ISO 3166-1 numeric": "740", 
+                    "name": "Suriname", 
+                    "sfID": 143554
+                }, 
+                "ST": {
+                    "ISO 3166-1 alpha-2": "ST", 
+                    "ISO 3166-1 alpha-3": "STP", 
+                    "ISO 3166-1 numeric": "678", 
+                    "name": "Sao Tome and Principe"
+                }, 
+                "SV": {
+                    "ISO 3166-1 alpha-2": "SV", 
+                    "ISO 3166-1 alpha-3": "SLV", 
+                    "ISO 3166-1 numeric": "222", 
+                    "name": "El Salvador", 
+                    "sfID": 143506
+                }, 
+                "SX": {
+                    "ISO 3166-1 alpha-2": "SX", 
+                    "ISO 3166-1 alpha-3": "SXM", 
+                    "ISO 3166-1 numeric": "534", 
+                    "name": "Sint Maarten"
+                }, 
+                "SY": {
+                    "ISO 3166-1 alpha-2": "SY", 
+                    "ISO 3166-1 alpha-3": "SYR", 
+                    "ISO 3166-1 numeric": "760", 
+                    "name": "Syrian Arab Republic"
+                }, 
+                "SZ": {
+                    "ISO 3166-1 alpha-2": "SZ", 
+                    "ISO 3166-1 alpha-3": "SWZ", 
+                    "ISO 3166-1 numeric": "748", 
+                    "name": "Swaziland"
+                }, 
+                "TC": {
+                    "ISO 3166-1 alpha-2": "TC", 
+                    "ISO 3166-1 alpha-3": "TCA", 
+                    "ISO 3166-1 numeric": "796", 
+                    "name": "Turks and Caicos Islands", 
+                    "sfID": 143552
+                }, 
+                "TD": {
+                    "ISO 3166-1 alpha-2": "TD", 
+                    "ISO 3166-1 alpha-3": "TCD", 
+                    "ISO 3166-1 numeric": "148", 
+                    "name": "Chad"
+                }, 
+                "TF": {
+                    "ISO 3166-1 alpha-2": "TF", 
+                    "ISO 3166-1 alpha-3": "ATF", 
+                    "ISO 3166-1 numeric": "260", 
+                    "name": "French Southern Territories"
+                }, 
+                "TG": {
+                    "ISO 3166-1 alpha-2": "TG", 
+                    "ISO 3166-1 alpha-3": "TGO", 
+                    "ISO 3166-1 numeric": "768", 
+                    "name": "Togo"
+                }, 
+                "TH": {
+                    "ISO 3166-1 alpha-2": "TH", 
+                    "ISO 3166-1 alpha-3": "THA", 
+                    "ISO 3166-1 numeric": "764", 
+                    "name": "Thailand", 
+                    "sfID": 143475
+                }, 
+                "TJ": {
+                    "ISO 3166-1 alpha-2": "TJ", 
+                    "ISO 3166-1 alpha-3": "TJK", 
+                    "ISO 3166-1 numeric": "762", 
+                    "name": "Tajikistan"
+                }, 
+                "TK": {
+                    "ISO 3166-1 alpha-2": "TK", 
+                    "ISO 3166-1 alpha-3": "TKL", 
+                    "ISO 3166-1 numeric": "772", 
+                    "name": "Tokelau"
+                }, 
+                "TL": {
+                    "ISO 3166-1 alpha-2": "TL", 
+                    "ISO 3166-1 alpha-3": "TLS", 
+                    "ISO 3166-1 numeric": "626", 
+                    "name": "Timor-Leste"
+                }, 
+                "TM": {
+                    "ISO 3166-1 alpha-2": "TM", 
+                    "ISO 3166-1 alpha-3": "TKM", 
+                    "ISO 3166-1 numeric": "795", 
+                    "name": "Turkmenistan"
+                }, 
+                "TN": {
+                    "ISO 3166-1 alpha-2": "TN", 
+                    "ISO 3166-1 alpha-3": "TUN", 
+                    "ISO 3166-1 numeric": "788", 
+                    "name": "Tunisia", 
+                    "sfID": 143536
+                }, 
+                "TO": {
+                    "ISO 3166-1 alpha-2": "TO", 
+                    "ISO 3166-1 alpha-3": "TON", 
+                    "ISO 3166-1 numeric": "776", 
+                    "name": "Tonga"
+                }, 
+                "TR": {
+                    "ISO 3166-1 alpha-2": "TR", 
+                    "ISO 3166-1 alpha-3": "TUR", 
+                    "ISO 3166-1 numeric": "792", 
+                    "name": "Turkey", 
+                    "sfID": 143480
+                }, 
+                "TT": {
+                    "ISO 3166-1 alpha-2": "TT", 
+                    "ISO 3166-1 alpha-3": "TTO", 
+                    "ISO 3166-1 numeric": "780", 
+                    "name": "Trinidad and Tobago", 
+                    "sfID": 143551
+                }, 
+                "TV": {
+                    "ISO 3166-1 alpha-2": "TV", 
+                    "ISO 3166-1 alpha-3": "TUV", 
+                    "ISO 3166-1 numeric": "798", 
+                    "name": "Tuvalu"
+                }, 
+                "TW": {
+                    "ISO 3166-1 alpha-2": "TW", 
+                    "ISO 3166-1 alpha-3": "TWN", 
+                    "ISO 3166-1 numeric": "158", 
+                    "name": "Taiwan", 
+                    "sfID": 143470
+                }, 
+                "TZ": {
+                    "ISO 3166-1 alpha-2": "TZ", 
+                    "ISO 3166-1 alpha-3": "TZA", 
+                    "ISO 3166-1 numeric": "834", 
+                    "name": "Tanzania", 
+                    "sfID": 143572
+                }, 
+                "UA": {
+                    "ISO 3166-1 alpha-2": "UA", 
+                    "ISO 3166-1 alpha-3": "UKR", 
+                    "ISO 3166-1 numeric": "804", 
+                    "name": "Ukraine"
+                }, 
+                "UG": {
+                    "ISO 3166-1 alpha-2": "UG", 
+                    "ISO 3166-1 alpha-3": "UGA", 
+                    "ISO 3166-1 numeric": "800", 
+                    "name": "Uganda", 
+                    "sfID": 143537
+                }, 
+                "UM": {
+                    "ISO 3166-1 alpha-2": "UM", 
+                    "ISO 3166-1 alpha-3": "UMI", 
+                    "ISO 3166-1 numeric": "581", 
+                    "name": "United States Minor Outlying Islands"
+                }, 
+                "US": {
+                    "ISO 3166-1 alpha-2": "US", 
+                    "ISO 3166-1 alpha-3": "USA", 
+                    "ISO 3166-1 numeric": "840", 
+                    "name": "United States", 
+                    "sfID": 143441
+                }, 
+                "UY": {
+                    "ISO 3166-1 alpha-2": "UY", 
+                    "ISO 3166-1 alpha-3": "URY", 
+                    "ISO 3166-1 numeric": "858", 
+                    "name": "Uruguay", 
+                    "sfID": 143514
+                }, 
+                "UZ": {
+                    "ISO 3166-1 alpha-2": "UZ", 
+                    "ISO 3166-1 alpha-3": "UZB", 
+                    "ISO 3166-1 numeric": "860", 
+                    "name": "Uzbekistan", 
+                    "sfID": 143566
+                }, 
+                "VA": {
+                    "ISO 3166-1 alpha-2": "VA", 
+                    "ISO 3166-1 alpha-3": "VAT", 
+                    "ISO 3166-1 numeric": "336", 
+                    "name": "Vatican City State"
+                }, 
+                "VC": {
+                    "ISO 3166-1 alpha-2": "VC", 
+                    "ISO 3166-1 alpha-3": "VCT", 
+                    "ISO 3166-1 numeric": "670", 
+                    "name": "Saint Vincent and the Grenadines", 
+                    "sfID": 143550
+                }, 
+                "VE": {
+                    "ISO 3166-1 alpha-2": "VE", 
+                    "ISO 3166-1 alpha-3": "VEN", 
+                    "ISO 3166-1 numeric": "862", 
+                    "name": "Venezuela", 
+                    "sfID": 143502
+                }, 
+                "VG": {
+                    "ISO 3166-1 alpha-2": "VG", 
+                    "ISO 3166-1 alpha-3": "VGB", 
+                    "ISO 3166-1 numeric": "092", 
+                    "name": "British Virgin Islands", 
+                    "sfID": 143543
+                }, 
+                "VI": {
+                    "ISO 3166-1 alpha-2": "VI", 
+                    "ISO 3166-1 alpha-3": "VIR", 
+                    "ISO 3166-1 numeric": "850", 
+                    "name": "U.S. Virgin Islands"
+                }, 
+                "VN": {
+                    "ISO 3166-1 alpha-2": "VN", 
+                    "ISO 3166-1 alpha-3": "VNM", 
+                    "ISO 3166-1 numeric": "704", 
+                    "name": "Vietnam", 
+                    "sfID": 143471
+                }, 
+                "VU": {
+                    "ISO 3166-1 alpha-2": "VU", 
+                    "ISO 3166-1 alpha-3": "VUT", 
+                    "ISO 3166-1 numeric": "548", 
+                    "name": "Vanuatu"
+                }, 
+                "WF": {
+                    "ISO 3166-1 alpha-2": "WF", 
+                    "ISO 3166-1 alpha-3": "WLF", 
+                    "ISO 3166-1 numeric": "876", 
+                    "name": "Wallis and Futuna"
+                }, 
+                "WS": {
+                    "ISO 3166-1 alpha-2": "WS", 
+                    "ISO 3166-1 alpha-3": "WSM", 
+                    "ISO 3166-1 numeric": "882", 
+                    "name": "Samoa"
+                }, 
+                "YE": {
+                    "ISO 3166-1 alpha-2": "YE", 
+                    "ISO 3166-1 alpha-3": "YEM", 
+                    "ISO 3166-1 numeric": "887", 
+                    "name": "Yemen", 
+                    "sfID": 143571
+                }, 
+                "YT": {
+                    "ISO 3166-1 alpha-2": "YT", 
+                    "ISO 3166-1 alpha-3": "MYT", 
+                    "ISO 3166-1 numeric": "175", 
+                    "name": "Mayotte"
+                }, 
+                "ZA": {
+                    "ISO 3166-1 alpha-2": "ZA", 
+                    "ISO 3166-1 alpha-3": "ZAF", 
+                    "ISO 3166-1 numeric": "710", 
+                    "name": "South Africa", 
+                    "sfID": 143472
+                }, 
+                "ZM": {
+                    "ISO 3166-1 alpha-2": "ZM", 
+                    "ISO 3166-1 alpha-3": "ZMB", 
+                    "ISO 3166-1 numeric": "894", 
+                    "name": "Zambia"
+                }, 
+                "ZW": {
+                    "ISO 3166-1 alpha-2": "ZW", 
+                    "ISO 3166-1 alpha-3": "ZWE", 
+                    "ISO 3166-1 numeric": "716", 
+                    "name": "Zimbabwe"
+                }
+            }, 
+            "synonym": [
+                "ISO 3166-1 alpha-2", 
+                "ISO 3166-1 alpha-3"
+            ]
+        }, 
+        "decimal si": {
+            "element": [
+                {
+                    "base": 10, 
+                    "exponent": 9, 
+                    "key": 3, 
+                    "name": "Gbit"
+                }, 
+                {
+                    "base": 10, 
+                    "exponent": 6, 
+                    "key": 2, 
+                    "name": "Mbit"
+                }, 
+                {
+                    "base": 10, 
+                    "exponent": 12, 
+                    "key": 4, 
+                    "name": "Tbit"
+                }, 
+                {
+                    "base": 10, 
+                    "exponent": 3, 
+                    "key": 1, 
+                    "name": "Kbit"
+                }, 
+                {
+                    "base": 10, 
+                    "exponent": 0, 
+                    "key": 0, 
+                    "name": "bit"
+                }
+            ]
+        }, 
+        "job status": {
+            "element": {
+                "aborted": {
+                    "name": "Aborted"
+                }, 
+                "completed": {
+                    "name": "Completed"
+                }, 
+                "pending": {
+                    "name": "Pending"
+                }, 
+                "running": {
+                    "name": "Running"
+                }
+            }
+        }, 
+        "language": {
+            "element": {
+                "aa": {
+                    "ISO 639-1": "aa", 
+                    "ISO 639-2/B": "aar", 
+                    "ISO 639-2/T": "aar", 
+                    "name": "Afar"
+                }, 
+                "ab": {
+                    "ISO 639-1": "ab", 
+                    "ISO 639-2/B": "abk", 
+                    "ISO 639-2/T": "abk", 
+                    "name": "Abkhazian"
+                }, 
+                "ae": {
+                    "ISO 639-1": "ae", 
+                    "ISO 639-2/B": "ave", 
+                    "ISO 639-2/T": "ave", 
+                    "name": "Avestan"
+                }, 
+                "af": {
+                    "ISO 639-1": "af", 
+                    "ISO 639-2/B": "afr", 
+                    "ISO 639-2/T": "afr", 
+                    "name": "Afrikaans"
+                }, 
+                "ak": {
+                    "ISO 639-1": "ak", 
+                    "ISO 639-2/B": "aka", 
+                    "ISO 639-2/T": "aka", 
+                    "name": "Akan"
+                }, 
+                "am": {
+                    "ISO 639-1": "am", 
+                    "ISO 639-2/B": "amh", 
+                    "ISO 639-2/T": "amh", 
+                    "name": "Amharic"
+                }, 
+                "an": {
+                    "ISO 639-1": "an", 
+                    "ISO 639-2/B": "arg", 
+                    "ISO 639-2/T": "arg", 
+                    "name": "Aragonese"
+                }, 
+                "ar": {
+                    "ISO 639-1": "ar", 
+                    "ISO 639-2/B": "ara", 
+                    "ISO 639-2/T": "ara", 
+                    "name": "Arabic"
+                }, 
+                "as": {
+                    "ISO 639-1": "as", 
+                    "ISO 639-2/B": "asm", 
+                    "ISO 639-2/T": "asm", 
+                    "name": "Assamese"
+                }, 
+                "av": {
+                    "ISO 639-1": "av", 
+                    "ISO 639-2/B": "ava", 
+                    "ISO 639-2/T": "ava", 
+                    "name": "Avaric"
+                }, 
+                "ay": {
+                    "ISO 639-1": "ay", 
+                    "ISO 639-2/B": "aym", 
+                    "ISO 639-2/T": "aym", 
+                    "name": "Aymara"
+                }, 
+                "az": {
+                    "ISO 639-1": "az", 
+                    "ISO 639-2/B": "aze", 
+                    "ISO 639-2/T": "aze", 
+                    "name": "Azerbaijani"
+                }, 
+                "ba": {
+                    "ISO 639-1": "ba", 
+                    "ISO 639-2/B": "bak", 
+                    "ISO 639-2/T": "bak", 
+                    "name": "Bashkir"
+                }, 
+                "be": {
+                    "ISO 639-1": "be", 
+                    "ISO 639-2/B": "bel", 
+                    "ISO 639-2/T": "bel", 
+                    "name": "Belarusian"
+                }, 
+                "bg": {
+                    "ISO 639-1": "bg", 
+                    "ISO 639-2/B": "bul", 
+                    "ISO 639-2/T": "bul", 
+                    "name": "Bulgarian"
+                }, 
+                "bh": {
+                    "ISO 639-1": "bh", 
+                    "ISO 639-2/B": "bih", 
+                    "ISO 639-2/T": "bih", 
+                    "name": "Bihari"
+                }, 
+                "bi": {
+                    "ISO 639-1": "bi", 
+                    "ISO 639-2/B": "bis", 
+                    "ISO 639-2/T": "bis", 
+                    "name": "Bislama"
+                }, 
+                "bm": {
+                    "ISO 639-1": "bm", 
+                    "ISO 639-2/B": "bam", 
+                    "ISO 639-2/T": "bam", 
+                    "name": "Bambara"
+                }, 
+                "bn": {
+                    "ISO 639-1": "bn", 
+                    "ISO 639-2/B": "ben", 
+                    "ISO 639-2/T": "ben", 
+                    "name": "Bengali"
+                }, 
+                "bo": {
+                    "ISO 639-1": "bo", 
+                    "ISO 639-2/B": "tib", 
+                    "ISO 639-2/T": "bod", 
+                    "name": "Tibetan"
+                }, 
+                "br": {
+                    "ISO 639-1": "br", 
+                    "ISO 639-2/B": "bre", 
+                    "ISO 639-2/T": "bre", 
+                    "name": "Breton"
+                }, 
+                "bs": {
+                    "ISO 639-1": "bs", 
+                    "ISO 639-2/B": "bos", 
+                    "ISO 639-2/T": "bos", 
+                    "name": "Bosnian"
+                }, 
+                "ca": {
+                    "ISO 639-1": "ca", 
+                    "ISO 639-2/B": "cat", 
+                    "ISO 639-2/T": "cat", 
+                    "name": "Catalan"
+                }, 
+                "ce": {
+                    "ISO 639-1": "ce", 
+                    "ISO 639-2/B": "che", 
+                    "ISO 639-2/T": "che", 
+                    "name": "Chechen"
+                }, 
+                "ch": {
+                    "ISO 639-1": "ch", 
+                    "ISO 639-2/B": "cha", 
+                    "ISO 639-2/T": "cha", 
+                    "name": "Chamorro"
+                }, 
+                "co": {
+                    "ISO 639-1": "co", 
+                    "ISO 639-2/B": "cos", 
+                    "ISO 639-2/T": "cos", 
+                    "name": "Corsican"
+                }, 
+                "cr": {
+                    "ISO 639-1": "cr", 
+                    "ISO 639-2/B": "cre", 
+                    "ISO 639-2/T": "cre", 
+                    "name": "Cree"
+                }, 
+                "cs": {
+                    "ISO 639-1": "cs", 
+                    "ISO 639-2/B": "cze", 
+                    "ISO 639-2/T": "ces", 
+                    "name": "Czech"
+                }, 
+                "cu": {
+                    "ISO 639-1": "cu", 
+                    "ISO 639-2/B": "chu", 
+                    "ISO 639-2/T": "chu", 
+                    "name": "Church Slavic"
+                }, 
+                "cv": {
+                    "ISO 639-1": "cv", 
+                    "ISO 639-2/B": "chv", 
+                    "ISO 639-2/T": "chv", 
+                    "name": "Chuvash"
+                }, 
+                "cy": {
+                    "ISO 639-1": "cy", 
+                    "ISO 639-2/B": "wel", 
+                    "ISO 639-2/T": "cym", 
+                    "name": "Welsh"
+                }, 
+                "da": {
+                    "ISO 639-1": "da", 
+                    "ISO 639-2/B": "dan", 
+                    "ISO 639-2/T": "dan", 
+                    "name": "Danish"
+                }, 
+                "de": {
+                    "ISO 639-1": "de", 
+                    "ISO 639-2/B": "ger", 
+                    "ISO 639-2/T": "deu", 
+                    "name": "German"
+                }, 
+                "dv": {
+                    "ISO 639-1": "dv", 
+                    "ISO 639-2/B": "div", 
+                    "ISO 639-2/T": "div", 
+                    "name": "Divehi"
+                }, 
+                "dz": {
+                    "ISO 639-1": "dz", 
+                    "ISO 639-2/B": "dzo", 
+                    "ISO 639-2/T": "dzo", 
+                    "name": "Dzongkha"
+                }, 
+                "ee": {
+                    "ISO 639-1": "ee", 
+                    "ISO 639-2/B": "ewe", 
+                    "ISO 639-2/T": "ewe", 
+                    "name": "Ewe"
+                }, 
+                "el": {
+                    "ISO 639-1": "el", 
+                    "ISO 639-2/B": "gre", 
+                    "ISO 639-2/T": "ell", 
+                    "name": "Modern Greek"
+                }, 
+                "en": {
+                    "ISO 639-1": "en", 
+                    "ISO 639-2/B": "eng", 
+                    "ISO 639-2/T": "eng", 
+                    "name": "English"
+                }, 
+                "eo": {
+                    "ISO 639-1": "eo", 
+                    "ISO 639-2/B": "epo", 
+                    "ISO 639-2/T": "epo", 
+                    "name": "Esperanto"
+                }, 
+                "es": {
+                    "ISO 639-1": "es", 
+                    "ISO 639-2/B": "spa", 
+                    "ISO 639-2/T": "spa", 
+                    "name": "Spanish"
+                }, 
+                "et": {
+                    "ISO 639-1": "et", 
+                    "ISO 639-2/B": "est", 
+                    "ISO 639-2/T": "est", 
+                    "name": "Estonian"
+                }, 
+                "eu": {
+                    "ISO 639-1": "eu", 
+                    "ISO 639-2/B": "baq", 
+                    "ISO 639-2/T": "eus", 
+                    "name": "Basque"
+                }, 
+                "fa": {
+                    "ISO 639-1": "fa", 
+                    "ISO 639-2/B": "per", 
+                    "ISO 639-2/T": "fas", 
+                    "name": "Persian"
+                }, 
+                "ff": {
+                    "ISO 639-1": "ff", 
+                    "ISO 639-2/B": "ful", 
+                    "ISO 639-2/T": "ful", 
+                    "name": "Fulah"
+                }, 
+                "fi": {
+                    "ISO 639-1": "fi", 
+                    "ISO 639-2/B": "fin", 
+                    "ISO 639-2/T": "fin", 
+                    "name": "Finnish"
+                }, 
+                "fj": {
+                    "ISO 639-1": "fj", 
+                    "ISO 639-2/B": "fij", 
+                    "ISO 639-2/T": "fij", 
+                    "name": "Fijian"
+                }, 
+                "fo": {
+                    "ISO 639-1": "fo", 
+                    "ISO 639-2/B": "fao", 
+                    "ISO 639-2/T": "fao", 
+                    "name": "Faroese"
+                }, 
+                "fr": {
+                    "ISO 639-1": "fr", 
+                    "ISO 639-2/B": "fre", 
+                    "ISO 639-2/T": "fra", 
+                    "name": "French"
+                }, 
+                "fy": {
+                    "ISO 639-1": "fy", 
+                    "ISO 639-2/B": "fry", 
+                    "ISO 639-2/T": "fry", 
+                    "name": "Western Frisian"
+                }, 
+                "ga": {
+                    "ISO 639-1": "ga", 
+                    "ISO 639-2/B": "gle", 
+                    "ISO 639-2/T": "gle", 
+                    "name": "Irish"
+                }, 
+                "gd": {
+                    "ISO 639-1": "gd", 
+                    "ISO 639-2/B": "gla", 
+                    "ISO 639-2/T": "gla", 
+                    "name": "Gaelic"
+                }, 
+                "gl": {
+                    "ISO 639-1": "gl", 
+                    "ISO 639-2/B": "glg", 
+                    "ISO 639-2/T": "glg", 
+                    "name": "Galician"
+                }, 
+                "gn": {
+                    "ISO 639-1": "gn", 
+                    "ISO 639-2/B": "grn", 
+                    "ISO 639-2/T": "grn", 
+                    "name": "Guarani"
+                }, 
+                "gu": {
+                    "ISO 639-1": "gu", 
+                    "ISO 639-2/B": "guj", 
+                    "ISO 639-2/T": "guj", 
+                    "name": "Gujarati"
+                }, 
+                "gv": {
+                    "ISO 639-1": "gv", 
+                    "ISO 639-2/B": "glv", 
+                    "ISO 639-2/T": "glv", 
+                    "name": "Manx"
+                }, 
+                "ha": {
+                    "ISO 639-1": "ha", 
+                    "ISO 639-2/B": "hau", 
+                    "ISO 639-2/T": "hau", 
+                    "name": "Hausa"
+                }, 
+                "he": {
+                    "ISO 639-1": "he", 
+                    "ISO 639-2/B": "heb", 
+                    "ISO 639-2/T": "heb", 
+                    "name": "Hebrew"
+                }, 
+                "hi": {
+                    "ISO 639-1": "hi", 
+                    "ISO 639-2/B": "hin", 
+                    "ISO 639-2/T": "hin", 
+                    "name": "Hindi"
+                }, 
+                "ho": {
+                    "ISO 639-1": "ho", 
+                    "ISO 639-2/B": "hmo", 
+                    "ISO 639-2/T": "hmo", 
+                    "name": "Hiri Motu"
+                }, 
+                "hr": {
+                    "ISO 639-1": "hr", 
+                    "ISO 639-2/B": "scr", 
+                    "ISO 639-2/T": "hrv", 
+                    "name": "Croatian"
+                }, 
+                "ht": {
+                    "ISO 639-1": "ht", 
+                    "ISO 639-2/B": "hat", 
+                    "ISO 639-2/T": "hat", 
+                    "name": "Haitian"
+                }, 
+                "hu": {
+                    "ISO 639-1": "hu", 
+                    "ISO 639-2/B": "hun", 
+                    "ISO 639-2/T": "hun", 
+                    "name": "Hungarian"
+                }, 
+                "hy": {
+                    "ISO 639-1": "hy", 
+                    "ISO 639-2/B": "arm", 
+                    "ISO 639-2/T": "hye", 
+                    "name": "Armenian"
+                }, 
+                "hz": {
+                    "ISO 639-1": "hz", 
+                    "ISO 639-2/B": "her", 
+                    "ISO 639-2/T": "her", 
+                    "name": "Herero"
+                }, 
+                "ia": {
+                    "ISO 639-1": "ia", 
+                    "ISO 639-2/B": "ina", 
+                    "ISO 639-2/T": "ina", 
+                    "name": "Interlingua"
+                }, 
+                "id": {
+                    "ISO 639-1": "id", 
+                    "ISO 639-2/B": "ind", 
+                    "ISO 639-2/T": "ind", 
+                    "name": "Indonesian"
+                }, 
+                "ie": {
+                    "ISO 639-1": "ie", 
+                    "ISO 639-2/B": "ile", 
+                    "ISO 639-2/T": "ile", 
+                    "name": "Interlingue"
+                }, 
+                "ig": {
+                    "ISO 639-1": "ig", 
+                    "ISO 639-2/B": "ibo", 
+                    "ISO 639-2/T": "ibo", 
+                    "name": "Igbo"
+                }, 
+                "ii": {
+                    "ISO 639-1": "ii", 
+                    "ISO 639-2/B": "iii", 
+                    "ISO 639-2/T": "iii", 
+                    "name": "Sichuan Yi"
+                }, 
+                "ik": {
+                    "ISO 639-1": "ik", 
+                    "ISO 639-2/B": "ipk", 
+                    "ISO 639-2/T": "ipk", 
+                    "name": "Inupiaq"
+                }, 
+                "io": {
+                    "ISO 639-1": "io", 
+                    "ISO 639-2/B": "ido", 
+                    "ISO 639-2/T": "ido", 
+                    "name": "Ido"
+                }, 
+                "is": {
+                    "ISO 639-1": "is", 
+                    "ISO 639-2/B": "ice", 
+                    "ISO 639-2/T": "isl", 
+                    "name": "Icelandic"
+                }, 
+                "it": {
+                    "ISO 639-1": "it", 
+                    "ISO 639-2/B": "ita", 
+                    "ISO 639-2/T": "ita", 
+                    "name": "Italian"
+                }, 
+                "iu": {
+                    "ISO 639-1": "iu", 
+                    "ISO 639-2/B": "iku", 
+                    "ISO 639-2/T": "iku", 
+                    "name": "Inuktitut"
+                }, 
+                "ja": {
+                    "ISO 639-1": "ja", 
+                    "ISO 639-2/B": "jpn", 
+                    "ISO 639-2/T": "jpn", 
+                    "name": "Japanese"
+                }, 
+                "jv": {
+                    "ISO 639-1": "jv", 
+                    "ISO 639-2/B": "jav", 
+                    "ISO 639-2/T": "jav", 
+                    "name": "Javanese"
+                }, 
+                "ka": {
+                    "ISO 639-1": "ka", 
+                    "ISO 639-2/B": "geo", 
+                    "ISO 639-2/T": "kat", 
+                    "name": "Georgian"
+                }, 
+                "kg": {
+                    "ISO 639-1": "kg", 
+                    "ISO 639-2/B": "kon", 
+                    "ISO 639-2/T": "kon", 
+                    "name": "Kongo"
+                }, 
+                "ki": {
+                    "ISO 639-1": "ki", 
+                    "ISO 639-2/B": "kik", 
+                    "ISO 639-2/T": "kik", 
+                    "name": "Kikuyu"
+                }, 
+                "kj": {
+                    "ISO 639-1": "kj", 
+                    "ISO 639-2/B": "kua", 
+                    "ISO 639-2/T": "kua", 
+                    "name": "Kuanyama"
+                }, 
+                "kk": {
+                    "ISO 639-1": "kk", 
+                    "ISO 639-2/B": "kaz", 
+                    "ISO 639-2/T": "kaz", 
+                    "name": "Kazakh"
+                }, 
+                "kl": {
+                    "ISO 639-1": "kl", 
+                    "ISO 639-2/B": "kal", 
+                    "ISO 639-2/T": "kal", 
+                    "name": "Kalaallisut"
+                }, 
+                "km": {
+                    "ISO 639-1": "km", 
+                    "ISO 639-2/B": "khm", 
+                    "ISO 639-2/T": "khm", 
+                    "name": "Central Khmer"
+                }, 
+                "kn": {
+                    "ISO 639-1": "kn", 
+                    "ISO 639-2/B": "kan", 
+                    "ISO 639-2/T": "kan", 
+                    "name": "Kannada"
+                }, 
+                "ko": {
+                    "ISO 639-1": "ko", 
+                    "ISO 639-2/B": "kor", 
+                    "ISO 639-2/T": "kor", 
+                    "name": "Korean"
+                }, 
+                "kr": {
+                    "ISO 639-1": "kr", 
+                    "ISO 639-2/B": "kau", 
+                    "ISO 639-2/T": "kau", 
+                    "name": "Kanuri"
+                }, 
+                "ks": {
+                    "ISO 639-1": "ks", 
+                    "ISO 639-2/B": "kas", 
+                    "ISO 639-2/T": "kas", 
+                    "name": "Kashmiri"
+                }, 
+                "ku": {
+                    "ISO 639-1": "ku", 
+                    "ISO 639-2/B": "kur", 
+                    "ISO 639-2/T": "kur", 
+                    "name": "Kurdish"
+                }, 
+                "kv": {
+                    "ISO 639-1": "kv", 
+                    "ISO 639-2/B": "kom", 
+                    "ISO 639-2/T": "kom", 
+                    "name": "Komi"
+                }, 
+                "kw": {
+                    "ISO 639-1": "kw", 
+                    "ISO 639-2/B": "cor", 
+                    "ISO 639-2/T": "cor", 
+                    "name": "Cornish"
+                }, 
+                "ky": {
+                    "ISO 639-1": "ky", 
+                    "ISO 639-2/B": "kir", 
+                    "ISO 639-2/T": "kir", 
+                    "name": "Kirghiz"
+                }, 
+                "la": {
+                    "ISO 639-1": "la", 
+                    "ISO 639-2/B": "lat", 
+                    "ISO 639-2/T": "lat", 
+                    "name": "Latin"
+                }, 
+                "lb": {
+                    "ISO 639-1": "lb", 
+                    "ISO 639-2/B": "ltz", 
+                    "ISO 639-2/T": "ltz", 
+                    "name": "Luxembourgish"
+                }, 
+                "lg": {
+                    "ISO 639-1": "lg", 
+                    "ISO 639-2/B": "lug", 
+                    "ISO 639-2/T": "lug", 
+                    "name": "Ganda"
+                }, 
+                "li": {
+                    "ISO 639-1": "li", 
+                    "ISO 639-2/B": "lim", 
+                    "ISO 639-2/T": "lim", 
+                    "name": "Limburgan"
+                }, 
+                "ln": {
+                    "ISO 639-1": "ln", 
+                    "ISO 639-2/B": "lin", 
+                    "ISO 639-2/T": "lin", 
+                    "name": "Lingala"
+                }, 
+                "lo": {
+                    "ISO 639-1": "lo", 
+                    "ISO 639-2/B": "lao", 
+                    "ISO 639-2/T": "lao", 
+                    "name": "Lao"
+                }, 
+                "lt": {
+                    "ISO 639-1": "lt", 
+                    "ISO 639-2/B": "lit", 
+                    "ISO 639-2/T": "lit", 
+                    "name": "Lithuanian"
+                }, 
+                "lu": {
+                    "ISO 639-1": "lu", 
+                    "ISO 639-2/B": "lub", 
+                    "ISO 639-2/T": "lub", 
+                    "name": "Luba-Katanga"
+                }, 
+                "lv": {
+                    "ISO 639-1": "lv", 
+                    "ISO 639-2/B": "lav", 
+                    "ISO 639-2/T": "lav", 
+                    "name": "Latvian"
+                }, 
+                "mg": {
+                    "ISO 639-1": "mg", 
+                    "ISO 639-2/B": "mlg", 
+                    "ISO 639-2/T": "mlg", 
+                    "name": "Malagasy"
+                }, 
+                "mh": {
+                    "ISO 639-1": "mh", 
+                    "ISO 639-2/B": "mah", 
+                    "ISO 639-2/T": "mah", 
+                    "name": "Marshallese"
+                }, 
+                "mi": {
+                    "ISO 639-1": "mi", 
+                    "ISO 639-2/B": "mao", 
+                    "ISO 639-2/T": "mri", 
+                    "name": "Maori"
+                }, 
+                "mk": {
+                    "ISO 639-1": "mk", 
+                    "ISO 639-2/B": "mac", 
+                    "ISO 639-2/T": "mkd", 
+                    "name": "Macedonian"
+                }, 
+                "ml": {
+                    "ISO 639-1": "ml", 
+                    "ISO 639-2/B": "mal", 
+                    "ISO 639-2/T": "mal", 
+                    "name": "Malayalam"
+                }, 
+                "mn": {
+                    "ISO 639-1": "mn", 
+                    "ISO 639-2/B": "mon", 
+                    "ISO 639-2/T": "mon", 
+                    "name": "Mongolian"
+                }, 
+                "mo": {
+                    "ISO 639-1": "mo", 
+                    "ISO 639-2/B": "mol", 
+                    "ISO 639-2/T": "mol", 
+                    "name": "Moldavian"
+                }, 
+                "mr": {
+                    "ISO 639-1": "mr", 
+                    "ISO 639-2/B": "mar", 
+                    "ISO 639-2/T": "mar", 
+                    "name": "Marathi"
+                }, 
+                "ms": {
+                    "ISO 639-1": "ms", 
+                    "ISO 639-2/B": "msa", 
+                    "ISO 639-2/T": "msa", 
+                    "name": "Malay"
+                }, 
+                "mt": {
+                    "ISO 639-1": "mt", 
+                    "ISO 639-2/B": "mlt", 
+                    "ISO 639-2/T": "mlt", 
+                    "name": "Maltese"
+                }, 
+                "my": {
+                    "ISO 639-1": "my", 
+                    "ISO 639-2/B": "bur", 
+                    "ISO 639-2/T": "mya", 
+                    "name": "Burmese"
+                }, 
+                "na": {
+                    "ISO 639-1": "na", 
+                    "ISO 639-2/B": "nau", 
+                    "ISO 639-2/T": "nau", 
+                    "name": "Nauru"
+                }, 
+                "nb": {
+                    "ISO 639-1": "nb", 
+                    "ISO 639-2/B": "nob", 
+                    "ISO 639-2/T": "nob", 
+                    "name": "Norwegian Bokmål"
+                }, 
+                "nd": {
+                    "ISO 639-1": "nd", 
+                    "ISO 639-2/B": "nde", 
+                    "ISO 639-2/T": "nde", 
+                    "name": "North Ndebele"
+                }, 
+                "ne": {
+                    "ISO 639-1": "ne", 
+                    "ISO 639-2/B": "nep", 
+                    "ISO 639-2/T": "nep", 
+                    "name": "Nepali"
+                }, 
+                "ng": {
+                    "ISO 639-1": "ng", 
+                    "ISO 639-2/B": "ndo", 
+                    "ISO 639-2/T": "ndo", 
+                    "name": "Ndonga"
+                }, 
+                "nl": {
+                    "ISO 639-1": "nl", 
+                    "ISO 639-2/B": "dut", 
+                    "ISO 639-2/T": "nld", 
+                    "name": "Dutch"
+                }, 
+                "nn": {
+                    "ISO 639-1": "nn", 
+                    "ISO 639-2/B": "nno", 
+                    "ISO 639-2/T": "nno", 
+                    "name": "Norwegian Nynorsk"
+                }, 
+                "no": {
+                    "ISO 639-1": "no", 
+                    "ISO 639-2/B": "nor", 
+                    "ISO 639-2/T": "nor", 
+                    "name": "Norwegian"
+                }, 
+                "nr": {
+                    "ISO 639-1": "nr", 
+                    "ISO 639-2/B": "nbl", 
+                    "ISO 639-2/T": "nbl", 
+                    "name": "South Ndebele"
+                }, 
+                "nv": {
+                    "ISO 639-1": "nv", 
+                    "ISO 639-2/B": "nav", 
+                    "ISO 639-2/T": "nav", 
+                    "name": "Navajo"
+                }, 
+                "ny": {
+                    "ISO 639-1": "ny", 
+                    "ISO 639-2/B": "nya", 
+                    "ISO 639-2/T": "nya", 
+                    "name": "Nyanja"
+                }, 
+                "oc": {
+                    "ISO 639-1": "oc", 
+                    "ISO 639-2/B": "oci", 
+                    "ISO 639-2/T": "oci", 
+                    "name": "Occitan"
+                }, 
+                "oj": {
+                    "ISO 639-1": "oj", 
+                    "ISO 639-2/B": "oji", 
+                    "ISO 639-2/T": "oji", 
+                    "name": "Ojibwa"
+                }, 
+                "om": {
+                    "ISO 639-1": "om", 
+                    "ISO 639-2/B": "orm", 
+                    "ISO 639-2/T": "orm", 
+                    "name": "Oromo"
+                }, 
+                "or": {
+                    "ISO 639-1": "or", 
+                    "ISO 639-2/B": "ori", 
+                    "ISO 639-2/T": "ori", 
+                    "name": "Oriya"
+                }, 
+                "os": {
+                    "ISO 639-1": "os", 
+                    "ISO 639-2/B": "oss", 
+                    "ISO 639-2/T": "oss", 
+                    "name": "Ossetian"
+                }, 
+                "pa": {
+                    "ISO 639-1": "pa", 
+                    "ISO 639-2/B": "pan", 
+                    "ISO 639-2/T": "pan", 
+                    "name": "Panjabi"
+                }, 
+                "pi": {
+                    "ISO 639-1": "pi", 
+                    "ISO 639-2/B": "pli", 
+                    "ISO 639-2/T": "pli", 
+                    "name": "Pali"
+                }, 
+                "pl": {
+                    "ISO 639-1": "pl", 
+                    "ISO 639-2/B": "pol", 
+                    "ISO 639-2/T": "pol", 
+                    "name": "Polish"
+                }, 
+                "ps": {
+                    "ISO 639-1": "ps", 
+                    "ISO 639-2/B": "pus", 
+                    "ISO 639-2/T": "pus", 
+                    "name": "Pushto"
+                }, 
+                "pt": {
+                    "ISO 639-1": "pt", 
+                    "ISO 639-2/B": "por", 
+                    "ISO 639-2/T": "por", 
+                    "name": "Portuguese"
+                }, 
+                "qu": {
+                    "ISO 639-1": "qu", 
+                    "ISO 639-2/B": "que", 
+                    "ISO 639-2/T": "que", 
+                    "name": "Quechua"
+                }, 
+                "rm": {
+                    "ISO 639-1": "rm", 
+                    "ISO 639-2/B": "roh", 
+                    "ISO 639-2/T": "roh", 
+                    "name": "Romansh"
+                }, 
+                "rn": {
+                    "ISO 639-1": "rn", 
+                    "ISO 639-2/B": "run", 
+                    "ISO 639-2/T": "run", 
+                    "name": "Rundi"
+                }, 
+                "ro": {
+                    "ISO 639-1": "ro", 
+                    "ISO 639-2/B": "rum", 
+                    "ISO 639-2/T": "ron", 
+                    "name": "Romanian"
+                }, 
+                "ru": {
+                    "ISO 639-1": "ru", 
+                    "ISO 639-2/B": "rus", 
+                    "ISO 639-2/T": "rus", 
+                    "name": "Russian"
+                }, 
+                "rw": {
+                    "ISO 639-1": "rw", 
+                    "ISO 639-2/B": "kin", 
+                    "ISO 639-2/T": "kin", 
+                    "name": "Kinyarwanda"
+                }, 
+                "sa": {
+                    "ISO 639-1": "sa", 
+                    "ISO 639-2/B": "san", 
+                    "ISO 639-2/T": "san", 
+                    "name": "Sanskrit"
+                }, 
+                "sc": {
+                    "ISO 639-1": "sc", 
+                    "ISO 639-2/B": "srd", 
+                    "ISO 639-2/T": "srd", 
+                    "name": "Sardinian"
+                }, 
+                "sd": {
+                    "ISO 639-1": "sd", 
+                    "ISO 639-2/B": "snd", 
+                    "ISO 639-2/T": "snd", 
+                    "name": "Sindhi"
+                }, 
+                "se": {
+                    "ISO 639-1": "se", 
+                    "ISO 639-2/B": "sme", 
+                    "ISO 639-2/T": "sme", 
+                    "name": "Northern Sami"
+                }, 
+                "sg": {
+                    "ISO 639-1": "sg", 
+                    "ISO 639-2/B": "sag", 
+                    "ISO 639-2/T": "sag", 
+                    "name": "Sango"
+                }, 
+                "si": {
+                    "ISO 639-1": "si", 
+                    "ISO 639-2/B": "sin", 
+                    "ISO 639-2/T": "sin", 
+                    "name": "Sinhala"
+                }, 
+                "sk": {
+                    "ISO 639-1": "sk", 
+                    "ISO 639-2/B": "slo", 
+                    "ISO 639-2/T": "slk", 
+                    "name": "Slovak"
+                }, 
+                "sl": {
+                    "ISO 639-1": "sl", 
+                    "ISO 639-2/B": "slv", 
+                    "ISO 639-2/T": "slv", 
+                    "name": "Slovenian"
+                }, 
+                "sm": {
+                    "ISO 639-1": "sm", 
+                    "ISO 639-2/B": "smo", 
+                    "ISO 639-2/T": "smo", 
+                    "name": "Samoan"
+                }, 
+                "sn": {
+                    "ISO 639-1": "sn", 
+                    "ISO 639-2/B": "sna", 
+                    "ISO 639-2/T": "sna", 
+                    "name": "Shona"
+                }, 
+                "so": {
+                    "ISO 639-1": "so", 
+                    "ISO 639-2/B": "som", 
+                    "ISO 639-2/T": "som", 
+                    "name": "Somali"
+                }, 
+                "sq": {
+                    "ISO 639-1": "sq", 
+                    "ISO 639-2/B": "alb", 
+                    "ISO 639-2/T": "sqi", 
+                    "name": "Albanian"
+                }, 
+                "sr": {
+                    "ISO 639-1": "sr", 
+                    "ISO 639-2/B": "scc", 
+                    "ISO 639-2/T": "srp", 
+                    "name": "Serbian"
+                }, 
+                "ss": {
+                    "ISO 639-1": "ss", 
+                    "ISO 639-2/B": "ssw", 
+                    "ISO 639-2/T": "ssw", 
+                    "name": "Swati"
+                }, 
+                "st": {
+                    "ISO 639-1": "st", 
+                    "ISO 639-2/B": "sot", 
+                    "ISO 639-2/T": "sot", 
+                    "name": "Southern Sotho"
+                }, 
+                "su": {
+                    "ISO 639-1": "su", 
+                    "ISO 639-2/B": "sun", 
+                    "ISO 639-2/T": "sun", 
+                    "name": "Sundanese"
+                }, 
+                "sv": {
+                    "ISO 639-1": "sv", 
+                    "ISO 639-2/B": "swe", 
+                    "ISO 639-2/T": "swe", 
+                    "name": "Swedish"
+                }, 
+                "sw": {
+                    "ISO 639-1": "sw", 
+                    "ISO 639-2/B": "swa", 
+                    "ISO 639-2/T": "swa", 
+                    "name": "Swahili"
+                }, 
+                "ta": {
+                    "ISO 639-1": "ta", 
+                    "ISO 639-2/B": "tam", 
+                    "ISO 639-2/T": "tam", 
+                    "name": "Tamil"
+                }, 
+                "te": {
+                    "ISO 639-1": "te", 
+                    "ISO 639-2/B": "tel", 
+                    "ISO 639-2/T": "tel", 
+                    "name": "Telugu"
+                }, 
+                "tg": {
+                    "ISO 639-1": "tg", 
+                    "ISO 639-2/B": "tgk", 
+                    "ISO 639-2/T": "tgk", 
+                    "name": "Tajik"
+                }, 
+                "th": {
+                    "ISO 639-1": "th", 
+                    "ISO 639-2/B": "tha", 
+                    "ISO 639-2/T": "tha", 
+                    "name": "Thai"
+                }, 
+                "ti": {
+                    "ISO 639-1": "ti", 
+                    "ISO 639-2/B": "tir", 
+                    "ISO 639-2/T": "tir", 
+                    "name": "Tigrinya"
+                }, 
+                "tk": {
+                    "ISO 639-1": "tk", 
+                    "ISO 639-2/B": "tuk", 
+                    "ISO 639-2/T": "tuk", 
+                    "name": "Turkmen"
+                }, 
+                "tl": {
+                    "ISO 639-1": "tl", 
+                    "ISO 639-2/B": "tgl", 
+                    "ISO 639-2/T": "tgl", 
+                    "name": "Tagalog"
+                }, 
+                "tn": {
+                    "ISO 639-1": "tn", 
+                    "ISO 639-2/B": "tsn", 
+                    "ISO 639-2/T": "tsn", 
+                    "name": "Tswana"
+                }, 
+                "to": {
+                    "ISO 639-1": "to", 
+                    "ISO 639-2/B": "ton", 
+                    "ISO 639-2/T": "ton", 
+                    "name": "Tonga"
+                }, 
+                "tr": {
+                    "ISO 639-1": "tr", 
+                    "ISO 639-2/B": "tur", 
+                    "ISO 639-2/T": "tur", 
+                    "name": "Turkish"
+                }, 
+                "ts": {
+                    "ISO 639-1": "ts", 
+                    "ISO 639-2/B": "tso", 
+                    "ISO 639-2/T": "tso", 
+                    "name": "Tsonga"
+                }, 
+                "tt": {
+                    "ISO 639-1": "tt", 
+                    "ISO 639-2/B": "tat", 
+                    "ISO 639-2/T": "tat", 
+                    "name": "Tatar"
+                }, 
+                "tw": {
+                    "ISO 639-1": "tw", 
+                    "ISO 639-2/B": "twi", 
+                    "ISO 639-2/T": "twi", 
+                    "name": "Twi"
+                }, 
+                "ty": {
+                    "ISO 639-1": "ty", 
+                    "ISO 639-2/B": "tah", 
+                    "ISO 639-2/T": "tah", 
+                    "name": "Tahitian"
+                }, 
+                "ug": {
+                    "ISO 639-1": "ug", 
+                    "ISO 639-2/B": "uig", 
+                    "ISO 639-2/T": "uig", 
+                    "name": "Uighur"
+                }, 
+                "uk": {
+                    "ISO 639-1": "uk", 
+                    "ISO 639-2/B": "ukr", 
+                    "ISO 639-2/T": "ukr", 
+                    "name": "Ukrainian"
+                }, 
+                "un": {
+                    "ISO 639-1": null, 
+                    "ISO 639-2/B": null, 
+                    "ISO 639-2/T": null, 
+                    "name": "Unknown"
+                }, 
+                "ur": {
+                    "ISO 639-1": "ur", 
+                    "ISO 639-2/B": "urd", 
+                    "ISO 639-2/T": "urd", 
+                    "name": "Urdu"
+                }, 
+                "uz": {
+                    "ISO 639-1": "uz", 
+                    "ISO 639-2/B": "uzb", 
+                    "ISO 639-2/T": "uzb", 
+                    "name": "Uzbek"
+                }, 
+                "ve": {
+                    "ISO 639-1": "ve", 
+                    "ISO 639-2/B": "ven", 
+                    "ISO 639-2/T": "ven", 
+                    "name": "Venda"
+                }, 
+                "vi": {
+                    "ISO 639-1": "vi", 
+                    "ISO 639-2/B": "vie", 
+                    "ISO 639-2/T": "vie", 
+                    "name": "Vietnamese"
+                }, 
+                "vo": {
+                    "ISO 639-1": "vo", 
+                    "ISO 639-2/B": "vol", 
+                    "ISO 639-2/T": "vol", 
+                    "name": "Volapük"
+                }, 
+                "wa": {
+                    "ISO 639-1": "wa", 
+                    "ISO 639-2/B": "wln", 
+                    "ISO 639-2/T": "wln", 
+                    "name": "Walloon"
+                }, 
+                "wo": {
+                    "ISO 639-1": "wo", 
+                    "ISO 639-2/B": "wol", 
+                    "ISO 639-2/T": "wol", 
+                    "name": "Wolof"
+                }, 
+                "xh": {
+                    "ISO 639-1": "xh", 
+                    "ISO 639-2/B": "xho", 
+                    "ISO 639-2/T": "xho", 
+                    "name": "Xhosa"
+                }, 
+                "yi": {
+                    "ISO 639-1": "yi", 
+                    "ISO 639-2/B": "yid", 
+                    "ISO 639-2/T": "yid", 
+                    "name": "Yiddish"
+                }, 
+                "yo": {
+                    "ISO 639-1": "yo", 
+                    "ISO 639-2/B": "yor", 
+                    "ISO 639-2/T": "yor", 
+                    "name": "Yoruba"
+                }, 
+                "za": {
+                    "ISO 639-1": "za", 
+                    "ISO 639-2/B": "zha", 
+                    "ISO 639-2/T": "zha", 
+                    "name": "Zhuang"
+                }, 
+                "zh": {
+                    "ISO 639-1": "zh", 
+                    "ISO 639-2/B": "chi", 
+                    "ISO 639-2/T": "zho", 
+                    "name": "Chinese"
+                }, 
+                "zu": {
+                    "ISO 639-1": "zu", 
+                    "ISO 639-2/B": "zul", 
+                    "ISO 639-2/T": "zul", 
+                    "name": "Zulu"
+                }
+            }, 
+            "synonym": [
+                "ISO 639-1", 
+                "ISO 639-2/T", 
+                "ISO 639-2/B"
+            ]
+        }, 
+        "media kind": {
+            "element": [
+                {
+                    "key": 100, 
+                    "name": "Person"
+                }
+            ]
+        }, 
+        "mongodb error": {
+            "element": [
+                {
+                    "code": 38, 
+                    "key": 38, 
+                    "name": "File not open"
+                }, 
+                {
+                    "code": 8, 
+                    "key": 8, 
+                    "name": "Unknown error"
+                }, 
+                {
+                    "code": 87, 
+                    "key": 87, 
+                    "name": "Cannot split"
+                }, 
+                {
+                    "code": 13, 
+                    "key": 13, 
+                    "name": "Unauthorized"
+                }, 
+                {
+                    "code": 79, 
+                    "key": 79, 
+                    "name": "Unknown repl write concern"
+                }, 
+                {
+                    "code": 112, 
+                    "key": 112, 
+                    "name": "Write conflict"
+                }, 
+                {
+                    "code": 31, 
+                    "key": 31, 
+                    "name": "Role not found"
+                }, 
+                {
+                    "code": 50, 
+                    "key": 50, 
+                    "name": "Exceeded time limit"
+                }, 
+                {
+                    "code": 46, 
+                    "key": 46, 
+                    "name": "Lock busy"
+                }, 
+                {
+                    "code": 135, 
+                    "key": 135, 
+                    "name": "Stale term"
+                }, 
+                {
+                    "code": 55, 
+                    "key": 55, 
+                    "name": "Invalid database ref"
+                }, 
+                {
+                    "code": 101, 
+                    "key": 101, 
+                    "name": "Outdated client"
+                }, 
+                {
+                    "code": 131, 
+                    "key": 131, 
+                    "name": "RLP initialization failed"
+                }, 
+                {
+                    "code": 13388, 
+                    "key": 13388, 
+                    "name": "Send stale config"
+                }, 
+                {
+                    "code": 136, 
+                    "key": 136, 
+                    "name": "Capped position lost"
+                }, 
+                {
+                    "code": 132, 
+                    "key": 132, 
+                    "name": "Config servers inconsistent"
+                }, 
+                {
+                    "code": 66, 
+                    "key": 66, 
+                    "name": "Immutable field"
+                }, 
+                {
+                    "code": 49, 
+                    "key": 49, 
+                    "name": "Invalid role modification"
+                }, 
+                {
+                    "code": 64, 
+                    "key": 64, 
+                    "name": "Write concern failed"
+                }, 
+                {
+                    "code": 12587, 
+                    "key": 12587, 
+                    "name": "Background operation in progress for namespace"
+                }, 
+                {
+                    "code": 2, 
+                    "key": 2, 
+                    "name": "Bad value"
+                }, 
+                {
+                    "code": 127, 
+                    "key": 127, 
+                    "name": "Unrecoverable rollback error"
+                }, 
+                {
+                    "code": 1, 
+                    "key": 1, 
+                    "name": "Internal error"
+                }, 
+                {
+                    "code": 39, 
+                    "key": 39, 
+                    "name": "File stream failed"
+                }, 
+                {
+                    "code": 137, 
+                    "key": 137, 
+                    "name": "Incompatible sharding config version"
+                }, 
+                {
+                    "code": 60, 
+                    "key": 60, 
+                    "name": "Database not found"
+                }, 
+                {
+                    "code": 24, 
+                    "key": 24, 
+                    "name": "Lock timeout"
+                }, 
+                {
+                    "code": 124, 
+                    "key": 124, 
+                    "name": "Incompatible election protocol"
+                }, 
+                {
+                    "code": 108, 
+                    "key": 108, 
+                    "name": "Inconsistent replica set names"
+                }, 
+                {
+                    "code": 74, 
+                    "key": 74, 
+                    "name": "Node not found"
+                }, 
+                {
+                    "code": 20, 
+                    "key": 20, 
+                    "name": "Illegal operation"
+                }, 
+                {
+                    "code": 9, 
+                    "key": 9, 
+                    "name": "Failed to parse"
+                }, 
+                {
+                    "code": 97, 
+                    "key": 97, 
+                    "name": "No projection found"
+                }, 
+                {
+                    "code": 11601, 
+                    "key": 11601, 
+                    "name": "Interrupted"
+                }, 
+                {
+                    "code": 28, 
+                    "key": 28, 
+                    "name": "Path not viable"
+                }, 
+                {
+                    "code": 102, 
+                    "key": 102, 
+                    "name": "Incompatible audit metadata"
+                }, 
+                {
+                    "code": 17, 
+                    "key": 17, 
+                    "name": "Protocol error"
+                }, 
+                {
+                    "code": 13104, 
+                    "key": 13104, 
+                    "name": "Prepare configs failed code"
+                }, 
+                {
+                    "code": 14031, 
+                    "key": 14031, 
+                    "name": "Out of disk space"
+                }, 
+                {
+                    "code": 32, 
+                    "key": 32, 
+                    "name": "Roles not related"
+                }, 
+                {
+                    "code": 142, 
+                    "key": 142, 
+                    "name": "JavaScript Uncatchable error"
+                }, 
+                {
+                    "code": 139, 
+                    "key": 139, 
+                    "name": "JavaScript interpreter failure"
+                }, 
+                {
+                    "code": 75, 
+                    "key": 75, 
+                    "name": "Write concern legacy oK"
+                }, 
+                {
+                    "code": 15, 
+                    "key": 15, 
+                    "name": "Overflow"
+                }, 
+                {
+                    "code": 37, 
+                    "key": 37, 
+                    "name": "File rename failed"
+                }, 
+                {
+                    "code": 10, 
+                    "key": 10, 
+                    "name": "Cannot mutate object"
+                }, 
+                {
+                    "code": 95, 
+                    "key": 95, 
+                    "name": "Not secondary"
+                }, 
+                {
+                    "code": 143, 
+                    "key": 143, 
+                    "name": "Cursor in use"
+                }, 
+                {
+                    "code": 12, 
+                    "key": 12, 
+                    "name": "Unsupported format"
+                }, 
+                {
+                    "code": 14, 
+                    "key": 14, 
+                    "name": "Type mismatch"
+                }, 
+                {
+                    "code": 5, 
+                    "key": 5, 
+                    "name": "Graph contains cycle"
+                }, 
+                {
+                    "code": 129, 
+                    "key": 129, 
+                    "name": "Lock state change failed"
+                }, 
+                {
+                    "code": 138, 
+                    "key": 138, 
+                    "name": "Remote oplog stale"
+                }, 
+                {
+                    "code": 65, 
+                    "key": 65, 
+                    "name": "Multiple errors occurred"
+                }, 
+                {
+                    "code": 56, 
+                    "key": 56, 
+                    "name": "Empty field name"
+                }, 
+                {
+                    "code": 114, 
+                    "key": 114, 
+                    "name": "Initial sync oplog source missing"
+                }, 
+                {
+                    "code": 86, 
+                    "key": 86, 
+                    "name": "Index key specs conflict"
+                }, 
+                {
+                    "code": 4, 
+                    "key": 4, 
+                    "name": "No such key"
+                }, 
+                {
+                    "code": 78, 
+                    "key": 78, 
+                    "name": "Command result schema violation"
+                }, 
+                {
+                    "code": 7, 
+                    "key": 7, 
+                    "name": "Host not found"
+                }, 
+                {
+                    "code": 126, 
+                    "key": 126, 
+                    "name": "RPC protocol negotiation failed"
+                }, 
+                {
+                    "code": 128, 
+                    "key": 128, 
+                    "name": "Lock not found"
+                }, 
+                {
+                    "code": 58, 
+                    "key": 58, 
+                    "name": "Role modification failed"
+                }, 
+                {
+                    "code": 29, 
+                    "key": 29, 
+                    "name": "Non existent path"
+                }, 
+                {
+                    "code": 23, 
+                    "key": 23, 
+                    "name": "Already initialized"
+                }, 
+                {
+                    "code": 84, 
+                    "key": 84, 
+                    "name": "Duplicate key value"
+                }, 
+                {
+                    "code": 3, 
+                    "key": 3, 
+                    "name": "Duplicate key"
+                }, 
+                {
+                    "code": 57, 
+                    "key": 57, 
+                    "name": "Dotted field name"
+                }, 
+                {
+                    "code": 48, 
+                    "key": 48, 
+                    "name": "Namespace exists"
+                }, 
+                {
+                    "code": 11000, 
+                    "key": 11000, 
+                    "name": "Duplicate key"
+                }, 
+                {
+                    "code": 19, 
+                    "key": 19, 
+                    "name": "Cannot reuse object"
+                }, 
+                {
+                    "code": 123, 
+                    "key": 123, 
+                    "name": "Not a replica set"
+                }, 
+                {
+                    "code": 93, 
+                    "key": 93, 
+                    "name": "Invalid replica set config"
+                }, 
+                {
+                    "code": 100, 
+                    "key": 100, 
+                    "name": "Cannot satisfy write concern"
+                }, 
+                {
+                    "code": 70, 
+                    "key": 70, 
+                    "name": "Shard not found"
+                }, 
+                {
+                    "code": 67, 
+                    "key": 67, 
+                    "name": "Cannot create index"
+                }, 
+                {
+                    "code": 43, 
+                    "key": 43, 
+                    "name": "Cursor not found"
+                }, 
+                {
+                    "code": 91, 
+                    "key": 91, 
+                    "name": "Shutdown in progress"
+                }, 
+                {
+                    "code": 140, 
+                    "key": 140, 
+                    "name": "Invalid SSL Configuration"
+                }, 
+                {
+                    "code": 83, 
+                    "key": 83, 
+                    "name": "Remote results unavailable"
+                }, 
+                {
+                    "code": 17280, 
+                    "key": 17280, 
+                    "name": "Key too long"
+                }, 
+                {
+                    "code": 105, 
+                    "key": 105, 
+                    "name": "Incompatible sharding metadata"
+                }, 
+                {
+                    "code": 94, 
+                    "key": 94, 
+                    "name": "Not yet initialized"
+                }, 
+                {
+                    "code": 110, 
+                    "key": 110, 
+                    "name": "Cannot initialize node with data"
+                }, 
+                {
+                    "code": 96, 
+                    "key": 96, 
+                    "name": "Operation failed"
+                }, 
+                {
+                    "code": 130, 
+                    "key": 130, 
+                    "name": "Symbol not found"
+                }, 
+                {
+                    "code": 121, 
+                    "key": 121, 
+                    "name": "Document validation failure"
+                }, 
+                {
+                    "code": 54, 
+                    "key": 54, 
+                    "name": "Not single value field"
+                }, 
+                {
+                    "code": 89, 
+                    "key": 89, 
+                    "name": "Network timeout"
+                }, 
+                {
+                    "code": 11600, 
+                    "key": 11600, 
+                    "name": "Interrupted at shutdown"
+                }, 
+                {
+                    "code": 13297, 
+                    "key": 13297, 
+                    "name": "Database differ case"
+                }, 
+                {
+                    "code": 119, 
+                    "key": 119, 
+                    "name": "Invalid sync source"
+                }, 
+                {
+                    "code": 125, 
+                    "key": 125, 
+                    "name": "Command failed"
+                }, 
+                {
+                    "code": 25, 
+                    "key": 25, 
+                    "name": "Remote validation error"
+                }, 
+                {
+                    "code": 13436, 
+                    "key": 13436, 
+                    "name": "Not master or secondary code"
+                }, 
+                {
+                    "code": 40, 
+                    "key": 40, 
+                    "name": "Conflicting update operators"
+                }, 
+                {
+                    "code": 107, 
+                    "key": 107, 
+                    "name": "Lock failed"
+                }, 
+                {
+                    "code": 77, 
+                    "key": 77, 
+                    "name": "Operation incomplete"
+                }, 
+                {
+                    "code": 61, 
+                    "key": 61, 
+                    "name": "Shard key not found"
+                }, 
+                {
+                    "code": 9996, 
+                    "key": 9996, 
+                    "name": "Received stale config"
+                }, 
+                {
+                    "code": 36, 
+                    "key": 36, 
+                    "name": "Remote change detected"
+                }, 
+                {
+                    "code": 81, 
+                    "key": 81, 
+                    "name": "No where parse context"
+                }, 
+                {
+                    "code": 133, 
+                    "key": 133, 
+                    "name": "Failed to satisfy read preference"
+                }, 
+                {
+                    "code": 41, 
+                    "key": 41, 
+                    "name": "File already open"
+                }, 
+                {
+                    "code": 109, 
+                    "key": 109, 
+                    "name": "Configuration in progress"
+                }, 
+                {
+                    "code": 82, 
+                    "key": 82, 
+                    "name": "No progress made"
+                }, 
+                {
+                    "code": 115, 
+                    "key": 115, 
+                    "name": "Command not supported"
+                }, 
+                {
+                    "code": 18, 
+                    "key": 18, 
+                    "name": "Authentication failed"
+                }, 
+                {
+                    "code": 106, 
+                    "key": 106, 
+                    "name": "Distributed clock skewed"
+                }, 
+                {
+                    "code": 30, 
+                    "key": 30, 
+                    "name": "Invalid path"
+                }, 
+                {
+                    "code": 122, 
+                    "key": 122, 
+                    "name": "Read after optime timeout"
+                }, 
+                {
+                    "code": 68, 
+                    "key": 68, 
+                    "name": "Index already exists"
+                }, 
+                {
+                    "code": 33, 
+                    "key": 33, 
+                    "name": "Privilege not found"
+                }, 
+                {
+                    "code": 11, 
+                    "key": 11, 
+                    "name": "User not found"
+                }, 
+                {
+                    "code": 98, 
+                    "key": 98, 
+                    "name": "Database path in use"
+                }, 
+                {
+                    "code": 13435, 
+                    "key": 13435, 
+                    "name": "Not master no slave ok code"
+                }, 
+                {
+                    "code": 72, 
+                    "key": 72, 
+                    "name": "Invalid options"
+                }, 
+                {
+                    "code": 111, 
+                    "key": 111, 
+                    "name": "Not exact value field"
+                }, 
+                {
+                    "code": 85, 
+                    "key": 85, 
+                    "name": "Index options conflict"
+                }, 
+                {
+                    "code": 62, 
+                    "key": 62, 
+                    "name": "Oplog operation unsupported"
+                }, 
+                {
+                    "code": 88, 
+                    "key": 88, 
+                    "name": "Split failed"
+                }, 
+                {
+                    "code": 34, 
+                    "key": 34, 
+                    "name": "Cannot backfill array"
+                }, 
+                {
+                    "code": 141, 
+                    "key": 141, 
+                    "name": "SSL handshake failed"
+                }, 
+                {
+                    "code": 69, 
+                    "key": 69, 
+                    "name": "Auth schema incompatible"
+                }, 
+                {
+                    "code": 92, 
+                    "key": 92, 
+                    "name": "Secondary ahead of primary"
+                }, 
+                {
+                    "code": 76, 
+                    "key": 76, 
+                    "name": "No replication enabled"
+                }, 
+                {
+                    "code": 113, 
+                    "key": 113, 
+                    "name": "Initial sync failure"
+                }, 
+                {
+                    "code": 27, 
+                    "key": 27, 
+                    "name": "Index not found"
+                }, 
+                {
+                    "code": 47, 
+                    "key": 47, 
+                    "name": "No matching document"
+                }, 
+                {
+                    "code": 52, 
+                    "key": 52, 
+                    "name": "Dollar prefixed field name"
+                }, 
+                {
+                    "code": 80, 
+                    "key": 80, 
+                    "name": "Role data inconsistent"
+                }, 
+                {
+                    "code": 63, 
+                    "key": 63, 
+                    "name": "Stale shard version"
+                }, 
+                {
+                    "code": 120, 
+                    "key": 120, 
+                    "name": "Oplog start missing"
+                }, 
+                {
+                    "code": 42, 
+                    "key": 42, 
+                    "name": "Log write failed"
+                }, 
+                {
+                    "code": 22, 
+                    "key": 22, 
+                    "name": "Invalid BSON"
+                }, 
+                {
+                    "code": 45, 
+                    "key": 45, 
+                    "name": "User data inconsistent"
+                }, 
+                {
+                    "code": 35, 
+                    "key": 35, 
+                    "name": "User modification failed"
+                }, 
+                {
+                    "code": 90, 
+                    "key": 90, 
+                    "name": "Callback canceled"
+                }, 
+                {
+                    "code": 99, 
+                    "key": 99, 
+                    "name": "Write concern not defined"
+                }, 
+                {
+                    "code": 6, 
+                    "key": 6, 
+                    "name": "Host unreachable"
+                }, 
+                {
+                    "code": 12586, 
+                    "key": 12586, 
+                    "name": "Background operation in progress for database"
+                }, 
+                {
+                    "code": 16, 
+                    "key": 16, 
+                    "name": "Invalid length"
+                }, 
+                {
+                    "code": 0, 
+                    "key": 0, 
+                    "name": "OK"
+                }, 
+                {
+                    "code": 117, 
+                    "key": 117, 
+                    "name": "Conflicting operation in progress"
+                }, 
+                {
+                    "code": 116, 
+                    "key": 116, 
+                    "name": "Document too large for capped"
+                }, 
+                {
+                    "code": 118, 
+                    "key": 118, 
+                    "name": "Namespace not sharded"
+                }, 
+                {
+                    "code": 21, 
+                    "key": 21, 
+                    "name": "Empty array operation"
+                }, 
+                {
+                    "code": 13334, 
+                    "key": 13334, 
+                    "name": "Shard key too big"
+                }, 
+                {
+                    "code": 134, 
+                    "key": 134, 
+                    "name": "Read concern majority not available yet"
+                }, 
+                {
+                    "code": 71, 
+                    "key": 71, 
+                    "name": "Replica set not found"
+                }, 
+                {
+                    "code": 104, 
+                    "key": 104, 
+                    "name": "Node not electable"
+                }, 
+                {
+                    "code": 10107, 
+                    "key": 10107, 
+                    "name": "Not master"
+                }, 
+                {
+                    "code": 53, 
+                    "key": 53, 
+                    "name": "Invalid id field"
+                }, 
+                {
+                    "code": 26, 
+                    "key": 26, 
+                    "name": "Namespace not found"
+                }, 
+                {
+                    "code": 59, 
+                    "key": 59, 
+                    "name": "Command not found"
+                }, 
+                {
+                    "code": 73, 
+                    "key": 73, 
+                    "name": "Invalid namespace"
+                }, 
+                {
+                    "code": 51, 
+                    "key": 51, 
+                    "name": "Manual intervention required"
+                }, 
+                {
+                    "code": 103, 
+                    "key": 103, 
+                    "name": "New replica set configuration incompatible"
+                }
+            ], 
+            "synonym": [
+                "code"
+            ]
+        }, 
+        "path homology": {
+            "element": {}, 
+            "synonym": [
+                "alternate"
+            ]
+        }, 
+        "task status": {
+            "element": {
+                "aborted": {
+                    "name": "Aborted"
+                }, 
+                "completed": {
+                    "name": "Completed"
+                }, 
+                "pending": {
+                    "name": "Pending"
+                }, 
+                "ready": {
+                    "name": "Ready"
+                }, 
+                "running": {
+                    "name": "Running"
+                }
+            }
+        }, 
+        "temporary workspace": null, 
+        "verbosity": {
+            "element": [
+                {
+                    "code": "debug", 
+                    "key": 10, 
+                    "name": "Debug"
+                }, 
+                {
+                    "code": "warning", 
+                    "key": 30, 
+                    "name": "Warning"
+                }, 
+                {
+                    "code": "error", 
+                    "key": 40, 
+                    "name": "Error"
+                }, 
+                {
+                    "code": "critical", 
+                    "key": 50, 
+                    "name": "Critical"
+                }, 
+                {
+                    "code": "info", 
+                    "key": 20, 
+                    "name": "Info"
+                }
+            ], 
+            "synonym": [
+                "code"
+            ]
+        }, 
+        "volume": null
+    }
+}

@@ -1,0 +1,1407 @@
+{
+    "archetype": {
+        "8x8 dct": {
+            "type": "integer"
+        }, 
+        "absolute music track number": {
+            "type": "integer"
+        }, 
+        "absolute tv episode number": {
+            "type": "integer"
+        }, 
+        "actors": {
+            "plural": true, 
+            "type": "string"
+        }, 
+        "adaptive quantization": {
+            "type": "string"
+        }, 
+        "album artist name": {
+            "atom": "aART", 
+            "description": "Artist for the whole album, if different than the individual tracks.", 
+            "type": "string"
+        }, 
+        "album handle": {
+            "simplify": true, 
+            "type": "string"
+        }, 
+        "album name": {
+            "atom": "©alb", 
+            "type": "string"
+        }, 
+        "arranger": {
+            "atom": "@arg", 
+            "description": "Person responsible for particular adaptation of composition", 
+            "type": "string"
+        }, 
+        "art director": {
+            "atom": "@ard", 
+            "description": "Person responsible for non-photographic artwork used with content", 
+            "type": "string"
+        }, 
+        "artist name": {
+            "atom": "@ART", 
+            "type": "string"
+        }, 
+        "audio stream": {
+            "namespace": "ns/medium/resource/stream/audio", 
+            "plural": true, 
+            "type": "object"
+        }, 
+        "b adapt": {
+            "type": "integer"
+        }, 
+        "b bias": {
+            "type": "integer"
+        }, 
+        "b frames": {
+            "type": "integer"
+        }, 
+        "b predicted ratio": {
+            "type": "float"
+        }, 
+        "b pyramid": {
+            "type": "integer"
+        }, 
+        "b weight": {
+            "type": "integer"
+        }, 
+        "backdrop url": {
+            "type": "string"
+        }, 
+        "backdrops": {
+            "namespace": "ns/knowledge/image", 
+            "plural": true, 
+            "type": "object"
+        }, 
+        "biography": {
+            "type": "string"
+        }, 
+        "birthday": {
+            "type": "date"
+        }, 
+        "bit depth": {
+            "format": "bit", 
+            "type": "integer"
+        }, 
+        "bit rate": {
+            "format": "bitrate", 
+            "type": "integer"
+        }, 
+        "bit rate mode": {
+            "type": "string"
+        }, 
+        "bluray compatible": {
+            "type": "integer"
+        }, 
+        "bpf": {
+            "type": "float"
+        }, 
+        "budget": {
+            "type": "integer"
+        }, 
+        "cabac": {
+            "type": "integer"
+        }, 
+        "caption stream": {
+            "namespace": "ns/medium/resource/stream/text", 
+            "plural": true, 
+            "type": "object"
+        }, 
+        "cast": {
+            "namespace": "ns/knowledge/person", 
+            "plural": true, 
+            "type": "object"
+        }, 
+        "certifications": {
+            "namespace": "ns/knowledge/certification", 
+            "plural": true, 
+            "type": "object"
+        }, 
+        "channel count": {
+            "plural": true, 
+            "type": "integer"
+        }, 
+        "channel position": {
+            "plural": true, 
+            "type": "string"
+        }, 
+        "channels": {
+            "type": "integer"
+        }, 
+        "character encoding": {
+            "type": "string"
+        }, 
+        "character id": {
+            "type": "integer"
+        }, 
+        "character name": {
+            "type": "string"
+        }, 
+        "chroma me": {
+            "type": "integer"
+        }, 
+        "chroma qo": {
+            "type": "integer"
+        }, 
+        "codirectors": {
+            "plural": true, 
+            "type": "string"
+        }, 
+        "collection id": {
+            "type": "integer"
+        }, 
+        "collection knowledge uri": {
+            "type": "string"
+        }, 
+        "collection name": {
+            "type": "string"
+        }, 
+        "collection uuid": {
+            "type": "string"
+        }, 
+        "color space": {
+            "type": "string"
+        }, 
+        "comment": {
+            "atom": "©cmt", 
+            "type": "string"
+        }, 
+        "company id": {
+            "type": "integer"
+        }, 
+        "company knowledge uri": {
+            "type": "string"
+        }, 
+        "company name": {
+            "type": "string"
+        }, 
+        "company uuid": {
+            "type": "string"
+        }, 
+        "compilation": {
+            "atom": "cpil", 
+            "description": "Is disc part of a compilation?", 
+            "type": "boolean"
+        }, 
+        "composer name": {
+            "atom": "©wrt", 
+            "type": "string"
+        }, 
+        "conductor": {
+            "atom": "©con", 
+            "description": "Name of the person who directed the orchestra", 
+            "type": "string"
+        }, 
+        "configuration path": {
+            "type": "string"
+        }, 
+        "constant frame rate": {
+            "type": "float"
+        }, 
+        "content advisory annotation": {
+            "type": "string"
+        }, 
+        "content advisory rating": {
+            "type": "string"
+        }, 
+        "content advisory score": {
+            "type": "integer"
+        }, 
+        "content advisory standard": {
+            "type": "string"
+        }, 
+        "content rating": {
+            "atom": "rtng", 
+            "description": "Does song have explicit content?", 
+            "enumeration": "content rating", 
+            "type": "enum"
+        }, 
+        "copyright": {
+            "atom": "cprt", 
+            "type": "string"
+        }, 
+        "copyright acknowledgement": {
+            "atom": "©cak", 
+            "description": "Ackowledgements of those granting permission to use copyrighted material", 
+            "type": "string"
+        }, 
+        "cover": {
+            "atom": "covr", 
+            "auto cast": false, 
+            "description": "One or more cover art images", 
+            "type": "integer"
+        }, 
+        "creators": {
+            "namespace": "ns/knowledge/person", 
+            "plural": true, 
+            "type": "object"
+        }, 
+        "credit": {
+            "namespace": "ns/knowledge/person/credit", 
+            "plural": true, 
+            "type": "object"
+        }, 
+        "credit uri": {
+            "type": "string"
+        }, 
+        "credits": {
+            "atom": "©src", 
+            "description": "Credits for those who provided source content", 
+            "type": "string"
+        }, 
+        "crew": {
+            "namespace": "ns/knowledge/person", 
+            "plural": true, 
+            "type": "object"
+        }, 
+        "critic name": {
+            "type": "string"
+        }, 
+        "crop": {
+            "type": "string"
+        }, 
+        "custom quantization": {
+            "type": "integer"
+        }, 
+        "dead zone": {
+            "type": "string"
+        }, 
+        "deathday": {
+            "type": "date"
+        }, 
+        "deblock filter": {
+            "type": "string"
+        }, 
+        "decimate": {
+            "type": "integer"
+        }, 
+        "delay": {
+            "type": "integer"
+        }, 
+        "department": {
+            "namespace": "ns/knowledge/department", 
+            "type": "object"
+        }, 
+        "department id": {
+            "type": "integer"
+        }, 
+        "department knowledge uri": {
+            "type": "string"
+        }, 
+        "department name": {
+            "type": "string"
+        }, 
+        "department uuid": {
+            "type": "string"
+        }, 
+        "description": {
+            "atom": "desc", 
+            "type": "string"
+        }, 
+        "dialnorm": {
+            "type": "integer"
+        }, 
+        "direct mv": {
+            "type": "integer"
+        }, 
+        "director": {
+            "atom": "©dir", 
+            "description": "Name of director for movie", 
+            "enable": false, 
+            "type": "string"
+        }, 
+        "directors": {
+            "plural": true, 
+            "type": "string"
+        }, 
+        "directory": {
+            "type": "string"
+        }, 
+        "disc count": {
+            "type": "integer"
+        }, 
+        "disc number": {
+            "type": "integer"
+        }, 
+        "disc position": {
+            "atom": "disk", 
+            "type": "string"
+        }, 
+        "display aspect ratio": {
+            "type": "float"
+        }, 
+        "domain": {
+            "type": "string"
+        }, 
+        "dpb size": {
+            "type": "integer"
+        }, 
+        "duration": {
+            "format": "millisecond", 
+            "type": "integer"
+        }, 
+        "encoded by": {
+            "atom": "@enc", 
+            "description": "Person or company that encoded the recording", 
+            "type": "string"
+        }, 
+        "encoded date": {
+            "type": "date"
+        }, 
+        "encoder": {
+            "type": "string"
+        }, 
+        "encoder settings": {
+            "namespace": "ns/medium/resource/x264", 
+            "type": "object"
+        }, 
+        "encoder settings string": {
+            "type": "string"
+        }, 
+        "encoding tool": {
+            "atom": "©too", 
+            "description": "Software which encoded the recording", 
+            "type": "string"
+        }, 
+        "equalization preset name": {
+            "atom": "©equ", 
+            "description": "Setting for equalization of content", 
+            "enable": false, 
+            "type": "string"
+        }, 
+        "essence": {
+            "type": "string"
+        }, 
+        "exclusion": {
+            "type": "string"
+        }, 
+        "executive producer": {
+            "atom": "©xpd", 
+            "description": "Person responsible for creating or supervising the song", 
+            "type": "string"
+        }, 
+        "exploded path": {
+            "type": "string"
+        }, 
+        "file name": {
+            "type": "string"
+        }, 
+        "format profile": {
+            "plural": true, 
+            "type": "string"
+        }, 
+        "frame count": {
+            "type": "integer"
+        }, 
+        "frame rate": {
+            "format": "framerate", 
+            "type": "float"
+        }, 
+        "frame rate maximum": {
+            "format": "framerate", 
+            "type": "float"
+        }, 
+        "frame rate minimum": {
+            "format": "framerate", 
+            "type": "float"
+        }, 
+        "frame rate mode": {
+            "type": "string"
+        }, 
+        "freebase company mid": {
+            "type": "string"
+        }, 
+        "freebase id": {
+            "type": "string"
+        }, 
+        "freebase mid": {
+            "type": "string"
+        }, 
+        "freebase movie mid": {
+            "type": "string"
+        }, 
+        "freebase music album mid": {
+            "type": "string"
+        }, 
+        "freebase music track mid": {
+            "type": "string"
+        }, 
+        "freebase person mid": {
+            "type": "string"
+        }, 
+        "freebase tv episode mid": {
+            "type": "string"
+        }, 
+        "freebase tv season mid": {
+            "type": "string"
+        }, 
+        "freebase tv show mid": {
+            "type": "string"
+        }, 
+        "freshness": {
+            "type": "string"
+        }, 
+        "gapless": {
+            "atom": "pgap", 
+            "type": "boolean"
+        }, 
+        "genre id": {
+            "type": "integer"
+        }, 
+        "genre knowledge uri": {
+            "type": "string"
+        }, 
+        "genre name": {
+            "atom": "©gen", 
+            "type": "string"
+        }, 
+        "genre type": {
+            "atom": "gnre", 
+            "description": "Enumerated value from ID3 tag set, plus 1", 
+            "enumeration": "genre", 
+            "type": "enum"
+        }, 
+        "genre uuid": {
+            "type": "string"
+        }, 
+        "genres": {
+            "namespace": "ns/knowledge/genre", 
+            "plural": true, 
+            "type": "object"
+        }, 
+        "grouping": {
+            "atom": "grup", 
+            "description": "Overall work, like TIT1 in ID3", 
+            "type": "string"
+        }, 
+        "guests": {
+            "namespace": "ns/knowledge/person", 
+            "plural": true, 
+            "type": "object"
+        }, 
+        "handbrake audio encoder settings": {
+            "plural": "dict", 
+            "type": "string"
+        }, 
+        "handbrake parameters": {
+            "plural": "dict", 
+            "type": "string"
+        }, 
+        "handbrake x264 settings": {
+            "plural": "dict", 
+            "type": "string"
+        }, 
+        "hd video": {
+            "atom": "hdvd", 
+            "type": "integer"
+        }, 
+        "height": {
+            "format": "pixel", 
+            "type": "integer"
+        }, 
+        "homepage": {
+            "type": "string"
+        }, 
+        "hypothetical reference": {
+            "type": "string"
+        }, 
+        "i constrained": {
+            "type": "integer"
+        }, 
+        "i predicted ratio": {
+            "type": "float"
+        }, 
+        "i refresh": {
+            "type": "integer"
+        }, 
+        "id3 genre type": {
+            "description": "Enumerated value from ID3 tag set", 
+            "type": "integer"
+        }, 
+        "image url": {
+            "type": "string"
+        }, 
+        "imdb character id": {
+            "type": "string"
+        }, 
+        "imdb movie id": {
+            "type": "string"
+        }, 
+        "imdb person id": {
+            "type": "string"
+        }, 
+        "imdb tv episode id": {
+            "type": "string"
+        }, 
+        "imdb tv show id": {
+            "type": "string"
+        }, 
+        "inclusion": {
+            "type": "string"
+        }, 
+        "interlaced": {
+            "type": "integer"
+        }, 
+        "itunes account": {
+            "atom": "apID", 
+            "type": "string"
+        }, 
+        "itunes account type": {
+            "atom": "akID", 
+            "enumeration": "itunes account type", 
+            "type": "enum"
+        }, 
+        "itunes category": {
+            "atom": "catg", 
+            "type": "string"
+        }, 
+        "itunes composer id": {
+            "atom": "cmID", 
+            "type": "integer"
+        }, 
+        "itunes content id": {
+            "atom": "cnID", 
+            "type": "integer"
+        }, 
+        "itunes country id": {
+            "atom": "sfID", 
+            "enumeration": "country", 
+            "type": "enum"
+        }, 
+        "itunes currency": {
+            "type": "string"
+        }, 
+        "itunes episode global id": {
+            "atom": "egid", 
+            "type": "integer"
+        }, 
+        "itunes genre id": {
+            "atom": "geID", 
+            "type": "integer"
+        }, 
+        "itunes keywords": {
+            "atom": "keyw", 
+            "type": "string"
+        }, 
+        "itunes movie id": {
+            "type": "integer"
+        }, 
+        "itunes music album id": {
+            "type": "integer"
+        }, 
+        "itunes music track id": {
+            "type": "integer"
+        }, 
+        "itunes person id": {
+            "atom": "atID", 
+            "type": "integer"
+        }, 
+        "itunes playlist id": {
+            "atom": "plID", 
+            "type": "integer"
+        }, 
+        "itunes track duration": {
+            "format": "millisecond", 
+            "type": "integer"
+        }, 
+        "itunes track hd price": {
+            "type": "float"
+        }, 
+        "itunes track price": {
+            "type": "float"
+        }, 
+        "itunes tv episode id": {
+            "type": "integer"
+        }, 
+        "itunes tv season id": {
+            "type": "integer"
+        }, 
+        "itunes tv show id": {
+            "type": "integer"
+        }, 
+        "itunextc": {
+            "atom": "iTunEXTC", 
+            "type": "string"
+        }, 
+        "itunmovi": {
+            "atom": "iTunMOVI", 
+            "type": "plist"
+        }, 
+        "itunnorm": {
+            "atom": "iTunNORM", 
+            "description": "Sound Check analysis info", 
+            "type": "string"
+        }, 
+        "keyframe max": {
+            "type": "integer"
+        }, 
+        "keyframe min": {
+            "type": "integer"
+        }, 
+        "keyword id": {
+            "type": "integer"
+        }, 
+        "keyword knowledge uri": {
+            "type": "string"
+        }, 
+        "keyword name": {
+            "type": "string"
+        }, 
+        "keyword uuid": {
+            "type": "string"
+        }, 
+        "keywords": {
+            "namespace": "ns/knowledge/keyword", 
+            "plural": true, 
+            "type": "object"
+        }, 
+        "knowledge uri": {
+            "type": "string"
+        }, 
+        "languages": {
+            "namespace": "ns/knowledge/language", 
+            "plural": true, 
+            "type": "object"
+        }, 
+        "liner notes": {
+            "atom": "©lnt", 
+            "description": "Explanatory notes about a record album, included on the jacket or in the packaging", 
+            "type": "string"
+        }, 
+        "long description": {
+            "atom": "ldes", 
+            "type": "string"
+        }, 
+        "lyricist": {
+            "atom": "©aut", 
+            "description": "Writer of the song lyrics", 
+            "type": "string"
+        }, 
+        "lyrics": {
+            "atom": "©lyr", 
+            "type": "string"
+        }, 
+        "macroblock aff": {
+            "type": "integer"
+        }, 
+        "macroblock partitions": {
+            "type": "string"
+        }, 
+        "macroblock tree": {
+            "type": "integer"
+        }, 
+        "maximum quantizer": {
+            "type": "integer"
+        }, 
+        "me method": {
+            "type": "string"
+        }, 
+        "me range": {
+            "type": "integer"
+        }, 
+        "mediainfo full": {
+            "type": "boolean"
+        }, 
+        "mediainfo language": {
+            "type": "string"
+        }, 
+        "mediainfo output": {
+            "type": "string"
+        }, 
+        "menu stream": {
+            "namespace": "ns/medium/resource/stream/text", 
+            "plural": true, 
+            "type": "object"
+        }, 
+        "minimum quantizer": {
+            "type": "integer"
+        }, 
+        "mixed references": {
+            "type": "integer"
+        }, 
+        "modified date": {
+            "type": "date"
+        }, 
+        "movie handle": {
+            "simplify": true, 
+            "type": "string"
+        }, 
+        "movie id": {
+            "type": "integer"
+        }, 
+        "movie knowledge uri": {
+            "type": "string"
+        }, 
+        "movie title": {
+            "type": "string"
+        }, 
+        "movie uuid": {
+            "type": "string"
+        }, 
+        "movies": {
+            "namespace": "ns/knowledge/movie", 
+            "plural": true, 
+            "type": "object"
+        }, 
+        "music album id": {
+            "type": "integer"
+        }, 
+        "music album knowledge uri": {
+            "type": "string"
+        }, 
+        "music album name": {
+            "type": "string"
+        }, 
+        "music album uuid": {
+            "type": "string"
+        }, 
+        "music disc number": {
+            "type": "integer"
+        }, 
+        "music track": {
+            "namespace": "ns/knowledge/music/track", 
+            "type": "object"
+        }, 
+        "music track id": {
+            "type": "integer"
+        }, 
+        "music track knowledge uri": {
+            "type": "string"
+        }, 
+        "music track name": {
+            "type": "string"
+        }, 
+        "music track number": {
+            "atom": "tves", 
+            "type": "integer"
+        }, 
+        "music track uuid": {
+            "type": "string"
+        }, 
+        "music tracks": {
+            "namespace": "ns/knowledge/music/track", 
+            "plural": true, 
+            "type": "object"
+        }, 
+        "network id": {
+            "type": "integer"
+        }, 
+        "network knowledge uri": {
+            "type": "string"
+        }, 
+        "network name": {
+            "type": "string"
+        }, 
+        "network uuid": {
+            "type": "string"
+        }, 
+        "networks": {
+            "namespace": "ns/knowledge/network", 
+            "plural": true, 
+            "type": "object"
+        }, 
+        "noise reduction": {
+            "type": "integer"
+        }, 
+        "occupation": {
+            "namespace": "ns/knowledge/occupation", 
+            "type": "object"
+        }, 
+        "occupation id": {
+            "type": "integer"
+        }, 
+        "occupation knowledge uri": {
+            "type": "string"
+        }, 
+        "occupation name": {
+            "type": "string"
+        }, 
+        "occupation uuid": {
+            "type": "string"
+        }, 
+        "online extras": {
+            "atom": "©url", 
+            "description": "Links to content that can only be accessed when connected to the internet", 
+            "type": "string"
+        }, 
+        "open gop": {
+            "type": "integer"
+        }, 
+        "order": {
+            "type": "integer"
+        }, 
+        "original artist": {
+            "atom": "©ope", 
+            "description": "Name of artist originally attributed with content", 
+            "type": "string"
+        }, 
+        "original critic score": {
+            "type": "string"
+        }, 
+        "original movie title": {
+            "type": "string"
+        }, 
+        "p skip": {
+            "type": "integer"
+        }, 
+        "p weight": {
+            "type": "integer"
+        }, 
+        "page": {
+            "type": "integer"
+        }, 
+        "part of a collection": {
+            "namespace": "ns/knowledge/collection", 
+            "type": "object"
+        }, 
+        "peak limited frame rate": {
+            "type": "float"
+        }, 
+        "people uri": {
+            "type": "string"
+        }, 
+        "performer": {
+            "atom": "©prf", 
+            "description": "Name or URL of the individual primary members of the band or group", 
+            "type": "string"
+        }, 
+        "phonogram rights": {
+            "atom": "©phg", 
+            "description": "Like a copyright, but using the circled P symbol, for audio rights", 
+            "type": "string"
+        }, 
+        "pictures": {
+            "namespace": "ns/knowledge/image", 
+            "plural": true, 
+            "type": "object"
+        }, 
+        "pixel aspect ratio": {
+            "type": "float"
+        }, 
+        "place of birth": {
+            "type": "string"
+        }, 
+        "podcast": {
+            "atom": "pcst", 
+            "type": "boolean"
+        }, 
+        "podcast url": {
+            "atom": "purl", 
+            "type": "string"
+        }, 
+        "post quantizer curve blur": {
+            "type": "float"
+        }, 
+        "poster url": {
+            "type": "string"
+        }, 
+        "posters": {
+            "namespace": "ns/knowledge/image", 
+            "plural": true, 
+            "type": "object"
+        }, 
+        "producer": {
+            "atom": "©prd", 
+            "description": "Person responsible for creating or supervising the song", 
+            "type": "string"
+        }, 
+        "producers": {
+            "plural": true, 
+            "type": "string"
+        }, 
+        "production companies": {
+            "namespace": "ns/knowledge/company", 
+            "plural": true, 
+            "type": "object"
+        }, 
+        "production countries": {
+            "namespace": "ns/knowledge/country", 
+            "plural": true, 
+            "type": "object"
+        }, 
+        "profile url": {
+            "type": "string"
+        }, 
+        "profiles": {
+            "namespace": "ns/knowledge/image", 
+            "plural": true, 
+            "type": "object"
+        }, 
+        "psychovisual optimization": {
+            "type": "integer"
+        }, 
+        "psychovisual strength": {
+            "type": "string"
+        }, 
+        "publisher": {
+            "atom": "©pub", 
+            "description": "Company publishing the song", 
+            "type": "string"
+        }, 
+        "purchase date": {
+            "atom": "purd", 
+            "type": "date"
+        }, 
+        "quantizer": {
+            "type": "float"
+        }, 
+        "quantizer curve blur": {
+            "type": "float"
+        }, 
+        "quantizer curve compression": {
+            "type": "float"
+        }, 
+        "quantizer step": {
+            "type": "integer"
+        }, 
+        "query": {
+            "namespace": "ns/search/query", 
+            "plural": "dict", 
+            "plural format": "eval", 
+            "type": "string"
+        }, 
+        "rate tolerance": {
+            "type": "float"
+        }, 
+        "rc lookahead": {
+            "type": "integer"
+        }, 
+        "rc method": {
+            "type": "string"
+        }, 
+        "record company": {
+            "atom": "©mak", 
+            "description": "Company releasing the song", 
+            "type": "string"
+        }, 
+        "release date": {
+            "atom": "©day", 
+            "type": "date"
+        }, 
+        "release year": {
+            "type": "integer"
+        }, 
+        "revenue": {
+            "type": "integer"
+        }, 
+        "review publication": {
+            "type": "string"
+        }, 
+        "review quote": {
+            "type": "string"
+        }, 
+        "review url": {
+            "type": "string"
+        }, 
+        "rotten tomatoes audience rating": {
+            "type": "string"
+        }, 
+        "rotten tomatoes audience score": {
+            "type": "integer"
+        }, 
+        "rotten tomatoes critics consensus": {
+            "type": "string"
+        }, 
+        "rotten tomatoes critics rating": {
+            "type": "string"
+        }, 
+        "rotten tomatoes critics score": {
+            "type": "integer"
+        }, 
+        "rotten tomatoes reviews": {
+            "namespace": "ns/knowledge/review", 
+            "plural": true, 
+            "type": "object"
+        }, 
+        "rottentomatoes movie id": {
+            "type": "integer"
+        }, 
+        "routing type": {
+            "type": "string"
+        }, 
+        "sample count": {
+            "type": "integer"
+        }, 
+        "sample rate": {
+            "format": "frequency", 
+            "type": "integer"
+        }, 
+        "scene cut": {
+            "type": "integer"
+        }, 
+        "scheme": {
+            "type": "string"
+        }, 
+        "screenwriters": {
+            "plural": true, 
+            "type": "string"
+        }, 
+        "simple character name": {
+            "simplify": true, 
+            "type": "string"
+        }, 
+        "simple collection name": {
+            "simplify": true, 
+            "type": "string"
+        }, 
+        "simple company name": {
+            "simplify": true, 
+            "type": "string"
+        }, 
+        "simple genre name": {
+            "simplify": true, 
+            "type": "string"
+        }, 
+        "simple keyword name": {
+            "simplify": true, 
+            "type": "string"
+        }, 
+        "simple movie title": {
+            "simplify": true, 
+            "type": "string"
+        }, 
+        "simple music album name": {
+            "simplify": true, 
+            "type": "string"
+        }, 
+        "simple music track name": {
+            "simplify": true, 
+            "type": "string"
+        }, 
+        "simple name": {
+            "simplify": true, 
+            "type": "string"
+        }, 
+        "simple network name": {
+            "simplify": true, 
+            "type": "string"
+        }, 
+        "simple person name": {
+            "simplify": true, 
+            "type": "string"
+        }, 
+        "simple tv episode name": {
+            "simplify": true, 
+            "type": "string"
+        }, 
+        "simple tv show name": {
+            "simplify": true, 
+            "type": "string"
+        }, 
+        "sliced threads": {
+            "type": "integer"
+        }, 
+        "soloist": {
+            "atom": "©sol", 
+            "description": "Name of the musician who performs the solo", 
+            "type": "string"
+        }, 
+        "song description": {
+            "atom": "©des", 
+            "description": "Explanation of the song", 
+            "type": "string"
+        }, 
+        "sort album": {
+            "atom": "soal", 
+            "type": "string"
+        }, 
+        "sort album artist": {
+            "atom": "soaa", 
+            "type": "string"
+        }, 
+        "sort artist": {
+            "atom": "soar", 
+            "type": "string"
+        }, 
+        "sort composer": {
+            "atom": "soco", 
+            "type": "string"
+        }, 
+        "sort name": {
+            "atom": "sonm", 
+            "type": "string"
+        }, 
+        "sort tv show": {
+            "atom": "sosn", 
+            "type": "string"
+        }, 
+        "sound engineer": {
+            "atom": "©sne", 
+            "description": "The name of the person doing soundengineering", 
+            "type": "string"
+        }, 
+        "source frame rate": {
+            "enumeration": "frame rate", 
+            "type": "enum"
+        }, 
+        "spoken languages": {
+            "namespace": "ns/knowledge/languages", 
+            "plural": true, 
+            "type": "object"
+        }, 
+        "stills": {
+            "namespace": "ns/knowledge/image", 
+            "plural": true, 
+            "type": "object"
+        }, 
+        "stream id": {
+            "type": "integer"
+        }, 
+        "stream kind": {
+            "enumeration": "stream kind", 
+            "type": "enum"
+        }, 
+        "stream kind position": {
+            "type": "integer"
+        }, 
+        "stream name": {
+            "type": "string"
+        }, 
+        "stream order": {
+            "type": "integer"
+        }, 
+        "stream portion": {
+            "type": "float"
+        }, 
+        "stream size": {
+            "format": "byte", 
+            "type": "integer"
+        }, 
+        "stream type": {
+            "enumeration": "mediainfo stream type", 
+            "type": "enum"
+        }, 
+        "studio": {
+            "plural": true, 
+            "type": "string"
+        }, 
+        "sub me": {
+            "type": "integer"
+        }, 
+        "tag date": {
+            "type": "date"
+        }, 
+        "tagline": {
+            "type": "string"
+        }, 
+        "target frame rate": {
+            "enumeration": "frame rate", 
+            "type": "enum"
+        }, 
+        "tasks": {
+            "namespace": "ns/system/task", 
+            "plural": true, 
+            "type": "object"
+        }, 
+        "tempo": {
+            "atom": "tmpo", 
+            "type": "integer"
+        }, 
+        "term": {
+            "type": "string"
+        }, 
+        "thanks": {
+            "atom": "©thx", 
+            "description": "Notes of acknowledgement or recognition from the artist", 
+            "type": "string"
+        }, 
+        "time shift": {
+            "type": "integer"
+        }, 
+        "titles": {
+            "namespace": "ns/knowledge/movie", 
+            "plural": true, 
+            "type": "object"
+        }, 
+        "tmdb collection id": {
+            "type": "integer"
+        }, 
+        "tmdb company id": {
+            "type": "integer"
+        }, 
+        "tmdb genre id": {
+            "type": "integer"
+        }, 
+        "tmdb keyword id": {
+            "type": "integer"
+        }, 
+        "tmdb movie id": {
+            "type": "integer"
+        }, 
+        "tmdb network id": {
+            "type": "integer"
+        }, 
+        "tmdb person id": {
+            "type": "integer"
+        }, 
+        "tmdb popularity": {
+            "type": "float"
+        }, 
+        "tmdb tv episode id": {
+            "type": "integer"
+        }, 
+        "tmdb tv season id": {
+            "type": "integer"
+        }, 
+        "tmdb tv show id": {
+            "type": "integer"
+        }, 
+        "tmdb vote average": {
+            "type": "float"
+        }, 
+        "tmdb vote count": {
+            "type": "integer"
+        }, 
+        "total number of tv episodes": {
+            "type": "integer"
+        }, 
+        "total number of tv seasons": {
+            "type": "integer"
+        }, 
+        "track count": {
+            "type": "integer"
+        }, 
+        "track genealogy": {
+            "type": "string"
+        }, 
+        "track name": {
+            "atom": "©nam", 
+            "type": "string"
+        }, 
+        "track number": {
+            "type": "integer"
+        }, 
+        "track position": {
+            "atom": "trkn", 
+            "type": "string"
+        }, 
+        "track subtitle": {
+            "atom": "@st3", 
+            "type": "string"
+        }, 
+        "trellis": {
+            "type": "integer"
+        }, 
+        "trimmed imdb movie id": {
+            "type": "string"
+        }, 
+        "tv episode id": {
+            "type": "integer"
+        }, 
+        "tv episode knowledge uri": {
+            "type": "string"
+        }, 
+        "tv episode name": {
+            "type": "string"
+        }, 
+        "tv episode number": {
+            "atom": "tves", 
+            "type": "integer"
+        }, 
+        "tv episode production code": {
+            "atom": "tven", 
+            "type": "string"
+        }, 
+        "tv episode uuid": {
+            "type": "string"
+        }, 
+        "tv episodes": {
+            "namespace": "ns/knowledge/tv/episode", 
+            "plural": true, 
+            "type": "object"
+        }, 
+        "tv network name": {
+            "atom": "tvnn", 
+            "type": "string"
+        }, 
+        "tv season": {
+            "namespace": "ns/knowledge/tv/season", 
+            "type": "object"
+        }, 
+        "tv season id": {
+            "type": "integer"
+        }, 
+        "tv season knowledge uri": {
+            "type": "string"
+        }, 
+        "tv season number": {
+            "atom": "tvsn", 
+            "type": "integer"
+        }, 
+        "tv season umid": {
+            "type": "string"
+        }, 
+        "tv season uuid": {
+            "type": "string"
+        }, 
+        "tv seasons": {
+            "namespace": "ns/knowledge/tv/season", 
+            "plural": true, 
+            "type": "object"
+        }, 
+        "tv show air day": {
+            "type": "string"
+        }, 
+        "tv show air time": {
+            "type": "string"
+        }, 
+        "tv show handle": {
+            "simplify": true, 
+            "type": "string"
+        }, 
+        "tv show id": {
+            "type": "integer"
+        }, 
+        "tv show knowledge uri": {
+            "type": "string"
+        }, 
+        "tv show name": {
+            "atom": "tvsh", 
+            "type": "string"
+        }, 
+        "tv show status": {
+            "type": "string"
+        }, 
+        "tv show umid": {
+            "type": "string"
+        }, 
+        "tv show uuid": {
+            "type": "string"
+        }, 
+        "tvdb tv episode id": {
+            "type": "integer"
+        }, 
+        "tvdb tv season id": {
+            "type": "integer"
+        }, 
+        "tvdb tv show id": {
+            "type": "integer"
+        }, 
+        "variable frame rate": {
+            "type": "boolean"
+        }, 
+        "vbv max": {
+            "type": "integer"
+        }, 
+        "vbv size": {
+            "type": "integer"
+        }, 
+        "video profile": {
+            "type": "string"
+        }, 
+        "video stream": {
+            "namespace": "ns/medium/resource/stream/video", 
+            "plural": true, 
+            "type": "object"
+        }, 
+        "width": {
+            "format": "pixel", 
+            "type": "integer"
+        }, 
+        "xid": {
+            "atom": "xid", 
+            "type": "string"
+        }
+    }
+}

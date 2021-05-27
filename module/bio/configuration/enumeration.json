@@ -1,0 +1,553 @@
+{
+    "enumeration": {
+        "iupac amino acid notation": {
+            "element": {
+                "A": {
+                    "charge": 1.8, 
+                    "code": "ala", 
+                    "name": "Alanine", 
+                    "weight": 89
+                }, 
+                "B": {
+                    "code": "asx", 
+                    "name": "Aspartic acid or Asparagine"
+                }, 
+                "C": {
+                    "charge": 2.5, 
+                    "code": "cys", 
+                    "name": "Cysteine", 
+                    "weight": 121
+                }, 
+                "D": {
+                    "charge": -3.5, 
+                    "code": "asp", 
+                    "name": "Aspartic acid", 
+                    "weight": 133
+                }, 
+                "E": {
+                    "charge": -3.5, 
+                    "code": "glu", 
+                    "name": "Glutamic acid", 
+                    "weight": 147
+                }, 
+                "F": {
+                    "charge": 2.8, 
+                    "code": "phe", 
+                    "name": "Phenylalanine", 
+                    "weight": 165
+                }, 
+                "G": {
+                    "charge": -0.4, 
+                    "code": "gly", 
+                    "name": "Glycine", 
+                    "weight": 75
+                }, 
+                "H": {
+                    "charge": -3.2, 
+                    "code": "his", 
+                    "name": "Histidine", 
+                    "weight": 155
+                }, 
+                "I": {
+                    "charge": 4.5, 
+                    "code": "ile", 
+                    "name": "Isoleucine", 
+                    "weight": 131
+                }, 
+                "J": {
+                    "code": "xle", 
+                    "name": "Leucine or Isoleucine"
+                }, 
+                "K": {
+                    "charge": -3.9, 
+                    "code": "lys", 
+                    "name": "Lysine", 
+                    "weight": 146
+                }, 
+                "L": {
+                    "charge": 3.8, 
+                    "code": "leu", 
+                    "name": "Leucine", 
+                    "weight": 131
+                }, 
+                "M": {
+                    "charge": 1.9, 
+                    "code": "met", 
+                    "name": "Methionine", 
+                    "weight": 149
+                }, 
+                "N": {
+                    "charge": -3.5, 
+                    "code": "asn", 
+                    "name": "Asparagine", 
+                    "weight": 132
+                }, 
+                "P": {
+                    "charge": -1.6, 
+                    "code": "pro", 
+                    "name": "Proline", 
+                    "weight": 115
+                }, 
+                "Q": {
+                    "charge": -3.5, 
+                    "code": "gln", 
+                    "name": "Glutamine", 
+                    "weight": 146
+                }, 
+                "R": {
+                    "charge": -4.5, 
+                    "code": "arg", 
+                    "name": "Arginine", 
+                    "weight": 174
+                }, 
+                "S": {
+                    "charge": -0.8, 
+                    "code": "ser", 
+                    "name": "Serine", 
+                    "weight": 105
+                }, 
+                "T": {
+                    "charge": -0.7, 
+                    "code": "thr", 
+                    "name": "Threonine", 
+                    "weight": 119
+                }, 
+                "V": {
+                    "charge": 4.2, 
+                    "code": "val", 
+                    "name": "Valine", 
+                    "weight": 117
+                }, 
+                "W": {
+                    "charge": -0.9, 
+                    "code": "trp", 
+                    "name": "Tryptophan", 
+                    "weight": 204
+                }, 
+                "X": {
+                    "code": "xaa", 
+                    "name": "Any amino acid"
+                }, 
+                "Y": {
+                    "charge": -1.3, 
+                    "code": "tyr", 
+                    "name": "Tyrosine", 
+                    "weight": 181
+                }, 
+                "Z": {
+                    "code": "glx", 
+                    "name": "Glutamine or Glutamic acid"
+                }
+            }
+        }, 
+        "iupac nucleic acid notation": {
+            "element": {
+                "A": {
+                    "name": "Adenine", 
+                    "option": [
+                        "A"
+                    ], 
+                    "reverse": "T"
+                }, 
+                "B": {
+                    "name": "Not A", 
+                    "option": [
+                        "G", 
+                        "T", 
+                        "C"
+                    ], 
+                    "reverse": "V"
+                }, 
+                "C": {
+                    "name": "Cytosine", 
+                    "option": [
+                        "C"
+                    ], 
+                    "reverse": "G"
+                }, 
+                "D": {
+                    "name": "Not C", 
+                    "option": [
+                        "G", 
+                        "A", 
+                        "T"
+                    ], 
+                    "reverse": "H"
+                }, 
+                "G": {
+                    "name": "Guanine", 
+                    "option": [
+                        "G"
+                    ], 
+                    "reverse": "C"
+                }, 
+                "H": {
+                    "name": "Not G", 
+                    "option": [
+                        "A", 
+                        "C", 
+                        "T"
+                    ], 
+                    "reverse": "D"
+                }, 
+                "K": {
+                    "name": "Keto", 
+                    "option": [
+                        "G", 
+                        "T"
+                    ], 
+                    "reverse": "M"
+                }, 
+                "M": {
+                    "name": "Amino", 
+                    "option": [
+                        "A", 
+                        "C"
+                    ], 
+                    "reverse": "K"
+                }, 
+                "N": {
+                    "name": "Any", 
+                    "option": [
+                        "A", 
+                        "G", 
+                        "C", 
+                        "T"
+                    ], 
+                    "reverse": "N"
+                }, 
+                "R": {
+                    "name": "Purine", 
+                    "option": [
+                        "G", 
+                        "A"
+                    ], 
+                    "reverse": "Y"
+                }, 
+                "S": {
+                    "name": "Strong bonds", 
+                    "option": [
+                        "G", 
+                        "C"
+                    ], 
+                    "reverse": "S"
+                }, 
+                "T": {
+                    "name": "Thymine", 
+                    "option": [
+                        "T"
+                    ], 
+                    "reverse": "A"
+                }, 
+                "V": {
+                    "name": "Not T", 
+                    "option": [
+                        "G", 
+                        "C", 
+                        "A"
+                    ], 
+                    "reverse": "B"
+                }, 
+                "W": {
+                    "name": "Weak bonds", 
+                    "option": [
+                        "A", 
+                        "T"
+                    ], 
+                    "reverse": "W"
+                }, 
+                "Y": {
+                    "name": "Pyrimidine", 
+                    "option": [
+                        "T", 
+                        "C"
+                    ], 
+                    "reverse": "R"
+                }
+            }
+        }, 
+        "kind": {
+            "element": {
+                "bai": {
+                    "name": "BAM Index"
+                }, 
+                "bam": {
+                    "name": "Binary Sequence Alignment"
+                }, 
+                "bed": {
+                    "name": "Browser Extensible Data"
+                }, 
+                "bt2": {
+                    "name": "Bowtie 2 Index"
+                }, 
+                "ebwt": {
+                    "name": "Bowtie 1 Index"
+                }, 
+                "fa": {
+                    "name": "Sequence format"
+                }, 
+                "fai": {
+                    "name": "FASTA Index"
+                }, 
+                "fastq": {
+                    "name": "Sequence Reads"
+                }, 
+                "gff": {
+                    "name": "General Feature Format"
+                }, 
+                "gtf": {
+                    "name": "General Transfer Format"
+                }, 
+                "ihrf": {
+                    "name": "Illumina HiSeq Run Folder"
+                }, 
+                "ihrz": {
+                    "name": "Compressed Illumina HiSeq Run Folder"
+                }, 
+                "ihsz": {
+                    "name": "Illumina HiSeq SAV Folder"
+                }, 
+                "imrf": {
+                    "name": "Illumina MiSeq Run Folder"
+                }, 
+                "imrz": {
+                    "name": "Compressed Illumina MiSeq Run Folder"
+                }, 
+                "imsz": {
+                    "name": "Illumina MiSeq SAV Folder"
+                }, 
+                "inrf": {
+                    "name": "Illumina NextSeq Run Folder"
+                }, 
+                "inrz": {
+                    "name": "Compressed Illumina NextSeq Run Folder"
+                }, 
+                "insz": {
+                    "name": "Illumina NextSeq SAV Folder"
+                }, 
+                "sam": {
+                    "name": "Sequence Alignment"
+                }, 
+                "vcf": {
+                    "name": "Variant Call format"
+                }
+            }
+        }, 
+        "media kind": {
+            "element": [
+                {
+                    "key": 53, 
+                    "name": "Sample"
+                }, 
+                {
+                    "key": 50, 
+                    "name": "Flowcell"
+                }, 
+                {
+                    "key": 52, 
+                    "name": "Library"
+                }, 
+                {
+                    "key": 51, 
+                    "name": "Lane"
+                }
+            ]
+        }, 
+        "nucleic to amino": {
+            "element": {
+                "AAA": {
+                    "code": "K"
+                }, 
+                "AAC": {
+                    "code": "N"
+                }, 
+                "AAG": {
+                    "code": "K"
+                }, 
+                "AAT": {
+                    "code": "N"
+                }, 
+                "ACA": {
+                    "code": "T"
+                }, 
+                "ACC": {
+                    "code": "T"
+                }, 
+                "ACG": {
+                    "code": "T"
+                }, 
+                "ACT": {
+                    "code": "T"
+                }, 
+                "AGA": {
+                    "code": "R"
+                }, 
+                "AGC": {
+                    "code": "S"
+                }, 
+                "AGG": {
+                    "code": "R"
+                }, 
+                "AGT": {
+                    "code": "S"
+                }, 
+                "ATA": {
+                    "code": "I"
+                }, 
+                "ATC": {
+                    "code": "I"
+                }, 
+                "ATG": {
+                    "code": "START"
+                }, 
+                "ATT": {
+                    "code": "I"
+                }, 
+                "CAA": {
+                    "code": "Q"
+                }, 
+                "CAC": {
+                    "code": "H"
+                }, 
+                "CAG": {
+                    "code": "Q"
+                }, 
+                "CAT": {
+                    "code": "H"
+                }, 
+                "CCA": {
+                    "code": "P"
+                }, 
+                "CCC": {
+                    "code": "P"
+                }, 
+                "CCG": {
+                    "code": "P"
+                }, 
+                "CCT": {
+                    "code": "P"
+                }, 
+                "CGA": {
+                    "code": "R"
+                }, 
+                "CGC": {
+                    "code": "R"
+                }, 
+                "CGG": {
+                    "code": "R"
+                }, 
+                "CGT": {
+                    "code": "R"
+                }, 
+                "CTA": {
+                    "code": "L"
+                }, 
+                "CTC": {
+                    "code": "L"
+                }, 
+                "CTG": {
+                    "code": "L"
+                }, 
+                "CTT": {
+                    "code": "L"
+                }, 
+                "GAA": {
+                    "code": "E"
+                }, 
+                "GAC": {
+                    "code": "D"
+                }, 
+                "GAG": {
+                    "code": "E"
+                }, 
+                "GAT": {
+                    "code": "D"
+                }, 
+                "GCA": {
+                    "code": "A"
+                }, 
+                "GCC": {
+                    "code": "A"
+                }, 
+                "GCG": {
+                    "code": "A"
+                }, 
+                "GCT": {
+                    "code": "A"
+                }, 
+                "GGA": {
+                    "code": "G"
+                }, 
+                "GGC": {
+                    "code": "G"
+                }, 
+                "GGG": {
+                    "code": "G"
+                }, 
+                "GGT": {
+                    "code": "G"
+                }, 
+                "GTA": {
+                    "code": "V"
+                }, 
+                "GTC": {
+                    "code": "V"
+                }, 
+                "GTG": {
+                    "code": "V"
+                }, 
+                "GTT": {
+                    "code": "V"
+                }, 
+                "TAA": {
+                    "code": "STOP"
+                }, 
+                "TAC": {
+                    "code": "Y"
+                }, 
+                "TAG": {
+                    "code": "STOP"
+                }, 
+                "TAT": {
+                    "code": "Y"
+                }, 
+                "TCA": {
+                    "code": "S"
+                }, 
+                "TCC": {
+                    "code": "S"
+                }, 
+                "TCG": {
+                    "code": "S"
+                }, 
+                "TCT": {
+                    "code": "S"
+                }, 
+                "TGA": {
+                    "code": "STOP"
+                }, 
+                "TGC": {
+                    "code": "C"
+                }, 
+                "TGG": {
+                    "code": "W"
+                }, 
+                "TGT": {
+                    "code": "C"
+                }, 
+                "TTA": {
+                    "code": "L"
+                }, 
+                "TTC": {
+                    "code": "F"
+                }, 
+                "TTG": {
+                    "code": "L"
+                }, 
+                "TTT": {
+                    "code": "F"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,1878 @@
+{
+    "service": {
+        "fastq": {
+            "branch": {
+                "service/medium/resource/fastq": {
+                    "dependency": [
+                        "/m/asset/{home id}"
+                    ], 
+                    "index": [
+                        "path digest"
+                    ], 
+                    "match": [
+                        {
+                            "filter": "^/m/resource/fastq/sha1/(?P<path_digest>[0-9a-f]{40})$"
+                        }
+                    ], 
+                    "namespace": "ns/medium/fastq/resource", 
+                    "resolvable": [
+                        {
+                            "canonical": true, 
+                            "format": "/m/resource/fastq/sha1/{path digest}"
+                        }
+                    ], 
+                    "table": "medium/resource"
+                }
+            }, 
+            "implementation": {
+                "class": "module.bio.service.fastq.FastqHandler"
+            }, 
+            "match": "^/m/resource/fastq/.*$"
+        }, 
+        "home": {
+            "branch": {
+                "service/home/barcode": {
+                    "collect": [
+                        "/c/web/barcode/{web barcode id}", 
+                        "/c/local/barcode/{barcode uuid}"
+                    ], 
+                    "index": [
+                        "barcode id", 
+                        "barcode uuid", 
+                        "web barcode id"
+                    ], 
+                    "match": [
+                        {
+                            "filter": "^/h/barcode/(?P<barcode_id>[0-9]+)$"
+                        }, 
+                        {
+                            "depend": "/c/local/barcode/{barcode uuid}", 
+                            "filter": "^/h/barcode/uuid/(?P<barcode_uuid>(?P<uuid>[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}))$"
+                        }, 
+                        {
+                            "depend": "/c/web/barcode/{web barcode id}", 
+                            "filter": "^/h/barcode/web/(?P<web_barcode_id>[0-9]+)$"
+                        }
+                    ], 
+                    "qualified key": {
+                        "home id": "barcode id", 
+                        "uuid": "barcode uuid"
+                    }, 
+                    "resolvable": [
+                        {
+                            "format": "/h/{home id}"
+                        }, 
+                        {
+                            "canonical": true, 
+                            "format": "/h/barcode/{barcode id}"
+                        }, 
+                        {
+                            "format": "/h/barcode/uuid/{barcode uuid}"
+                        }, 
+                        {
+                            "format": "/h/barcode/web/{web barcode id}"
+                        }
+                    ], 
+                    "table": "home"
+                }, 
+                "service/home/flowcell": {
+                    "collect": [
+                        "/c/web/flowcell/illumina/{illumina flowcell id}", 
+                        "/c/local/flowcell/{flowcell uuid}"
+                    ], 
+                    "index": [
+                        "media kind", 
+                        "flowcell id", 
+                        "flowcell uuid", 
+                        "illumina flowcell id", 
+                        "illumina instrument id", 
+                        "instrument run count", 
+                        "web flowcell id", 
+                        "flowcell scheduled"
+                    ], 
+                    "match": [
+                        {
+                            "filter": "^/h/flowcell/(?P<flowcell_id>[0-9]+)$"
+                        }, 
+                        {
+                            "depend": "/c/local/flowcell/illumina/{illumina flowcell id}", 
+                            "filter": "^/h/flowcell/illumina/(?P<illumina_flowcell_id>(?:[A-Z0-9]{9}|[A-Z0-9]{9}-[A-Z0-9]{5}))$"
+                        }, 
+                        {
+                            "filter": "^/h/flowcell/illumina/(?P<illumina_instrument_id>(?:SN|M)[0-9]+)/(?P<instrument_run_count>[0-9]+)$"
+                        }, 
+                        {
+                            "depend": "/c/web/flowcell/{web flowcell id}", 
+                            "filter": "^/h/flowcell/web/(?P<web_flowcell_id>[0-9]+)$"
+                        }, 
+                        {
+                            "depend": "/c/local/flowcell/{flowcell uuid}", 
+                            "filter": "^/h/flowcell/uuid/(?P<flowcell_uuid>(?P<uuid>[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}))$"
+                        }
+                    ], 
+                    "override": {
+                        "media kind": 50
+                    }, 
+                    "qualified key": {
+                        "home id": "flowcell id", 
+                        "uuid": "flowcell uuid"
+                    }, 
+                    "resolvable": [
+                        {
+                            "format": "/h/{home id}"
+                        }, 
+                        {
+                            "canonical": true, 
+                            "format": "/h/flowcell/{flowcell id}"
+                        }, 
+                        {
+                            "format": "/h/flowcell/illumina/{illumina flowcell id}"
+                        }, 
+                        {
+                            "format": "/h/flowcell/illumina/{illumina instrument id}/{instrument run count}"
+                        }, 
+                        {
+                            "format": "/h/flowcell/web/{web flowcell id}"
+                        }, 
+                        {
+                            "format": "/h/flowcell/uuid/{flowcell uuid}"
+                        }
+                    ], 
+                    "table": "home"
+                }, 
+                "service/home/group": {
+                    "index": [
+                        "web group id"
+                    ], 
+                    "match": [
+                        {
+                            "depend": "/c/web/group/{web group id}", 
+                            "filter": "^/h/group/web/(?P<web_group_id>[0-9]+)$"
+                        }, 
+                        {
+                            "depend": "/c/web/group/handle/{group handle}", 
+                            "filter": "^/h/group/handle/(?P<group_handle>[0-9a-z]+)$"
+                        }
+                    ], 
+                    "resolvable": [
+                        {
+                            "format": "/h/group/web/{web group id}"
+                        }
+                    ]
+                }, 
+                "service/home/instrument": {
+                    "index": [
+                        "uuid", 
+                        "instrument id", 
+                        "illumina instrument id"
+                    ], 
+                    "match": [
+                        {
+                            "filter": "^/h/instrument/(?P<instrument_id>[0-9]+)$"
+                        }, 
+                        {
+                            "filter": "^/h/instrument/illumina/(?P<illumina_instrument_id>(?:SN|M)[0-9]+)$"
+                        }
+                    ], 
+                    "qualified key": {
+                        "home id": "instrument id", 
+                        "uuid": "instrument uuid"
+                    }, 
+                    "resolvable": [
+                        {
+                            "format": "/h/{home id}"
+                        }, 
+                        {
+                            "canonical": true, 
+                            "format": "/h/instrument/{instrument id}"
+                        }, 
+                        {
+                            "format": "/h/instrument/illumina/{illumina instrument id}"
+                        }
+                    ], 
+                    "table": "home"
+                }, 
+                "service/home/lane": {
+                    "collect": [
+                        "/h/flowcell/{flowcell id}", 
+                        "/h/flowcell/uuid/{flowcell uuid}", 
+                        "/h/flowcell/illumina/{illumina flowcell id}", 
+                        "/c/web/lane/{web flowcell id}/{lane number}", 
+                        "/c/local/lane/{flowcell uuid}/{lane number}", 
+                        "/c/local/lane/{lane uuid}"
+                    ], 
+                    "index": [
+                        "lane id", 
+                        "lane uuid", 
+                        "web lane id", 
+                        "flowcell id", 
+                        "flowcell uuid", 
+                        "web flowcell id", 
+                        "illumina flowcell id", 
+                        "lane number", 
+                        "media kind", 
+                        "flowcell scheduled"
+                    ], 
+                    "match": [
+                        {
+                            "filter": "^/h/lane/(?P<lane_id>[0-9]+)$"
+                        }, 
+                        {
+                            "depend": "/c/local/lane/{flowcell uuid}/{lane number}", 
+                            "filter": "^/h/lane/(?P<flowcell_id>[0-9]+)/(?P<lane_number>[0-9]+)$"
+                        }, 
+                        {
+                            "depend": "/c/local/lane/{lane uuid}", 
+                            "filter": "^/h/lane/illumina/(?P<illumina_flowcell_id>(?:[A-Z0-9]{9}|[A-Z0-9]{9}-[A-Z0-9]{5}))/(?P<lane_number>[0-9]+)$"
+                        }, 
+                        {
+                            "depend": "/c/web/lane/{web lane id}", 
+                            "filter": "^/h/lane/web/(?P<web_lane_id>[0-9]+)$"
+                        }, 
+                        {
+                            "depend": "/c/local/lane/{lane uuid}", 
+                            "filter": "^/h/lane/uuid/(?P<lane_uuid>(?P<uuid>[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}))$"
+                        }, 
+                        {
+                            "depend": "/c/web/lane/{web flowcell id}/{lane number}", 
+                            "filter": "^/h/lane/web/(?P<web_flowcell_id>[0-9]+)/(?P<lane_number>[0-9]+)$"
+                        }, 
+                        {
+                            "depend": "/c/local/lane/{flowcell uuid}/{lane number}", 
+                            "filter": "^/h/lane/uuid/(?P<flowcell_uuid>[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})/(?P<lane_number>[0-9]+)$"
+                        }
+                    ], 
+                    "override": {
+                        "media kind": 51
+                    }, 
+                    "qualified key": {
+                        "home id": "lane id", 
+                        "uuid": "lane uuid"
+                    }, 
+                    "resolvable": [
+                        {
+                            "format": "/h/{home id}"
+                        }, 
+                        {
+                            "canonical": true, 
+                            "format": "/h/lane/{lane id}"
+                        }, 
+                        {
+                            "format": "/h/lane/{flowcell id}/{lane number}"
+                        }, 
+                        {
+                            "format": "/h/lane/illumina/{illumina flowcell id}/{lane number}"
+                        }, 
+                        {
+                            "format": "/h/lane/web/{web lane id}"
+                        }, 
+                        {
+                            "format": "/h/lane/uuid/{lane uuid}"
+                        }, 
+                        {
+                            "format": "/h/lane/web/{web flowcell id}/{lane number}"
+                        }, 
+                        {
+                            "format": "/h/lane/uuid/{flowcell uuid}/{lane number}"
+                        }
+                    ], 
+                    "table": "home"
+                }, 
+                "service/home/library": {
+                    "collect": [
+                        "/c/web/library/{web library id}", 
+                        "/c/local/library/{library uuid}"
+                    ], 
+                    "index": [
+                        "library id", 
+                        "library uuid", 
+                        "web library id", 
+                        "library name", 
+                        "simple library name", 
+                        "media kind", 
+                        "flowcell scheduled"
+                    ], 
+                    "match": [
+                        {
+                            "filter": "^/h/library/(?P<library_id>[0-9]+)$"
+                        }, 
+                        {
+                            "depend": "/c/web/library/{web library id}", 
+                            "filter": "^/h/library/web/(?P<web_library_id>[0-9]+)$"
+                        }, 
+                        {
+                            "depend": "/c/local/library/{library uuid}", 
+                            "filter": "^/h/library/uuid/(?P<library_uuid>(?P<uuid>[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}))$"
+                        }
+                    ], 
+                    "override": {
+                        "media kind": 52
+                    }, 
+                    "qualified key": {
+                        "home id": "library id", 
+                        "uuid": "library uuid"
+                    }, 
+                    "resolvable": [
+                        {
+                            "format": "/h/{home id}"
+                        }, 
+                        {
+                            "canonical": true, 
+                            "format": "/h/library/{library id}"
+                        }, 
+                        {
+                            "format": "/h/library/web/{web library id}"
+                        }, 
+                        {
+                            "format": "/h/library/uuid/{library uuid}"
+                        }
+                    ], 
+                    "table": "home"
+                }, 
+                "service/home/organism": {
+                    "collect": [
+                        "/c/local/organism/{organism uuid}"
+                    ], 
+                    "index": [
+                        "organism id", 
+                        "organism handle", 
+                        "organism uuid", 
+                        "web organism id"
+                    ], 
+                    "match": [
+                        {
+                            "filter": "^/h/organism/(?P<organism_id>[0-9]+)$"
+                        }, 
+                        {
+                            "filter": "^/h/organism/handle/(?P<organism_handle>[0-9a-z]+)$"
+                        }, 
+                        {
+                            "filter": "^/h/organism/web/(?P<web_organism_id>[0-9]+)$"
+                        }, 
+                        {
+                            "filter": "^/h/organism/uuid/(?P<organism_uuid>(?P<uuid>[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}))$"
+                        }
+                    ], 
+                    "qualified key": {
+                        "home id": "organism id", 
+                        "uuid": "organism uuid"
+                    }, 
+                    "resolvable": [
+                        {
+                            "format": "/h/{home id}"
+                        }, 
+                        {
+                            "canonical": true, 
+                            "format": "/h/organism/{organism id}"
+                        }, 
+                        {
+                            "format": "/h/organism/handle/{organism handle}"
+                        }, 
+                        {
+                            "format": "/h/organism/web/{web organism id}"
+                        }, 
+                        {
+                            "format": "/h/organism/uuid/{organism uuid}"
+                        }
+                    ], 
+                    "table": "home"
+                }, 
+                "service/home/person": {
+                    "index": [
+                        "web person id"
+                    ], 
+                    "match": [
+                        {
+                            "depend": "/c/web/person/{web person id}", 
+                            "filter": "^/h/person/web/(?P<web_person_id>[0-9]+)$"
+                        }, 
+                        {
+                            "depend": "/c/web/person/handle/{person handle}", 
+                            "filter": "^/h/person/handle/(?P<person_handle>[0-9a-z]+)$"
+                        }
+                    ], 
+                    "resolvable": [
+                        {
+                            "format": "/h/person/web/{web person id}"
+                        }
+                    ]
+                }, 
+                "service/home/pool": {
+                    "collect": [
+                        "/c/web/pool/{web pool id}", 
+                        "/c/local/pool/{pool uuid}"
+                    ], 
+                    "index": [
+                        "pool id", 
+                        "pool uuid", 
+                        "web pool id"
+                    ], 
+                    "match": [
+                        {
+                            "filter": "^/h/pool/(?P<pool_id>[0-9]+)$"
+                        }, 
+                        {
+                            "depend": "/c/web/pool/{web pool id}", 
+                            "filter": "^/h/pool/web/(?P<web_pool_id>[0-9]+)$"
+                        }, 
+                        {
+                            "depend": "/c/local/pool/{pool uuid}", 
+                            "filter": "^/h/pool/uuid/(?P<pool_uuid>(?P<uuid>[[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}))$"
+                        }
+                    ], 
+                    "qualified key": {
+                        "home id": "pool id", 
+                        "uuid": "pool uuid"
+                    }, 
+                    "resolvable": [
+                        {
+                            "format": "/h/{home id}"
+                        }, 
+                        {
+                            "canonical": true, 
+                            "format": "/h/pool/{pool id}"
+                        }, 
+                        {
+                            "format": "/h/pool/web/{web pool id}"
+                        }, 
+                        {
+                            "format": "/h/pool/uuid/{pool uuid}"
+                        }
+                    ], 
+                    "table": "home"
+                }, 
+                "service/home/sample": {
+                    "collect": [
+                        "/c/web/sample/{web sample id}", 
+                        "/c/local/sample/{sample uuid}"
+                    ], 
+                    "index": [
+                        "sample id", 
+                        "sample uuid", 
+                        "web sample id", 
+                        "media kind", 
+                        "flowcell scheduled"
+                    ], 
+                    "match": [
+                        {
+                            "filter": "^/h/sample/(?P<sample_id>[0-9]+)$"
+                        }, 
+                        {
+                            "depend": "/c/web/sample/{web sample id}", 
+                            "filter": "^/h/sample/web/(?P<web_sample_id>[0-9]+)$"
+                        }, 
+                        {
+                            "depend": "/c/local/sample/{sample uuid}", 
+                            "filter": "^/h/sample/uuid/(?P<sample_uuid>(?P<uuid>[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}))$"
+                        }
+                    ], 
+                    "override": {
+                        "media kind": 53
+                    }, 
+                    "qualified key": {
+                        "home id": "sample id", 
+                        "uuid": "sample uuid"
+                    }, 
+                    "resolvable": [
+                        {
+                            "format": "/h/{home id}"
+                        }, 
+                        {
+                            "canonical": true, 
+                            "format": "/h/sample/{sample id}"
+                        }, 
+                        {
+                            "format": "/h/sample/web/{web sample id}"
+                        }, 
+                        {
+                            "format": "/h/sample/uuid/{sample uuid}"
+                        }
+                    ], 
+                    "table": "home"
+                }
+            }
+        }, 
+        "illumina": {
+            "branch": {
+                "service/medium/resource/ihrf": {
+                    "dependency": [
+                        "/m/asset/{flowcell id}"
+                    ], 
+                    "index": [
+                        "kind", 
+                        "flowcell id", 
+                        "path digest", 
+                        "number of nibbles", 
+                        "illumina lane count", 
+                        "illumina instrument id", 
+                        "illumina flowcell id"
+                    ], 
+                    "match": [
+                        {
+                            "filter": "^/m/resource/ihrf/sha1/(?P<path_digest>[0-9a-f]{40})$"
+                        }
+                    ], 
+                    "namespace": "ns/medium/flowcell/resource", 
+                    "resolvable": [
+                        {
+                            "canonical": true, 
+                            "format": "/m/resource/ihrf/sha1/{path digest}"
+                        }
+                    ], 
+                    "table": "medium/resource"
+                }, 
+                "service/medium/resource/ihrz": {
+                    "dependency": [
+                        "/m/asset/{flowcell id}"
+                    ], 
+                    "index": [
+                        "kind", 
+                        "flowcell id", 
+                        "path digest", 
+                        "number of nibbles", 
+                        "illumina lane count", 
+                        "illumina instrument id", 
+                        "illumina flowcell id"
+                    ], 
+                    "match": [
+                        {
+                            "filter": "^/m/resource/ihrz/sha1/(?P<path_digest>[0-9a-f]{40})$"
+                        }
+                    ], 
+                    "namespace": "ns/medium/flowcell/resource", 
+                    "resolvable": [
+                        {
+                            "canonical": true, 
+                            "format": "/m/resource/ihrz/sha1/{path digest}"
+                        }
+                    ], 
+                    "table": "medium/resource"
+                }, 
+                "service/medium/resource/ihsz": {
+                    "dependency": [
+                        "/m/asset/{flowcell id}"
+                    ], 
+                    "index": [
+                        "kind", 
+                        "flowcell id", 
+                        "path digest", 
+                        "illumina instrument id", 
+                        "illumina flowcell id"
+                    ], 
+                    "match": [
+                        {
+                            "filter": "^/m/resource/ihsz/sha1/(?P<path_digest>[0-9a-f]{40})$"
+                        }
+                    ], 
+                    "namespace": "ns/medium/flowcell/resource", 
+                    "resolvable": [
+                        {
+                            "canonical": true, 
+                            "format": "/m/resource/ihsz/sha1/{path digest}"
+                        }
+                    ], 
+                    "table": "medium/resource"
+                }, 
+                "service/medium/resource/imrf": {
+                    "dependency": [
+                        "/m/asset/{flowcell id}"
+                    ], 
+                    "index": [
+                        "kind", 
+                        "flowcell id", 
+                        "path digest", 
+                        "number of nibbles", 
+                        "illumina lane count", 
+                        "illumina instrument id", 
+                        "illumina flowcell id"
+                    ], 
+                    "match": [
+                        {
+                            "filter": "^/m/resource/imrf/sha1/(?P<path_digest>[0-9a-f]{40})$"
+                        }
+                    ], 
+                    "namespace": "ns/medium/flowcell/resource", 
+                    "resolvable": [
+                        {
+                            "canonical": true, 
+                            "format": "/m/resource/imrf/sha1/{path digest}"
+                        }
+                    ], 
+                    "table": "medium/resource"
+                }, 
+                "service/medium/resource/imrz": {
+                    "dependency": [
+                        "/m/asset/{flowcell id}"
+                    ], 
+                    "index": [
+                        "kind", 
+                        "flowcell id", 
+                        "path digest", 
+                        "number of nibbles", 
+                        "illumina lane count", 
+                        "illumina instrument id", 
+                        "illumina flowcell id"
+                    ], 
+                    "match": [
+                        {
+                            "filter": "^/m/resource/imrz/sha1/(?P<path_digest>[0-9a-f]{40})$"
+                        }
+                    ], 
+                    "namespace": "ns/medium/flowcell/resource", 
+                    "resolvable": [
+                        {
+                            "canonical": true, 
+                            "format": "/m/resource/imrz/sha1/{path digest}"
+                        }
+                    ], 
+                    "table": "medium/resource"
+                }, 
+                "service/medium/resource/imsz": {
+                    "dependency": [
+                        "/m/asset/{flowcell id}"
+                    ], 
+                    "index": [
+                        "kind", 
+                        "flowcell id", 
+                        "path digest", 
+                        "illumina instrument id", 
+                        "illumina flowcell id"
+                    ], 
+                    "match": [
+                        {
+                            "filter": "^/m/resource/imsz/sha1/(?P<path_digest>[0-9a-f]{40})$"
+                        }
+                    ], 
+                    "namespace": "ns/medium/flowcell/resource", 
+                    "resolvable": [
+                        {
+                            "canonical": true, 
+                            "format": "/m/resource/imsz/sha1/{path digest}"
+                        }
+                    ], 
+                    "table": "medium/resource"
+                }, 
+                "service/medium/resource/inrf": {
+                    "dependency": [
+                        "/m/asset/{flowcell id}"
+                    ], 
+                    "index": [
+                        "kind", 
+                        "flowcell id", 
+                        "path digest", 
+                        "number of nibbles", 
+                        "illumina lane count", 
+                        "illumina instrument id", 
+                        "illumina flowcell id"
+                    ], 
+                    "match": [
+                        {
+                            "filter": "^/m/resource/inrf/sha1/(?P<path_digest>[0-9a-f]{40})$"
+                        }
+                    ], 
+                    "namespace": "ns/medium/flowcell/resource", 
+                    "resolvable": [
+                        {
+                            "canonical": true, 
+                            "format": "/m/resource/inrf/sha1/{path digest}"
+                        }
+                    ], 
+                    "table": "medium/resource"
+                }, 
+                "service/medium/resource/inrz": {
+                    "dependency": [
+                        "/m/asset/{flowcell id}"
+                    ], 
+                    "index": [
+                        "kind", 
+                        "flowcell id", 
+                        "path digest", 
+                        "number of nibbles", 
+                        "illumina lane count", 
+                        "illumina instrument id", 
+                        "illumina flowcell id"
+                    ], 
+                    "match": [
+                        {
+                            "filter": "^/m/resource/inrz/sha1/(?P<path_digest>[0-9a-f]{40})$"
+                        }
+                    ], 
+                    "namespace": "ns/medium/flowcell/resource", 
+                    "resolvable": [
+                        {
+                            "canonical": true, 
+                            "format": "/m/resource/inrz/sha1/{path digest}"
+                        }
+                    ], 
+                    "table": "medium/resource"
+                }, 
+                "service/medium/resource/insz": {
+                    "dependency": [
+                        "/m/asset/{flowcell id}"
+                    ], 
+                    "index": [
+                        "kind", 
+                        "flowcell id", 
+                        "path digest", 
+                        "illumina instrument id", 
+                        "illumina flowcell id"
+                    ], 
+                    "match": [
+                        {
+                            "filter": "^/m/resource/insz/sha1/(?P<path_digest>[0-9a-f]{40})$"
+                        }
+                    ], 
+                    "namespace": "ns/medium/flowcell/resource", 
+                    "resolvable": [
+                        {
+                            "canonical": true, 
+                            "format": "/m/resource/insz/sha1/{path digest}"
+                        }
+                    ], 
+                    "table": "medium/resource"
+                }
+            }, 
+            "implementation": {
+                "class": "module.bio.service.illumina.IlluminaHandler"
+            }, 
+            "match": "^/m/resource/(?:i[hmn][rs][fz])/.*$"
+        }, 
+        "knowledge": {
+            "branch": {
+                "service/knowledge/barcode": {
+                    "aggregate": [
+                        {
+                            "order": 10, 
+                            "uri": "/c/web/barcode/{web barcode id}"
+                        }, 
+                        {
+                            "order": 100, 
+                            "uri": "/c/local/barcode/{barcode uuid}"
+                        }
+                    ], 
+                    "collect": [
+                        "/h/barcode/{barcode id}"
+                    ], 
+                    "index": [
+                        "barcode id", 
+                        "barcode uuid", 
+                        "web barcode id"
+                    ], 
+                    "match": [
+                        {
+                            "depend": "/h/barcode/{barcode id}", 
+                            "filter": "^/k/barcode/(?P<barcode_id>[0-9]+)$"
+                        }
+                    ], 
+                    "resolvable": [
+                        {
+                            "canonical": true, 
+                            "format": "/k/barcode/{barcode id}"
+                        }
+                    ], 
+                    "table": "knowledge/barcode"
+                }, 
+                "service/knowledge/flowcell": {
+                    "aggregate": [
+                        {
+                            "order": 10, 
+                            "uri": "/c/web/flowcell/{web flowcell id}"
+                        }, 
+                        {
+                            "order": 20, 
+                            "uri": "/c/web/flowcell/illumina/{illumina flowcell id}"
+                        }, 
+                        {
+                            "order": 100, 
+                            "uri": "/c/local/flowcell/{flowcell uuid}"
+                        }, 
+                        {
+                            "order": 110, 
+                            "uri": "/k/flowcell/{flowcell id}/lanes"
+                        }
+                    ], 
+                    "collect": [
+                        "/h/flowcell/{flowcell id}"
+                    ], 
+                    "index": [
+                        "media kind", 
+                        "flowcell id", 
+                        "flowcell uuid", 
+                        "illumina flowcell id", 
+                        "illumina instrument id", 
+                        "instrument run count", 
+                        "web flowcell id", 
+                        "flowcell scheduled"
+                    ], 
+                    "match": [
+                        {
+                            "depend": "/h/flowcell/{flowcell id}", 
+                            "filter": "^/k/flowcell/(?P<flowcell_id>[0-9]+)$"
+                        }
+                    ], 
+                    "resolvable": [
+                        {
+                            "canonical": true, 
+                            "format": "/k/flowcell/{flowcell id}"
+                        }
+                    ], 
+                    "table": "knowledge/flowcell"
+                }, 
+                "service/knowledge/flowcell/lanes": {
+                    "aggregate": [
+                        {
+                            "order": 10, 
+                            "uri": "/c/web/flowcell/{web flowcell id}/lanes"
+                        }, 
+                        {
+                            "order": 100, 
+                            "uri": "/c/local/flowcell/{flowcell uuid}/lanes"
+                        }
+                    ], 
+                    "collect": [
+                        "/h/flowcell/{flowcell id}"
+                    ], 
+                    "index": [
+                        "flowcell id", 
+                        "flowcell uuid", 
+                        "web flowcell id"
+                    ], 
+                    "match": [
+                        {
+                            "depend": "/h/flowcell/{flowcell id}", 
+                            "filter": "^/k/flowcell/(?P<flowcell_id>[0-9]+)/lanes$"
+                        }
+                    ], 
+                    "resolvable": [
+                        {
+                            "canonical": true, 
+                            "format": "/k/flowcell/{flowcell id}/lanes"
+                        }
+                    ], 
+                    "table": "knowledge/flowcell/lanes"
+                }, 
+                "service/knowledge/group": {
+                    "aggregate": [
+                        {
+                            "order": 10, 
+                            "uri": "/c/web/group/{web group id}"
+                        }, 
+                        {
+                            "order": 20, 
+                            "uri": "/c/web/group/{web group id}/people"
+                        }
+                    ], 
+                    "index": [
+                        "web group id"
+                    ]
+                }, 
+                "service/knowledge/instrument": {
+                    "collect": [
+                        "/h/instrument/{instrument id}"
+                    ], 
+                    "index": [
+                        "instrument id", 
+                        "illumina instrument id"
+                    ], 
+                    "match": [
+                        {
+                            "filter": "^/k/instrument/(?P<instrument_id>[0-9]+)$"
+                        }
+                    ], 
+                    "resolvable": [
+                        {
+                            "canonical": true, 
+                            "format": "/k/instrument/{instrument id}"
+                        }
+                    ], 
+                    "table": "knowledge/instrument"
+                }, 
+                "service/knowledge/lane": {
+                    "aggregate": [
+                        {
+                            "order": 10, 
+                            "uri": "/c/web/lane/{web lane id}"
+                        }, 
+                        {
+                            "order": 100, 
+                            "uri": "/c/local/lane/{lane uuid}"
+                        }, 
+                        {
+                            "order": 110, 
+                            "uri": "/k/lane/{lane id}/pools"
+                        }
+                    ], 
+                    "collect": [
+                        "/h/lane/{lane id}"
+                    ], 
+                    "index": [
+                        "lane id", 
+                        "lane uuid", 
+                        "flowcell id", 
+                        "flowcell uuid", 
+                        "web lane id", 
+                        "illumina flowcell id", 
+                        "lane number"
+                    ], 
+                    "match": [
+                        {
+                            "depend": "/h/lane/{lane id}", 
+                            "filter": "^/k/lane/(?P<lane_id>[0-9]+)$"
+                        }, 
+                        {
+                            "depend": "/h/lane/{flowcell id}/{lane number}", 
+                            "filter": "^/k/lane/(?P<flowcell_id>[0-9]+)/(?P<lane_number>[0-9]+)$"
+                        }
+                    ], 
+                    "resolvable": [
+                        {
+                            "canonical": true, 
+                            "format": "/k/lane/{lane id}"
+                        }, 
+                        {
+                            "format": "/k/lane/{flowcell id}/{lane number}"
+                        }
+                    ], 
+                    "table": "knowledge/lane"
+                }, 
+                "service/knowledge/lane/pools": {
+                    "aggregate": [
+                        {
+                            "order": 10, 
+                            "uri": "/c/web/lane/{web lane id}/pools"
+                        }, 
+                        {
+                            "order": 100, 
+                            "uri": "/c/local/lane/{lane uuid}/pools"
+                        }
+                    ], 
+                    "collect": [
+                        "/h/lane/{lane id}"
+                    ], 
+                    "index": [
+                        "lane id", 
+                        "lane uuid", 
+                        "web lane id"
+                    ], 
+                    "match": [
+                        {
+                            "depend": "/h/lane/{lane id}", 
+                            "filter": "^/k/lane/(?P<lane_id>[0-9]+)/pools$"
+                        }
+                    ], 
+                    "resolvable": [
+                        {
+                            "canonical": true, 
+                            "format": "/k/lane/{lane id}/pools"
+                        }
+                    ], 
+                    "table": "knowledge/lane/pools"
+                }, 
+                "service/knowledge/library": {
+                    "aggregate": [
+                        {
+                            "order": 10, 
+                            "uri": "/c/web/library/{web library id}"
+                        }, 
+                        {
+                            "order": 100, 
+                            "uri": "/c/local/library/{library uuid}"
+                        }, 
+                        {
+                            "order": 110, 
+                            "uri": "/k/library/{library id}/barcodes"
+                        }
+                    ], 
+                    "collect": [
+                        "/h/library/{library id}"
+                    ], 
+                    "index": [
+                        "library id", 
+                        "library uuid", 
+                        "web library id"
+                    ], 
+                    "match": [
+                        {
+                            "depend": "/h/library/{library id}", 
+                            "filter": "^/k/library/(?P<library_id>[0-9]+)$"
+                        }
+                    ], 
+                    "resolvable": [
+                        {
+                            "canonical": true, 
+                            "format": "/k/library/{library id}"
+                        }
+                    ], 
+                    "table": "knowledge/library"
+                }, 
+                "service/knowledge/library/barcodes": {
+                    "aggregate": [
+                        {
+                            "order": 10, 
+                            "uri": "/c/web/library/{web library id}/barcodes"
+                        }, 
+                        {
+                            "order": 100, 
+                            "uri": "/c/local/library/{library uuid}/barcodes"
+                        }
+                    ], 
+                    "collect": [
+                        "/h/library/{library id}"
+                    ], 
+                    "index": [
+                        "library id", 
+                        "library uuid", 
+                        "web library id"
+                    ], 
+                    "match": [
+                        {
+                            "depend": "/h/library/{library id}", 
+                            "filter": "^/k/library/(?P<library_id>[0-9]+)/barcodes$"
+                        }
+                    ], 
+                    "resolvable": [
+                        {
+                            "canonical": true, 
+                            "format": "/k/library/{library id}/barcodes"
+                        }
+                    ], 
+                    "table": "knowledge/library/barcodes"
+                }, 
+                "service/knowledge/organism": {
+                    "aggregate": [
+                        {
+                            "order": 10, 
+                            "uri": "/c/web/organism/{web organism id}"
+                        }, 
+                        {
+                            "order": 100, 
+                            "uri": "/c/local/organism/{organism uuid}"
+                        }
+                    ], 
+                    "collect": [
+                        "/h/organism/{organism id}"
+                    ], 
+                    "index": [
+                        "organism id", 
+                        "organism uuid", 
+                        "web organism id"
+                    ], 
+                    "match": [
+                        {
+                            "depend": "/h/organism/{organism id}", 
+                            "filter": "^/k/organism/(?P<organism_id>[0-9]+)$"
+                        }
+                    ], 
+                    "resolvable": [
+                        {
+                            "canonical": true, 
+                            "format": "/k/organism/{organism id}"
+                        }
+                    ], 
+                    "table": "knowledge/organism"
+                }, 
+                "service/knowledge/person": {
+                    "aggregate": [
+                        {
+                            "order": 10, 
+                            "uri": "/c/web/person/{web person id}"
+                        }
+                    ], 
+                    "index": [
+                        "web person id"
+                    ]
+                }, 
+                "service/knowledge/pool": {
+                    "aggregate": [
+                        {
+                            "order": 10, 
+                            "uri": "/c/web/pool/{web pool id}"
+                        }, 
+                        {
+                            "order": 100, 
+                            "uri": "/c/local/pool/{pool uuid}"
+                        }, 
+                        {
+                            "order": 120, 
+                            "uri": "/k/pool/{pool id}/samples"
+                        }
+                    ], 
+                    "collect": [
+                        "/h/pool/{pool id}"
+                    ], 
+                    "index": [
+                        "pool id", 
+                        "pool uuid", 
+                        "web pool id"
+                    ], 
+                    "match": [
+                        {
+                            "depend": "/h/pool/{pool id}", 
+                            "filter": "^/k/pool/(?P<pool_id>[0-9]+)$"
+                        }
+                    ], 
+                    "resolvable": [
+                        {
+                            "canonical": true, 
+                            "format": "/k/pool/{pool id}"
+                        }
+                    ], 
+                    "table": "knowledge/pool"
+                }, 
+                "service/knowledge/pool/samples": {
+                    "aggregate": [
+                        {
+                            "order": 10, 
+                            "uri": "/c/web/pool/{web pool id}/samples"
+                        }, 
+                        {
+                            "order": 100, 
+                            "uri": "/c/local/pool/{pool uuid}/samples"
+                        }
+                    ], 
+                    "collect": [
+                        "/h/pool/{pool id}"
+                    ], 
+                    "index": [
+                        "pool id", 
+                        "pool uuid", 
+                        "web pool id"
+                    ], 
+                    "match": [
+                        {
+                            "depend": "/h/pool/{pool id}", 
+                            "filter": "^/k/pool/(?P<pool_id>[0-9]+)/samples$"
+                        }
+                    ], 
+                    "resolvable": [
+                        {
+                            "canonical": true, 
+                            "format": "/k/pool/{pool id}/samples"
+                        }
+                    ], 
+                    "table": "knowledge/pool/samples"
+                }, 
+                "service/knowledge/sample": {
+                    "aggregate": [
+                        {
+                            "order": 10, 
+                            "uri": "/c/web/sample/{web sample id}"
+                        }, 
+                        {
+                            "order": 100, 
+                            "uri": "/c/local/sample/{sample uuid}"
+                        }
+                    ], 
+                    "collect": [
+                        "/h/sample/{sample id}"
+                    ], 
+                    "index": [
+                        "sample id", 
+                        "sample uuid", 
+                        "web sample id"
+                    ], 
+                    "match": [
+                        {
+                            "depend": "/h/sample/{sample id}", 
+                            "filter": "^/k/sample/(?P<sample_id>[0-9]+)$"
+                        }
+                    ], 
+                    "resolvable": [
+                        {
+                            "canonical": true, 
+                            "format": "/k/sample/{sample id}"
+                        }
+                    ], 
+                    "table": "knowledge/sample"
+                }
+            }
+        }, 
+        "local": {
+            "branch": {
+                "service/document/local/barcode": {
+                    "index": [
+                        "barcode uuid"
+                    ], 
+                    "match": [
+                        {
+                            "filter": "^/c/local/barcode/(?P<barcode_uuid>[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})$"
+                        }
+                    ], 
+                    "resolvable": [
+                        {
+                            "canonical": true, 
+                            "format": "/c/local/barcode/{barcode uuid}"
+                        }
+                    ], 
+                    "table": "local/barcode"
+                }, 
+                "service/document/local/flowcell": {
+                    "index": [
+                        "flowcell uuid", 
+                        "illumina flowcell id"
+                    ], 
+                    "match": [
+                        {
+                            "filter": "^/c/local/flowcell/(?P<flowcell_uuid>[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})$"
+                        }, 
+                        {
+                            "filter": "^/c/local/flowcell/illumina/(?P<illumina_flowcell_id>(?:[A-Z0-9]{9}|[A-Z0-9]{9}-[A-Z0-9]{5}))$"
+                        }
+                    ], 
+                    "resolvable": [
+                        {
+                            "canonical": true, 
+                            "format": "/c/local/flowcell/{flowcell uuid}"
+                        }, 
+                        {
+                            "format": "/c/local/flowcell/illumina/{illumina flowcell id}"
+                        }
+                    ], 
+                    "table": "local/flowcell"
+                }, 
+                "service/document/local/flowcell/lanes": {
+                    "index": [
+                        "flowcell uuid"
+                    ], 
+                    "match": [
+                        {
+                            "filter": "^/c/local/flowcell/(?P<flowcell_uuid>[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})/lanes$"
+                        }
+                    ], 
+                    "resolvable": [
+                        {
+                            "canonical": true, 
+                            "format": "/c/local/flowcell/{flowcell uuid}/lanes"
+                        }
+                    ], 
+                    "table": "local/flowcell/lanes"
+                }, 
+                "service/document/local/lane": {
+                    "index": [
+                        "lane uuid", 
+                        "flowcell uuid", 
+                        "illumina flowcell id", 
+                        "lane number"
+                    ], 
+                    "match": [
+                        {
+                            "filter": "^/c/local/lane/(?P<lane_uuid>[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})$"
+                        }, 
+                        {
+                            "filter": "^/c/local/lane/(?P<flowcell_uuid>[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})/(?P<lane_number>[0-9]+)$"
+                        }, 
+                        {
+                            "filter": "^/c/local/lane/illumina/(?P<illumina_flowcell_id>(?:[A-Z0-9]{9}|[A-Z0-9]{9}-[A-Z0-9]{5}))/(?P<lane_number>[0-9]+)$"
+                        }
+                    ], 
+                    "resolvable": [
+                        {
+                            "canonical": true, 
+                            "format": "/c/local/lane/{lane uuid}"
+                        }, 
+                        {
+                            "format": "/c/local/lane/{flowcell uuid}/{lane number}"
+                        }, 
+                        {
+                            "format": "/c/local/lane/illumina/{illumina flowcell id}/{lane number}"
+                        }
+                    ], 
+                    "table": "local/lane"
+                }, 
+                "service/document/local/lane/pools": {
+                    "index": [
+                        "lane uuid"
+                    ], 
+                    "match": [
+                        {
+                            "filter": "^/c/local/lane/(?P<lane_uuid>[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})/pools$"
+                        }
+                    ], 
+                    "resolvable": [
+                        {
+                            "canonical": true, 
+                            "format": "/c/local/lane/{lane uuid}/pools"
+                        }
+                    ], 
+                    "table": "local/lane/pools"
+                }, 
+                "service/document/local/library": {
+                    "index": [
+                        "library uuid"
+                    ], 
+                    "match": [
+                        {
+                            "filter": "^/c/local/library/(?P<library_uuid>[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})$"
+                        }
+                    ], 
+                    "resolvable": [
+                        {
+                            "canonical": true, 
+                            "format": "/c/local/library/{library uuid}"
+                        }
+                    ], 
+                    "table": "local/library"
+                }, 
+                "service/document/local/library/barcodes": {
+                    "index": [
+                        "library uuid"
+                    ], 
+                    "match": [
+                        {
+                            "filter": "^/c/local/library/(?P<library_uuid>[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})/barcodes$"
+                        }
+                    ], 
+                    "resolvable": [
+                        {
+                            "canonical": true, 
+                            "format": "/c/local/library/{library uuid}/barcodes"
+                        }
+                    ], 
+                    "table": "local/library/barcodes"
+                }, 
+                "service/document/local/organism": {
+                    "index": [
+                        "organism uuid", 
+                        "organism handle"
+                    ], 
+                    "match": [
+                        {
+                            "filter": "^/c/local/organism/(?P<organism_uuid>[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})$"
+                        }, 
+                        {
+                            "filter": "^/c/local/organism/handle/(?P<organism_handle>[a-z0-9]+)$"
+                        }
+                    ], 
+                    "resolvable": [
+                        {
+                            "canonical": true, 
+                            "format": "/c/local/organism/{organism uuid}"
+                        }, 
+                        {
+                            "format": "/c/local/organism/handle/{organism handle}"
+                        }
+                    ], 
+                    "table": "local/organism"
+                }, 
+                "service/document/local/pool": {
+                    "index": [
+                        "pool uuid"
+                    ], 
+                    "match": [
+                        {
+                            "filter": "^/c/local/pool/(?P<pool_uuid>[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})$"
+                        }
+                    ], 
+                    "resolvable": [
+                        {
+                            "canonical": true, 
+                            "format": "/c/local/pool/{pool uuid}"
+                        }
+                    ], 
+                    "table": "local/pool"
+                }, 
+                "service/document/local/pool/samples": {
+                    "index": [
+                        "pool uuid"
+                    ], 
+                    "match": [
+                        {
+                            "filter": "^/c/local/pool/(?P<pool_uuid>[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})/samples$"
+                        }
+                    ], 
+                    "resolvable": [
+                        {
+                            "canonical": true, 
+                            "format": "/c/local/pool/{pool uuid}/samples"
+                        }
+                    ], 
+                    "table": "local/pool/samples"
+                }, 
+                "service/document/local/sample": {
+                    "index": [
+                        "sample uuid"
+                    ], 
+                    "match": [
+                        {
+                            "filter": "^/c/local/sample/(?P<sample_uuid>[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})$"
+                        }
+                    ], 
+                    "resolvable": [
+                        {
+                            "canonical": true, 
+                            "format": "/c/local/sample/{sample uuid}"
+                        }
+                    ], 
+                    "table": "local/sample"
+                }
+            }
+        }, 
+        "web": {
+            "api key": [
+                "618c2eb1850a0ab95316c0a7f7f681e3c6108574"
+            ], 
+            "branch": {
+                "service/document/web/barcode": {
+                    "index": [
+                        "web barcode id"
+                    ], 
+                    "match": [
+                        {
+                            "filter": "^/c/web/barcode/(?P<web_barcode_id>[0-9]+)$", 
+                            "query parameter": [
+                                "api key", 
+                                "username"
+                            ], 
+                            "remote": "barcode/{web barcode id}/"
+                        }
+                    ], 
+                    "resolvable": [
+                        {
+                            "canonical": true, 
+                            "format": "/c/web/barcode/{web barcode id}"
+                        }
+                    ], 
+                    "table": "web/barcode"
+                }, 
+                "service/document/web/flowcell": {
+                    "index": [
+                        "illumina flowcell id", 
+                        "web flowcell id", 
+                        "flowcell scheduled"
+                    ], 
+                    "match": [
+                        {
+                            "filter": "^/c/web/flowcell/(?P<web_flowcell_id>[0-9]+)$", 
+                            "query parameter": [
+                                "api key", 
+                                "username"
+                            ], 
+                            "remote": "flowcell/{web flowcell id}/"
+                        }, 
+                        {
+                            "filter": "^/c/web/flowcell/illumina/(?P<illumina_flowcell_id>(?:[A-Z0-9]{9}|[A-Z0-9]{9}-[A-Z0-9]{5}))$", 
+                            "query parameter": [
+                                "api key", 
+                                "username"
+                            ], 
+                            "remote": "flowcell/illumina/{illumina flowcell id}/"
+                        }
+                    ], 
+                    "resolvable": [
+                        {
+                            "canonical": true, 
+                            "format": "/c/web/flowcell/{web flowcell id}"
+                        }, 
+                        {
+                            "format": "/c/web/flowcell/illumina/{illumina flowcell id}"
+                        }
+                    ], 
+                    "table": "web/flowcell"
+                }, 
+                "service/document/web/flowcell/lanes": {
+                    "index": [
+                        "web flowcell id"
+                    ], 
+                    "match": [
+                        {
+                            "filter": "^/c/web/flowcell/(?P<web_flowcell_id>[0-9]+)/lanes$", 
+                            "query parameter": [
+                                "api key", 
+                                "username"
+                            ], 
+                            "remote": "flowcell/{web flowcell id}/lanes/"
+                        }
+                    ], 
+                    "resolvable": [
+                        {
+                            "canonical": true, 
+                            "format": "/c/web/flowcell/{web flowcell id}/lanes"
+                        }
+                    ], 
+                    "table": "web/flowcell/lanes"
+                }, 
+                "service/document/web/flowcell/status": {
+                    "collect": [
+                        "/h/flowcell/illumina/{illumina flowcell id}", 
+                        "/h/flowcell/web/{web flowcell id}"
+                    ], 
+                    "index": [
+                        "illumina flowcell id", 
+                        "web flowcell id", 
+                        "web flowcell status"
+                    ], 
+                    "match": [
+                        {
+                            "filter": "^/c/web/flowcell/(?P<web_flowcell_id>[0-9]+)/status$"
+                        }, 
+                        {
+                            "filter": "^/c/web/flowcell/illumina/(?P<illumina_flowcell_id>(?:[A-Z0-9]{9}|[A-Z0-9]{9}-[A-Z0-9]{5}))/status$"
+                        }, 
+                        {
+                            "filter": "^/c/web/flowcell/(?P<web_flowcell_id>[0-9]+)/status/(?P<web_flowcell_status>[0-9])$", 
+                            "query parameter": [
+                                "api key", 
+                                "username"
+                            ], 
+                            "remote": "flowcell/{web flowcell id}/status/{web flowcell status}"
+                        }, 
+                        {
+                            "filter": "^/c/web/flowcell/illumina/(?P<illumina_flowcell_id>(?:[A-Z0-9]{9}|[A-Z0-9]{9}-[A-Z0-9]{5}))/status/(?P<web_flowcell_status>[0-9])$", 
+                            "query parameter": [
+                                "api key", 
+                                "username"
+                            ], 
+                            "remote": "flowcell/illumina/{illumina flowcell id}/status/{web flowcell status}"
+                        }
+                    ], 
+                    "resolvable": [
+                        {
+                            "canonical": true, 
+                            "format": "/c/web/flowcell/{web flowcell id}/status"
+                        }, 
+                        {
+                            "format": "/c/web/flowcell/illumina/{illumina flowcell id}/status"
+                        }
+                    ], 
+                    "table": "web/flowcell/status"
+                }, 
+                "service/document/web/group": {
+                    "index": [
+                        "group handle", 
+                        "web group id"
+                    ], 
+                    "match": [
+                        {
+                            "filter": "^/c/web/group/(?P<web_group_id>[0-9]+)$", 
+                            "query parameter": [
+                                "api key", 
+                                "username"
+                            ], 
+                            "remote": "group/{web group id}/"
+                        }, 
+                        {
+                            "filter": "^/c/web/group/handle/(?P<group_handle>[a-z0-9]+)$", 
+                            "query parameter": [
+                                "api key", 
+                                "username"
+                            ], 
+                            "remote": "group/handle/{group handle}/"
+                        }
+                    ], 
+                    "resolvable": [
+                        {
+                            "canonical": true, 
+                            "format": "/c/web/group/{web group id}"
+                        }, 
+                        {
+                            "format": "/c/web/group/handle/{group handle}"
+                        }
+                    ], 
+                    "table": "web/group"
+                }, 
+                "service/document/web/group/people": {
+                    "index": [
+                        "group handle", 
+                        "web group id"
+                    ], 
+                    "match": [
+                        {
+                            "filter": "^/c/web/group/(?P<web_group_id>[0-9]+)/people$", 
+                            "query parameter": [
+                                "api key", 
+                                "username"
+                            ], 
+                            "remote": "group/{web group id}/users"
+                        }, 
+                        {
+                            "filter": "^/c/web/group/handle/(?P<group_handle>[a-z0-9]+)/people$", 
+                            "query parameter": [
+                                "api key", 
+                                "username"
+                            ], 
+                            "remote": "group/handle/{group handle}/users"
+                        }
+                    ], 
+                    "resolvable": [
+                        {
+                            "canonical": true, 
+                            "format": "/c/web/group/{web group id}/people"
+                        }, 
+                        {
+                            "format": "/c/web/group/handle/{group handle}/people"
+                        }
+                    ], 
+                    "table": "web/group/people"
+                }, 
+                "service/document/web/lane": {
+                    "index": [
+                        "illumina flowcell id", 
+                        "web flowcell id", 
+                        "web lane id", 
+                        "lane number"
+                    ], 
+                    "match": [
+                        {
+                            "filter": "^/c/web/lane/(?P<web_lane_id>[0-9]+)$", 
+                            "query parameter": [
+                                "api key", 
+                                "username"
+                            ], 
+                            "remote": "lane/{web lane id}/"
+                        }, 
+                        {
+                            "filter": "^/c/web/lane/(?P<web_flowcell_id>[0-9]+)/(?P<lane_number>[0-9]+)$", 
+                            "query parameter": [
+                                "api key", 
+                                "username"
+                            ], 
+                            "remote": "lane/{web flowcell id}/{lane number}/"
+                        }
+                    ], 
+                    "resolvable": [
+                        {
+                            "canonical": true, 
+                            "format": "/c/web/lane/{web lane id}"
+                        }, 
+                        {
+                            "format": "/c/web/lane/{web flowcell id}/{lane number}"
+                        }
+                    ], 
+                    "table": "web/lane"
+                }, 
+                "service/document/web/lane/pools": {
+                    "index": [
+                        "web lane id"
+                    ], 
+                    "match": [
+                        {
+                            "filter": "^/c/web/lane/(?P<web_lane_id>[0-9]+)/pools$", 
+                            "query parameter": [
+                                "api key", 
+                                "username"
+                            ], 
+                            "remote": "lane/{web lane id}/librarypools/"
+                        }
+                    ], 
+                    "resolvable": [
+                        {
+                            "canonical": true, 
+                            "format": "/c/web/lane/{web lane id}/pools"
+                        }
+                    ], 
+                    "table": "web/lane/pools"
+                }, 
+                "service/document/web/library": {
+                    "index": [
+                        "web library id", 
+                        "library name", 
+                        "simple library name"
+                    ], 
+                    "match": [
+                        {
+                            "filter": "^/c/web/library/(?P<web_library_id>[0-9]+)$", 
+                            "query parameter": [
+                                "api key", 
+                                "username"
+                            ], 
+                            "remote": "library/{web library id}/"
+                        }
+                    ], 
+                    "resolvable": [
+                        {
+                            "canonical": true, 
+                            "format": "/c/web/library/{web library id}"
+                        }
+                    ], 
+                    "table": "web/library"
+                }, 
+                "service/document/web/library/barcodes": {
+                    "index": [
+                        "web library id"
+                    ], 
+                    "match": [
+                        {
+                            "filter": "^/c/web/library/(?P<web_library_id>[0-9]+)/barcodes$", 
+                            "query parameter": [
+                                "api key", 
+                                "username"
+                            ], 
+                            "remote": "library/{web library id}/barcodes/"
+                        }
+                    ], 
+                    "resolvable": [
+                        {
+                            "canonical": true, 
+                            "format": "/c/web/library/{web library id}/barcodes"
+                        }
+                    ], 
+                    "table": "web/library/barcodes"
+                }, 
+                "service/document/web/organism": {
+                    "index": [
+                        "web organism id"
+                    ], 
+                    "match": [
+                        {
+                            "filter": "^/c/web/organism/(?P<web_organism_id>[0-9]+)$", 
+                            "query parameter": [
+                                "api key", 
+                                "username"
+                            ], 
+                            "remote": "organism/{web organism id}/"
+                        }
+                    ], 
+                    "resolvable": [
+                        {
+                            "canonical": true, 
+                            "format": "/c/web/organism/{web organism id}"
+                        }
+                    ], 
+                    "table": "web/organism"
+                }, 
+                "service/document/web/person": {
+                    "index": [
+                        "web person id", 
+                        "person handle"
+                    ], 
+                    "match": [
+                        {
+                            "filter": "^/c/web/person/(?P<web_person_id>[0-9]+)$", 
+                            "query parameter": [
+                                "api key", 
+                                "username"
+                            ], 
+                            "remote": "user/{web person id}/"
+                        }, 
+                        {
+                            "filter": "^/c/web/person/handle/(?P<person_handle>[a-z0-9]+)$", 
+                            "query parameter": [
+                                "api key", 
+                                "username"
+                            ], 
+                            "remote": "user/handle/{person handle}"
+                        }
+                    ], 
+                    "resolvable": [
+                        {
+                            "canonical": true, 
+                            "format": "/c/web/person/{web person id}"
+                        }, 
+                        {
+                            "format": "/c/web/person/handle/{person handle}"
+                        }
+                    ], 
+                    "table": "web/person"
+                }, 
+                "service/document/web/person/groups": {
+                    "index": [
+                        "web person id", 
+                        "person handle"
+                    ], 
+                    "match": [
+                        {
+                            "filter": "^/c/web/person/(?P<web_person_id>[0-9]+)/groups$", 
+                            "query parameter": [
+                                "api key", 
+                                "username"
+                            ], 
+                            "remote": "user/{web person id}/groups"
+                        }, 
+                        {
+                            "filter": "^/c/web/person/handle/(?P<person_handle>[a-z0-9]+)/groups$", 
+                            "query parameter": [
+                                "api key", 
+                                "username"
+                            ], 
+                            "remote": "user/handle/{person handle}/groups"
+                        }
+                    ], 
+                    "resolvable": [
+                        {
+                            "canonical": true, 
+                            "format": "/c/web/person/{web person id}/groups"
+                        }, 
+                        {
+                            "format": "/c/web/person/handle/{person handle}/groups"
+                        }
+                    ], 
+                    "table": "web/person/groups"
+                }, 
+                "service/document/web/pool": {
+                    "index": [
+                        "web pool id"
+                    ], 
+                    "match": [
+                        {
+                            "filter": "^/c/web/pool/(?P<web_pool_id>[0-9]+)$", 
+                            "query parameter": [
+                                "api key", 
+                                "username"
+                            ], 
+                            "remote": "librarypool/{web pool id}/"
+                        }
+                    ], 
+                    "resolvable": [
+                        {
+                            "canonical": true, 
+                            "format": "/c/web/pool/{web pool id}"
+                        }
+                    ], 
+                    "table": "web/pool"
+                }, 
+                "service/document/web/pool/samples": {
+                    "index": [
+                        "web pool id"
+                    ], 
+                    "match": [
+                        {
+                            "filter": "^/c/web/pool/(?P<web_pool_id>[0-9]+)/samples$", 
+                            "query parameter": [
+                                "api key", 
+                                "username"
+                            ], 
+                            "remote": "librarypool/{web pool id}/librarypoolconcentrations/"
+                        }
+                    ], 
+                    "resolvable": [
+                        {
+                            "canonical": true, 
+                            "format": "/c/web/pool/{web pool id}/samples"
+                        }
+                    ], 
+                    "table": "web/pool/samples"
+                }, 
+                "service/document/web/sample": {
+                    "index": [
+                        "web sample id", 
+                        "sample name", 
+                        "simple sample name"
+                    ], 
+                    "match": [
+                        {
+                            "filter": "^/c/web/sample/(?P<web_sample_id>[0-9]+)$", 
+                            "query parameter": [
+                                "api key", 
+                                "username"
+                            ], 
+                            "remote": "librarypoolconcentrations/{web sample id}/"
+                        }
+                    ], 
+                    "resolvable": [
+                        {
+                            "canonical": true, 
+                            "format": "/c/web/sample/{web sample id}"
+                        }
+                    ], 
+                    "table": "web/sample"
+                }
+            }, 
+            "implementation": {
+                "class": "module.bio.service.web.WebHandler"
+            }, 
+            "match": "^/c/web/.*$", 
+            "remote base": "http://tuboweb.bio.nyu.edu:88/library/api/rest", 
+            "username": "gs"
+        }
+    }
+}

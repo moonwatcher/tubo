@@ -1,0 +1,5899 @@
+{
+    "rule": {
+        "rule/asset/movie/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "asset uri", 
+                            "reference": "movie asset uri"
+                        }
+                    ], 
+                    "requires": [
+                        "movie asset uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "asset uri"
+            ]
+        }, 
+        "rule/asset/music/track/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "asset uri", 
+                            "reference": "music track asset uri"
+                        }
+                    ], 
+                    "requires": [
+                        "music track asset uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "asset uri"
+            ]
+        }, 
+        "rule/asset/qualified/movie/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/m/asset/{movie id}", 
+                            "property": "movie asset uri"
+                        }
+                    ], 
+                    "requires": [
+                        "movie id"
+                    ]
+                }
+            ], 
+            "provide": [
+                "movie asset uri"
+            ]
+        }, 
+        "rule/asset/qualified/music/track/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/m/asset/{music track id}", 
+                            "property": "music track asset uri"
+                        }
+                    ], 
+                    "requires": [
+                        "music track id"
+                    ]
+                }
+            ], 
+            "provide": [
+                "music track asset uri"
+            ]
+        }, 
+        "rule/asset/qualified/tv/episode/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/m/asset/{tv episode id}", 
+                            "property": "tv episode asset uri"
+                        }
+                    ], 
+                    "requires": [
+                        "tv episode id"
+                    ]
+                }
+            ], 
+            "provide": [
+                "tv episode asset uri"
+            ]
+        }, 
+        "rule/asset/tv/episode/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "asset uri", 
+                            "reference": "tv episode asset uri"
+                        }
+                    ], 
+                    "requires": [
+                        "tv episode asset uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "asset uri"
+            ]
+        }, 
+        "rule/genealogy/asset/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "asset uri", 
+                            "reference": "music track asset uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 1
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "music track asset uri"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "asset uri", 
+                            "reference": "tv episode asset uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 10
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "tv episode asset uri"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "asset uri", 
+                            "reference": "movie asset uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 9
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "movie asset uri"
+                    ]
+                }
+            ]
+        }, 
+        "rule/genealogy/home/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "home uri", 
+                            "reference": "music track home uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 1
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "music track home uri"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "home uri", 
+                            "reference": "tv episode home uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 10
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "tv episode home uri"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "home uri", 
+                            "reference": "movie home uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 9
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "movie home uri"
+                    ]
+                }
+            ]
+        }, 
+        "rule/genealogy/knowledge/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "knowledge uri", 
+                            "reference": "music track knowledge uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 1
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "music track knowledge uri"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "knowledge uri", 
+                            "reference": "tv episode knowledge uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 10
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "tv episode knowledge uri"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "knowledge uri", 
+                            "reference": "movie knowledge uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 9
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "movie knowledge uri"
+                    ]
+                }
+            ]
+        }, 
+        "rule/home/collection/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "home uri", 
+                            "reference": "collection home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "collection home uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "home uri"
+            ]
+        }, 
+        "rule/home/company/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "home uri", 
+                            "reference": "company home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "company home uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "home uri"
+            ]
+        }, 
+        "rule/home/genre/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "home uri", 
+                            "reference": "genre home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "genre home uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "home uri"
+            ]
+        }, 
+        "rule/home/movie/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "home uri", 
+                            "reference": "movie home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "movie home uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "home uri"
+            ]
+        }, 
+        "rule/home/music/album/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "home uri", 
+                            "reference": "music album home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "music album home uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "home uri"
+            ]
+        }, 
+        "rule/home/music/track/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "home uri", 
+                            "reference": "music track home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "music track home uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "home uri"
+            ]
+        }, 
+        "rule/home/network/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "home uri", 
+                            "reference": "network home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "network home uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "home uri"
+            ]
+        }, 
+        "rule/home/qualified/collection/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/h/collection/{collection id}", 
+                            "property": "collection home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "collection id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/collection/{home id}", 
+                            "property": "collection home uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 104
+                    }, 
+                    "requires": [
+                        "home id", 
+                        "media kind"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/collection/uuid/{collection uuid}", 
+                            "property": "collection home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "collection uuid"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/collection/tmdb/{tmdb collection id}", 
+                            "property": "collection home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "tmdb collection id"
+                    ]
+                }
+            ], 
+            "provide": [
+                "collection home uri"
+            ]
+        }, 
+        "rule/home/qualified/company/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/h/company/{company id}", 
+                            "property": "company home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "company id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/company/{home id}", 
+                            "property": "company home uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 103
+                    }, 
+                    "requires": [
+                        "home id", 
+                        "media kind"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/company/uuid/{company uuid}", 
+                            "property": "company home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "company uuid"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/company/tmdb/{tmdb company id}", 
+                            "property": "company home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "tmdb company id"
+                    ]
+                }
+            ], 
+            "provide": [
+                "company home uri"
+            ]
+        }, 
+        "rule/home/qualified/genre/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/h/genre/{genre id}", 
+                            "property": "genre home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "genre id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/genre/{home id}", 
+                            "property": "genre home uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 101
+                    }, 
+                    "requires": [
+                        "home id", 
+                        "media kind"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/genre/uuid/{genre uuid}", 
+                            "property": "genre home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "genre uuid"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/genre/tmdb/{tmdb genre id}", 
+                            "property": "genre home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "tmdb genre id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/genre/itunes/{itunes genre id}", 
+                            "property": "genre home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "itunes genre id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/genre/gnre/{genre type}", 
+                            "property": "genre home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "genre type"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/genre/id3/{id3 genre type}", 
+                            "property": "genre home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "id3 genre type"
+                    ]
+                }
+            ], 
+            "provide": [
+                "genre home uri"
+            ]
+        }, 
+        "rule/home/qualified/movie/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/h/movie/{movie id}", 
+                            "property": "movie home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "movie id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/movie/{home id}", 
+                            "property": "movie home uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 9
+                    }, 
+                    "requires": [
+                        "home id", 
+                        "media kind"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/movie/uuid/{movie uuid}", 
+                            "property": "movie home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "movie uuid"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/movie/tmdb/{tmdb movie id}", 
+                            "property": "movie home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "tmdb movie id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/movie/imdb/{imdb movie id}", 
+                            "property": "movie home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "imdb movie id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/movie/itunes/{itunes movie id}", 
+                            "property": "movie home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "itunes movie id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/movie/rottentomatoes/{rottentomatoes movie id}", 
+                            "property": "movie home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "rottentomatoes movie id"
+                    ]
+                }
+            ], 
+            "provide": [
+                "movie home uri"
+            ]
+        }, 
+        "rule/home/qualified/music/album/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/h/music/album/{music album id}", 
+                            "property": "music album home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "music album id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/music/album/uuid/{music album uuid}", 
+                            "property": "music album home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "music album uuid"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/music/album/itunes/{itunes music album id}", 
+                            "property": "music album home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "itunes music album id"
+                    ]
+                }
+            ], 
+            "provide": [
+                "music album home uri"
+            ]
+        }, 
+        "rule/home/qualified/music/track/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/h/music/track/{music track id}", 
+                            "property": "music track home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "music track id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/music/track/{home id}", 
+                            "property": "music track home uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 1
+                    }, 
+                    "requires": [
+                        "home id", 
+                        "media kind"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/music/track/uuid/{music track uuid}", 
+                            "property": "music track home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "music track uuid"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/music/track/{music album id}/{disc number}/{track number}", 
+                            "property": "music track home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "music album id", 
+                        "disc number", 
+                        "track number"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/music/track/itunes/{itunes music track id}", 
+                            "property": "music track home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "itunes music track id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/music/track/itunes/{itunes music album id}/{disc number}/{track number}", 
+                            "property": "music track home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "itunes music album id", 
+                        "disc number", 
+                        "track number"
+                    ]
+                }
+            ], 
+            "provide": [
+                "music track home uri"
+            ]
+        }, 
+        "rule/home/qualified/network/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/h/network/{network id}", 
+                            "property": "network home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "network id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/network/uuid/{network uuid}", 
+                            "property": "network home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "network uuid"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/network/tmdb/{tmdb network id}", 
+                            "property": "network home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "tmdb network id"
+                    ]
+                }
+            ], 
+            "provide": [
+                "network home uri"
+            ]
+        }, 
+        "rule/home/qualified/person/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/h/person/tmdb/{tmdb person id}", 
+                            "property": "person home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "tmdb person id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/person/itunes/{itunes person id}", 
+                            "property": "person home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "itunes person id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/person/imdb/{imdb person id}", 
+                            "property": "person home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "imdb person id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/person/freebase{freebase person mid}", 
+                            "property": "person home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "freebase person mid"
+                    ]
+                }
+            ], 
+            "provide": [
+                "person home uri"
+            ]
+        }, 
+        "rule/home/qualified/tv/episode/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/h/tv/episode/{tv episode id}", 
+                            "property": "tv episode home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "tv episode id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/tv/episode/{home id}", 
+                            "property": "tv episode home uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 10
+                    }, 
+                    "requires": [
+                        "home id", 
+                        "media kind"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/tv/episode/uuid/{tv episode uuid}", 
+                            "property": "tv episode home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "tv episode uuid"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/tv/episode/{tv season id}/{track number}", 
+                            "property": "tv episode home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "tv season id", 
+                        "track number"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/tv/episode/{tv show id}/{disc number}/{track number}", 
+                            "property": "tv episode home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "tv show id", 
+                        "disc number", 
+                        "track number"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/tv/episode/tmdb/{tmdb tv show id}/{disc number}/{track number}", 
+                            "property": "tv episode home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "tmdb tv show id", 
+                        "disc number", 
+                        "track number"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/tv/episode/tmdb/{tmdb tv season id}/{track number}", 
+                            "property": "tv episode home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "tmdb tv season id", 
+                        "track number"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/tv/episode/tmdb/{tmdb tv episode id}", 
+                            "property": "tv episode home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "tmdb tv episode id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/tv/episode/tvdb/{tvdb tv episode id}", 
+                            "property": "tv episode home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "tvdb tv episode id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/tv/episode/tvdb/{tvdb tv season id}/{track number}", 
+                            "property": "tv episode home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "tvdb tv season id", 
+                        "track number"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/tv/episode/tvdb/{tvdb tv show id}/{disc number}/{track number}", 
+                            "property": "tv episode home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "tvdb tv show id", 
+                        "disc number", 
+                        "track number"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/tv/episode/freebase{freebase tv episode id}", 
+                            "property": "tv episode home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "freebase tv episode id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/tv/episode/freebase{freebase tv season id}/{track number}", 
+                            "property": "tv episode home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "freebase tv season id", 
+                        "track number"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/tv/episode/freebase{freebase tv show id}/{disc number}/{track number}", 
+                            "property": "tv episode home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "freebase tv show id", 
+                        "disc number", 
+                        "track number"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/tv/episode/imdb/{imdb tv episode id}", 
+                            "property": "tv episode home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "imdb tv episode id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/tv/episode/imdb/{imdb tv show id}/{disc number}/{track number}", 
+                            "property": "tv episode home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "imdb tv show id", 
+                        "disc number", 
+                        "track number"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/tv/episode/itunes/{itunes tv episode id}", 
+                            "property": "tv episode home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "itunes tv episode id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/tv/episode/itunes/{itunes tv season id}/{track number}", 
+                            "property": "tv episode home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "itunes tv season id", 
+                        "track number"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/tv/episode/itunes/{itunes tv show id}/{disc number}/{track number}", 
+                            "property": "tv episode home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "itunes tv show id", 
+                        "disc number", 
+                        "track number"
+                    ]
+                }
+            ], 
+            "provide": [
+                "tv episode home uri"
+            ]
+        }, 
+        "rule/home/qualified/tv/season/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/h/tv/season/{tv season id}", 
+                            "property": "tv season home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "tv season id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/tv/season/uuid/{tv season uuid}", 
+                            "property": "tv season home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "tv season uuid"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/tv/season/{tv show id}/{disc number}", 
+                            "property": "tv season home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "disc number", 
+                        "tv show id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/tv/season/tmdb/{tmdb tv show id}/{disc number}", 
+                            "property": "tv season home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "tmdb tv show id", 
+                        "disc number"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/tv/season/tmdb/{tmdb tv season id}", 
+                            "property": "tv season home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "tmdb tv season id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/tv/season/tvdb/{tvdb tv season id}", 
+                            "property": "tv season home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "tvdb tv season id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/tv/season/tvdb/{tvdb tv show id}/{disc number}", 
+                            "property": "tv season home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "tvdb tv show id", 
+                        "disc number"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/tv/season/tmdb/freebase{freebase tv season mid}", 
+                            "property": "tv season home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "freebase tv season mid"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/tv/season/tmdb/freebase{freebase tv show mid}/{disc number}", 
+                            "property": "tv season home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "freebase tv show mid", 
+                        "disc number"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/tv/season/itunes/{itunes tv season id}", 
+                            "property": "tv season home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "itunes tv season id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/tv/season/itunes/{itunes tv show id}/{disc number}", 
+                            "property": "tv season home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "itunes tv show id", 
+                        "disc number"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/tv/season/imdb/{imdb tv show id}/{disc number}", 
+                            "property": "tv season home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "imdb tv show id", 
+                        "disc number"
+                    ]
+                }
+            ], 
+            "provide": [
+                "tv season home uri"
+            ]
+        }, 
+        "rule/home/qualified/tv/show/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/h/tv/show/{tv show id}", 
+                            "property": "tv show home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "tv show id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/tv/show/uuid/{tv show uuid}", 
+                            "property": "tv show home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "tv show uuid"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/tv/show/tmdb/{tmdb tv show id}", 
+                            "property": "tv show home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "tmdb tv show id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/tv/show/tvdb/{tvdb tv show id}", 
+                            "property": "tv show home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "tvdb tv show id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/tv/show/itunes/{itunes tv show id}", 
+                            "property": "tv show home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "itunes tv show id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/tv/show/imdb/{imdb tv show id}", 
+                            "property": "tv show home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "imdb tv show id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/tv/show/freebase{freebase tv show mid}", 
+                            "property": "tv show home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "freebase tv show mid"
+                    ]
+                }
+            ], 
+            "provide": [
+                "tv show home uri"
+            ]
+        }, 
+        "rule/home/tv/episode/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "home uri", 
+                            "reference": "tv episode home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "tv episode home uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "home uri"
+            ]
+        }, 
+        "rule/home/tv/season/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "home uri", 
+                            "reference": "tv season home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "tv season home uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "home uri"
+            ]
+        }, 
+        "rule/home/tv/show/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "home uri", 
+                            "reference": "tv show home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "tv show home uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "home uri"
+            ]
+        }, 
+        "rule/itunes/album/name": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "{tv show name}, Season {tv season number}", 
+                            "property": "album name"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 10
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "tv show name", 
+                        "tv season number"
+                    ]
+                }
+            ], 
+            "provide": [
+                "album name"
+            ]
+        }, 
+        "rule/itunes/itunextc/parse": {
+            "branch": [
+                {
+                    "decode": [
+                        {
+                            "expression": "(?P<content_advisory_standard>[^|]+)\\|(?P<content_advisory_rating>[^|]+)\\|(?P<content_advisory_score>[^|]+)\\|(?P<content_advisory_annotation>[^|]+)?", 
+                            "property": "itunextc"
+                        }
+                    ], 
+                    "requires": [
+                        "itunextc"
+                    ]
+                }
+            ], 
+            "provide": [
+                "content advisory standard", 
+                "content advisory rating", 
+                "content advisory score", 
+                "content advisory annotation"
+            ]
+        }, 
+        "rule/itunes/tv/season/parse": {
+            "branch": [
+                {
+                    "decode": [
+                        {
+                            "expression": ", Season (?P<disc_number>[0-9]+)$", 
+                            "property": "album name"
+                        }
+                    ], 
+                    "requires": [
+                        "album name"
+                    ]
+                }
+            ], 
+            "provide": [
+                "disc number"
+            ]
+        }, 
+        "rule/job/implementation": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "implementation", 
+                            "value": "module.core.multimedia.unknow.UnknownJob"
+                        }
+                    ], 
+                    "equal": {
+                        "action": "prepare"
+                    }, 
+                    "requires": [
+                        "action"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "implementation", 
+                            "value": "module.core.multimedia.unknow.UnknownJob"
+                        }
+                    ], 
+                    "equal": {
+                        "action": "explode"
+                    }, 
+                    "requires": [
+                        "action"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "implementation", 
+                            "value": "module.core.multimedia.unknow.UnknownJob"
+                        }
+                    ], 
+                    "equal": {
+                        "action": "pack"
+                    }, 
+                    "requires": [
+                        "action"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "implementation", 
+                            "value": "module.core.multimedia.unknow.UnknownJob"
+                        }
+                    ], 
+                    "equal": {
+                        "action": "tag"
+                    }, 
+                    "requires": [
+                        "action"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "implementation", 
+                            "value": "module.core.multimedia.unknow.UnknownJob"
+                        }
+                    ], 
+                    "equal": {
+                        "action": "optimize"
+                    }, 
+                    "requires": [
+                        "action"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "implementation", 
+                            "value": "module.core.multimedia.unknow.UnknownJob"
+                        }
+                    ], 
+                    "equal": {
+                        "action": "transcode"
+                    }, 
+                    "requires": [
+                        "action"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "implementation", 
+                            "value": "module.core.multimedia.unknow.UnknownJob"
+                        }
+                    ], 
+                    "equal": {
+                        "action": "update"
+                    }, 
+                    "requires": [
+                        "action"
+                    ]
+                }
+            ], 
+            "provide": [
+                "implementation"
+            ]
+        }, 
+        "rule/knowledge/artist/info": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "{tv show name}", 
+                            "property": "artist name"
+                        }, 
+                        {
+                            "format": "{tv show name}", 
+                            "property": "album artist name"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 10
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "tv show name"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "{directors[0]}", 
+                            "property": "artist name"
+                        }, 
+                        {
+                            "format": "{directors[0]}", 
+                            "property": "album artist name"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 9
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "directors"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "{producers[0]}", 
+                            "property": "artist name"
+                        }, 
+                        {
+                            "format": "{producers[0]}", 
+                            "property": "album artist name"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 9
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "producers"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "{screenwriters[0]}", 
+                            "property": "artist name"
+                        }, 
+                        {
+                            "format": "{screenwriters[0]}", 
+                            "property": "album artist name"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 9
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "screenwriters"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "{codirectors[0]}", 
+                            "property": "artist name"
+                        }, 
+                        {
+                            "format": "{codirectors[0]}", 
+                            "property": "album artist name"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 9
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "codirectors"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "{actors[0]}", 
+                            "property": "artist name"
+                        }, 
+                        {
+                            "format": "{actors[0]}", 
+                            "property": "album artist name"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 9
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "actors"
+                    ]
+                }
+            ], 
+            "provide": [
+                "artist name", 
+                "album artist name"
+            ]
+        }, 
+        "rule/knowledge/collection/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "knowledge uri", 
+                            "reference": "collection knowledge uri"
+                        }
+                    ], 
+                    "requires": [
+                        "collection knowledge uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "knowledge uri"
+            ]
+        }, 
+        "rule/knowledge/company/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "knowledge uri", 
+                            "reference": "company knowledge uri"
+                        }
+                    ], 
+                    "requires": [
+                        "company knowledge uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "knowledge uri"
+            ]
+        }, 
+        "rule/knowledge/default/disc/count": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "disc count", 
+                            "value": 0
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 10
+                    }, 
+                    "requires": [
+                        "media kind"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "disc count", 
+                            "value": 0
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 1
+                    }, 
+                    "requires": [
+                        "media kind"
+                    ]
+                }
+            ], 
+            "provide": [
+                "disc count"
+            ]
+        }, 
+        "rule/knowledge/default/music/track": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "music track number", 
+                            "reference": "track number"
+                        }, 
+                        {
+                            "property": "music disc number", 
+                            "reference": "disc number"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 1
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "track number", 
+                        "disc number"
+                    ]
+                }
+            ], 
+            "provide": [
+                "music track number", 
+                "music disc number"
+            ]
+        }, 
+        "rule/knowledge/default/track/count": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "track count", 
+                            "value": 0
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 10
+                    }, 
+                    "requires": [
+                        "media kind"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "track count", 
+                            "value": 0
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 1
+                    }, 
+                    "requires": [
+                        "media kind"
+                    ]
+                }
+            ], 
+            "provide": [
+                "track count"
+            ]
+        }, 
+        "rule/knowledge/default/tv/episode": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "tv episode number", 
+                            "reference": "track number"
+                        }, 
+                        {
+                            "property": "tv season number", 
+                            "reference": "disc number"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 10
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "track number", 
+                        "disc number"
+                    ]
+                }
+            ], 
+            "provide": [
+                "tv episode number", 
+                "tv season number"
+            ]
+        }, 
+        "rule/knowledge/disc/position": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "{disc number} / {disc count}", 
+                            "property": "disc position"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 10
+                    }, 
+                    "requires": [
+                        "disc number", 
+                        "disc count"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "{disc number} / {disc count}", 
+                            "property": "disc position"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 1
+                    }, 
+                    "requires": [
+                        "disc number", 
+                        "disc count"
+                    ]
+                }
+            ], 
+            "provide": [
+                "disc position"
+            ]
+        }, 
+        "rule/knowledge/genre/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "knowledge uri", 
+                            "reference": "genre knowledge uri"
+                        }
+                    ], 
+                    "requires": [
+                        "genre knowledge uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "knowledge uri"
+            ]
+        }, 
+        "rule/knowledge/movie/imdb/trimmed": {
+            "branch": [
+                {
+                    "decode": [
+                        {
+                            "expression": "^tt(?P<trimmed_imdb_movie_id>[0-9]+)$", 
+                            "property": "imdb movie id"
+                        }
+                    ], 
+                    "requires": [
+                        "imdb movie id"
+                    ]
+                }
+            ], 
+            "provide": [
+                "trimmed imdb movie id"
+            ]
+        }, 
+        "rule/knowledge/movie/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "knowledge uri", 
+                            "reference": "movie knowledge uri"
+                        }
+                    ], 
+                    "requires": [
+                        "movie knowledge uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "knowledge uri"
+            ]
+        }, 
+        "rule/knowledge/music/album/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "knowledge uri", 
+                            "reference": "music album knowledge uri"
+                        }
+                    ], 
+                    "requires": [
+                        "music album knowledge uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "knowledge uri"
+            ]
+        }, 
+        "rule/knowledge/music/track/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "knowledge uri", 
+                            "reference": "music track knowledge uri"
+                        }
+                    ], 
+                    "requires": [
+                        "music track knowledge uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "knowledge uri"
+            ]
+        }, 
+        "rule/knowledge/network/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "knowledge uri", 
+                            "reference": "network knowledge uri"
+                        }
+                    ], 
+                    "requires": [
+                        "network knowledge uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "knowledge uri"
+            ]
+        }, 
+        "rule/knowledge/occupation/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "knowledge uri", 
+                            "reference": "occupation knowledge uri"
+                        }
+                    ], 
+                    "requires": [
+                        "occupation knowledge uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "knowledge uri"
+            ]
+        }, 
+        "rule/knowledge/qualified/collection/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/k/{language}/collection/{collection id}", 
+                            "property": "collection knowledge uri"
+                        }
+                    ], 
+                    "requires": [
+                        "language", 
+                        "collection id"
+                    ]
+                }
+            ], 
+            "provide": [
+                "collection knowledge uri"
+            ]
+        }, 
+        "rule/knowledge/qualified/company/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/k/{language}/company/{company id}", 
+                            "property": "company knowledge uri"
+                        }
+                    ], 
+                    "requires": [
+                        "language", 
+                        "company id"
+                    ]
+                }
+            ], 
+            "provide": [
+                "company knowledge uri"
+            ]
+        }, 
+        "rule/knowledge/qualified/genre/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/k/{language}/genre/{genre id}", 
+                            "property": "genre knowledge uri"
+                        }
+                    ], 
+                    "requires": [
+                        "language", 
+                        "genre id"
+                    ]
+                }
+            ], 
+            "provide": [
+                "genre knowledge uri"
+            ]
+        }, 
+        "rule/knowledge/qualified/movie/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/k/{language}/movie/{movie id}", 
+                            "property": "movie knowledge uri"
+                        }
+                    ], 
+                    "requires": [
+                        "language", 
+                        "movie id"
+                    ]
+                }
+            ], 
+            "provide": [
+                "movie knowledge uri"
+            ]
+        }, 
+        "rule/knowledge/qualified/music/album/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/k/{language}/music/album/{music album id}", 
+                            "property": "music album knowledge uri"
+                        }
+                    ], 
+                    "requires": [
+                        "language", 
+                        "music album id"
+                    ]
+                }
+            ], 
+            "provide": [
+                "music album knowledge uri"
+            ]
+        }, 
+        "rule/knowledge/qualified/music/track/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/k/{language}/music/track/{music track id}", 
+                            "property": "music track knowledge uri"
+                        }
+                    ], 
+                    "requires": [
+                        "language", 
+                        "music track id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/k/{language}/music/track/{music album id}/{disc number}/{track number}", 
+                            "property": "music track knowledge uri"
+                        }
+                    ], 
+                    "requires": [
+                        "language", 
+                        "music album id", 
+                        "disc number", 
+                        "track number"
+                    ]
+                }
+            ], 
+            "provide": [
+                "music track knowledge uri"
+            ]
+        }, 
+        "rule/knowledge/qualified/network/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/k/network/{network id}", 
+                            "property": "network knowledge uri"
+                        }
+                    ], 
+                    "requires": [
+                        "network id"
+                    ]
+                }
+            ], 
+            "provide": [
+                "network knowledge uri"
+            ]
+        }, 
+        "rule/knowledge/qualified/occupation/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/k/{language}/occupation/{occupation id}", 
+                            "property": "occupation knowledge uri"
+                        }
+                    ], 
+                    "requires": [
+                        "language", 
+                        "occupation id"
+                    ]
+                }
+            ], 
+            "provide": [
+                "occupation knowledge uri"
+            ]
+        }, 
+        "rule/knowledge/qualified/tv/episode/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/k/{language}/tv/episode/{tv show id}/{disc number}/{track number}", 
+                            "property": "tv episode knowledge uri"
+                        }
+                    ], 
+                    "requires": [
+                        "language", 
+                        "tv show id", 
+                        "disc number", 
+                        "track number"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/k/{language}/tv/episode/{tv season id}/{track number}", 
+                            "property": "tv episode knowledge uri"
+                        }
+                    ], 
+                    "requires": [
+                        "language", 
+                        "tv season id", 
+                        "track number"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/k/{language}/tv/episode/{tv episode id}", 
+                            "property": "tv episode knowledge uri"
+                        }
+                    ], 
+                    "requires": [
+                        "language", 
+                        "tv episode id"
+                    ]
+                }
+            ], 
+            "provide": [
+                "tv episode knowledge uri"
+            ]
+        }, 
+        "rule/knowledge/qualified/tv/season/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/k/{language}/tv/season/{tv show id}/{disc number}", 
+                            "property": "tv season knowledge uri"
+                        }
+                    ], 
+                    "requires": [
+                        "tv show id", 
+                        "disc number", 
+                        "language"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/k/{language}/tv/season/{tv season id}", 
+                            "property": "tv season knowledge uri"
+                        }
+                    ], 
+                    "requires": [
+                        "language", 
+                        "tv season id"
+                    ]
+                }
+            ], 
+            "provide": [
+                "tv season knowledge uri"
+            ]
+        }, 
+        "rule/knowledge/qualified/tv/show/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/k/{language}/tv/show/{tv show id}", 
+                            "property": "tv show knowledge uri"
+                        }
+                    ], 
+                    "requires": [
+                        "language", 
+                        "tv show id"
+                    ]
+                }
+            ], 
+            "provide": [
+                "tv show knowledge uri"
+            ]
+        }, 
+        "rule/knowledge/release/year": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "member": "year", 
+                            "property": "release year", 
+                            "reference": "release date"
+                        }
+                    ], 
+                    "requires": [
+                        "release date"
+                    ]
+                }
+            ], 
+            "provide": [
+                "release year"
+            ]
+        }, 
+        "rule/knowledge/resource/name": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "{tv show name} {track genealogy} {tv episode name}", 
+                            "property": "full name"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 10
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "tv show name", 
+                        "track genealogy", 
+                        "tv episode name"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "{movie title} {release year}", 
+                            "property": "full name"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 9
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "movie title", 
+                        "release year"
+                    ]
+                }
+            ], 
+            "provide": [
+                "full name"
+            ]
+        }, 
+        "rule/knowledge/simple/name/character": {
+            "branch": [
+                {
+                    "decode": [
+                        {
+                            "expression": "^(?P<simple_character_name>.+)$", 
+                            "property": "character name"
+                        }
+                    ], 
+                    "requires": [
+                        "character name"
+                    ]
+                }
+            ], 
+            "provide": [
+                "simple character name"
+            ]
+        }, 
+        "rule/knowledge/simple/name/collection": {
+            "branch": [
+                {
+                    "decode": [
+                        {
+                            "expression": "^(?P<simple_collection_name>.+)$", 
+                            "property": "collection name"
+                        }
+                    ], 
+                    "requires": [
+                        "collection name"
+                    ]
+                }
+            ], 
+            "provide": [
+                "simple collection name"
+            ]
+        }, 
+        "rule/knowledge/simple/name/company": {
+            "branch": [
+                {
+                    "decode": [
+                        {
+                            "expression": "^(?P<simple_company_name>.+)$", 
+                            "property": "company name"
+                        }
+                    ], 
+                    "requires": [
+                        "company name"
+                    ]
+                }
+            ], 
+            "provide": [
+                "simple company name"
+            ]
+        }, 
+        "rule/knowledge/simple/name/genre": {
+            "branch": [
+                {
+                    "decode": [
+                        {
+                            "expression": "^(?P<simple_genre_name>.+)$", 
+                            "property": "genre name"
+                        }
+                    ], 
+                    "requires": [
+                        "genre name"
+                    ]
+                }
+            ], 
+            "provide": [
+                "simple genre name"
+            ]
+        }, 
+        "rule/knowledge/simple/name/keyword": {
+            "branch": [
+                {
+                    "decode": [
+                        {
+                            "expression": "^(?P<simple_keyword_name>.+)$", 
+                            "property": "keyword name"
+                        }
+                    ], 
+                    "requires": [
+                        "keyword name"
+                    ]
+                }
+            ], 
+            "provide": [
+                "simple keyword name"
+            ]
+        }, 
+        "rule/knowledge/simple/name/movie": {
+            "branch": [
+                {
+                    "decode": [
+                        {
+                            "expression": "^(?P<simple_movie_title>.+)$", 
+                            "property": "movie title"
+                        }
+                    ], 
+                    "requires": [
+                        "movie title"
+                    ]
+                }
+            ], 
+            "provide": [
+                "simple movie title"
+            ]
+        }, 
+        "rule/knowledge/simple/name/music/album": {
+            "branch": [
+                {
+                    "decode": [
+                        {
+                            "expression": "^(?P<simple_music_album_name>.+)$", 
+                            "property": "music album name"
+                        }
+                    ], 
+                    "requires": [
+                        "music album name"
+                    ]
+                }
+            ], 
+            "provide": [
+                "simple music album name"
+            ]
+        }, 
+        "rule/knowledge/simple/name/music/track": {
+            "branch": [
+                {
+                    "decode": [
+                        {
+                            "expression": "^(?P<simple_music_track_name>.+)$", 
+                            "property": "music track name"
+                        }
+                    ], 
+                    "requires": [
+                        "music track name"
+                    ]
+                }
+            ], 
+            "provide": [
+                "simple music track name"
+            ]
+        }, 
+        "rule/knowledge/simple/name/network": {
+            "branch": [
+                {
+                    "decode": [
+                        {
+                            "expression": "^(?P<simple_network_name>.+)$", 
+                            "property": "network name"
+                        }
+                    ], 
+                    "requires": [
+                        "network name"
+                    ]
+                }
+            ], 
+            "provide": [
+                "simple network name"
+            ]
+        }, 
+        "rule/knowledge/simple/name/person": {
+            "branch": [
+                {
+                    "decode": [
+                        {
+                            "expression": "^(?P<simple_person_name>.+)$", 
+                            "property": "person name"
+                        }
+                    ], 
+                    "requires": [
+                        "person name"
+                    ]
+                }
+            ], 
+            "provide": [
+                "simple person name"
+            ]
+        }, 
+        "rule/knowledge/simple/name/tv/episode": {
+            "branch": [
+                {
+                    "decode": [
+                        {
+                            "expression": "^(?P<simple_tv_episode_name>.+)$", 
+                            "property": "tv episode name"
+                        }
+                    ], 
+                    "requires": [
+                        "tv episode name"
+                    ]
+                }
+            ], 
+            "provide": [
+                "simple tv episode name"
+            ]
+        }, 
+        "rule/knowledge/simple/name/tv/show": {
+            "branch": [
+                {
+                    "decode": [
+                        {
+                            "expression": "^(?P<simple_tv_show_name>.+)$", 
+                            "property": "tv show name"
+                        }
+                    ], 
+                    "requires": [
+                        "tv show name"
+                    ]
+                }
+            ], 
+            "provide": [
+                "simple tv show name"
+            ]
+        }, 
+        "rule/knowledge/sort/album": {
+            "branch": [
+                {
+                    "decode": [
+                        {
+                            "expression": "^(the |a |an )?(?P<sort_album>.+)$", 
+                            "flags": 2, 
+                            "property": "album name"
+                        }
+                    ], 
+                    "requires": [
+                        "album name"
+                    ]
+                }
+            ], 
+            "provide": [
+                "sort album"
+            ]
+        }, 
+        "rule/knowledge/sort/albumartist": {
+            "branch": [
+                {
+                    "decode": [
+                        {
+                            "expression": "^(the |a |an )?(?P<sort_album_artist>.+)$", 
+                            "flags": 2, 
+                            "property": "album artist name"
+                        }
+                    ], 
+                    "requires": [
+                        "album artist name"
+                    ]
+                }
+            ], 
+            "provide": [
+                "sort album artist"
+            ]
+        }, 
+        "rule/knowledge/sort/artist": {
+            "branch": [
+                {
+                    "decode": [
+                        {
+                            "expression": "^(the |a |an )?(?P<sort_artist>.+)$", 
+                            "flags": 2, 
+                            "property": "artist name"
+                        }
+                    ], 
+                    "requires": [
+                        "artist name"
+                    ]
+                }
+            ], 
+            "provide": [
+                "sort artist"
+            ]
+        }, 
+        "rule/knowledge/sort/composer": {
+            "branch": [
+                {
+                    "decode": [
+                        {
+                            "expression": "^(the |a |an )?(?P<sort_composer>.+)$", 
+                            "flags": 2, 
+                            "property": "composer name"
+                        }
+                    ], 
+                    "requires": [
+                        "composer name"
+                    ]
+                }
+            ], 
+            "provide": [
+                "sort composer"
+            ]
+        }, 
+        "rule/knowledge/sort/name": {
+            "branch": [
+                {
+                    "decode": [
+                        {
+                            "expression": "^(the |a |an )?(?P<sort_name>.+)$", 
+                            "flags": 2, 
+                            "property": "track name"
+                        }
+                    ], 
+                    "requires": [
+                        "track name"
+                    ]
+                }
+            ], 
+            "provide": [
+                "sort name"
+            ]
+        }, 
+        "rule/knowledge/sort/show": {
+            "branch": [
+                {
+                    "decode": [
+                        {
+                            "expression": "^(the |a |an )?(?P<sort_tv_show>.+)$", 
+                            "flags": 2, 
+                            "property": "tv show name"
+                        }
+                    ], 
+                    "requires": [
+                        "tv show name"
+                    ]
+                }
+            ], 
+            "provide": [
+                "sort tv show"
+            ]
+        }, 
+        "rule/knowledge/track/position": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "{track number} / {track count}", 
+                            "property": "track position"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 10
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "track number", 
+                        "track count"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "{track number} / {track count}", 
+                            "property": "track position"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 1
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "track number", 
+                        "track count"
+                    ]
+                }
+            ], 
+            "provide": [
+                "track position"
+            ]
+        }, 
+        "rule/knowledge/tv/episode/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "knowledge uri", 
+                            "reference": "tv episode knowledge uri"
+                        }
+                    ], 
+                    "requires": [
+                        "tv episode knowledge uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "knowledge uri"
+            ]
+        }, 
+        "rule/knowledge/tv/season/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "knowledge uri", 
+                            "reference": "tv season knowledge uri"
+                        }
+                    ], 
+                    "requires": [
+                        "tv season knowledge uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "knowledge uri"
+            ]
+        }, 
+        "rule/knowledge/tv/show/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "knowledge uri", 
+                            "reference": "tv show knowledge uri"
+                        }
+                    ], 
+                    "requires": [
+                        "tv show knowledge uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "knowledge uri"
+            ]
+        }, 
+        "rule/local/collection/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "local uri", 
+                            "reference": "collection local uri"
+                        }
+                    ], 
+                    "requires": [
+                        "collection local uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "local uri"
+            ]
+        }, 
+        "rule/local/company/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "local uri", 
+                            "reference": "company local uri"
+                        }
+                    ], 
+                    "requires": [
+                        "company local uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "local uri"
+            ]
+        }, 
+        "rule/local/department/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "local uri", 
+                            "reference": "department local uri"
+                        }
+                    ], 
+                    "requires": [
+                        "department local uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "local uri"
+            ]
+        }, 
+        "rule/local/genre/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "local uri", 
+                            "reference": "genre local uri"
+                        }
+                    ], 
+                    "requires": [
+                        "genre local uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "local uri"
+            ]
+        }, 
+        "rule/local/keyword/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "local uri", 
+                            "reference": "keyword local uri"
+                        }
+                    ], 
+                    "requires": [
+                        "keyword local uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "local uri"
+            ]
+        }, 
+        "rule/local/movie/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "local uri", 
+                            "reference": "movie local uri"
+                        }
+                    ], 
+                    "requires": [
+                        "movie local uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "local uri"
+            ]
+        }, 
+        "rule/local/music/album/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "local uri", 
+                            "reference": "music album local uri"
+                        }
+                    ], 
+                    "requires": [
+                        "music album local uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "local uri"
+            ]
+        }, 
+        "rule/local/music/track/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "local uri", 
+                            "reference": "music track local uri"
+                        }
+                    ], 
+                    "requires": [
+                        "music track local uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "local uri"
+            ]
+        }, 
+        "rule/local/network/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "local uri", 
+                            "reference": "network local uri"
+                        }
+                    ], 
+                    "requires": [
+                        "network local uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "local uri"
+            ]
+        }, 
+        "rule/local/occupation/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "local uri", 
+                            "reference": "occupation local uri"
+                        }
+                    ], 
+                    "requires": [
+                        "occupation local uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "local uri"
+            ]
+        }, 
+        "rule/local/qualified/collection/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/c/local/collection/{collection uuid}", 
+                            "property": "collection local uri"
+                        }
+                    ], 
+                    "requires": [
+                        "collection uuid"
+                    ]
+                }
+            ], 
+            "provide": [
+                "collection local uri"
+            ]
+        }, 
+        "rule/local/qualified/company/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/c/local/company/{company uuid}", 
+                            "property": "company local uri"
+                        }
+                    ], 
+                    "requires": [
+                        "company uuid"
+                    ]
+                }
+            ], 
+            "provide": [
+                "company local uri"
+            ]
+        }, 
+        "rule/local/qualified/department/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/c/local/department/{department uuid}", 
+                            "property": "department local uri"
+                        }
+                    ], 
+                    "requires": [
+                        "department uuid"
+                    ]
+                }
+            ], 
+            "provide": [
+                "department local uri"
+            ]
+        }, 
+        "rule/local/qualified/genre/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/c/local/genre/{genre uuid}", 
+                            "property": "genre local uri"
+                        }
+                    ], 
+                    "requires": [
+                        "genre uuid"
+                    ]
+                }
+            ], 
+            "provide": [
+                "genre local uri"
+            ]
+        }, 
+        "rule/local/qualified/keyword/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/c/local/keyword/{keyword uuid}", 
+                            "property": "keyword local uri"
+                        }
+                    ], 
+                    "requires": [
+                        "keyword uuid"
+                    ]
+                }
+            ], 
+            "provide": [
+                "keyword local uri"
+            ]
+        }, 
+        "rule/local/qualified/movie/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/c/local/movie/{movie uuid}", 
+                            "property": "movie local uri"
+                        }
+                    ], 
+                    "requires": [
+                        "movie uuid"
+                    ]
+                }
+            ], 
+            "provide": [
+                "movie local uri"
+            ]
+        }, 
+        "rule/local/qualified/music/album/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/c/local/music/album/{music album uuid}", 
+                            "property": "music album local uri"
+                        }
+                    ], 
+                    "requires": [
+                        "music album uuid"
+                    ]
+                }
+            ], 
+            "provide": [
+                "music album local uri"
+            ]
+        }, 
+        "rule/local/qualified/music/track/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/c/local/music/track/{music track uuid}", 
+                            "property": "music track local uri"
+                        }
+                    ], 
+                    "requires": [
+                        "music track uuid"
+                    ]
+                }
+            ], 
+            "provide": [
+                "music track local uri"
+            ]
+        }, 
+        "rule/local/qualified/network/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/c/local/network/{network uuid}", 
+                            "property": "network local uri"
+                        }
+                    ], 
+                    "requires": [
+                        "network uuid"
+                    ]
+                }
+            ], 
+            "provide": [
+                "network local uri"
+            ]
+        }, 
+        "rule/local/qualified/occupation/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/c/local/occupation/{occupation uuid}", 
+                            "property": "occupation local uri"
+                        }
+                    ], 
+                    "requires": [
+                        "occupation uuid"
+                    ]
+                }
+            ], 
+            "provide": [
+                "occupation local uri"
+            ]
+        }, 
+        "rule/local/qualified/tv/episode/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/c/local/tv/episode/{tv episode uuid}", 
+                            "property": "tv episode local uri"
+                        }
+                    ], 
+                    "requires": [
+                        "tv episode uuid"
+                    ]
+                }
+            ], 
+            "provide": [
+                "tv episode local uri"
+            ]
+        }, 
+        "rule/local/qualified/tv/season/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/c/local/tv/season/{tv season uuid}", 
+                            "property": "tv season local uri"
+                        }
+                    ], 
+                    "requires": [
+                        "tv season uuid"
+                    ]
+                }
+            ], 
+            "provide": [
+                "tv season local uri"
+            ]
+        }, 
+        "rule/local/qualified/tv/show/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/c/local/tv/show/{tv show uuid}", 
+                            "property": "tv show local uri"
+                        }
+                    ], 
+                    "requires": [
+                        "tv show uuid"
+                    ]
+                }
+            ], 
+            "provide": [
+                "tv show local uri"
+            ]
+        }, 
+        "rule/local/tv/episode/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "local uri", 
+                            "reference": "tv episode local uri"
+                        }
+                    ], 
+                    "requires": [
+                        "tv episode local uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "local uri"
+            ]
+        }, 
+        "rule/local/tv/season/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "local uri", 
+                            "reference": "tv season local uri"
+                        }
+                    ], 
+                    "requires": [
+                        "tv season local uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "local uri"
+            ]
+        }, 
+        "rule/local/tv/show/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "local uri", 
+                            "reference": "tv show local uri"
+                        }
+                    ], 
+                    "requires": [
+                        "tv show local uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "local uri"
+            ]
+        }, 
+        "rule/medium/asset/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/m/asset/{home id}", 
+                            "property": "asset uri"
+                        }
+                    ], 
+                    "requires": [
+                        "home id"
+                    ]
+                }
+            ], 
+            "provide": [
+                "asset uri"
+            ]
+        }, 
+        "rule/medium/credit/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/k/person/{person id}/credit", 
+                            "property": "credit uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 100
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "person id"
+                    ]
+                }
+            ], 
+            "provide": [
+                "credit uri"
+            ]
+        }, 
+        "rule/medium/home/tv/season/umid": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "algorithm": "umid", 
+                            "digest": [
+                                "tv season id", 
+                                "media kind"
+                            ], 
+                            "property": "tv season umid"
+                        }
+                    ], 
+                    "requires": [
+                        "tv season id"
+                    ]
+                }
+            ], 
+            "provide": [
+                "tv season umid"
+            ]
+        }, 
+        "rule/medium/home/tv/show/umid": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "algorithm": "umid", 
+                            "digest": [
+                                "tv show id", 
+                                "media kind"
+                            ], 
+                            "property": "tv show umid"
+                        }
+                    ], 
+                    "requires": [
+                        "tv show id"
+                    ]
+                }
+            ], 
+            "provide": [
+                "tv show umid"
+            ]
+        }, 
+        "rule/medium/home/umid": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "algorithm": "umid", 
+                            "digest": [
+                                "home id", 
+                                "media kind"
+                            ], 
+                            "property": "umid"
+                        }
+                    ], 
+                    "requires": [
+                        "home id"
+                    ]
+                }
+            ], 
+            "provide": [
+                "umid"
+            ]
+        }, 
+        "rule/medium/home/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/h/{home id}", 
+                            "property": "home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "home id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/movie/{movie id}", 
+                            "property": "home uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 9
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "movie id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/movie/tmdb/{tmdb movie id}", 
+                            "property": "home uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 9
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "tmdb movie id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/movie/imdb/{imdb movie id}", 
+                            "property": "home uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 9
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "imdb movie id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/movie/rottentomatoes/{rottentomatoes movie id}", 
+                            "property": "home uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 9
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "rottentomatoes movie id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/tv/episode/{tv episode id}", 
+                            "property": "home uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 10
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "tv episode id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/tv/episode/{tv season id}/{track number}", 
+                            "property": "home uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 10
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "tv season id", 
+                        "track number"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/tv/episode/{tv show id}/{disc number}/{track number}", 
+                            "property": "home uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 10
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "tv show id", 
+                        "disc number", 
+                        "track number"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/tv/episode/tmdb/{tmdb tv show id}/{disc number}/{track number}", 
+                            "property": "home uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 10
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "tmdb tv show id", 
+                        "disc number", 
+                        "track number"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/tv/episode/tmdb/{tmdb tv season id}/{track number}", 
+                            "property": "home uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 10
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "tmdb tv season id", 
+                        "track number"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/tv/episode/tmdb/{tmdb tv episode id}", 
+                            "property": "home uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 10
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "tmdb tv episode id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/tv/episode/itunes/{itunes tv episode id}", 
+                            "property": "home uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 10
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "itunes tv episode id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/tv/episode/itunes/{itunes tv season id}/{track number}", 
+                            "property": "home uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 10
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "itunes tv season id", 
+                        "track number"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/tv/episode/itunes/{itunes tv show id}/{disc number}/{track number}", 
+                            "property": "home uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 10
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "itunes tv show id", 
+                        "disc number", 
+                        "track number"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/tv/episode/imdb/{imdb tv episode id}", 
+                            "property": "home uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 10
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "imdb tv episode id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/tv/episode/imdb/{imdb tv show id}/{disc number}/{track number}", 
+                            "property": "home uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 10
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "imdb tv show id", 
+                        "disc number", 
+                        "track number"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/tv/season/{tv season id}", 
+                            "property": "home uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 10
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "tv season id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/tv/season/{tv show id}/{disc number}", 
+                            "property": "home uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 10
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "tv show id", 
+                        "disc number"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/tv/season/tmdb/{tmdb tv show id}/{disc number}", 
+                            "property": "home uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 10
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "tmdb tv show id", 
+                        "disc number"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/tv/season/tmdb/{tmdb tv season id}", 
+                            "property": "home uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 10
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "tmdb tv season id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/tv/show/{tv show id}", 
+                            "property": "home uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 10
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "tv show id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/tv/show/tmdb/{tmdb tv show id}", 
+                            "property": "home uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 10
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "tmdb tv show id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/music/track/{music track id}", 
+                            "property": "home uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 1
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "music track id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/music/track/{music album id}/{disc number}/{track number}", 
+                            "property": "home uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 1
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "music album id", 
+                        "disc number", 
+                        "track number"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/music/track/~/{album handle}/{disc number}/{track number}", 
+                            "property": "home uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 1
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "album handle", 
+                        "disc number", 
+                        "track number"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/music/track/itunes/{itunes music album id}/{disc number}/{track number}", 
+                            "property": "home uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 1
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "itunes music album id", 
+                        "disc number", 
+                        "track number"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/person/tmdb/{tmdb person id}", 
+                            "property": "home uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 100
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "tmdb person id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/person/imdb/{imdb person id}", 
+                            "property": "home uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 100
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "imdb person id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/person/itunes/{itunes person id}", 
+                            "property": "home uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 100
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "itunes person id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/person/freebase{freebase person mid}", 
+                            "property": "home uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 100
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "freebase person mid"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/genre/tmdb/{tmdb genre id}", 
+                            "property": "home uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 101
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "tmdb genre id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/network/tmdb/{tmdb network id}", 
+                            "property": "home uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 102
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "tmdb network id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/company/tmdb/{tmdb company id}", 
+                            "property": "home uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 103
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "tmdb company id"
+                    ]
+                }
+            ], 
+            "provide": [
+                "home uri"
+            ]
+        }, 
+        "rule/medium/knowledge/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/k/{language}/tv/episode/{tv episode id}", 
+                            "property": "knowledge uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 10
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "tv episode id", 
+                        "language"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/k/{language}/tv/episode/{tv season id}/{track number}", 
+                            "property": "knowledge uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 10
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "tv season id", 
+                        "track number", 
+                        "language"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/k/{language}/tv/episode/{tv show id}/{disc number}/{track number}", 
+                            "property": "knowledge uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 10
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "tv show id", 
+                        "disc number", 
+                        "track number", 
+                        "language"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/k/{language}/tv/season/{tv season id}", 
+                            "property": "knowledge uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 10
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "tv season id", 
+                        "language"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/k/{language}/tv/season/{tv show id}/{disc number}", 
+                            "property": "knowledge uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 10
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "tv show id", 
+                        "tv season number", 
+                        "language"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/k/{language}/tv/show/{tv show id}", 
+                            "property": "knowledge uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 10
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "tv show id", 
+                        "language"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/k/{language}/movie/{movie id}", 
+                            "property": "knowledge uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 9
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "movie id", 
+                        "language"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/k/{language}/music/track/{music track id}", 
+                            "property": "knowledge uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 1
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "music track id", 
+                        "language"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/k/{language}/music/track/{music album id}/{disc number}/{track number}", 
+                            "property": "knowledge uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 1
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "music album id", 
+                        "disc number", 
+                        "track number", 
+                        "language"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/k/{language}/person/{person id}", 
+                            "property": "knowledge uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 100
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "person id", 
+                        "language"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/k/{language}/genre/{genre id}", 
+                            "property": "knowledge uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 101
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "genre id", 
+                        "language"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/k/network/{network id}", 
+                            "property": "knowledge uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 102
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "network id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/k/{language}/company/{company id}", 
+                            "property": "knowledge uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 103
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "company id", 
+                        "language"
+                    ]
+                }
+            ], 
+            "provide": [
+                "knowledge uri"
+            ]
+        }, 
+        "rule/medium/people/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/k/tv/episode/{tv episode id}/people", 
+                            "property": "people uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 10
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "tv episode id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/k/tv/season/{tv season id}/people", 
+                            "property": "people uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 10
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "tv season id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/k/tv/show/{tv show id}/people", 
+                            "property": "people uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 10
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "tv show id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/k/movie/{movie id}/people", 
+                            "property": "people uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 9
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "movie id"
+                    ]
+                }
+            ], 
+            "provide": [
+                "people uri"
+            ]
+        }, 
+        "rule/medium/resource/basename/parse": {
+            "branch": [
+                {
+                    "decode": [
+                        {
+                            "expression": "^(?P<resource_path_digest>[0-9a-f]{40})(?:\\.(?P<language>[a-z]{2}))?\\.(?P<stream_order>[0-9]{2})\\.(?P<umid>[0-9a-f]{13})\\.(?P<kind>[^\\.]{3})$", 
+                            "flags": 34, 
+                            "property": "file name"
+                        }
+                    ], 
+                    "match": {
+                        "expression": "^[0-9a-f]{40}(?:\\.[a-z]{2})?\\.[0-9]{2}\\.[0-9a-f]{13}\\.[^\\.]{3}$", 
+                        "flags": 34, 
+                        "property": "file name"
+                    }, 
+                    "requires": [
+                        "file name"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "media kind", 
+                            "value": 10
+                        }
+                    ], 
+                    "decode": [
+                        {
+                            "expression": "^tmdb(?P<tmdb_tv_show_id>[0-9]+) s(?P<disc_number>[0-9]+)e(?P<track_number>[0-9]+)[^/]*(?:\\.(?P<language>[a-z]{2}))?\\.(?P<kind>[^\\.]{3})$", 
+                            "flags": 34, 
+                            "property": "basename"
+                        }
+                    ], 
+                    "match": {
+                        "expression": "^tmdb[0-9]+ s[0-9]+e[0-9]+[^/]*(?:\\.[a-z]{2})?\\.[^\\.]{3}$", 
+                        "flags": 34, 
+                        "property": "basename"
+                    }, 
+                    "requires": [
+                        "basename"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "media kind", 
+                            "value": 10
+                        }
+                    ], 
+                    "decode": [
+                        {
+                            "expression": "^tvdb(?P<tvdb_tv_show_id>[0-9]+) s(?P<disc_number>[0-9]+)e(?P<track_number>[0-9]+)[^/]*(?:\\.(?P<language>[a-z]{2}))?\\.(?P<kind>[^\\.]{3})$", 
+                            "flags": 34, 
+                            "property": "basename"
+                        }
+                    ], 
+                    "match": {
+                        "expression": "^tvdb[0-9]+ s[0-9]+e[0-9]+[^/]*(?:\\.[a-z]{2})?\\.[^\\.]{3}$", 
+                        "flags": 34, 
+                        "property": "basename"
+                    }, 
+                    "requires": [
+                        "basename"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "media kind", 
+                            "value": 10
+                        }
+                    ], 
+                    "decode": [
+                        {
+                            "expression": "^itmf(?P<itunes_tv_show_id>[0-9]+) s(?P<disc_number>[0-9]+)e(?P<track_number>[0-9]+)[^/]*(?:\\.(?P<language>[a-z]{2}))?\\.(?P<kind>[^\\.]{3})$", 
+                            "flags": 34, 
+                            "property": "basename"
+                        }
+                    ], 
+                    "match": {
+                        "expression": "^itmf[0-9]+ s[0-9]+e[0-9]+[^/]*(?:\\.[a-z]{2})?\\.[^\\.]{3}$", 
+                        "flags": 34, 
+                        "property": "basename"
+                    }, 
+                    "requires": [
+                        "basename"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "media kind", 
+                            "value": 1
+                        }
+                    ], 
+                    "decode": [
+                        {
+                            "expression": "^itmf(?P<itunes_music_album_id>[0-9]+) d(?P<disc_number>[0-9]+)t(?P<track_number>[0-9]+)[^/]*(?:\\.(?P<language>[a-z]{2}))?\\.(?P<kind>[^\\.]{3})$", 
+                            "flags": 34, 
+                            "property": "basename"
+                        }
+                    ], 
+                    "match": {
+                        "expression": "^itmf[0-9]+ d[0-9]+t[0-9]+[^/]*(?:\\.[a-z]{2})?\\.[^\\.]{3}$", 
+                        "flags": 34, 
+                        "property": "basename"
+                    }, 
+                    "requires": [
+                        "basename"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "media kind", 
+                            "value": 9
+                        }
+                    ], 
+                    "decode": [
+                        {
+                            "expression": "^imdb(?P<imdb_movie_id>tt[0-9]+)[^/]*(?:\\.(?P<language>[a-z]{2}))?\\.(?P<kind>[^\\.]{3})$", 
+                            "flags": 34, 
+                            "property": "basename"
+                        }
+                    ], 
+                    "match": {
+                        "expression": "^imdbtt[0-9]+[^/]*(?:\\.[a-z]{2})?\\.[^\\.]{3}$", 
+                        "flags": 34, 
+                        "property": "basename"
+                    }, 
+                    "requires": [
+                        "basename"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "media kind", 
+                            "value": 9
+                        }
+                    ], 
+                    "decode": [
+                        {
+                            "expression": "^tmdb(?P<tmdb_movie_id>[0-9]+)[^/]*(?:\\.(?P<language>[a-z]{2}))?\\.(?P<kind>[^\\.]{3})$", 
+                            "flags": 34, 
+                            "property": "basename"
+                        }
+                    ], 
+                    "match": {
+                        "expression": "^tmdb[0-9]+[^/]*(?:\\.[a-z]{2})?\\.[^\\.]{3}$", 
+                        "flags": 34, 
+                        "property": "basename"
+                    }, 
+                    "requires": [
+                        "basename"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "media kind", 
+                            "value": 9
+                        }
+                    ], 
+                    "decode": [
+                        {
+                            "expression": "^itmf(?P<itunes_movie_id>[0-9]+)[^/]*(?:\\.(?P<language>[a-z]{2}))?\\.(?P<kind>[^\\.]{3})$", 
+                            "flags": 34, 
+                            "property": "basename"
+                        }
+                    ], 
+                    "match": {
+                        "expression": "^itmf[0-9]+[^/]*(?:\\.[a-z]{2})?\\.[^\\.]{3}$", 
+                        "flags": 34, 
+                        "property": "basename"
+                    }, 
+                    "requires": [
+                        "basename"
+                    ]
+                }
+            ], 
+            "provide": [
+                "disc number", 
+                "track number", 
+                "imdb movie id", 
+                "tmdb movie id", 
+                "itunes movie id", 
+                "tv show handle", 
+                "tvdb tv show id", 
+                "itunes tv show id", 
+                "itunes music album id", 
+                "album handle", 
+                "track name", 
+                "stream order"
+            ]
+        }, 
+        "rule/medium/resource/directory/canonic": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "{volume path}/tv show/{kind}/{profile}/{simple tv show name}.{tv show umid}/{disc number}.{tv season umid}", 
+                            "property": "canonic directory"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 10
+                    }, 
+                    "requires": [
+                        "volume path", 
+                        "media kind", 
+                        "kind", 
+                        "profile", 
+                        "tv show umid", 
+                        "tv season umid", 
+                        "simple tv show name", 
+                        "disc number"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "{volume path}/music/{kind}/{profile}/{music album id}/{disc number}", 
+                            "property": "canonic directory"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 1
+                    }, 
+                    "requires": [
+                        "volume path", 
+                        "media kind", 
+                        "kind", 
+                        "profile", 
+                        "music album id", 
+                        "disc number"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "{volume path}/movie/{kind}/{profile}", 
+                            "property": "canonic directory"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 9
+                    }, 
+                    "requires": [
+                        "volume path", 
+                        "media kind", 
+                        "kind", 
+                        "profile"
+                    ]
+                }
+            ], 
+            "provide": [
+                "canonic directory"
+            ]
+        }, 
+        "rule/medium/resource/directory/fragment": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "{temp path}", 
+                            "property": "fragment directory"
+                        }
+                    ], 
+                    "requires": [
+                        "temp path"
+                    ]
+                }
+            ], 
+            "provide": [
+                "fragment directory"
+            ]
+        }, 
+        "rule/medium/resource/directory/implicit": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "directory", 
+                            "reference": "canonic directory"
+                        }
+                    ], 
+                    "equal": {
+                        "routing type": "repository"
+                    }, 
+                    "requires": [
+                        "canonic directory", 
+                        "routing type"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "directory", 
+                            "reference": "fragment directory"
+                        }
+                    ], 
+                    "equal": {
+                        "routing type": "fragment"
+                    }, 
+                    "requires": [
+                        "fragment directory", 
+                        "routing type"
+                    ]
+                }
+            ], 
+            "provide": [
+                "directory"
+            ]
+        }, 
+        "rule/medium/resource/filename/canonic": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "{simple tv show name} {track genealogy} {simple tv episode name}.{umid}.{kind}", 
+                            "property": "canonic file name"
+                        }
+                    ], 
+                    "equal": {
+                        "localized": false, 
+                        "media kind": 10
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "simple tv show name", 
+                        "track genealogy", 
+                        "simple tv episode name", 
+                        "umid", 
+                        "kind", 
+                        "localized"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "{simple tv show name} {track genealogy} {simple tv episode name}.{language}.{umid}.{kind}", 
+                            "property": "canonic file name"
+                        }
+                    ], 
+                    "equal": {
+                        "localized": true, 
+                        "media kind": 10
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "simple tv show name", 
+                        "track genealogy", 
+                        "simple tv episode name", 
+                        "umid", 
+                        "kind", 
+                        "language", 
+                        "localized"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "{simple music album name} {track genealogy} {simple music track name}.{umid}.{kind}", 
+                            "property": "canonic file name"
+                        }
+                    ], 
+                    "equal": {
+                        "localized": false, 
+                        "media kind": 1
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "simple music album name", 
+                        "track genealogy", 
+                        "simple music track name", 
+                        "umid", 
+                        "kind", 
+                        "localized"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "{simple music album name} {track genealogy} {simple music track name}.{language}.{umid}.{kind}", 
+                            "property": "canonic file name"
+                        }
+                    ], 
+                    "equal": {
+                        "localized": true, 
+                        "media kind": 1
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "simple music album name", 
+                        "track genealogy", 
+                        "simple music track name", 
+                        "umid", 
+                        "kind", 
+                        "language", 
+                        "localized"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "{simple movie title} {release year}.{umid}.{kind}", 
+                            "property": "canonic file name"
+                        }
+                    ], 
+                    "equal": {
+                        "localized": false, 
+                        "media kind": 9
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "simple movie title", 
+                        "release year", 
+                        "umid", 
+                        "kind", 
+                        "localized"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "{simple movie title} {release year}.{language}.{umid}.{kind}", 
+                            "property": "canonic file name"
+                        }
+                    ], 
+                    "equal": {
+                        "localized": true, 
+                        "media kind": 9
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "simple movie title", 
+                        "release year", 
+                        "umid", 
+                        "kind", 
+                        "language", 
+                        "localized"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "{simple movie title}.{umid}.{kind}", 
+                            "property": "canonic file name"
+                        }
+                    ], 
+                    "equal": {
+                        "localized": false, 
+                        "media kind": 9
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "simple movie title", 
+                        "umid", 
+                        "kind", 
+                        "localized"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "{simple movie title}.{language}.{umid}.{kind}", 
+                            "property": "canonic file name"
+                        }
+                    ], 
+                    "equal": {
+                        "localized": true, 
+                        "media kind": 9
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "simple movie title", 
+                        "umid", 
+                        "kind", 
+                        "language", 
+                        "localized"
+                    ]
+                }
+            ], 
+            "provide": [
+                "canonic file name"
+            ]
+        }, 
+        "rule/medium/resource/filename/fragment": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "{resource path digest}.{language}.{stream order:>02}.{umid}.{kind}", 
+                            "property": "fragment file name"
+                        }
+                    ], 
+                    "equal": {
+                        "localized": true
+                    }, 
+                    "requires": [
+                        "resource path digest", 
+                        "language", 
+                        "stream order", 
+                        "umid", 
+                        "kind", 
+                        "localized"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "{resource path digest}.{stream order:>02}.{umid}.{kind}", 
+                            "property": "fragment file name"
+                        }
+                    ], 
+                    "equal": {
+                        "localized": false
+                    }, 
+                    "requires": [
+                        "resource path digest", 
+                        "stream order", 
+                        "umid", 
+                        "kind", 
+                        "localized"
+                    ]
+                }
+            ], 
+            "provide": [
+                "fragment file name"
+            ]
+        }, 
+        "rule/medium/resource/filename/implicit": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "file name", 
+                            "reference": "canonic file name"
+                        }
+                    ], 
+                    "equal": {
+                        "routing type": "repository"
+                    }, 
+                    "requires": [
+                        "canonic file name", 
+                        "routing type"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "file name", 
+                            "reference": "fragment file name"
+                        }
+                    ], 
+                    "equal": {
+                        "routing type": "fragment"
+                    }, 
+                    "requires": [
+                        "fragment file name", 
+                        "routing type"
+                    ]
+                }
+            ], 
+            "provide": [
+                "file name"
+            ]
+        }, 
+        "rule/medium/resource/fragment/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/m/resource/sha1/{path digest}/fragment", 
+                            "property": "resource fragment uri"
+                        }
+                    ], 
+                    "requires": [
+                        "path digest"
+                    ]
+                }
+            ], 
+            "provide": [
+                "resource fragment uri"
+            ]
+        }, 
+        "rule/medium/resource/kind/language": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "localized", 
+                            "value": false
+                        }
+                    ], 
+                    "equal": {
+                        "kind": "m4v"
+                    }, 
+                    "requires": [
+                        "kind"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "localized", 
+                            "value": false
+                        }
+                    ], 
+                    "equal": {
+                        "kind": "m4a"
+                    }, 
+                    "requires": [
+                        "kind"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "localized", 
+                            "value": false
+                        }
+                    ], 
+                    "equal": {
+                        "kind": "mkv"
+                    }, 
+                    "requires": [
+                        "kind"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "localized", 
+                            "value": false
+                        }
+                    ], 
+                    "equal": {
+                        "kind": "avi"
+                    }, 
+                    "requires": [
+                        "kind"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "localized", 
+                            "value": true
+                        }
+                    ], 
+                    "equal": {
+                        "kind": "srt"
+                    }, 
+                    "requires": [
+                        "kind"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "localized", 
+                            "value": true
+                        }
+                    ], 
+                    "equal": {
+                        "kind": "ass"
+                    }, 
+                    "requires": [
+                        "kind"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "localized", 
+                            "value": true
+                        }
+                    ], 
+                    "equal": {
+                        "kind": "chp"
+                    }, 
+                    "requires": [
+                        "kind"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "localized", 
+                            "value": true
+                        }
+                    ], 
+                    "equal": {
+                        "kind": "ac3"
+                    }, 
+                    "requires": [
+                        "kind"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "localized", 
+                            "value": true
+                        }
+                    ], 
+                    "equal": {
+                        "kind": "dts"
+                    }, 
+                    "requires": [
+                        "kind"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "localized", 
+                            "value": true
+                        }
+                    ], 
+                    "equal": {
+                        "kind": "flac"
+                    }, 
+                    "requires": [
+                        "kind"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "localized", 
+                            "value": true
+                        }
+                    ], 
+                    "equal": {
+                        "kind": "png"
+                    }, 
+                    "requires": [
+                        "kind"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "localized", 
+                            "value": true
+                        }
+                    ], 
+                    "equal": {
+                        "kind": "jpg"
+                    }, 
+                    "requires": [
+                        "kind"
+                    ]
+                }
+            ], 
+            "provide": [
+                "localized"
+            ]
+        }, 
+        "rule/medium/resource/path/canonic": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "{canonic directory}/{canonic file name}", 
+                            "property": "canonic path"
+                        }
+                    ], 
+                    "requires": [
+                        "canonic directory", 
+                        "canonic file name"
+                    ]
+                }
+            ], 
+            "provide": [
+                "canonic path"
+            ]
+        }, 
+        "rule/medium/resource/path/implicit": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "{directory}/{file name}", 
+                            "property": "path"
+                        }
+                    ], 
+                    "requires": [
+                        "directory", 
+                        "file name"
+                    ]
+                }
+            ], 
+            "provide": [
+                "path"
+            ]
+        }, 
+        "rule/medium/resource/track/genealogy": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "s{disc number:02d}e{track number:02d}", 
+                            "property": "track genealogy"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 10
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "disc number", 
+                        "track number"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "d{disc number:02d}t{track number:02d}", 
+                            "property": "track genealogy"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 1
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "disc number", 
+                        "track number"
+                    ]
+                }
+            ], 
+            "provide": [
+                "track genealogy"
+            ]
+        }, 
+        "rule/medium/resource/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/m/resource/sha1/{path digest}", 
+                            "property": "resource uri"
+                        }
+                    ], 
+                    "requires": [
+                        "path digest"
+                    ]
+                }
+            ], 
+            "provide": [
+                "resource uri"
+            ]
+        }, 
+        "rule/medium/stream/audio/kind": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "kind", 
+                            "value": "ac3"
+                        }
+                    ], 
+                    "equal": {
+                        "format": "AC-3", 
+                        "stream kind": "audio"
+                    }, 
+                    "requires": [
+                        "format", 
+                        "stream kind"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "kind", 
+                            "value": "dts"
+                        }
+                    ], 
+                    "equal": {
+                        "format": "DTS", 
+                        "stream kind": "audio"
+                    }, 
+                    "requires": [
+                        "format", 
+                        "stream kind"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "kind", 
+                            "value": "mp3"
+                        }
+                    ], 
+                    "equal": {
+                        "format": "MPEG Audio", 
+                        "stream kind": "audio"
+                    }, 
+                    "requires": [
+                        "format", 
+                        "stream kind"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "kind", 
+                            "value": "aac"
+                        }
+                    ], 
+                    "equal": {
+                        "format": "AAC", 
+                        "stream kind": "audio"
+                    }, 
+                    "requires": [
+                        "format", 
+                        "stream kind"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "kind", 
+                            "value": "alac"
+                        }
+                    ], 
+                    "equal": {
+                        "format": "ALAC", 
+                        "stream kind": "audio"
+                    }, 
+                    "requires": [
+                        "format", 
+                        "stream kind"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "kind", 
+                            "value": "pcm"
+                        }
+                    ], 
+                    "equal": {
+                        "format": "PCM", 
+                        "stream kind": "audio"
+                    }, 
+                    "requires": [
+                        "format", 
+                        "stream kind"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "kind", 
+                            "value": "flac"
+                        }
+                    ], 
+                    "equal": {
+                        "format": "FLAC", 
+                        "stream kind": "audio"
+                    }, 
+                    "requires": [
+                        "format", 
+                        "stream kind"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "kind", 
+                            "value": "ogg"
+                        }
+                    ], 
+                    "equal": {
+                        "format": "Vorbis", 
+                        "stream kind": "audio"
+                    }, 
+                    "requires": [
+                        "format", 
+                        "stream kind"
+                    ]
+                }
+            ], 
+            "provide": [
+                "kind"
+            ]
+        }, 
+        "rule/medium/stream/audio/name": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "stream name", 
+                            "value": "Mono"
+                        }
+                    ], 
+                    "equal": {
+                        "channels": 1, 
+                        "stream kind": "audio"
+                    }, 
+                    "requires": [
+                        "stream kind", 
+                        "channels"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "stream name", 
+                            "value": "Stereo"
+                        }
+                    ], 
+                    "equal": {
+                        "channels": 2, 
+                        "stream kind": "audio"
+                    }, 
+                    "requires": [
+                        "stream kind", 
+                        "channels"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "stream name", 
+                            "value": "Stereo"
+                        }
+                    ], 
+                    "equal": {
+                        "channels": 3, 
+                        "stream kind": "audio"
+                    }, 
+                    "requires": [
+                        "stream kind", 
+                        "channels"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "stream name", 
+                            "value": "Quadraphonic"
+                        }
+                    ], 
+                    "equal": {
+                        "channels": 4, 
+                        "stream kind": "audio"
+                    }, 
+                    "requires": [
+                        "stream kind", 
+                        "channels"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "stream name", 
+                            "value": "Surround"
+                        }
+                    ], 
+                    "equal": {
+                        "channels": 5, 
+                        "stream kind": "audio"
+                    }, 
+                    "requires": [
+                        "stream kind", 
+                        "channels"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "stream name", 
+                            "value": "Surround"
+                        }
+                    ], 
+                    "equal": {
+                        "channels": 6, 
+                        "stream kind": "audio"
+                    }, 
+                    "requires": [
+                        "stream kind", 
+                        "channels"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "stream name", 
+                            "value": "Surround"
+                        }
+                    ], 
+                    "equal": {
+                        "channels": 7, 
+                        "stream kind": "audio"
+                    }, 
+                    "requires": [
+                        "stream kind", 
+                        "channels"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "stream name", 
+                            "value": "Surround"
+                        }
+                    ], 
+                    "equal": {
+                        "channels": 8, 
+                        "stream kind": "audio"
+                    }, 
+                    "requires": [
+                        "stream kind", 
+                        "channels"
+                    ]
+                }
+            ], 
+            "provide": [
+                "stream name"
+            ]
+        }, 
+        "rule/medium/stream/default/position": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "stream kind position", 
+                            "value": 1
+                        }
+                    ]
+                }
+            ], 
+            "provide": [
+                "stream kind position"
+            ]
+        }, 
+        "rule/medium/stream/default/primary": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "primary", 
+                            "value": false
+                        }
+                    ]
+                }
+            ], 
+            "provide": [
+                "primary"
+            ]
+        }, 
+        "rule/medium/stream/image/kind": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "kind", 
+                            "value": "png"
+                        }
+                    ], 
+                    "equal": {
+                        "format": "LZ77", 
+                        "stream kind": "image"
+                    }, 
+                    "requires": [
+                        "stream kind", 
+                        "format"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "kind", 
+                            "value": "jpg"
+                        }
+                    ], 
+                    "equal": {
+                        "format": "JPEG", 
+                        "stream kind": "image"
+                    }, 
+                    "requires": [
+                        "stream kind", 
+                        "format"
+                    ]
+                }
+            ], 
+            "provide": [
+                "kind"
+            ]
+        }, 
+        "rule/medium/stream/text/kind": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "kind", 
+                            "value": "tx3g"
+                        }
+                    ], 
+                    "equal": {
+                        "format": "Timed text", 
+                        "stream kind": "caption"
+                    }, 
+                    "requires": [
+                        "stream kind", 
+                        "format"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "kind", 
+                            "value": "srt"
+                        }
+                    ], 
+                    "equal": {
+                        "format": "UTF-8", 
+                        "stream kind": "caption"
+                    }, 
+                    "requires": [
+                        "stream kind", 
+                        "format"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "kind", 
+                            "value": "ass"
+                        }
+                    ], 
+                    "equal": {
+                        "format": "ASS", 
+                        "stream kind": "caption"
+                    }, 
+                    "requires": [
+                        "stream kind", 
+                        "format"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "kind", 
+                            "value": "pgs"
+                        }
+                    ], 
+                    "equal": {
+                        "format": "PGS", 
+                        "stream kind": "caption"
+                    }, 
+                    "requires": [
+                        "stream kind", 
+                        "format"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "kind", 
+                            "value": "chp"
+                        }
+                    ], 
+                    "equal": {
+                        "stream kind": "menu"
+                    }, 
+                    "requires": [
+                        "stream kind"
+                    ]
+                }
+            ], 
+            "provide": [
+                "kind"
+            ]
+        }, 
+        "rule/medium/stream/video/kind": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "kind", 
+                            "value": "h264"
+                        }
+                    ], 
+                    "equal": {
+                        "format": "AVC", 
+                        "stream kind": "video"
+                    }, 
+                    "requires": [
+                        "stream kind", 
+                        "format"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "kind", 
+                            "value": "h263"
+                        }
+                    ], 
+                    "equal": {
+                        "format": "MPEG-4 Visual", 
+                        "stream kind": "video"
+                    }, 
+                    "requires": [
+                        "stream kind", 
+                        "format"
+                    ]
+                }
+            ], 
+            "provide": [
+                "kind"
+            ]
+        }, 
+        "rule/system/default/enabled": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "enabled", 
+                            "value": true
+                        }
+                    ]
+                }
+            ], 
+            "provide": [
+                "enabled"
+            ]
+        }, 
+        "rule/system/default/routing": {
+            "provide": [
+                "volume"
+            ]
+        }, 
+        "rule/system/default/routing/type": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "routing type", 
+                            "value": "repository"
+                        }
+                    ]
+                }
+            ], 
+            "provide": [
+                "routing type"
+            ]
+        }, 
+        "rule/system/essence": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "essence", 
+                            "value": "video"
+                        }
+                    ], 
+                    "equal": {
+                        "kind": "mkv"
+                    }, 
+                    "requires": [
+                        "kind"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "essence", 
+                            "value": "video"
+                        }
+                    ], 
+                    "equal": {
+                        "kind": "m4v"
+                    }, 
+                    "requires": [
+                        "kind"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "essence", 
+                            "value": "video"
+                        }
+                    ], 
+                    "equal": {
+                        "kind": "avi"
+                    }, 
+                    "requires": [
+                        "kind"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "essence", 
+                            "value": "video"
+                        }
+                    ], 
+                    "equal": {
+                        "kind": "mov"
+                    }, 
+                    "requires": [
+                        "kind"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "essence", 
+                            "value": "audio"
+                        }
+                    ], 
+                    "equal": {
+                        "kind": "m4a"
+                    }, 
+                    "requires": [
+                        "kind"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "essence", 
+                            "value": "audio"
+                        }
+                    ], 
+                    "equal": {
+                        "kind": "aac"
+                    }, 
+                    "requires": [
+                        "kind"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "essence", 
+                            "value": "audio"
+                        }
+                    ], 
+                    "equal": {
+                        "kind": "ac3"
+                    }, 
+                    "requires": [
+                        "kind"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "essence", 
+                            "value": "audio"
+                        }
+                    ], 
+                    "equal": {
+                        "kind": "dts"
+                    }, 
+                    "requires": [
+                        "kind"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "essence", 
+                            "value": "audio"
+                        }
+                    ], 
+                    "equal": {
+                        "kind": "flac"
+                    }, 
+                    "requires": [
+                        "kind"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "essence", 
+                            "value": "audio"
+                        }
+                    ], 
+                    "equal": {
+                        "kind": "alac"
+                    }, 
+                    "requires": [
+                        "kind"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "essence", 
+                            "value": "audio"
+                        }
+                    ], 
+                    "equal": {
+                        "kind": "mp3"
+                    }, 
+                    "requires": [
+                        "kind"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "essence", 
+                            "value": "audio"
+                        }
+                    ], 
+                    "equal": {
+                        "kind": "ogg"
+                    }, 
+                    "requires": [
+                        "kind"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "essence", 
+                            "value": "json"
+                        }
+                    ], 
+                    "equal": {
+                        "kind": "json"
+                    }, 
+                    "requires": [
+                        "kind"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "essence", 
+                            "value": "caption"
+                        }
+                    ], 
+                    "equal": {
+                        "kind": "srt"
+                    }, 
+                    "requires": [
+                        "kind"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "essence", 
+                            "value": "caption"
+                        }
+                    ], 
+                    "equal": {
+                        "kind": "ass"
+                    }, 
+                    "requires": [
+                        "kind"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "essence", 
+                            "value": "menu"
+                        }
+                    ], 
+                    "equal": {
+                        "kind": "chp"
+                    }, 
+                    "requires": [
+                        "kind"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "essence", 
+                            "value": "image"
+                        }
+                    ], 
+                    "equal": {
+                        "kind": "jpg"
+                    }, 
+                    "requires": [
+                        "kind"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "essence", 
+                            "value": "image"
+                        }
+                    ], 
+                    "equal": {
+                        "kind": "png"
+                    }, 
+                    "requires": [
+                        "kind"
+                    ]
+                }
+            ], 
+            "provide": [
+                "essence"
+            ]
+        }, 
+        "rule/system/mongodb/url": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "mongodb://{username}:{password}@{host}:{port}/{database}", 
+                            "property": "mongodb url"
+                        }
+                    ], 
+                    "requires": [
+                        "host", 
+                        "database", 
+                        "port", 
+                        "username", 
+                        "password"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "mongodb://{username}:{password}@{host}/{database}", 
+                            "property": "mongodb url"
+                        }
+                    ], 
+                    "requires": [
+                        "host", 
+                        "database", 
+                        "username", 
+                        "password"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "mongodb://{host}:{port}", 
+                            "property": "mongodb url"
+                        }
+                    ], 
+                    "requires": [
+                        "host", 
+                        "port"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "mongodb://{host}", 
+                            "property": "mongodb url"
+                        }
+                    ], 
+                    "requires": [
+                        "host"
+                    ]
+                }
+            ], 
+            "provide": [
+                "mongodb url"
+            ]
+        }, 
+        "rule/task/default/preset": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "preset", 
+                            "value": "default"
+                        }
+                    ], 
+                    "equal": {
+                        "action": "copy", 
+                        "host": "vito"
+                    }, 
+                    "requires": [
+                        "action", 
+                        "host"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "preset", 
+                            "value": "default"
+                        }
+                    ], 
+                    "equal": {
+                        "action": "move", 
+                        "host": "vito"
+                    }, 
+                    "requires": [
+                        "action", 
+                        "host"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "preset", 
+                            "value": "default"
+                        }
+                    ], 
+                    "equal": {
+                        "action": "delete", 
+                        "host": "vito"
+                    }, 
+                    "requires": [
+                        "action", 
+                        "host"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "preset", 
+                            "value": "default"
+                        }
+                    ], 
+                    "equal": {
+                        "action": "prepare", 
+                        "host": "vito"
+                    }, 
+                    "requires": [
+                        "action", 
+                        "host"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "preset", 
+                            "value": "normal"
+                        }
+                    ], 
+                    "equal": {
+                        "action": "optimize", 
+                        "host": "vito"
+                    }, 
+                    "requires": [
+                        "action", 
+                        "host"
+                    ]
+                }
+            ], 
+            "provide": [
+                "preset"
+            ]
+        }
+    }
+}

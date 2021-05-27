@@ -1,0 +1,3429 @@
+{
+    "rule": {
+        "rule/asset/flowcell/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "asset uri", 
+                            "reference": "flowcell asset uri"
+                        }
+                    ], 
+                    "requires": [
+                        "flowcell asset uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "asset uri"
+            ]
+        }, 
+        "rule/asset/lane/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "asset uri", 
+                            "reference": "lane asset uri"
+                        }
+                    ], 
+                    "requires": [
+                        "lane asset uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "asset uri"
+            ]
+        }, 
+        "rule/asset/library/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "asset uri", 
+                            "reference": "library asset uri"
+                        }
+                    ], 
+                    "requires": [
+                        "library asset uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "asset uri"
+            ]
+        }, 
+        "rule/asset/qualified/flowcell/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/m/asset/{flowcell id}", 
+                            "property": "flowcell asset uri"
+                        }
+                    ], 
+                    "requires": [
+                        "flowcell id"
+                    ]
+                }
+            ], 
+            "provide": [
+                "flowcell asset uri"
+            ]
+        }, 
+        "rule/asset/qualified/lane/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/m/asset/{lane id}", 
+                            "property": "lane asset uri"
+                        }
+                    ], 
+                    "requires": [
+                        "lane id"
+                    ]
+                }
+            ], 
+            "provide": [
+                "lane asset uri"
+            ]
+        }, 
+        "rule/asset/qualified/library/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/m/asset/{library id}", 
+                            "property": "library asset uri"
+                        }
+                    ], 
+                    "requires": [
+                        "library id"
+                    ]
+                }
+            ], 
+            "provide": [
+                "library asset uri"
+            ]
+        }, 
+        "rule/asset/qualified/sample/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/m/asset/{sample id}", 
+                            "property": "sample asset uri"
+                        }
+                    ], 
+                    "requires": [
+                        "sample id"
+                    ]
+                }
+            ], 
+            "provide": [
+                "sample asset uri"
+            ]
+        }, 
+        "rule/asset/sample/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "asset uri", 
+                            "reference": "sample asset uri"
+                        }
+                    ], 
+                    "requires": [
+                        "sample asset uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "asset uri"
+            ]
+        }, 
+        "rule/genealogy/asset/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "asset uri", 
+                            "reference": "flowcell asset uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 50
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "flowcell asset uri"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "asset uri", 
+                            "reference": "lane asset uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 51
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "lane asset uri"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "asset uri", 
+                            "reference": "library asset uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 52
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "library asset uri"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "asset uri", 
+                            "reference": "sample asset uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 53
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "sample asset uri"
+                    ]
+                }
+            ]
+        }, 
+        "rule/genealogy/home/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "home uri", 
+                            "reference": "flowcell home uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 50
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "flowcell home uri"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "home uri", 
+                            "reference": "lane home uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 51
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "lane home uri"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "home uri", 
+                            "reference": "library home uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 52
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "library home uri"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "home uri", 
+                            "reference": "sample home uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 53
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "sample home uri"
+                    ]
+                }
+            ]
+        }, 
+        "rule/genealogy/knowledge/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "knowledge uri", 
+                            "reference": "flowcell knowledge uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 50
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "flowcell knowledge uri"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "knowledge uri", 
+                            "reference": "lane knowledge uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 51
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "lane knowledge uri"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "knowledge uri", 
+                            "reference": "library knowledge uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 52
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "library knowledge uri"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "knowledge uri", 
+                            "reference": "sample knowledge uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 53
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "sample knowledge uri"
+                    ]
+                }
+            ]
+        }, 
+        "rule/genealogy/umid": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "algorithm": "umid", 
+                            "digest": [
+                                "home id", 
+                                "media kind", 
+                                "nibble number"
+                            ], 
+                            "property": "umid"
+                        }
+                    ], 
+                    "requires": [
+                        "home id", 
+                        "media kind", 
+                        "nibble number"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "algorithm": "umid", 
+                            "digest": [
+                                "home id", 
+                                "media kind"
+                            ], 
+                            "property": "umid"
+                        }
+                    ], 
+                    "requires": [
+                        "home id", 
+                        "media kind"
+                    ]
+                }
+            ]
+        }, 
+        "rule/home/barcode/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "home uri", 
+                            "reference": "barcode home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "barcode home uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "home uri"
+            ]
+        }, 
+        "rule/home/flowcell/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "home uri", 
+                            "reference": "flowcell home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "flowcell home uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "home uri"
+            ]
+        }, 
+        "rule/home/lane/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "home uri", 
+                            "reference": "lane home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "lane home uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "home uri"
+            ]
+        }, 
+        "rule/home/library/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "home uri", 
+                            "reference": "library home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "library home uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "home uri"
+            ]
+        }, 
+        "rule/home/organism/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "home uri", 
+                            "reference": "organism home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "organism home uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "home uri"
+            ]
+        }, 
+        "rule/home/pool/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "home uri", 
+                            "reference": "pool home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "pool home uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "home uri"
+            ]
+        }, 
+        "rule/home/qualified/barcode/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/h/barcode/{barcode id}", 
+                            "property": "barcode home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "barcode id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/barcode/uuid/{barcode uuid}", 
+                            "property": "barcode home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "barcode uuid"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/barcode/web/{web barcode id}", 
+                            "property": "barcode home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "web barcode id"
+                    ]
+                }
+            ], 
+            "provide": [
+                "barcode home uri"
+            ]
+        }, 
+        "rule/home/qualified/flowcell/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/h/flowcell/{flowcell id}", 
+                            "property": "flowcell home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "flowcell id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/flowcell/{home id}", 
+                            "property": "flowcell home uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 50
+                    }, 
+                    "requires": [
+                        "home id", 
+                        "media kind"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/flowcell/uuid/{flowcell uuid}", 
+                            "property": "flowcell home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "flowcell uuid"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/flowcell/illumina/{illumina flowcell id}", 
+                            "property": "flowcell home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "illumina flowcell id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/flowcell/web/{web flowcell id}", 
+                            "property": "flowcell home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "web flowcell id"
+                    ]
+                }
+            ], 
+            "provide": [
+                "flowcell home uri"
+            ]
+        }, 
+        "rule/home/qualified/group/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/h/group/web/{web group id}", 
+                            "property": "group home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "web group id"
+                    ]
+                }
+            ]
+        }, 
+        "rule/home/qualified/lane/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/h/lane/{lane id}", 
+                            "property": "lane home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "lane id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/lane/{home id}", 
+                            "property": "lane home uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 51
+                    }, 
+                    "requires": [
+                        "home id", 
+                        "media kind"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/lane/uuid/{lane uuid}", 
+                            "property": "lane home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "lane uuid"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/lane/{flowcell id}/{lane number}", 
+                            "property": "lane home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "flowcell id", 
+                        "lane number"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/lane/illumina/{illumina flowcell id}/{lane number}", 
+                            "property": "lane home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "illumina flowcell id", 
+                        "lane number"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/lane/web/{web lane id}", 
+                            "property": "lane home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "web lane id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/lane/web/{web flowcell id}/{lane number}", 
+                            "property": "lane home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "web flowcell id", 
+                        "lane number"
+                    ]
+                }
+            ], 
+            "provide": [
+                "lane home uri"
+            ]
+        }, 
+        "rule/home/qualified/library/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/h/library/{library id}", 
+                            "property": "library home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "library id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/library/{home id}", 
+                            "property": "library home uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 52
+                    }, 
+                    "requires": [
+                        "home id", 
+                        "media kind"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/library/web/{web library id}", 
+                            "property": "library home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "web library id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/library/uuid/{library uuid}", 
+                            "property": "library home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "library uuid"
+                    ]
+                }
+            ], 
+            "provide": [
+                "library home uri"
+            ]
+        }, 
+        "rule/home/qualified/organism/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/h/organism/{organism id}", 
+                            "property": "organism home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "organism id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/organism/uuid/{organism uuid}", 
+                            "property": "organism home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "organism uuid"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/organism/web/{web organism id}", 
+                            "property": "organism home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "web organism id"
+                    ]
+                }
+            ], 
+            "provide": [
+                "organism home uri"
+            ]
+        }, 
+        "rule/home/qualified/person/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/h/person/web/{web person id}", 
+                            "property": "person home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "web person id"
+                    ]
+                }
+            ]
+        }, 
+        "rule/home/qualified/pool/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/h/pool/{pool id}", 
+                            "property": "pool home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "pool id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/pool/uuid/{pool uuid}", 
+                            "property": "pool home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "pool uuid"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/pool/web/{web pool id}", 
+                            "property": "pool home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "web pool id"
+                    ]
+                }
+            ], 
+            "provide": [
+                "pool home uri"
+            ]
+        }, 
+        "rule/home/qualified/sample/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/h/sample/{sample id}", 
+                            "property": "sample home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "sample id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/sample/{home id}", 
+                            "property": "sample home uri"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 53
+                    }, 
+                    "requires": [
+                        "home id", 
+                        "media kind"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/sample/web/{web sample id}", 
+                            "property": "sample home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "web sample id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/h/sample/uuid/{sample uuid}", 
+                            "property": "sample home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "sample uuid"
+                    ]
+                }
+            ], 
+            "provide": [
+                "sample home uri"
+            ]
+        }, 
+        "rule/home/sample/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "home uri", 
+                            "reference": "sample home uri"
+                        }
+                    ], 
+                    "requires": [
+                        "sample home uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "home uri"
+            ]
+        }, 
+        "rule/job/implementation": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "implementation", 
+                            "value": "module.bio.queue.flowcell.FlowcellJob"
+                        }
+                    ], 
+                    "equal": {
+                        "action": "implode"
+                    }, 
+                    "requires": [
+                        "action"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "implementation", 
+                            "value": "module.bio.queue.flowcell.FlowcellJob"
+                        }
+                    ], 
+                    "equal": {
+                        "action": "explode"
+                    }, 
+                    "requires": [
+                        "action"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "implementation", 
+                            "value": "module.bio.queue.sheet.ExportSampleSheetJob"
+                        }
+                    ], 
+                    "equal": {
+                        "action": "export-samplesheet"
+                    }, 
+                    "requires": [
+                        "action"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "implementation", 
+                            "value": "module.bio.queue.sheet.ImportSampleSheetJob"
+                        }
+                    ], 
+                    "equal": {
+                        "action": "import-samplesheet"
+                    }, 
+                    "requires": [
+                        "action"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "implementation", 
+                            "value": "module.bio.queue.flowcell.FlowcellJob"
+                        }
+                    ], 
+                    "equal": {
+                        "action": "basecall"
+                    }, 
+                    "requires": [
+                        "action"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "implementation", 
+                            "value": "module.bio.queue.flowcell.FlowcellJob"
+                        }
+                    ], 
+                    "equal": {
+                        "action": "sav"
+                    }, 
+                    "requires": [
+                        "action"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "implementation", 
+                            "value": "module.bio.queue.demux.DemuxJob"
+                        }
+                    ], 
+                    "equal": {
+                        "action": "demux"
+                    }, 
+                    "requires": [
+                        "action"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "implementation", 
+                            "value": "module.bio.queue.demux.DemuxJob"
+                        }
+                    ], 
+                    "equal": {
+                        "action": "filter"
+                    }, 
+                    "requires": [
+                        "action"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "implementation", 
+                            "value": "module.bio.queue.demux.DemuxJob"
+                        }
+                    ], 
+                    "equal": {
+                        "action": "merge"
+                    }, 
+                    "requires": [
+                        "action"
+                    ]
+                }
+            ]
+        }, 
+        "rule/knowledge/barcode/length": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "algorithm": "length", 
+                            "digest": "barcode sequence", 
+                            "property": "barcode length"
+                        }
+                    ], 
+                    "requires": [
+                        "barcode sequence"
+                    ]
+                }
+            ], 
+            "provide": [
+                "barcode length"
+            ]
+        }, 
+        "rule/knowledge/barcode/pattern": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "{barcode nibble}:{barcode cycle offset}:{barcode length}", 
+                            "property": "barcode pattern"
+                        }
+                    ], 
+                    "requires": [
+                        "barcode length", 
+                        "barcode cycle offset", 
+                        "barcode nibble"
+                    ]
+                }
+            ], 
+            "provide": [
+                "barcode pattern"
+            ]
+        }, 
+        "rule/knowledge/barcode/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "knowledge uri", 
+                            "reference": "barcode knowledge uri"
+                        }
+                    ], 
+                    "requires": [
+                        "barcode knowledge uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "knowledge uri"
+            ]
+        }, 
+        "rule/knowledge/flowcell/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "knowledge uri", 
+                            "reference": "flowcell knowledge uri"
+                        }
+                    ], 
+                    "requires": [
+                        "flowcell knowledge uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "knowledge uri"
+            ]
+        }, 
+        "rule/knowledge/lane/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "knowledge uri", 
+                            "reference": "lane knowledge uri"
+                        }
+                    ], 
+                    "requires": [
+                        "lane knowledge uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "knowledge uri"
+            ]
+        }, 
+        "rule/knowledge/library/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "knowledge uri", 
+                            "reference": "library knowledge uri"
+                        }
+                    ], 
+                    "requires": [
+                        "library knowledge uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "knowledge uri"
+            ]
+        }, 
+        "rule/knowledge/organism/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "knowledge uri", 
+                            "reference": "organism knowledge uri"
+                        }
+                    ], 
+                    "requires": [
+                        "organism knowledge uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "knowledge uri"
+            ]
+        }, 
+        "rule/knowledge/pool/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "knowledge uri", 
+                            "reference": "pool knowledge uri"
+                        }
+                    ], 
+                    "requires": [
+                        "pool knowledge uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "knowledge uri"
+            ]
+        }, 
+        "rule/knowledge/qualified/barcode/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/k/barcode/{barcode id}", 
+                            "property": "barcode knowledge uri"
+                        }
+                    ], 
+                    "requires": [
+                        "barcode id"
+                    ]
+                }
+            ], 
+            "provide": [
+                "barcode knowledge uri"
+            ]
+        }, 
+        "rule/knowledge/qualified/flowcell/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/k/flowcell/{flowcell id}", 
+                            "property": "flowcell knowledge uri"
+                        }
+                    ], 
+                    "requires": [
+                        "flowcell id"
+                    ]
+                }
+            ], 
+            "provide": [
+                "flowcell knowledge uri"
+            ]
+        }, 
+        "rule/knowledge/qualified/lane/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/k/lane/{lane id}", 
+                            "property": "lane knowledge uri"
+                        }
+                    ], 
+                    "requires": [
+                        "lane id"
+                    ]
+                }
+            ], 
+            "provide": [
+                "lane knowledge uri"
+            ]
+        }, 
+        "rule/knowledge/qualified/library/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/k/library/{library id}", 
+                            "property": "library knowledge uri"
+                        }
+                    ], 
+                    "requires": [
+                        "library id"
+                    ]
+                }
+            ], 
+            "provide": [
+                "library knowledge uri"
+            ]
+        }, 
+        "rule/knowledge/qualified/organism/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/k/organism/{organism id}", 
+                            "property": "organism knowledge uri"
+                        }
+                    ], 
+                    "requires": [
+                        "organism id"
+                    ]
+                }
+            ], 
+            "provide": [
+                "organism knowledge uri"
+            ]
+        }, 
+        "rule/knowledge/qualified/pool/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/k/pool/{pool id}", 
+                            "property": "pool knowledge uri"
+                        }
+                    ], 
+                    "requires": [
+                        "pool id"
+                    ]
+                }
+            ], 
+            "provide": [
+                "pool knowledge uri"
+            ]
+        }, 
+        "rule/knowledge/qualified/sample/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/k/sample/{sample id}", 
+                            "property": "sample knowledge uri"
+                        }
+                    ], 
+                    "requires": [
+                        "sample id"
+                    ]
+                }
+            ], 
+            "provide": [
+                "sample knowledge uri"
+            ]
+        }, 
+        "rule/knowledge/sample/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "knowledge uri", 
+                            "reference": "sample knowledge uri"
+                        }
+                    ], 
+                    "requires": [
+                        "sample knowledge uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "knowledge uri"
+            ]
+        }, 
+        "rule/knowledge/simple/name/library": {
+            "branch": [
+                {
+                    "decode": [
+                        {
+                            "expression": "^(?P<simple_library_name>.+)$", 
+                            "property": "library name"
+                        }
+                    ], 
+                    "requires": [
+                        "library name"
+                    ]
+                }
+            ], 
+            "provide": [
+                "simple library name"
+            ]
+        }, 
+        "rule/local/barcode/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "local uri", 
+                            "reference": "barcode local uri"
+                        }
+                    ], 
+                    "requires": [
+                        "barcode local uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "local uri"
+            ]
+        }, 
+        "rule/local/flowcell/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "local uri", 
+                            "reference": "flowcell local uri"
+                        }
+                    ], 
+                    "requires": [
+                        "flowcell local uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "local uri"
+            ]
+        }, 
+        "rule/local/lane/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "local uri", 
+                            "reference": "lane local uri"
+                        }
+                    ], 
+                    "requires": [
+                        "lane local uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "local uri"
+            ]
+        }, 
+        "rule/local/library/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "local uri", 
+                            "reference": "library local uri"
+                        }
+                    ], 
+                    "requires": [
+                        "library local uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "local uri"
+            ]
+        }, 
+        "rule/local/organism/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "local uri", 
+                            "reference": "organism local uri"
+                        }
+                    ], 
+                    "requires": [
+                        "organism local uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "local uri"
+            ]
+        }, 
+        "rule/local/pool/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "local uri", 
+                            "reference": "pool local uri"
+                        }
+                    ], 
+                    "requires": [
+                        "pool local uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "local uri"
+            ]
+        }, 
+        "rule/local/qualified/barcode/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/c/local/barcode/{barcode uuid}", 
+                            "property": "barcode local uri"
+                        }
+                    ], 
+                    "requires": [
+                        "barcode uuid"
+                    ]
+                }
+            ], 
+            "provide": [
+                "barcode local uri"
+            ]
+        }, 
+        "rule/local/qualified/flowcell/lanes/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/c/local/flowcell/{flowcell uuid}/lanes", 
+                            "property": "flowcell lanes local uri"
+                        }
+                    ], 
+                    "requires": [
+                        "flowcell uuid"
+                    ]
+                }
+            ], 
+            "provide": [
+                "flowcell lanes local uri"
+            ]
+        }, 
+        "rule/local/qualified/flowcell/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/c/local/flowcell/{flowcell uuid}", 
+                            "property": "flowcell local uri"
+                        }
+                    ], 
+                    "requires": [
+                        "flowcell uuid"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/c/local/flowcell/illumina/{illumina flowcell id}", 
+                            "property": "flowcell local uri"
+                        }
+                    ], 
+                    "requires": [
+                        "illumina flowcell id"
+                    ]
+                }
+            ], 
+            "provide": [
+                "flowcell local uri"
+            ]
+        }, 
+        "rule/local/qualified/lane/pools/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/c/local/lane/{lane uuid}/pools", 
+                            "property": "lane pools local uri"
+                        }
+                    ], 
+                    "requires": [
+                        "lane uuid"
+                    ]
+                }
+            ], 
+            "provide": [
+                "lane pools local uri"
+            ]
+        }, 
+        "rule/local/qualified/lane/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/c/local/lane/{lane uuid}", 
+                            "property": "lane local uri"
+                        }
+                    ], 
+                    "requires": [
+                        "lane uuid"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/c/local/lane/{flowcell uuid}/{lane number}", 
+                            "property": "lane local uri"
+                        }
+                    ], 
+                    "requires": [
+                        "flowcell uuid", 
+                        "lane number"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "/c/local/lane/illumina/{illumina flowcell id}/{lane number}", 
+                            "property": "lane local uri"
+                        }
+                    ], 
+                    "requires": [
+                        "illumina flowcell id", 
+                        "lane number"
+                    ]
+                }
+            ], 
+            "provide": [
+                "lane local uri"
+            ]
+        }, 
+        "rule/local/qualified/library/barcodes/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/c/local/library/{library uuid}/barcodes", 
+                            "property": "library barcodes local uri"
+                        }
+                    ], 
+                    "requires": [
+                        "library uuid"
+                    ]
+                }
+            ], 
+            "provide": [
+                "library barcodes local uri"
+            ]
+        }, 
+        "rule/local/qualified/library/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/c/local/library/{library uuid}", 
+                            "property": "library local uri"
+                        }
+                    ], 
+                    "requires": [
+                        "library uuid"
+                    ]
+                }
+            ], 
+            "provide": [
+                "library local uri"
+            ]
+        }, 
+        "rule/local/qualified/organism/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/c/local/organism/{organism uuid}", 
+                            "property": "organism local uri"
+                        }
+                    ], 
+                    "requires": [
+                        "organism uuid"
+                    ]
+                }
+            ], 
+            "provide": [
+                "organism local uri"
+            ]
+        }, 
+        "rule/local/qualified/pool/samples/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/c/local/pool/{pool uuid}/samples", 
+                            "property": "pool samples local uri"
+                        }
+                    ], 
+                    "requires": [
+                        "pool uuid"
+                    ]
+                }
+            ], 
+            "provide": [
+                "pool samples local uri"
+            ]
+        }, 
+        "rule/local/qualified/pool/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/c/local/pool/{pool uuid}", 
+                            "property": "pool local uri"
+                        }
+                    ], 
+                    "requires": [
+                        "pool uuid"
+                    ]
+                }
+            ], 
+            "provide": [
+                "pool local uri"
+            ]
+        }, 
+        "rule/local/qualified/sample/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "/c/local/sample/{sample uuid}", 
+                            "property": "sample local uri"
+                        }
+                    ], 
+                    "requires": [
+                        "sample uuid"
+                    ]
+                }
+            ], 
+            "provide": [
+                "sample local uri"
+            ]
+        }, 
+        "rule/local/sample/uri": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "local uri", 
+                            "reference": "sample local uri"
+                        }
+                    ], 
+                    "requires": [
+                        "sample local uri"
+                    ]
+                }
+            ], 
+            "provide": [
+                "local uri"
+            ]
+        }, 
+        "rule/medium/kind": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "kind", 
+                            "value": "fastq"
+                        }
+                    ], 
+                    "equal": {
+                        "extension": "fastq", 
+                        "inode type": "file"
+                    }, 
+                    "requires": [
+                        "extension", 
+                        "inode type"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "kind", 
+                            "value": "fastq"
+                        }
+                    ], 
+                    "equal": {
+                        "extension": "fq", 
+                        "inode type": "file"
+                    }, 
+                    "requires": [
+                        "extension", 
+                        "inode type"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "kind", 
+                            "value": "sam"
+                        }
+                    ], 
+                    "equal": {
+                        "extension": "sam", 
+                        "inode type": "file"
+                    }, 
+                    "requires": [
+                        "extension", 
+                        "inode type"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "kind", 
+                            "value": "bam"
+                        }
+                    ], 
+                    "equal": {
+                        "extension": "bam", 
+                        "inode type": "file"
+                    }, 
+                    "requires": [
+                        "extension", 
+                        "inode type"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "kind", 
+                            "value": "bai"
+                        }
+                    ], 
+                    "equal": {
+                        "extension": "bai", 
+                        "inode type": "file"
+                    }, 
+                    "requires": [
+                        "extension", 
+                        "inode type"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "kind", 
+                            "value": "bed"
+                        }
+                    ], 
+                    "equal": {
+                        "extension": "bed", 
+                        "inode type": "file"
+                    }, 
+                    "requires": [
+                        "extension", 
+                        "inode type"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "kind", 
+                            "value": "bt2"
+                        }
+                    ], 
+                    "equal": {
+                        "extension": "bt2", 
+                        "inode type": "file"
+                    }, 
+                    "requires": [
+                        "extension", 
+                        "inode type"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "kind", 
+                            "value": "ebwt"
+                        }
+                    ], 
+                    "equal": {
+                        "extension": "ebwt", 
+                        "inode type": "file"
+                    }, 
+                    "requires": [
+                        "extension", 
+                        "inode type"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "kind", 
+                            "value": "gff"
+                        }
+                    ], 
+                    "equal": {
+                        "extension": "gff", 
+                        "inode type": "file"
+                    }, 
+                    "requires": [
+                        "extension", 
+                        "inode type"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "kind", 
+                            "value": "gtf"
+                        }
+                    ], 
+                    "equal": {
+                        "extension": "gtf", 
+                        "inode type": "file"
+                    }, 
+                    "requires": [
+                        "extension", 
+                        "inode type"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "kind", 
+                            "value": "fa"
+                        }
+                    ], 
+                    "equal": {
+                        "extension": "fa", 
+                        "inode type": "file"
+                    }, 
+                    "requires": [
+                        "extension", 
+                        "inode type"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "kind", 
+                            "value": "fa"
+                        }
+                    ], 
+                    "equal": {
+                        "extension": "seq", 
+                        "inode type": "file"
+                    }, 
+                    "requires": [
+                        "extension", 
+                        "inode type"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "kind", 
+                            "value": "fa"
+                        }
+                    ], 
+                    "equal": {
+                        "extension": "fsa", 
+                        "inode type": "file"
+                    }, 
+                    "requires": [
+                        "extension", 
+                        "inode type"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "kind", 
+                            "value": "fa"
+                        }
+                    ], 
+                    "equal": {
+                        "extension": "fasta", 
+                        "inode type": "file"
+                    }, 
+                    "requires": [
+                        "extension", 
+                        "inode type"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "kind", 
+                            "value": "fa"
+                        }
+                    ], 
+                    "equal": {
+                        "extension": "fas", 
+                        "inode type": "file"
+                    }, 
+                    "requires": [
+                        "extension", 
+                        "inode type"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "kind", 
+                            "value": "fa"
+                        }
+                    ], 
+                    "equal": {
+                        "extension": "fna", 
+                        "inode type": "file"
+                    }, 
+                    "requires": [
+                        "extension", 
+                        "inode type"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "kind", 
+                            "value": "fa"
+                        }
+                    ], 
+                    "equal": {
+                        "extension": "ffn", 
+                        "inode type": "file"
+                    }, 
+                    "requires": [
+                        "extension", 
+                        "inode type"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "kind", 
+                            "value": "fa"
+                        }
+                    ], 
+                    "equal": {
+                        "extension": "faa", 
+                        "inode type": "file"
+                    }, 
+                    "requires": [
+                        "extension", 
+                        "inode type"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "kind", 
+                            "value": "fa"
+                        }
+                    ], 
+                    "equal": {
+                        "extension": "frn", 
+                        "inode type": "file"
+                    }, 
+                    "requires": [
+                        "extension", 
+                        "inode type"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "kind", 
+                            "value": "vcf"
+                        }
+                    ], 
+                    "equal": {
+                        "extension": "vcf", 
+                        "inode type": "file"
+                    }, 
+                    "requires": [
+                        "extension", 
+                        "inode type"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "kind", 
+                            "value": "fai"
+                        }
+                    ], 
+                    "equal": {
+                        "extension": "fai", 
+                        "inode type": "file"
+                    }, 
+                    "requires": [
+                        "extension", 
+                        "inode type"
+                    ]
+                }
+            ]
+        }, 
+        "rule/medium/resource/basename/canonic": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "{illumina run id}_SAV.{umid}.{extension}.{compression}", 
+                            "property": "canonic basename"
+                        }
+                    ], 
+                    "equal": {
+                        "inode type": "file", 
+                        "kind": "ihsz", 
+                        "media kind": 50
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "inode type", 
+                        "illumina run id", 
+                        "umid", 
+                        "extension", 
+                        "compression"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "{illumina run id}_SAV.{umid}.{extension}.{compression}", 
+                            "property": "canonic basename"
+                        }
+                    ], 
+                    "equal": {
+                        "inode type": "file", 
+                        "kind": "insz", 
+                        "media kind": 50
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "inode type", 
+                        "illumina run id", 
+                        "umid", 
+                        "extension", 
+                        "compression"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "{illumina run id}_SAV.{umid}.{extension}.{compression}", 
+                            "property": "canonic basename"
+                        }
+                    ], 
+                    "equal": {
+                        "inode type": "file", 
+                        "kind": "imsz", 
+                        "media kind": 50
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "inode type", 
+                        "illumina run id", 
+                        "umid", 
+                        "extension", 
+                        "compression"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "{illumina flowcell id}_n{nibble number:02d}.{umid}.{extension}.{compression}", 
+                            "property": "canonic basename"
+                        }
+                    ], 
+                    "equal": {
+                        "inode type": "file", 
+                        "kind": "fastq", 
+                        "media kind": 50
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "nibble number", 
+                        "inode type", 
+                        "illumina flowcell id", 
+                        "umid", 
+                        "extension", 
+                        "compression"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "{illumina run id}.{umid}.{extension}.{compression}", 
+                            "property": "canonic basename"
+                        }
+                    ], 
+                    "equal": {
+                        "inode type": "file", 
+                        "media kind": 50
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "inode type", 
+                        "illumina run id", 
+                        "umid", 
+                        "extension", 
+                        "compression"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "{illumina run id}", 
+                            "property": "canonic basename"
+                        }
+                    ], 
+                    "equal": {
+                        "inode type": "directory", 
+                        "media kind": 50
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "inode type", 
+                        "illumina run id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "{illumina flowcell id}_l{lane number:02d}n{nibble number:02d}.{umid}.{extension}.{compression}", 
+                            "property": "canonic basename"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 51
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "illumina flowcell id", 
+                        "lane number", 
+                        "nibble number", 
+                        "umid", 
+                        "extension", 
+                        "compression"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "{illumina flowcell id}_l{lane number:02d}n{nibble number:02d}_{simple library name}.{umid}.{extension}.{compression}", 
+                            "property": "canonic basename"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 52
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "illumina flowcell id", 
+                        "lane number", 
+                        "simple library name", 
+                        "nibble number", 
+                        "umid", 
+                        "extension", 
+                        "compression"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "{illumina flowcell id}_l{lane number:02d}n{nibble number:02d}_{simple library name}.{umid}.{extension}.{compression}", 
+                            "property": "canonic basename"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 53
+                    }, 
+                    "requires": [
+                        "media kind", 
+                        "illumina flowcell id", 
+                        "lane number", 
+                        "simple library name", 
+                        "nibble number", 
+                        "umid", 
+                        "extension", 
+                        "compression"
+                    ]
+                }
+            ]
+        }, 
+        "rule/medium/resource/basename/parse": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "kind", 
+                            "value": "ihrf"
+                        }, 
+                        {
+                            "property": "stop", 
+                            "value": true
+                        }, 
+                        {
+                            "property": "media kind", 
+                            "value": 50
+                        }
+                    ], 
+                    "decode": [
+                        {
+                            "expression": "^(?P<illumina_run_id>(?P<illumina_run_day>[0-9]{6})_(?P<illumina_instrument_id>(?:SN|K)[0-9]+)_(?P<instrument_run_count>[0-9]{4})_(?P<flowcell_socket>[AB])(?P<illumina_flowcell_id>[A-Z0-9]{9}))$", 
+                            "flags": 34, 
+                            "property": "basename"
+                        }
+                    ], 
+                    "equal": {
+                        "inode type": "directory"
+                    }, 
+                    "match": {
+                        "expression": "^[0-9]{6}_(?:SN|K)[0-9]+_[0-9]{4}_[AB][A-Z0-9]{9}$", 
+                        "flags": 34, 
+                        "property": "basename"
+                    }, 
+                    "requires": [
+                        "basename", 
+                        "inode type"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "kind", 
+                            "value": "inrf"
+                        }, 
+                        {
+                            "property": "stop", 
+                            "value": true
+                        }, 
+                        {
+                            "property": "media kind", 
+                            "value": 50
+                        }
+                    ], 
+                    "decode": [
+                        {
+                            "expression": "^(?P<illumina_run_id>(?P<illumina_run_day>[0-9]{6})_(?P<illumina_instrument_id>NB[0-9]+)_(?P<instrument_run_count>[0-9]{4})_(?P<flowcell_socket>A)(?P<illumina_flowcell_id>[A-Z0-9]{9}))$", 
+                            "flags": 34, 
+                            "property": "basename"
+                        }
+                    ], 
+                    "equal": {
+                        "inode type": "directory"
+                    }, 
+                    "match": {
+                        "expression": "^[0-9]{6}_NB[0-9]+_[0-9]{4}_A[A-Z0-9]{9}$", 
+                        "flags": 34, 
+                        "property": "basename"
+                    }, 
+                    "requires": [
+                        "basename", 
+                        "inode type"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "kind", 
+                            "value": "imrf"
+                        }, 
+                        {
+                            "property": "stop", 
+                            "value": true
+                        }, 
+                        {
+                            "property": "media kind", 
+                            "value": 50
+                        }
+                    ], 
+                    "decode": [
+                        {
+                            "expression": "^(?P<illumina_run_id>(?P<illumina_run_day>[0-9]{6})_(?P<illumina_instrument_id>M[0-9]+)_(?P<instrument_run_count>[0-9]{4})_(?P<illumina_flowcell_id>[A-Z0-9]{9}-[A-Z0-9]{5}))$", 
+                            "flags": 34, 
+                            "property": "basename"
+                        }
+                    ], 
+                    "equal": {
+                        "inode type": "directory"
+                    }, 
+                    "match": {
+                        "expression": "^[0-9]{6}_M[0-9]{5}_[0-9]{4}_[0]{9}-[A-Z0-9]{5}$", 
+                        "flags": 34, 
+                        "property": "basename"
+                    }, 
+                    "requires": [
+                        "basename", 
+                        "inode type"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "kind", 
+                            "value": "ihsz"
+                        }, 
+                        {
+                            "property": "media kind", 
+                            "value": 50
+                        }
+                    ], 
+                    "decode": [
+                        {
+                            "expression": "^(?P<illumina_run_id>(?P<illumina_run_day>[0-9]{6})_(?P<illumina_instrument_id>(?:SN|K)[0-9]+)_(?P<instrument_run_count>[0-9]{4})_(?P<flowcell_socket>[AB])(?P<illumina_flowcell_id>[A-Z0-9]{9}))_SAV(?:\\.(?P<umid>[0-9a-f]{14}))?\\.(?P<extension>[^\\.]+)(?:\\.(?P<compression>[^\\.]+))?$", 
+                            "flags": 34, 
+                            "property": "basename"
+                        }
+                    ], 
+                    "equal": {
+                        "inode type": "file"
+                    }, 
+                    "match": {
+                        "expression": "^[0-9]{6}_(?:SN|K)[0-9]+_[0-9]{4}_[AB][A-Z0-9]{9}_SAV(?:\\.[0-9a-f]{14})?\\.[^\\.]+(?:\\.[^\\.]+)?$", 
+                        "flags": 34, 
+                        "property": "basename"
+                    }, 
+                    "requires": [
+                        "basename", 
+                        "inode type"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "kind", 
+                            "value": "insz"
+                        }, 
+                        {
+                            "property": "media kind", 
+                            "value": 50
+                        }
+                    ], 
+                    "decode": [
+                        {
+                            "expression": "^(?P<illumina_run_id>(?P<illumina_run_day>[0-9]{6})_(?P<illumina_instrument_id>NB[0-9]+)_(?P<instrument_run_count>[0-9]{4})_(?P<flowcell_socket>A)(?P<illumina_flowcell_id>[A-Z0-9]{9}))_SAV(?:\\.(?P<umid>[0-9a-f]{14}))?\\.(?P<extension>[^\\.]+)(?:\\.(?P<compression>[^\\.]+))?$", 
+                            "flags": 34, 
+                            "property": "basename"
+                        }
+                    ], 
+                    "equal": {
+                        "inode type": "file"
+                    }, 
+                    "match": {
+                        "expression": "^[0-9]{6}_NB[0-9]+_[0-9]{4}_A[A-Z0-9]{9}_SAV(?:\\.[0-9a-f]{14})?\\.[^\\.]+(?:\\.[^\\.]+)?$", 
+                        "flags": 34, 
+                        "property": "basename"
+                    }, 
+                    "requires": [
+                        "basename", 
+                        "inode type"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "kind", 
+                            "value": "imsz"
+                        }, 
+                        {
+                            "property": "media kind", 
+                            "value": 50
+                        }
+                    ], 
+                    "decode": [
+                        {
+                            "expression": "^(?P<illumina_run_id>(?P<illumina_run_day>[0-9]{6})_(?P<illumina_instrument_id>M[0-9]+)_(?P<instrument_run_count>[0-9]{4})_(?P<illumina_flowcell_id>[A-Z0-9]{9}-[A-Z0-9]{5}))_SAV(?:\\.(?P<umid>[0-9a-f]{14}))?\\.(?P<extension>[^\\.]+)(?:\\.(?P<compression>[^\\.]+))?$", 
+                            "flags": 34, 
+                            "property": "basename"
+                        }
+                    ], 
+                    "equal": {
+                        "inode type": "file"
+                    }, 
+                    "match": {
+                        "expression": "^[0-9]{6}_M[0-9]{5}_[0-9]{4}_[0]{9}-[A-Z0-9]{5}_SAV(?:\\.[0-9a-f]{14})?\\.[^\\.]+(?:\\.[^\\.]+)?$", 
+                        "flags": 34, 
+                        "property": "basename"
+                    }, 
+                    "requires": [
+                        "basename", 
+                        "inode type"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "kind", 
+                            "value": "ihrz"
+                        }, 
+                        {
+                            "property": "media kind", 
+                            "value": 50
+                        }
+                    ], 
+                    "decode": [
+                        {
+                            "expression": "^(?P<illumina_run_id>(?P<illumina_run_day>[0-9]{6})_(?P<illumina_instrument_id>(?:SN|K)[0-9]+)_(?P<instrument_run_count>[0-9]{4})_(?P<flowcell_socket>[AB])(?P<illumina_flowcell_id>[A-Z0-9]{9}))(?:\\.(?P<umid>[0-9a-f]{14}))?\\.(?P<extension>[^\\.]+)(?:\\.(?P<compression>[^\\.]+))?$", 
+                            "flags": 34, 
+                            "property": "basename"
+                        }
+                    ], 
+                    "equal": {
+                        "inode type": "file"
+                    }, 
+                    "match": {
+                        "expression": "^[0-9]{6}_(?:SN|K)[0-9]+_[0-9]{4}_[AB][A-Z0-9]{9}(?:\\.[0-9a-f]{14})?\\.[^\\.]+(?:\\.[^\\.]+)?$", 
+                        "flags": 34, 
+                        "property": "basename"
+                    }, 
+                    "requires": [
+                        "basename", 
+                        "inode type"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "kind", 
+                            "value": "inrz"
+                        }, 
+                        {
+                            "property": "media kind", 
+                            "value": 50
+                        }
+                    ], 
+                    "decode": [
+                        {
+                            "expression": "^(?P<illumina_run_id>(?P<illumina_run_day>[0-9]{6})_(?P<illumina_instrument_id>NB[0-9]+)_(?P<instrument_run_count>[0-9]{4})_(?P<flowcell_socket>A)(?P<illumina_flowcell_id>[A-Z0-9]{9}))(?:\\.(?P<umid>[0-9a-f]{14}))?\\.(?P<extension>[^\\.]+)(?:\\.(?P<compression>[^\\.]+))?$", 
+                            "flags": 34, 
+                            "property": "basename"
+                        }
+                    ], 
+                    "equal": {
+                        "inode type": "file"
+                    }, 
+                    "match": {
+                        "expression": "^[0-9]{6}_NB[0-9]+_[0-9]{4}_A[A-Z0-9]{9}(?:\\.[0-9a-f]{14})?\\.[^\\.]+(?:\\.[^\\.]+)?$", 
+                        "flags": 34, 
+                        "property": "basename"
+                    }, 
+                    "requires": [
+                        "basename", 
+                        "inode type"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "kind", 
+                            "value": "imrz"
+                        }, 
+                        {
+                            "property": "media kind", 
+                            "value": 50
+                        }
+                    ], 
+                    "decode": [
+                        {
+                            "expression": "^(?P<illumina_run_id>(?P<illumina_run_day>[0-9]{6})_(?P<illumina_instrument_id>M[0-9]+)_(?P<instrument_run_count>[0-9]{4})_(?P<illumina_flowcell_id>[A-Z0-9]{9}-[A-Z0-9]{5}))(?:\\.(?P<umid>[0-9a-f]{14}))?\\.(?P<extension>[^\\.]+)(?:\\.(?P<compression>[^\\.]+))?$", 
+                            "flags": 34, 
+                            "property": "basename"
+                        }
+                    ], 
+                    "equal": {
+                        "inode type": "file"
+                    }, 
+                    "match": {
+                        "expression": "^[0-9]{6}_M[0-9]{5}_[0-9]{4}_[0]{9}-[A-Z0-9]{5}(?:\\.[0-9a-f]{14})?\\.[^\\.]+(?:\\.[^\\.]+)?$", 
+                        "flags": 34, 
+                        "property": "basename"
+                    }, 
+                    "requires": [
+                        "basename", 
+                        "inode type"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "media kind", 
+                            "value": 51
+                        }
+                    ], 
+                    "decode": [
+                        {
+                            "expression": "^(?P<illumina_flowcell_id>[A-Z0-9]{9}|[A-Z0-9]{9}-[A-Z0-9]{5})_Undetermined_L(?P<lane_number>[0-9]{3})_R(?P<nibble_number>[0-9])_[0-9]{3}\\.(?P<extension>fastq)\\.(?P<compression>[^\\.]+)$", 
+                            "flags": 34, 
+                            "property": "basename"
+                        }
+                    ], 
+                    "equal": {
+                        "inode type": "file"
+                    }, 
+                    "match": {
+                        "expression": "^(?:[A-Z0-9]{9}|[A-Z0-9]{9}-[A-Z0-9]{5})_Undetermined_L[0-9]{3}_R[0-9]_[0-9]{3}\\.fastq\\.[^\\.]+$", 
+                        "flags": 34, 
+                        "property": "basename"
+                    }, 
+                    "requires": [
+                        "basename", 
+                        "inode type"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "media kind", 
+                            "value": 51
+                        }
+                    ], 
+                    "decode": [
+                        {
+                            "expression": "^(?P<illumina_flowcell_id>[A-Z0-9]{9}|[A-Z0-9]{9}-[A-Z0-9]{5})_Lane_(?P<lane_number>[0-9]{3})\\.(?P<nibble_number>[0-9])\\.(?P<extension>fastq)\\.(?P<compression>[^\\.]+)$", 
+                            "flags": 34, 
+                            "property": "basename"
+                        }
+                    ], 
+                    "equal": {
+                        "inode type": "file"
+                    }, 
+                    "match": {
+                        "expression": "^(?:[A-Z0-9]{9}|[A-Z0-9]{9}-[A-Z0-9]{5})_Lane_[0-9]{3}\\.[0-9]\\.fastq\\.[^\\.]+$", 
+                        "flags": 34, 
+                        "property": "basename"
+                    }, 
+                    "requires": [
+                        "basename", 
+                        "inode type"
+                    ]
+                }
+            ], 
+            "provide": [
+                "illumina instrument id", 
+                "instrument run count", 
+                "flowcell socket", 
+                "illumina flowcell id", 
+                "illumina run day", 
+                "illumina run id", 
+                "nibble number", 
+                "lane number"
+            ]
+        }, 
+        "rule/medium/resource/dirname/canonic": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "{volume path}/{profile}/{illumina flowcell id}/{lane number}", 
+                            "property": "canonic dirname"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 51, 
+                        "profile": "deliver"
+                    }, 
+                    "requires": [
+                        "volume path", 
+                        "media kind", 
+                        "kind", 
+                        "profile", 
+                        "illumina flowcell id", 
+                        "lane number"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "{volume path}/{profile}/{illumina flowcell id}/{lane number}", 
+                            "property": "canonic dirname"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 52, 
+                        "profile": "deliver"
+                    }, 
+                    "requires": [
+                        "volume path", 
+                        "media kind", 
+                        "kind", 
+                        "profile", 
+                        "illumina flowcell id", 
+                        "lane number"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "{volume path}/{profile}/{illumina flowcell id}/{lane number}", 
+                            "property": "canonic dirname"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 53, 
+                        "profile": "deliver"
+                    }, 
+                    "requires": [
+                        "volume path", 
+                        "media kind", 
+                        "kind", 
+                        "profile", 
+                        "illumina flowcell id", 
+                        "lane number"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "{volume path}/flowcell/{kind}/{profile}/{illumina flowcell id}", 
+                            "property": "canonic dirname"
+                        }
+                    ], 
+                    "equal": {
+                        "inode type": "file", 
+                        "kind": "fastq", 
+                        "media kind": 50
+                    }, 
+                    "requires": [
+                        "volume path", 
+                        "media kind", 
+                        "inode type", 
+                        "illumina flowcell id", 
+                        "kind", 
+                        "profile"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "{volume path}/flowcell/{kind}/{profile}", 
+                            "property": "canonic dirname"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 50
+                    }, 
+                    "requires": [
+                        "volume path", 
+                        "media kind", 
+                        "kind", 
+                        "profile"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "{volume path}/lane/{kind}/{profile}/{illumina flowcell id}/{lane number}", 
+                            "property": "canonic dirname"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 51
+                    }, 
+                    "requires": [
+                        "volume path", 
+                        "media kind", 
+                        "kind", 
+                        "profile", 
+                        "illumina flowcell id", 
+                        "lane number"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "{volume path}/library/{kind}/{profile}/{illumina flowcell id}/{lane number}", 
+                            "property": "canonic dirname"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 52
+                    }, 
+                    "requires": [
+                        "volume path", 
+                        "media kind", 
+                        "kind", 
+                        "profile", 
+                        "illumina flowcell id", 
+                        "lane number"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "format": "{volume path}/sample/{kind}/{profile}/{illumina flowcell id}/{lane number}", 
+                            "property": "canonic dirname"
+                        }
+                    ], 
+                    "equal": {
+                        "media kind": 53
+                    }, 
+                    "requires": [
+                        "volume path", 
+                        "media kind", 
+                        "kind", 
+                        "profile", 
+                        "illumina flowcell id", 
+                        "lane number"
+                    ]
+                }
+            ]
+        }, 
+        "rule/medium/resource/illumina/flowcell/timestamp": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "datetime format": "%Y%m%d", 
+                            "property": "flowcell timestamp", 
+                            "reference": "flowcell scheduled"
+                        }
+                    ], 
+                    "requires": [
+                        "flowcell scheduled"
+                    ]
+                }
+            ], 
+            "provide": [
+                "flowcell timestamp"
+            ]
+        }, 
+        "rule/medium/resource/illumina/flowcell/type": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "lane count", 
+                            "value": 2
+                        }, 
+                        {
+                            "property": "guaranteed yield", 
+                            "value": 150000000
+                        }
+                    ], 
+                    "description": "HiSeq Rapid Flow Cell v1", 
+                    "match": {
+                        "expression": "^[GH][0-9A-Z]{4}ADXX$", 
+                        "flags": 34, 
+                        "property": "illumina flowcell id"
+                    }, 
+                    "requires": [
+                        "illumina flowcell id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "lane count", 
+                            "value": 2
+                        }, 
+                        {
+                            "property": "guaranteed yield", 
+                            "value": 150000000
+                        }
+                    ], 
+                    "description": "HiSeq Rapid Flow Cell v2", 
+                    "match": {
+                        "expression": "^[GH][0-9A-Z]{4}BCX[XY0-9]$", 
+                        "flags": 34, 
+                        "property": "illumina flowcell id"
+                    }, 
+                    "requires": [
+                        "illumina flowcell id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "lane count", 
+                            "value": 8
+                        }, 
+                        {
+                            "property": "guaranteed yield", 
+                            "value": 187500000
+                        }
+                    ], 
+                    "description": "HiSeq SR Flow Cell v3", 
+                    "match": {
+                        "expression": "^[289][0-9A-Z]{4}ACXX$", 
+                        "flags": 34, 
+                        "property": "illumina flowcell id"
+                    }, 
+                    "requires": [
+                        "illumina flowcell id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "lane count", 
+                            "value": 8
+                        }, 
+                        {
+                            "property": "guaranteed yield", 
+                            "value": 187500000
+                        }
+                    ], 
+                    "description": "HiSeq Flow Cell v3", 
+                    "match": {
+                        "expression": "^[7BCDE][0-9A-Z]{4}ACXX$", 
+                        "flags": 34, 
+                        "property": "illumina flowcell id"
+                    }, 
+                    "requires": [
+                        "illumina flowcell id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "lane count", 
+                            "value": 8
+                        }
+                    ], 
+                    "description": "HiSeq Flow Cell v1.5", 
+                    "match": {
+                        "expression": "^[7BCDE][0-9A-Z]{4}ABXX$", 
+                        "flags": 34, 
+                        "property": "illumina flowcell id"
+                    }, 
+                    "requires": [
+                        "illumina flowcell id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "lane count", 
+                            "value": 8
+                        }
+                    ], 
+                    "description": "HiSeq Flow Cell v1", 
+                    "match": {
+                        "expression": "^[289][0-9A-Z]{4}ABXX$", 
+                        "flags": 34, 
+                        "property": "illumina flowcell id"
+                    }, 
+                    "requires": [
+                        "illumina flowcell id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "lane count", 
+                            "value": 8
+                        }
+                    ], 
+                    "description": "HiSeq 3000/4000 PE", 
+                    "match": {
+                        "expression": "^[H][0-9A-Z]{4}BBXX$", 
+                        "flags": 34, 
+                        "property": "illumina flowcell id"
+                    }, 
+                    "requires": [
+                        "illumina flowcell id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "lane count", 
+                            "value": 1
+                        }
+                    ], 
+                    "description": "MiSeq", 
+                    "match": {
+                        "expression": "^[0]{9}-[A-Z0-9]{5}$", 
+                        "flags": 34, 
+                        "property": "illumina flowcell id"
+                    }, 
+                    "requires": [
+                        "illumina flowcell id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "lane count", 
+                            "value": 4
+                        }, 
+                        {
+                            "property": "guaranteed yield", 
+                            "value": 100000000
+                        }
+                    ], 
+                    "description": "NextSeq HighOutput v2", 
+                    "match": {
+                        "expression": "^[0-9A-Z]{5}[AB][GF]X[XY0-9]$", 
+                        "flags": 34, 
+                        "property": "illumina flowcell id"
+                    }, 
+                    "requires": [
+                        "illumina flowcell id"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "lane count", 
+                            "value": 4
+                        }, 
+                        {
+                            "property": "guaranteed yield", 
+                            "value": 32500000
+                        }
+                    ], 
+                    "description": "NextSeq MidOutput v2", 
+                    "match": {
+                        "expression": "^[0-9A-Z]{5}AFXX$", 
+                        "flags": 34, 
+                        "property": "illumina flowcell id"
+                    }, 
+                    "requires": [
+                        "illumina flowcell id"
+                    ]
+                }
+            ], 
+            "provide": [
+                "lane count"
+            ]
+        }, 
+        "rule/program/bcl2fastq/clustercount/default": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "bcl2fastq fastq cluster count", 
+                            "value": 0
+                        }
+                    ]
+                }
+            ], 
+            "provide": [
+                "bcl2fastq fastq cluster count"
+            ]
+        }, 
+        "rule/program/bcl2fastq/eamss/default": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "bcl2fastq no eamss", 
+                            "value": true
+                        }
+                    ]
+                }
+            ], 
+            "provide": [
+                "bcl2fastq no eamss"
+            ]
+        }, 
+        "rule/program/bcl2fastq/flowcell/default": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "bcl2fastq flowcell id", 
+                            "reference": "illumina flowcell id"
+                        }
+                    ], 
+                    "requires": [
+                        "illumina flowcell id"
+                    ]
+                }
+            ], 
+            "provide": [
+                "bcl2fastq flowcell id"
+            ]
+        }, 
+        "rule/program/bcl2fastq/input/dirname": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "{path}/Data/Intensities/BaseCalls", 
+                            "property": "bcl2fastq input dir"
+                        }
+                    ], 
+                    "requires": [
+                        "path"
+                    ]
+                }
+            ], 
+            "provide": [
+                "bcl2fastq input dir"
+            ]
+        }, 
+        "rule/program/bcl2fastq/mismatches/default": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "bcl2fastq mismatches", 
+                            "value": 1
+                        }
+                    ]
+                }
+            ], 
+            "provide": [
+                "bcl2fastq mismatches"
+            ]
+        }, 
+        "rule/program/bcl2fastq/output/dirname": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "{work directory}/{illumina run id}/Unaligned", 
+                            "property": "bcl2fastq output dir"
+                        }
+                    ], 
+                    "requires": [
+                        "work directory", 
+                        "illumina run id"
+                    ]
+                }
+            ], 
+            "provide": [
+                "bcl2fastq output dir"
+            ]
+        }, 
+        "rule/program/bcl2fastq/samplesheet/path": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "{work directory}/SampleSheet.csv", 
+                            "property": "bcl2fastq sample sheet"
+                        }
+                    ], 
+                    "requires": [
+                        "work directory"
+                    ]
+                }
+            ], 
+            "provide": [
+                "bcl2fastq sample sheet"
+            ]
+        }, 
+        "rule/program/pheniqs/configuration/path": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "{work directory}/demux.json", 
+                            "property": "pheniqs configuration path"
+                        }
+                    ], 
+                    "requires": [
+                        "work directory"
+                    ]
+                }
+            ], 
+            "provide": [
+                "pheniqs configuration path"
+            ]
+        }, 
+        "rule/program/picard/basecall/dirname": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "{path}/Data/Intensities/BaseCalls", 
+                            "property": "picard basecall dir"
+                        }
+                    ], 
+                    "requires": [
+                        "path"
+                    ]
+                }
+            ], 
+            "provide": [
+                "picard basecall dir"
+            ]
+        }, 
+        "rule/program/picard/illumina/flowcell/id": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "picard flowcell barcode", 
+                            "reference": "illumina flowcell id"
+                        }
+                    ], 
+                    "requires": [
+                        "illumina flowcell id"
+                    ]
+                }
+            ], 
+            "provide": [
+                "picard flowcell barcode"
+            ]
+        }, 
+        "rule/program/picard/illumina/instrument/id": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "picard machine name", 
+                            "reference": "illumina instrument id"
+                        }
+                    ], 
+                    "requires": [
+                        "illumina instrument id"
+                    ]
+                }
+            ], 
+            "provide": [
+                "picard machine name"
+            ]
+        }, 
+        "rule/program/picard/illumina/lane/number": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "picard lane", 
+                            "reference": "lane number"
+                        }
+                    ], 
+                    "requires": [
+                        "lane number"
+                    ]
+                }
+            ], 
+            "provide": [
+                "picard lane"
+            ]
+        }, 
+        "rule/program/picard/illumina/run/count": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "picard run barcode", 
+                            "reference": "instrument run count"
+                        }
+                    ], 
+                    "requires": [
+                        "instrument run count"
+                    ]
+                }
+            ], 
+            "provide": [
+                "picard run barcode"
+            ]
+        }, 
+        "rule/program/picard/output/prefix": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "{work directory}/{illumina flowcell id}_Lane_{lane number:03d}", 
+                            "property": "picard output prefix"
+                        }
+                    ], 
+                    "requires": [
+                        "work directory", 
+                        "illumina flowcell id", 
+                        "lane number"
+                    ]
+                }
+            ], 
+            "provide": [
+                "picard output prefix"
+            ]
+        }, 
+        "rule/program/picard/read/id/format/default": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "picard read name format", 
+                            "value": "CASAVA_1_8"
+                        }
+                    ]
+                }
+            ], 
+            "provide": [
+                "picard read name format"
+            ]
+        }, 
+        "rule/program/picard/temp/dirname": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "format": "{work directory}/tmp", 
+                            "property": "picard temp directory"
+                        }
+                    ], 
+                    "requires": [
+                        "work directory"
+                    ]
+                }
+            ], 
+            "provide": [
+                "picard temp directory"
+            ]
+        }, 
+        "rule/program/picard/threads": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "picard number of processors", 
+                            "reference": "threads"
+                        }
+                    ]
+                }
+            ], 
+            "provide": [
+                "picard number of processors"
+            ]
+        }, 
+        "rule/task/action/implementation": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "method", 
+                            "value": "extract_interop"
+                        }
+                    ], 
+                    "equal": {
+                        "action": "sav"
+                    }, 
+                    "requires": [
+                        "action"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "method", 
+                            "value": "tar_flowcell"
+                        }
+                    ], 
+                    "equal": {
+                        "action": "implode"
+                    }, 
+                    "requires": [
+                        "action"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "method", 
+                            "value": "untar_flowcell"
+                        }
+                    ], 
+                    "equal": {
+                        "action": "explode"
+                    }, 
+                    "requires": [
+                        "action"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "method", 
+                            "value": "pheniqs_filter"
+                        }
+                    ], 
+                    "equal": {
+                        "action": "filter"
+                    }, 
+                    "requires": [
+                        "action"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "method", 
+                            "value": "pheniqs_demux"
+                        }
+                    ], 
+                    "equal": {
+                        "action": "demux"
+                    }, 
+                    "requires": [
+                        "action"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "method", 
+                            "value": "merge_fastq"
+                        }
+                    ], 
+                    "equal": {
+                        "action": "merge"
+                    }, 
+                    "requires": [
+                        "action"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "method", 
+                            "value": "export_samplesheet"
+                        }
+                    ], 
+                    "equal": {
+                        "action": "export-samplesheet"
+                    }, 
+                    "requires": [
+                        "action"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "method", 
+                            "value": "import_samplesheet"
+                        }
+                    ], 
+                    "equal": {
+                        "action": "import-samplesheet"
+                    }, 
+                    "requires": [
+                        "action"
+                    ]
+                }
+            ]
+        }, 
+        "rule/task/default/cores": {
+            "branch": [
+                {
+                    "apply": [
+                        {
+                            "property": "task cores", 
+                            "reference": "cores"
+                        }
+                    ], 
+                    "equal": {
+                        "action": "implode"
+                    }, 
+                    "requires": [
+                        "action", 
+                        "cores"
+                    ]
+                }, 
+                {
+                    "apply": [
+                        {
+                            "property": "task cores", 
+                            "reference": "cores"
+                        }
+                    ], 
+                    "equal": {
+                        "action": "explode"
+                    }, 
+                    "requires": [
+                        "action", 
+                        "cores"
+                    ]
+                }
+            ]
+        }
+    }
+}
